@@ -9,7 +9,7 @@ public class GroupRenewalControllerTest {
     private static Map<String, Schema.RecordTypeInfo> oppRecordTypeMapByDevName  = RecordTypeUtil.getAllRecordTypesByDeveloperName(Constants.OPPORTUNITY);
     
     @testSetup
-    public static void testSetup(){
+    public static void testSetup(){ 
         
         Id propBasedRecordTypeId = accRecordTypeMapByDevName.get(Constants.PROPERTY_BASED_APINAME).getRecordTypeId();
        
