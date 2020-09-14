@@ -1,0 +1,7 @@
+<design:component >
+	<design:attribute name="recordId" label="recordId" />
+    <design:attribute name="displaybuttons" label="displaybuttons"/>
+    <design:attribute name="displaykeydays" label="displaykeydays"/>
+    <design:attribute name="showBudgetTable" label="showBudgetTable"/>
+    <design:attribute name="showWizardHeader" label="showWizardHeader"/>
+</design:component>

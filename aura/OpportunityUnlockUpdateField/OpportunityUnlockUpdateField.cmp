@@ -1,0 +1,161 @@
+<aura:component controller="OpportunityUnlockUpdateController" implements="flexipage:availableForRecordHome,force:hasRecordId"> <!--inherit recordId attribute-->
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="simpleRecord" type="Object" />
+    <aura:attribute name="recordError" type="String" />
+    <aura:attribute name="stageOptions" type="sObject[]"/>
+    <aura:attribute name="reasonOptions" type="sObject[]"/>
+    <aura:attribute name="disabledPicklist" type="Boolean" default="true"/>
+    <aura:attribute name="isLocked" type="Boolean" default="true"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    
+    
+    
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="large" aura:id="spinner"/>
+    </aura:if>
+    
+    <force:recordData aura:id="recordEditor"
+                      recordId="{!v.recordId}"
+                      targetError="{!v.recordError}"
+                      fields="StageName,ReasonForClosure__c,ReasonForClosureDetails__c,
+                              NetCurrentRentAdj__c,GrossCurrentRentAdj__c,SemiGrossCurrentRentAdj__c,
+                              ActualShopOpenedDate__c,ForecastedRentTerminationDate__c,PromotionalAllowance__c,
+                              ForecastOverride__c,ProposedRentCommencementDate__c,JDESentStatus__c,DealAchieved__c,
+                              CloseDate,ForecastRent__c,TotalASRForecastCapital__c,ForecastComments__c,ExistingTenantsExpectedVacateDate__c,
+                              VirtualVacancyStartDate__c,CurrentLeaseVirtualVacancy__c,VirtualVacancyEndDate__c,VirtualVacancyRent__c,
+                              ForecastRentCommencementDate__c, TradeFlag__c,PrimaryContact__c,DevelopmentType__c"
+                      targetRecord="{!v.record}"
+                      targetFields ="{!v.simpleRecord}"
+                      mode="EDIT"/>
+    <!--<aura:if isTrue="{!!v.simpleRecord.DealAchieved__c}">
+        <c:OpportunityKeyDates aura:id="keydatesComponent" recordId="{!v.recordId}" displaybuttons="false"/>
+    </aura:if>-->
+    
+    <lightning:recordEditForm aura:id="recordEditorForm" recordId="{!v.recordId}" 
+                              objectApiName="Opportunity" 
+                              onsuccess="{! c.successSaving}"
+                              onerror="{! c.errorSaving}"
+                              onsubmit="{! c.onSubmit}">
+    
+        <lightning:messages />
+        <h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small">Forecasting Fields</span>
+        </h3>
+        <lightning:layout multipleRows="true" verticalAlign="start">
+            <lightning:inputField fieldName="StageName" aura:id="StageName" class="slds-hidden"/>
+            <!--<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="StageName"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="ReasonForClosure__c"/>
+            </lightning:layoutItem>-->
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="ForecastRentCommencementDate__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <aura:if isTrue="{!v.simpleRecord.DealAchieved__c == False}">
+                    <lightning:inputField fieldName="ProposedShopOpeningDate__c"/>
+                </aura:if>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="ActualShopOpenedDate__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="ForecastedRentTerminationDate__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem alignmentBump="top" flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="TradeFlag__c"/>
+            </lightning:layoutItem>
+            <!-- <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                    <lightning:inputField fieldName="ProposedRentCommencementDate__c"/>
+            </lightning:layoutItem> -->            
+            <aura:if isTrue="{!!v.simpleRecord.DealAchieved__c}">
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                    <lightning:inputField fieldName="ForecastRent__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                    <lightning:inputField fieldName="TotalASRForecastCapital__c"/>
+                </lightning:layoutItem>
+            </aura:if>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="CloseDate"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="ForecastOverride__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="ForecastComments__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="PromotionalAllowance__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="GrossCurrentRentAdj__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="NetCurrentRentAdj__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="SemiGrossCurrentRentAdj__c"/>
+            </lightning:layoutItem>
+            
+            <!--changes for 10549 start-->
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="DevelopmentType__c"/>
+            </lightning:layoutItem>
+                       
+            <!--changes for 10549 end-->
+        
+            <!-- <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="ForecastRentCommencementDate__c"/>
+            </lightning:layoutItem> -->
+        </lightning:layout>
+        <h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small">Virtual Vacancy</span>
+        </h3>
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="ExistingTenantsExpectedVacateDate__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="VirtualVacancyStartDate__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="CurrentLeaseVirtualVacancy__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="VirtualVacancyEndDate__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="VirtualVacancyRent__c"/>
+            </lightning:layoutItem>
+            
+        </lightning:layout>
+        <!--changes for 10549 start-->
+        <h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small">Contact Details</span>
+        </h3>
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <lightning:inputField fieldName="PrimaryContact__c"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <!--changes for 10549 end-->
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <div style="padding-top: 21px; text-align: right">
+                    <lightning:button variant="brand" type="submit" label="Save"/>
+                </div>
+            </lightning:layoutItem>
+        </lightning:layout>
+        </lightning:recordEditForm>
+    <!--</lightning:recordEditForm>-->
+    
+    <!-- Display Lightning Data Service errors, if any -->
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            {!v.recordError}</div>
+    </aura:if>
+</aura:component>

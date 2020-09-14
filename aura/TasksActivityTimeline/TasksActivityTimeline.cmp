@@ -1,0 +1,111 @@
+<aura:component controller="TasksActivityTimelineController" implements="force:appHostable,force:lightningQuickActionWithoutHeader,force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute type="String" name="userAlias"/>
+    <aura:attribute name="tasksByStageList" type="Object" />
+    <aura:attribute name="adhocTasksList" type="Object" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <c:ToastMessage aura:id = "toast"/>
+    <div>
+        <div style="padding-bottom:10px">
+            <lightning:formattedText value="KEY MILESTONES AT THIS STAGE" />
+        </div>
+        <ul>
+            <aura:iteration items="{!v.tasksByStageList}" var="taskRec" >
+                <li>
+                    <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                        <span class="slds-assistive-text">task</span>
+                        <div class="slds-media">
+                            <div class="slds-media__figure">
+                                <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon" title="task" style="margin-left:25px">
+                                    <lightning:icon iconName="standard:task" size="small"/> 
+                                </div>
+                            </div>
+                            <div class="slds-media__body">
+                                <div class="slds-grid slds-grid_align-spread slds-timeline__trigger">
+                                    <div class="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space">
+                                        <span class="slds-checkbox">
+                                            <lightning:input checked="{! (taskRec.Status == 'Completed') ? TRUE : FALSE}" type="checkbox" name="{!taskRec.Id}" onclick="{!c.toggleCheckBox}"/>
+                                        </span>
+                                        <h3 class="slds-truncate" title="{!taskRec.Subject}">
+                                            <p class="slds-truncate"><a href="{! '/' + taskRec.Id}">{!taskRec.Subject}</a></p>
+                                        </h3>
+                                    </div>
+                                    <div class="slds-timeline__actions slds-timeline__actions_inline">
+                                        <p style="padding-right:5px"><lightning:formattedDateTime value="{!taskRec.ActivityDate}"/></p>
+                                        <lightning:buttonMenu menuAlignment="right" iconName="utility:down" iconSize="small" name="{!taskRec.Id}" variant="border-filled" alternativeText="View More" onselect="{!c.toggleButton}">
+                                            <lightning:menuItem label="Edit" value="edit"/>
+                                            <!--<lightning:menuItem label="Delete" value="delete"/>-->
+                                        </lightning:buttonMenu>
+                                    </div>
+                                </div>
+                                <aura:if isTrue="{! taskRec.WhoCount == 0 }">
+                                    <p class="slds-truncate">{!taskRec.Owner.Name} has an upcoming Task</p>
+                                    <aura:set attribute="else">
+                                        <aura:if isTrue="{! taskRec.WhoCount > 1}">
+                                            <p class="slds-truncate">{!taskRec.Owner.Name} has an upcoming Task with <a href="{! '/' + taskRec.WhoId}">{!taskRec.Who.Name}</a> + {!taskRec.WhoCount - 1}</p>
+                                            <aura:set attribute="else">
+                                                <p class="slds-truncate">{!taskRec.Owner.Name} has an upcoming Task with <a href="{! '/' + taskRec.WhoId}">{!taskRec.Who.Name}</a></p>
+                                            </aura:set>
+                                        </aura:if>
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </aura:iteration>
+        </ul>
+    </div>
+    <div>
+        <div style="padding-top:10px;padding-bottom:10px">
+            <lightning:formattedText value="OTHER OPEN ACTIVITIES" />
+        </div>
+        <ul>
+            <aura:iteration items="{!v.adhocTasksList}" var="taskRec" >
+                <li>
+                    <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                        <span class="slds-assistive-text">task</span>
+                        <div class="slds-media">
+                            <div class="slds-media__figure">
+                                <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon" title="task" style="margin-left:25px">
+                                    <lightning:icon iconName="standard:task" size="small"/> 
+                                </div>
+                            </div>
+                            <div class="slds-media__body">
+                                <div class="slds-grid slds-grid_align-spread slds-timeline__trigger">
+                                    <div class="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space">
+                                        <span class="slds-checkbox">
+                                            <lightning:input checked="{! (taskRec.Status == 'Completed') ? TRUE : FALSE}" type="checkbox" name="{!taskRec.Id}" onclick="{!c.toggleCheckBox}"/>
+                                        </span>
+                                        <h3 class="slds-truncate">
+                                            <p class="slds-truncate"><a href="{! '/' + taskRec.Id}">{!taskRec.Subject}</a></p>
+                                        </h3>
+                                    </div>
+                                    <div class="slds-timeline__actions slds-timeline__actions_inline">
+                                        <p style="padding-right:5px"><lightning:formattedDateTime value="{!taskRec.ActivityDate}"/></p>
+                                        <lightning:buttonMenu menuAlignment="right" iconName="utility:down" iconSize="small" name="{!taskRec.Id}" variant="border-filled" alternativeText="View More" onselect="{!c.toggleButton}">
+                                            <lightning:menuItem label="Edit" value="edit"/>
+                                            <!--<lightning:menuItem label="Delete" value="delete"/>-->
+                                        </lightning:buttonMenu>
+                                    </div>
+                                </div>
+                                <aura:if isTrue="{! taskRec.WhoCount == 0 }">
+                                    <p class="slds-truncate">{!taskRec.Owner.Name} has an upcoming Task</p>
+                                    <aura:set attribute="else">
+                                        <aura:if isTrue="{! taskRec.WhoCount > 1}">
+                                            <p class="slds-truncate">{!taskRec.Owner.Name} has an upcoming Task with <a href="{! '/' + taskRec.WhoId}">{!taskRec.Who.Name}</a> + {!taskRec.WhoCount - 1}</p>
+                                            <aura:set attribute="else">
+                                                <p class="slds-truncate">{!taskRec.Owner.Name} has an upcoming Task with <a href="{! '/' + taskRec.WhoId}">{!taskRec.Who.Name}</a></p>
+                                            </aura:set>
+                                        </aura:if>
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </aura:iteration>
+        </ul>
+    </div>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+</aura:component>

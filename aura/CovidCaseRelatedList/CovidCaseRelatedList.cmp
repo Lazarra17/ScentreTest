@@ -1,0 +1,188 @@
+<aura:component controller="CovidCaseRelatedListController" implements="lightning:actionOverride,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:appHostable"> <!--inherit recordId attribute-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="showNotes" type="Boolean" default="false"/>
+    <aura:attribute name="hasNotes" type="Boolean" default="false"/>
+    <aura:attribute name="showFiles" type="Boolean" default="false"/>
+    <aura:attribute name="hasFiles" type="Boolean" default="false"/>
+    <aura:attribute name="showError" type="Boolean" default="false"/>
+    <aura:attribute name="showErrorInFiles" type="Boolean" default="false"/>
+    <aura:attribute name="showErrorInNotes" type="Boolean" default="false"/>
+    <aura:attribute name="isModalOpen" type="boolean" default="false"/>
+    <aura:attribute name="recordError" type="String"/>
+    <aura:attribute name="filesError" type="String"/>
+    <aura:attribute name="notesError" type="String"/>
+    <aura:attribute name="FilesRelatedList" type="List" />
+    <aura:attribute name="NotesRelatedList" type="List" />
+    <aura:attribute name="totalFiles" type="Integer" />
+    <aura:attribute name="totalNotes" type="Integer" />
+    
+    <aura:attribute name="note" type="ContentNote" default="{'sobjectType': 'ContentNote','Title': '','Content': ''}"/>
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="medium" aura:id="spinner"/>
+    </aura:if>
+    
+    <c:Toast />
+    
+    <aura:if isTrue="{!v.showFiles}">
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid slds-has-bottom-magnet slds-border_top slds-border_bottom slds-border_left slds-border_right" style="background-color: #F3F2F2; padding-bottom: 10px; padding-top: 10px;">
+                <header class="slds-media slds-media--center slds-has-flexi-truncate" style="padding: 4px 16px;">
+                    <div class="slds-media__figure">
+                        <lightning:icon iconName="standard:file" size="small"></lightning:icon>                 
+                    </div>
+                    <div class="slds-media__body slds-truncate">
+                        <h2 class="slds-card__header-title">
+                            <a class="slds-card__header-link slds-truncate" onclick="{!c.viewAllFiles}">
+                                <span>Files <aura:if isTrue="{!v.totalFiles > 3}">
+                                    (3+)
+                                    <aura:set attribute="else">
+                                        ({!v.totalFiles})
+                                    </aura:set>
+                                    </aura:if>
+                                </span>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="slds-no-flex">
+                        <lightning:buttonMenu iconSize="x-small" onselect="{!c.addFiles}" variant="border-filled">
+                            <lightning:menuItem value="AddFile" label="Add Files" class="slds-align_absolute-center"/>
+                        </lightning:buttonMenu>
+                    </div>
+                </header>
+            </div>
+            
+            <div class="slds-card__body slds-has-bottom-magnet slds-has-top-magnet slds-border_left slds-border_right slds-border_bottom">
+                <aura:if isTrue="{!v.hasFiles}">
+                    <aura:iteration items="{!v.FilesRelatedList}" var="file">
+                        <div class="slds-var-p-horizontal_medium slds-var-p-vertical_xx-small slds-grid" style="background-color: #ffffff; padding: 4px 16px;">
+                            <div class="slds-float_left slds-align-middle">
+                                <lightning:icon iconName="standard:document" alternativeText="File"></lightning:icon>&nbsp;&nbsp;
+                            </div>
+                            <div class="slds-float_left slds-align-middle">
+                                <p><a href="{!'/lightning/r/ContentDocument/' + file.Id + '/view' }" class="slds-text-body--small slds-truncate">{!file.Title}</a></p>
+                                <p class="slds-text-body--small slds-truncate"><span><lightning:formattedDateTime value="{!file.CreatedDate}"/></span></p>
+                            </div>
+                        </div>
+                    </aura:iteration>
+                </aura:if>
+                <!--<aura:if isTrue="{!not(v.hasFiles)}">-->
+                    <div class="slds-align_absolute-center" style="padding-bottom: 18px;">
+                        <lightning:fileUpload multiple="true" 
+                                              recordId="{!v.recordId}" 
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </div>
+                <!--</aura:if>-->
+                <aura:if isTrue="{!v.showErrorInFiles}">
+                    <div class="slds-align_absolute-center">
+                        {!v.filesError}
+                    </div>
+                </aura:if>
+            </div>
+            <div class="slds-card__footer slds-align_absolute-center slds-border_top slds-border_bottom slds-border_left slds-border_right slds-has-top-magnet">
+                <aura:if isTrue="{!v.hasFiles}">
+                    <a class="slds-card__footer-action" onclick="{!c.viewAllFiles}">View All 
+                        <span class="slds-assistive-text">file</span>
+                    </a>
+                </aura:if>
+            </div>
+        </article>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.showNotes}"> 
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid slds-has-bottom-magnet slds-border_top slds-border_bottom slds-border_left slds-border_right" style="background: #F3F2F2; padding-bottom: 10px; padding-top: 10px;">
+                <header class="slds-media slds-media--center slds-has-flexi-truncate" style="padding: 4px 16px;">
+                    <div class="slds-media__figure">
+                        <lightning:icon iconName="standard:note" size="small"></lightning:icon>
+                    </div>
+                    <div class="slds-media__body slds-truncate">
+                        <h2 class="slds-card__header-title">
+                            <a class="slds-card__header-link slds-truncate" onclick="{!c.viewAllNotes}">
+                                <span>Notes <aura:if isTrue="{!v.totalNotes > 3}">
+                                    (3+)
+                                    <aura:set attribute="else">
+                                        ({!v.totalNotes})
+                                    </aura:set>
+                                    </aura:if>
+                                </span>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="slds-no-flex">
+                        <lightning:buttonMenu iconSize="x-small" onselect="{!c.addNotes}" variant="border-filled">
+                            <lightning:menuItem value="AddNote" label="New" class="slds-align_absolute-center"/>
+                        </lightning:buttonMenu>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-has-bottom-magnet slds-has-top-magnet slds-border_left slds-border_right">
+                <aura:if isTrue="{!v.hasNotes}">
+                    <aura:iteration items="{!v.NotesRelatedList}" var="note">
+                        <div class="slds-var-p-horizontal_medium slds-var-p-vertical_xx-small slds-grid" style="background-color: #ffffff; padding: 4px 16px;">
+                            <div class="slds-float_left slds-align-middle">
+                                <p><a href="{!'/lightning/r/ContentNote/' + note.Id + '/view' }" class="slds-text-body--small slds-truncate">{!note.Title}</a></p>
+                                <p class="slds-text-body--small slds-truncate"><span><lightning:formattedDateTime value="{!note.CreatedDate}"/></span></p>
+                            </div>
+                        </div>
+                    </aura:iteration>
+                </aura:if>
+                <aura:if isTrue="{!v.showErrorInNotes}">
+                    <div class="slds-align_absolute-center">
+                        {!v.notesError}
+                    </div>
+                </aura:if>
+            </div>
+            <div class="slds-card__footer slds-align_absolute-center slds-border_top slds-border_bottom slds-border_left slds-border_right slds-has-top-magnet">
+                <aura:if isTrue="{!v.hasNotes}">
+                    <a class="slds-card__footer-action" onclick="{!c.viewAllNotes}">View All 
+                        <span class="slds-assistive-text">note</span>
+                    </a>
+                </aura:if>
+            </div>
+        </article>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.showError}">
+        <div class="slds-card slds-align_absolute-center slds-border_top slds-border_bottom slds-border_left slds-border_right">
+            {!v.recordError}
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.isModalOpen}">
+        
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box Header Starts here-->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModal }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">New Note</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <b>Title:</b><br/>
+                    <lightning:input class="form-control" value="{!v.note.Title}"/><br/>
+                    <b>Content:</b><br/>
+                    <lightning:inputRichText value="{!v.note.Content}" placeholder="Type here..."/><br/>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral"
+                                      label="Cancel"
+                                      title="Cancel"
+                                      onclick="{! c.closeModal }"/>
+                    <lightning:button variant="brand"
+                                      label="Save"
+                                      title="Save"
+                                      onclick="{!c.saveNote}"/>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    
+</aura:component>

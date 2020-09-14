@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CategoryAmount__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Category Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CategoryPecentage__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Category Pecentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MaxPromotionFund__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Max Promotion Fund</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MaxRequired__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Max Required</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MinRequired__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Min Required</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MinimumPromotionFund__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Minimum Promotion Fund</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RentCategory__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Rent Category</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RentRangeMax__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Rent Range Max</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RentRangeMin__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Rent Range Min</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Gross</fullName>
+                    <default>true</default>
+                    <label>Gross</label>
+                </value>
+                <value>
+                    <fullName>Semi Gross</fullName>
+                    <default>false</default>
+                    <label>Semi Gross</label>
+                </value>
+                <value>
+                    <fullName>Net</fullName>
+                    <default>false</default>
+                    <label>Net</label>
+                </value>
+                <value>
+                    <fullName>Albany</fullName>
+                    <default>false</default>
+                    <label>Albany</label>
+                </value>
+                <value>
+                    <fullName>Manukau</fullName>
+                    <default>false</default>
+                    <label>Manukau</label>
+                </value>
+                <value>
+                    <fullName>St. Lukes</fullName>
+                    <default>false</default>
+                    <label>St. Lukes</label>
+                </value>
+                <value>
+                    <fullName>Riccarton</fullName>
+                    <default>false</default>
+                    <label>Riccarton</label>
+                </value>
+                <value>
+                    <fullName>Newmarket</fullName>
+                    <default>false</default>
+                    <label>Newmarket</label>
+                </value>
+                <value>
+                    <fullName>St Lukes</fullName>
+                    <default>false</default>
+                    <label>St Lukes</label>
+                </value>
+                <value>
+                    <fullName>New market</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>New market</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Promotion Fund</label>
+    <pluralLabel>Promotion Funds</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,110 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global">
+    <aura:attribute type="Boolean" name="isLoading" default="false"/>
+    <aura:attribute type="Object" name="accountRecord" />
+    <aura:attribute type="Object" name="accountRecordField" />
+    <aura:attribute type="String" name="accountError" />
+    <aura:attribute type="String" name="accGroupLevelRecTypeId" default="{!$Label.c.Account_GroupLevelId}" />
+    <!--TOAST-->
+    <c:ToastMessage aura:id = "toast-account"/>
+    <!--SPINNER-->
+    <aura:if isTrue="{! v.isLoading}">
+        <lightning:spinner variant="brand" size="medium" aura:id="spinner"/>
+    </aura:if>
+    <!--HEADER-->
+    <div class="slds-col modal-footer" style="border-bottom-right-radius: .25rem; padding: .75rem 1rem;text-align: right">        
+        <div id = "header" class = "slds-border_bottom">
+            <div class="slds-text-heading_large slds-text-align_center">Add a Parent Account</div>
+        </div>
+    </div>
+    <!--CHILD ACCOUNT DATA SERVICE-->
+    <force:recordData aura:id="childAccountRecord"
+                      recordId="{! v.recordId}"
+                      targetRecord="{! v.accountRecord}"
+                      targetFields="{! v.accountRecordField}"
+                      layoutType="COMPACT"
+                      fields="ABNNZBN__c, Name, ACN__c, TradingName__c, 
+                              LesseeName__c, Type, Category__c, SuperfineCategory__c, 
+                              Cluster__c, BillingStreet, BillingCity, 
+                              BillingCountry, BillingPostalCode, BillingState, 
+                              ShippingStreet, ShippingCity,ShippingCountry, 
+                              ShippingPostalCode, ShippingState, ParentId"
+                      mode="EDIT"/>
+    <!--PARENT ACCOUNT FORM-->
+    <lightning:recordEditForm objectApiName="Account"
+                              recordTypeId="{! v.accGroupLevelRecTypeId}"
+                              onload="{! c.onLoad}"
+                              onsuccess="{! c.onSuccess}"
+                              onerror="{! c.onError}"
+                              onsubmit="{! c.onSubmit}">
+        <lightning:messages />
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountNameField" fieldName="Name"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountABN" fieldName="ABNNZBN__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountACN" fieldName="ACN__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountTradingName" fieldName="TradingName__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountLesseeName" fieldName="LesseeName__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountType" fieldName="Type"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountCategory" fieldName="Category__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountSuperfineCategory" fieldName="SuperfineCategory__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountCluster" fieldName="Cluster__c"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountBillingCountry" fieldName="BillingCountry"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountBillingStreet" fieldName="BillingStreet"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountBillingCity" fieldName="BillingCity"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountBillingState" fieldName="BillingState"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountBillingPostalCode" fieldName="BillingPostalCode"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountShippingCountry" fieldName="ShippingCountry"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountShippingStreet" fieldName="ShippingStreet"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountShippingCity" fieldName="ShippingCity"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountShippingState" fieldName="ShippingState"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:inputField aura:id="accountShippingPostalCode" fieldName="ShippingPostalCode"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem class="button-group" flexibility="auto" padding="around-small" size="12" largeDeviceSize="12" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:buttonGroup>
+                    <lightning:button onclick="{! c.closeModal}" label="Cancel"/>
+                    <aura:if isTrue="{! v.accountRecordField.ParentId == null || v.accountRecordField.ParentId == ''}">
+                        <lightning:button type="submit" label="Save"/>
+                    </aura:if>
+                </lightning:buttonGroup>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:recordEditForm>
+</aura:component>

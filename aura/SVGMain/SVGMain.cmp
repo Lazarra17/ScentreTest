@@ -1,0 +1,64 @@
+<aura:component controller="PropertyMapsController" implements="flexipage:availableForRecordHome,force:lightningQuickAction,force:hasRecordId">
+	<aura:handler name="spaceDetails" event="c:SpaceDetails"
+    action="{!c.spaceDetails}"/>    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="vfHost" type="String"
+            default="{!$Label.c.VFURL}"/>
+    <aura:attribute name="levelButtons" type="String[]"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="imageLocation" type="String"/>
+    <aura:attribute name="spaceId" type="String"/>
+    <aura:attribute name="level" type="String"/>
+    <aura:attribute name="spaceData" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <lightning:card title="Property with levels" iconName="standard:account">
+        <aura:if isTrue="{!v.imageLocation}">
+            <aura:iteration items="{!v.levelButtons}" var="item" indexVar="index">
+                <button class="{!v.level == item.Floor__c ? 'button-margin slds-button slds-button_brand' : 'button-margin slds-button slds-button_neutral'}" type="button" onclick="{!c.handleClick}" id="{!item.Floor__c}">{!item.Name}</button>
+            </aura:iteration>
+            <a href="{!v.imageLocation}" class="slds-button slds-button_brand float-right" target="_blank">Print</a>
+            <!-- <c:SVGIframe imageLocation="{!v.imageLocation}"/> -->
+            <div class="acn-svg-map-container-outer">
+                <iframe aura:id="vfFrame" src="{!'https://' + v.vfHost + '/apex/SVGLoadImageD3?image=' + v.imageLocation}" width="100%" height="655px"/>
+                <!-- <iframe aura:id="vfFrame" src="{! '/resource/SvgZoomApp/SvgZoomApp/index.html?image=' + v.imageLocation}" width="100%" height="525px" /> -->
+            </div>
+        </aura:if>
+        <div>
+            <lightning:datatable
+                    keyField="id"
+                    data="{! v.spaceData }"
+                    columns="{! v.columns }"
+                    hideCheckboxColumn="true"
+                    onrowaction="{! c.handleRowAction }"/>
+            <!--<table>
+              <caption>Space Summary</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Shop NO</th>
+                  <th scope="col">Current Retailer</th>
+                  <th scope="col">Current Rent</th>
+                  <th scope="col">Rentable Area</th>
+                  <th scope="col">Usable Area</th>
+                  <th scope="col">Propidex Link</th>
+                  <th scope="col">Risk</th>
+                  <th scope="col">Find</th>
+                </tr>
+              </thead>
+              <tbody>
+                <aura:iteration var="item" items="{!v.spaceData}" indexVar="indx">
+                    <tr>
+                        <td data-label="Shop NO"><a href="{!item.spaceLink}">{!item.Name}</a></td>
+                      <td data-label="Current Retailer"><a href="{!item.accountLink}">{!item.accountName}</a></td>
+                      <td data-label="Current Rent">{!item.CurrentRent__c}</td>
+                      <td data-label="Rentable Area">{!item.rentableArea}</td>
+                      <td data-label="Usable Area">{!item.usableArea}</td>
+                      <td data-label="Propidex Link"><a href="{!item.propidexLink}">{!item.propidexLinkName}</a></td>
+                      <td data-label="Risk">{!item.CurrentLeaseRiskApplied__c}</td>
+                      <td data-label="Find">Visa - 3412</td>
+                    </tr>
+                </aura:iteration>
+              </tbody>
+            </table>-->
+        </div>
+    </lightning:card>
+</aura:component>

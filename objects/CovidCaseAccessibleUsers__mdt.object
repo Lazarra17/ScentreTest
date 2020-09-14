@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Assessment_of_Request_Section__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Assessment of Request Section</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Files_Related_List__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Files Related List</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Information_On_request__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Information On request</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Notes_Related_List__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Notes Related List</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Retail_Assistance_Assessment_Section__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Retail Assistance Assessment Section</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Covid Case Accessible Users</label>
+    <listViews>
+        <fullName>All_Info</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>Assessment_of_Request_Section__c</columns>
+        <columns>Information_On_request__c</columns>
+        <columns>Retail_Assistance_Assessment_Section__c</columns>
+        <columns>Files_Related_List__c</columns>
+        <columns>Notes_Related_List__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Info</label>
+    </listViews>
+    <pluralLabel>CovidCaseAccessibleUsers</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

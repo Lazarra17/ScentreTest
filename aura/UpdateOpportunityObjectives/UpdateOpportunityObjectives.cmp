@@ -1,0 +1,23 @@
+<aura:component controller="UpdateOpportunityObjectivesController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="opportunityFields" type="List" default="['BackgroundIssue__c','BestBet__c','Financials__c','OptionsRecommendations__c']"/>
+    <aura:attribute name="isLocked" type="Boolean" />
+    
+     <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="large" aura:id="spinner"/>
+    </aura:if>
+    
+    <lightning:recordForm
+                         aura:id="recordForm"
+                         recordId="{!v.recordId}"
+                         objectApiName="Opportunity"
+                         fields="{!v.opportunityFields}"
+                         mode="view"
+                         columns="2"
+                         onsubmit="{!c.handleSubmit}"
+                         onsuccess="{!c.handleSuccess}"
+                         onerror="{!c.handleError}"
+                         />
+
+</aura:component>

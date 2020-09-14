@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CPI</fullName>
+        <default>false</default>
+        <label>CPI</label>
+    </customValue>
+    <customValue>
+        <fullName>CPI+1.0</fullName>
+        <default>false</default>
+        <label>CPI+1.0</label>
+    </customValue>
+    <customValue>
+        <fullName>CPI+1.5</fullName>
+        <default>false</default>
+        <label>CPI+1.5</label>
+    </customValue>
+    <customValue>
+        <fullName>CPI+2.0</fullName>
+        <default>false</default>
+        <label>CPI+2.0</label>
+    </customValue>
+    <customValue>
+        <fullName>CPI+2.5</fullName>
+        <default>false</default>
+        <label>CPI+2.5</label>
+    </customValue>
+    <customValue>
+        <fullName>CPI+3.0</fullName>
+        <default>false</default>
+        <label>CPI+3.0</label>
+    </customValue>
+    <customValue>
+        <fullName>CPI+3.5</fullName>
+        <default>false</default>
+        <label>CPI+3.5</label>
+    </customValue>
+    <customValue>
+        <fullName>NZ CPI</fullName>
+        <default>false</default>
+        <label>NZ CPI</label>
+    </customValue>
+    <customValue>
+        <fullName>NZ CPI+2.0</fullName>
+        <default>false</default>
+        <label>NZ CPI+2.0</label>
+    </customValue>
+    <customValue>
+        <fullName>NZ CPI+2.5</fullName>
+        <default>false</default>
+        <label>NZ CPI+2.5</label>
+    </customValue>
+    <customValue>
+        <fullName>NZ CPI+3.0</fullName>
+        <default>false</default>
+        <label>NZ CPI+3.0</label>
+    </customValue>
+    <customValue>
+        <fullName>NZ CPI+3.5</fullName>
+        <default>false</default>
+        <label>NZ CPI+3.5</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed 3.5%</fullName>
+        <default>false</default>
+        <label>Fixed 3.5%</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed 4.0%</fullName>
+        <default>false</default>
+        <label>Fixed 4.0%</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed 4.5%</fullName>
+        <default>false</default>
+        <label>Fixed 4.5%</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed 5.0%</fullName>
+        <default>false</default>
+        <label>Fixed 5.0%</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-standard</fullName>
+        <default>false</default>
+        <label>Non-standard</label>
+    </customValue>
+    <customValue>
+        <fullName>NZ CPI+2.2</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NZ CPI+2.2</label>
+    </customValue>
+    <customValue>
+        <fullName>NZ CPI+2 w/review</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NZ CPI+2 w/review</label>
+    </customValue>
+    <customValue>
+        <fullName>NZ CPI+2</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NZ CPI+2</label>
+    </customValue>
+    <customValue>
+        <fullName>NZ CPI+1.5</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NZ CPI+1.5</label>
+    </customValue>
+    <customValue>
+        <fullName>Long Term Standard (excl Vic)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Long Term Standard (excl Vic)</label>
+    </customValue>
+    <customValue>
+        <fullName>NZ CPI+3</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NZ CPI+3</label>
+    </customValue>
+    <customValue>
+        <fullName>Qld Standard</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Qld Standard</label>
+    </customValue>
+    <customValue>
+        <fullName>Vic Standard</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Vic Standard</label>
+    </customValue>
+    <customValue>
+        <fullName>Vic Standard Post Sept 2003</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Vic Standard Post Sept 2003</label>
+    </customValue>
+    <customValue>
+        <fullName>Vic Standard Post Sept 2005</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Vic Standard Post Sept 2005</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed 5%</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fixed 5%</label>
+    </customValue>
+    <customValue>
+        <fullName>Vic Standard Post Sept 2004</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Vic Standard Post Sept 2004</label>
+    </customValue>
+    <description>Standard Review Types</description>
+    <masterLabel>Standard Review Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

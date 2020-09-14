@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction">
+	<aura:attribute type = "String" name ="recordId"/>
+    <c:RentCalculator recordId="{! v.recordId}"/>
+    <c:RentReview recordId="{! v.recordId}"/>
+</aura:component>

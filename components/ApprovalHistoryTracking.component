@@ -1,0 +1,15 @@
+<apex:component controller="ApproveStatusController" access="global">
+    <apex:attribute name="Oppid" type="Id" assignTo="{!OppObj}" description="This is the Id of the Opportunity" access="global" />
+    <table>
+        <apex:repeat value="{!aTracking}" var="att">
+            <tr>
+                <td>{!att.label}</td>
+                <td style="{!IF((att.isChanged), 'color: red', '')}"><apex:outputText value="{!att.newValue}" escape="false"/></td>
+            </tr>
+        </apex:repeat>
+        <tr>
+            <td>Usage Clause</td>
+            <td style="{!IF((usageClause.isChanged), 'color: red', '')}">{!usageClause.clauseDetails}</td>
+        </tr>
+    </table>
+</apex:component>

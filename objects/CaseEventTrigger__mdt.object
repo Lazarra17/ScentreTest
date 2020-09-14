@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CaseStatus__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Case Status</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>true</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Ready</fullName>
+                    <default>false</default>
+                    <label>Ready</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CaseType__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Case Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CAS_InspectionReport</fullName>
+                    <default>false</default>
+                    <label>CAS_InspectionReport</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVIIssueCreditNote</fullName>
+                    <default>false</default>
+                    <label>CAS_LVIIssueCreditNote</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVIRequestForRefund</fullName>
+                    <default>false</default>
+                    <label>CAS_LVIRequestForRefund</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVIVariancetoRentCommencementDate</fullName>
+                    <default>false</default>
+                    <label>CAS_LVIVariancetoRentCommencementDate</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVIVoluntaryWorkApproval</fullName>
+                    <default>false</default>
+                    <label>CAS_LVIVoluntaryWorkApproval</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVIAssignmentofaLease</fullName>
+                    <default>false</default>
+                    <label>CAS_LVIAssignmentofaLease</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVIConductMarketReview</fullName>
+                    <default>false</default>
+                    <label>CAS_LVIConductMarketReview</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVILeaseAreaVariation</fullName>
+                    <default>false</default>
+                    <label>CAS_LVILeaseAreaVariation</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVIManageBankGuarantee</fullName>
+                    <default>false</default>
+                    <label>CAS_LVIManageBankGuarantee</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVIMerchantOrPromotionalAllowance</fullName>
+                    <default>false</default>
+                    <label>CAS_LVIMerchantOrPromotionalAllowance</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVIRetailAdminLeaseVariations</fullName>
+                    <default>false</default>
+                    <label>CAS_LVIRetailAdminLeaseVariations</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVISurrenderaLease</fullName>
+                    <default>false</default>
+                    <label>CAS_LVISurrenderaLease</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVITerminateaLease</fullName>
+                    <default>false</default>
+                    <label>CAS_LVITerminateaLease</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVITradingNameChange</fullName>
+                    <default>false</default>
+                    <label>CAS_LVITradingNameChange</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVIVariationofSpecialty_Leases</fullName>
+                    <default>false</default>
+                    <label>CAS_LVIVariationofSpecialty_Leases</label>
+                </value>
+                <value>
+                    <fullName>CAS_RetailDesignBilling</fullName>
+                    <default>false</default>
+                    <label>CAS_RetailDesignBilling</label>
+                </value>
+                <value>
+                    <fullName>CAS_RetailDesignInstruction</fullName>
+                    <default>false</default>
+                    <label>CAS_RetailDesignInstruction</label>
+                </value>
+                <value>
+                    <fullName>CAS_StatementofCompletion</fullName>
+                    <default>false</default>
+                    <label>CAS_StatementofCompletion</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVICentreTeam</fullName>
+                    <default>false</default>
+                    <label>CAS_LVICentreTeam</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVIMiscellaneous</fullName>
+                    <default>false</default>
+                    <label>CAS_LVIMiscellaneous</label>
+                </value>
+                <value>
+                    <fullName>CAS_LVILeasingFinance</fullName>
+                    <default>false</default>
+                    <label>CAS_LVILeasingFinance</label>
+                </value>
+                <value>
+                    <fullName>CAS_AncillaryTaxInvoiceRequest</fullName>
+                    <default>false</default>
+                    <label>CAS_AncillaryTaxInvoiceRequest</label>
+                </value>
+                <value>
+                    <fullName>Inspection Report</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Inspection Report</label>
+                </value>
+                <value>
+                    <fullName>LVI - Assignment of a Lease</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Assignment of a Lease</label>
+                </value>
+                <value>
+                    <fullName>LVI - Conduct Market Review</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Conduct Market Review</label>
+                </value>
+                <value>
+                    <fullName>LVI - Issue Credit Note</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Issue Credit Note</label>
+                </value>
+                <value>
+                    <fullName>LVI - Lease Area Variation</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Lease Area Variation</label>
+                </value>
+                <value>
+                    <fullName>LVI - Manage Bank Guarantee</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Manage Bank Guarantee</label>
+                </value>
+                <value>
+                    <fullName>LVI - Merchant Or Promotional Allowance</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Merchant Or Promotional Allowance</label>
+                </value>
+                <value>
+                    <fullName>LVI - Request For Refund</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Request For Refund</label>
+                </value>
+                <value>
+                    <fullName>LVI - Retail Admin Lease Variations</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Retail Admin Lease Variations</label>
+                </value>
+                <value>
+                    <fullName>LVI - Surrender a Lease</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Surrender a Lease</label>
+                </value>
+                <value>
+                    <fullName>LVI - Terminate a Lease</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Terminate a Lease</label>
+                </value>
+                <value>
+                    <fullName>LVI - Trading Name Change</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Trading Name Change</label>
+                </value>
+                <value>
+                    <fullName>LVI - Variance to Rent Commencement Date</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Variance to Rent Commencement Date</label>
+                </value>
+                <value>
+                    <fullName>LVI - Variation of Specialty Leases</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Variation of Specialty Leases</label>
+                </value>
+                <value>
+                    <fullName>LVI - Voluntary Work Approval</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>LVI - Voluntary Work Approval</label>
+                </value>
+                <value>
+                    <fullName>Retail Design Billing</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Retail Design Billing</label>
+                </value>
+                <value>
+                    <fullName>Retail Design Instruction</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Retail Design Instruction</label>
+                </value>
+                <value>
+                    <fullName>Statement of Completion</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Statement of Completion</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Case Event Trigger</label>
+    <pluralLabel>Case Event Trigger</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

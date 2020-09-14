@@ -1,0 +1,35 @@
+<apex:page standardController="Opportunity" standardStylesheets="false" showHeader="false" sidebar="false" >
+<!-- Lightning Resources-->
+    <apex:includeLightning />
+    <!-- This loads the JavaScript file needed to use Lightning Components for Visualforce-->
+    <div id="dealshape"/>
+    <style>
+        <!-- needed the below to prevent re-rendering on touch in salesforce1 -->
+        html, body { 
+            height: 100%;
+            background-color: #fff !important;
+        }
+        <!-- prevents salesforce from adding a vertical scrollbar -->
+        html body.sfdcBody{
+            margin: 0;
+            padding: 0;     
+        }
+    </style>
+    <script>  
+    $Lightning.use("c:OpportunityWizardApp", function() {
+        $Lightning.createComponent("c:OpportunityWizard",
+            {
+               label: "",
+                recordId: "{!Opportunity.id}",
+                backButton: true
+            },
+            "dealshape",
+            function(cmp) { 
+                // do some stuff
+            });
+    });
+    </script>
+
+    <!-- Lightning Component -->
+
+</apex:page>

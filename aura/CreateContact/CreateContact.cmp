@@ -1,0 +1,74 @@
+<aura:component controller="CreateContactController" implements="flexipage:availableForRecordHome,lightning:availableForFlowScreens" description="My Lightning Component">
+    
+    <aura:attribute type = "String" name ="contactId"/>
+    <aura:attribute type = "String" name ="accountId"/>
+    <aura:attribute name="accountRecTypeId" type="String" />
+    <aura:attribute name="newAccount" type="Object"/>
+    <aura:attribute name="simpleNewAccount" type="Object"/>
+    <aura:attribute name="newAccountError" type="String"/>
+    <aura:attribute name="accountRecord" type="Object" />
+    
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+    
+    <!--RPP-9740 START -->
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    
+    <aura:attribute name="guarantorContact" type="object" access="public" />
+    <aura:attribute name="showNew" type="Boolean" default="false" />
+    
+    <aura:handler name="change" value="{!v.guarantorContact}" action="{!c.contactSelected}" />
+    <!--RPP-9740 END -->
+    
+    <force:recordData aura:id="accountRecordCreator" 
+                      layoutType="FULL"
+                      targetRecord="{!v.newAccount}"
+                      targetFields="{!v.simpleNewAccount}"
+                      targetError="{!v.newAccountError}" 
+                      fields="Tech_isDummyRecord__c"/>
+    
+    <!--RPP-9740 START -->
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="medium" aura:id="spinner"/>
+    </aura:if>
+    <aura:if isTrue="{!!v.showNew}">
+        <div>
+            <c:TypeAhead objectName = "Contact"
+                         lookupIcon = "standard:contact"
+                         field_API_text = "Name"
+                         field_API_val = "Id"
+                         field_API_search = "Name"
+                         placeholder = "Search for Guarantor"
+                         selItem = "{!v.guarantorContact}"
+                         allowToCreateNew = "true"
+                         />
+        </div>
+        <br/>
+    </aura:if>
+    <center>
+        <lightning:button aura:id="toggle" variant="brand" label="Create New Contact" onclick="{!c.toggleNew}" />
+        <aura:if isTrue="{!!v.showNew}">
+            <lightning:button variant="brand" label="Continue" onclick="{!c.continue}" />
+        </aura:if>
+    </center>
+    <!--RPP-9740 END -->
+    <aura:if isTrue="{!v.showNew}">
+        <lightning:recordEditForm aura:id="AccountRecordEditForm"
+                                  objectApiName="Account"
+                                  onsuccess="{!c.handleSuccessAccount}"
+                                  onload="{!c.handleOnLoad}">
+            <lightning:messages />
+        </lightning:recordEditForm>
+        <lightning:recordEditForm aura:id="ContactRecordEditForm" 
+                                  objectApiName="Contact" 
+                                  onsuccess="{!c.handleSuccess}"
+                                  onsubmit="{!c.handleOnSubmit}">
+            <lightning:messages />
+            <lightning:inputField fieldName="Name"/>
+            <lightning:inputField fieldName="MobilePhone"/>
+            <lightning:inputField fieldName="Phone"/>
+            <lightning:inputField fieldName="Email"/>
+            <lightning:inputField fieldName="MailingAddress" required="true"/>
+            <lightning:button class="slds-m-top_small" type="submit" label="Save" />
+        </lightning:recordEditForm>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,135 @@
+<apex:page showheader="false" sidebar="false">
+    <apex:includeScript value="{!$Resource.Jquery}"/>
+    <apex:includeScript value="{!$Resource.D3V3}"/>
+<style>
+  .button-wrapper{
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:100000;
+  }
+</style>
+    <body style="width:100%; height:500px">
+  <div class="button-wrapper">
+    
+    <button id="zoom_in" >Zoom In (+)</button>
+    <button id="zoom_out" >Zoom Out (-)</button>
+      </div>
+      <script>
+        window.$Label = window.$Label || {};
+        $Label.customLabel= '{!($Label.AppURL )}'; 
+        console.log('$Label.customLabel', $Label.customLabel);
+        var lexOrigin = $Label.customLabel;
+        window.addEventListener("message", function(event) {
+            if (event.origin !== lexOrigin) {
+                // Not the expected origin: reject message!
+                return;
+            }
+            // Handle message
+            console.log('vfdata', jq(event.data));
+            highLightId(event.data);
+        }, false);
+      
+        var width = 960,
+        height = 500;
+    
+      var zoom = d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", zoomed);
+    
+      var svg = null;
+    
+      d3.xml("{!$CurrentPage.parameters.image}","image/svg+xml", function(error, xml) {
+        if (error) {
+          console.log(error);
+          return;
+        }
+        var importedNode = document.importNode(xml.documentElement, true);
+    
+         svg = d3.select("body").append("svg")
+                 //.attr("width", width)
+                //.attr("height", height)
+                .attr("preserveAspectRatio", "xMinYMin meet")
+                .attr("viewBox", "0 0 1000 900")
+                .append("g")
+                  .call(zoom)
+                  .append("g")
+                  .each(function() {
+                    this.appendChild(xml.documentElement)
+                  });
+    
+          //onPathClick();
+          //highLightId('0100A');
+      });
+    
+    
+          function zoomed() {
+              svg.attr("transform",
+                  "translate(" + zoom.translate() + ")" +
+                  "scale(" + zoom.scale() + ")"
+              );
+          }
+    
+          function interpolateZoom (translate, scale) {
+              var self = this;
+              return d3.transition().duration(350).tween("zoom", function () {
+                  var iTranslate = d3.interpolate(zoom.translate(), translate),
+                      iScale = d3.interpolate(zoom.scale(), scale);
+                  return function (t) {
+                      zoom
+                          .scale(iScale(t))
+                          .translate(iTranslate(t));
+                      zoomed();
+                  };
+              });
+          }
+    
+          function zoomClick() {
+              var clicked = d3.event.target,
+                  direction = 1,
+                  factor = 0.2,
+                  target_zoom = 1,
+                  center = [width / 2, height / 2],
+                  extent = zoom.scaleExtent(),
+                  translate = zoom.translate(),
+                  translate0 = [],
+                  l = [],
+                  view = {x: translate[0], y: translate[1], k: zoom.scale()};
+    
+              d3.event.preventDefault();
+              direction = (this.id === 'zoom_in') ? 1 : -1;
+              target_zoom = zoom.scale() * (1 + factor * direction);
+    
+              if (target_zoom < extent[0] || target_zoom > extent[1]) { return false; }
+    
+              translate0 = [(center[0] - view.x) / view.k, (center[1] - view.y) / view.k];
+              view.k = target_zoom;
+              l = [translate0[0] * view.k + view.x, translate0[1] * view.k + view.y];
+    
+              view.x += center[0] - l[0];
+              view.y += center[1] - l[1];
+    
+              interpolateZoom([view.x, view.y], view.k);
+          }
+    
+          d3.selectAll('button').on('click', zoomClick);
+          
+        function onPathClick() { 
+            d3.selectAll('path').on('click', function(){
+              alert('space id ' + this.attributes.id.value);
+              //d3.selectAll('path').style("fill", "#FFFFFF");
+              var that = this
+              $( "path[fill='#ff0000']" ).attr('fill', '#FFFFFF');
+              this.setAttribute('fill',"#ff0000");
+            })
+          }
+    
+          function highLightId(pathId) {
+            $( "path[fill='#ff0000']" ).attr('fill', '#FFFFFF');
+            $( "#" + jq(pathId) ).attr('fill', '#ff0000');
+             //d3.selectAll("path[id='" + pathId + "']").style('fill',"#ff0000");
+          }
+        function jq( myid ) {
+            return myid.replace('/', '\\/');
+        }
+      </script>
+    </body>
+</apex:page>

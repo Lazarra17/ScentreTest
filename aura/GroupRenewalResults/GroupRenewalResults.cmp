@@ -1,0 +1,15 @@
+<aura:component >
+	   
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    
+    
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="OpportunityList" type="Object"/>
+    <aura:attribute name="data" type="Object"/>
+    
+    <lightning:datatable
+                         keyField="id"
+                         data="{! v.data }"
+                         columns="{! v.columns }"
+                         hideCheckboxColumn="true"/>
+</aura:component>

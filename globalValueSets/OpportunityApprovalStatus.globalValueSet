@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Pending Initial Approval</fullName>
+        <default>false</default>
+        <label>Pending Initial Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Initial Approval Rejected</fullName>
+        <default>false</default>
+        <label>Initial Approval Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>Initial Approval Granted</fullName>
+        <default>false</default>
+        <label>Initial Approval Granted</label>
+    </customValue>
+    <customValue>
+        <fullName>Pending Risk Approval</fullName>
+        <default>false</default>
+        <label>Pending Risk Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Risk Approval Rejected</fullName>
+        <default>false</default>
+        <label>Risk Approval Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>Risk Approval Granted</fullName>
+        <default>false</default>
+        <label>Risk Approval Granted</label>
+    </customValue>
+    <customValue>
+        <fullName>Pending Final Approval</fullName>
+        <default>false</default>
+        <label>Pending Final Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Final Approval Rejected</fullName>
+        <default>false</default>
+        <label>Final Approval Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>Final Approval Granted</fullName>
+        <default>false</default>
+        <label>Final Approval Granted</label>
+    </customValue>
+    <customValue>
+        <fullName>Pending Licence Approval</fullName>
+        <default>false</default>
+        <label>Pending Licence Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Licence Approval Rejected</fullName>
+        <default>false</default>
+        <label>Licence Approval Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>Licence Approval Granted</fullName>
+        <default>false</default>
+        <label>Licence Approval Granted</label>
+    </customValue>
+    <customValue>
+        <fullName>Store Room Granted</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Store Room Granted</label>
+    </customValue>
+    <customValue>
+        <fullName>RCA Approval Rejected</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>RCA Approval Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>Pending RCA Approval</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pending RCA Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>RCA Approval Granted</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>RCA Approval Granted</label>
+    </customValue>
+    <customValue>
+        <fullName>Store Room Pending</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Store Room Pending</label>
+    </customValue>
+    <customValue>
+        <fullName>Store Room Approval Rejected</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Store Room Approval Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>Pending Store Room Approval</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pending Store Room Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Store Room Rejected</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Store Room Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>Store Room Approval Granted</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Store Room Approval Granted</label>
+    </customValue>
+    <customValue>
+        <fullName>Leasing RM &amp; Risk Approval Granted</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Leasing RM &amp; Risk Approval Granted</label>
+    </customValue>
+    <customValue>
+        <fullName>Pending RM &amp; Risk Approval</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pending RM &amp; Risk Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>RM &amp; Risk Approval</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>RM &amp; Risk Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Pending Leasing RM Approval</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pending Leasing RM Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>RM Approval Rejected</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>RM Approval Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>RM &amp; Risk Approval Granted</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>RM &amp; Risk Approval Granted</label>
+    </customValue>
+    <customValue>
+        <fullName>Pending RM Approval</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pending RM Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>RM Approval Granted</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>RM Approval Granted</label>
+    </customValue>
+    <description>Field to store Opportunity Approval Status</description>
+    <masterLabel>Opportunity Approval Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,54 @@
+<aura:component implements="lightning:availableForFlowScreens,flexipage:availableForRecordHome,force:lightningQuickAction,force:hasRecordId" access="global" >
+    <aura:attribute type = "Boolean" name = "isLoading" default = "true" />
+    <aura:attribute type = "String" name = "currentTab" default = "rentreviews"/>
+    <aura:attribute type = "Object" name = "opportunity" />
+    <aura:attribute name="targtefieldRecord" type="Object"/>
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="displayOptionstab" type="boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="recordId" type="String"/> 
+    <aura:if isTrue = "{! v.isLoading}">
+        <lightning:spinner variant="brand" size="large" aura:id="spinner"/>
+    </aura:if>
+    <force:recordData aura:id="forceRecordCmp"
+                      recordId="{!v.recordId}"
+                      layoutType="COMPACT"
+                      fields="Id,RecordType.DeveloperName"
+                      mode="VIEW"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.targtefieldRecord}"
+                      targetError="{!v.error}"
+                      recordUpdated="{!c.doInit}"/>
+    
+    <div class = "wizard-container">
+        <c:OpportunityWizardheader recordId="{!v.recordId}"/>
+        
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem size="2">
+                <div>
+                    <lightning:verticalNavigation aura:id = "wizardTab" selectedItem="businessObjective" onselect = "{! c.handleSelect}" class = "border">
+                        <lightning:verticalNavigationSection>
+                            <lightning:verticalNavigationItem id = "objectiveTab" label="Objective" name="businessObjective"/>
+                            <lightning:verticalNavigationItem id = "rentTab" label="Rent" name="rent"/>
+                            <lightning:verticalNavigationItem id = "securityTab" label="Security" name="security"/>
+                            <lightning:verticalNavigationItem id = "outgoingTab" label="Outgoings" name="outgoings"/>
+                            <lightning:verticalNavigationItem id = "feesChargesTab" label="{!'Fees &#38; Charges'}" name="feescharges"/>
+                            <lightning:verticalNavigationItem id = "capitalTab" label="Capital" name="capital"/>
+                            <lightning:verticalNavigationItem id = "rentPromoTab" label="Rent and Promo Reviews" name="rentrreviews"/>
+                            <lightning:verticalNavigationItem id = "riskTab" label="Risk" name="risk"/>
+                            <aura:if isTrue="{!v.displayOptionstab}">
+                                <lightning:verticalNavigationItem id = "Options" label="Options" name="options"/>
+                            </aura:if>
+                        </lightning:verticalNavigationSection>
+                    </lightning:verticalNavigation>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size = "9">
+                <div class = "navigation">
+                    {! v.body}
+                </div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

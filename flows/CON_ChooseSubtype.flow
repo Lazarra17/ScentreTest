@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <choices>
+        <name>varGenerateCheque</name>
+        <choiceText>Generate Cheque</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Generate Cheque</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>varRaiseanInvoice</name>
+        <choiceText>Raise an Invoice</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Raise an invoice</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>varRenumberingSpaces</name>
+        <choiceText>Renumbering Spaces</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Renumbering Spaces</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>varReverseAnInvoice</name>
+        <choiceText>Reverse an Invoice</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Reverse an Invoice</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>isCaseSubType</name>
+        <label>Case SubType</label>
+        <locationX>511</locationX>
+        <locationY>158</locationY>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>isReverseAnInvoice</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>varCaseSubType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>varReverseAnInvoice</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ReverseAnInvoiceSubflow</targetReference>
+            </connector>
+            <label>Reverse an Invoice</label>
+        </rules>
+        <rules>
+            <name>isRaiseAnInvoice</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varCaseSubType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>varRaiseanInvoice</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RaiseAnInvoiceSubflow</targetReference>
+            </connector>
+            <label>Raise an Invoice</label>
+        </rules>
+        <rules>
+            <name>isRenumberingSpaces</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varCaseSubType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>varRenumberingSpaces</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RenumberingSpacesSubflow</targetReference>
+            </connector>
+            <label>Renumbering Spaces</label>
+        </rules>
+        <rules>
+            <name>isGenerateCheque</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varCaseSubType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>varGenerateCheque</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GenerateChequeSubflow</targetReference>
+            </connector>
+            <label>Generate Cheque</label>
+        </rules>
+    </decisions>
+    <description>LV13 - Retail Admin Lease Variations
+Main Flow</description>
+    <interviewLabel>CON_ChooseSubtype {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CON_LV13RetailAdminLeaseVariationsMainFlow</label>
+    <processType>Flow</processType>
+    <screens>
+        <name>LV13RetailAdminLeaseVariations</name>
+        <label>LV13 - Retail Admin Lease Variations</label>
+        <locationX>510</locationX>
+        <locationY>51</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>isCaseSubType</targetReference>
+        </connector>
+        <fields>
+            <name>varCaseSubType</name>
+            <choiceReferences>varReverseAnInvoice</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>varReverseAnInvoice</defaultSelectedChoiceReference>
+            <fieldText>Case Sub Type</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>LV13RetailAdminLeaseVariations</startElementReference>
+    <status>Active</status>
+    <subflows>
+        <name>GenerateChequeSubflow</name>
+        <label>GenerateChequeSubflow</label>
+        <locationX>831</locationX>
+        <locationY>337</locationY>
+        <flowName>CON_GenerateCheque</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>varCreatedCaseId</assignToReference>
+            <name>newCreatedCaseId</name>
+        </outputAssignments>
+    </subflows>
+    <subflows>
+        <name>RaiseAnInvoiceSubflow</name>
+        <label>RaiseAnInvoiceSubflow</label>
+        <locationX>393</locationX>
+        <locationY>337</locationY>
+        <flowName>CON_RaiseAnInvoice</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>varCreatedCaseId</assignToReference>
+            <name>newCreatedCaseId</name>
+        </outputAssignments>
+    </subflows>
+    <subflows>
+        <name>RenumberingSpacesSubflow</name>
+        <label>RenumberingSpacesSubflow</label>
+        <locationX>620</locationX>
+        <locationY>339</locationY>
+        <flowName>CON_RenumberingSpaces</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>varCreatedCaseId</assignToReference>
+            <name>newCreatedCaseId</name>
+        </outputAssignments>
+    </subflows>
+    <subflows>
+        <name>ReverseAnInvoiceSubflow</name>
+        <label>ReverseAnInvoiceSubflow</label>
+        <locationX>184</locationX>
+        <locationY>331</locationY>
+        <flowName>CON_ReverseAnInvoice</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>varCreatedCaseId</assignToReference>
+            <name>newCreatedCaseId</name>
+        </outputAssignments>
+    </subflows>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varCreatedCaseId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

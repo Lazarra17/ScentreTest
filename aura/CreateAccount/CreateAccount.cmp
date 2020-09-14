@@ -1,0 +1,73 @@
+<aura:component controller="CreateAccountController" implements="flexipage:availableForRecordHome,lightning:availableForFlowScreens">
+    
+    <aura:attribute type="String" name="accountRecordId"/>
+    <aura:attribute type="String" name="accountName"/>
+    <aura:attribute type="String" name="accountRecTypeId"/>
+    <aura:attribute type="String" name="accountCity"/>
+    <aura:attribute type="String" name="accountCountry"/>
+    <aura:attribute type="String" name="accountPostalCode"/>
+    <aura:attribute type="String" name="accountStateCode" />
+    <aura:attribute type="String" name="accountStreet"/>
+    <aura:attribute type="String" name="accountId"/>
+    <aura:attribute type="String" name="contactId"/>
+    <aura:attribute name="newContact" type="Object"/>
+    <aura:attribute name="simpleNewContact" type="Object"/>
+    <aura:attribute name="newContactError" type="String"/>
+    
+    <!--RPP-9740 START -->
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="guarantorAccount" type="object" access="public" />
+    <aura:attribute name="showNew" type="Boolean" default="false" />
+    
+    <aura:handler name="change" value="{!v.guarantorAccount}" action="{!c.accountSelected}" />
+    <!-- RPP-9740 END -->
+    
+    <force:recordData aura:id="contactRecordCreator" 
+                      layoutType="FULL"
+                      targetRecord="{!v.newContact}"
+                      targetFields="{!v.simpleNewContact}"
+                      targetError="{!v.newContactError}" />
+    
+    <!--RPP-9740 START -->
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="medium" aura:id="spinner"/>
+    </aura:if>
+    <aura:if isTrue="{!!v.showNew}">
+        <div>
+            <c:TypeAhead objectName = "Account"
+                         lookupIcon = "standard:account"
+                         field_API_text = "Name"
+                         field_API_val = "Id"
+                         field_API_search = "Name"
+                         placeholder = "Search for Guarantor"
+                         conditionStr = "RecordType.DeveloperName = 'ACCThirdParty' AND Type = 'Guarantor'"
+                         selItem = "{!v.guarantorAccount}"
+                         allowToCreateNew = "true"
+                         />
+        </div>
+        <br/>
+    </aura:if>
+    <center>
+        <lightning:button aura:id="toggle" variant="brand" label="Create New Account" onclick="{!c.toggleNew}" />
+        <aura:if isTrue="{!!v.showNew}">
+        	<lightning:button variant="brand" label="Continue" onclick="{!c.continue}" />
+        </aura:if>
+    </center>
+    <!--RPP-9740 END -->
+    <aura:if isTrue="{!v.showNew}">
+        <lightning:recordEditForm aura:id="recordEditForm" 
+                                  objectApiName="Account" 
+                                  onsuccess="{!c.handleSuccess}"
+                                  onload="{!c.handleOnLoad}"
+                                  onsubmit="{!c.handleOnSubmit}"
+                                  onerror="{!c.handleError}">
+            <lightning:messages />
+            <lightning:inputField fieldName="Name"/>
+            <lightning:inputField aura:id="typeField" fieldName="Type"/>
+            <lightning:inputField fieldName="ShippingAddress"/>
+            <lightning:inputField fieldName="ABNNZBN__c"/>
+            <lightning:inputField fieldName="ACN__c"/>
+            <lightning:button class="slds-m-top_small" type="submit" label="Save" />
+        </lightning:recordEditForm>
+    </aura:if>
+</aura:component>

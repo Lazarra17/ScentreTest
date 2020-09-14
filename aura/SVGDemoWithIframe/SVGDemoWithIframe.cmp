@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:registerEvent name="spaceDetails" type="c:SpaceDetails"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="imageLocation" type="String"/>
+    <div class="acn-svg-map-container-outer">
+        <div class="acn-svg-map-container-inner">
+            <div class="acn-svg-map-container">
+            	<iframe aura:id="vfFrame" src="{! '/resource/SVGApp/svg/svgDemo.html?image=' + v.imageLocation}" width="100%" height="600px" />
+            </div>
+        </div>
+    </div>
+</aura:component>

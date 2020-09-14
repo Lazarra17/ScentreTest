@@ -1,0 +1,123 @@
+<aura:component controller="CreateInspectionfromSpaceController" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction">
+    <!--aura:attribute name="subjectStr" type="String"/>
+    <aura:attribute name="errorMsg" type="String"/-->
+    <aura:attribute name="hideDiv" type="String" default="slds-hide"/>
+    <!--aura:attribute name="showText" type="String" default="slds-hide"/>
+    <aura:attribute name="picklistVal" type="String" />
+    <aura:attribute name="dueDate" type="Date"/-->
+    <!--aura:attribute name="statusstr" type="String"/>
+    <aura:attribute name ="validity" type="object" access="global" /-->
+    <aura:attribute name="selectedReason" type="String" />
+    <aura:attribute name="otherReasonDescription" type="String" default="" /> 
+    <aura:attribute name="caseId" type="String"/>
+    <aura:attribute name="optionSelect" type="String"/>
+    <aura:attribute name="enterTextSelect" type="String"/>
+    <!--aura:attribute name="reasonText" type="String"/>
+    <aura:attribute name="reasonOnSelect" type="String"/-->
+    <!--aura:attribute name="priorityStr" type="String"/>
+    <aura:attribute name="reasonTextArea" type= "Boolean" default= "false"/-->
+    <aura:attribute name="reasonPicklist" type= "Boolean" default= "false"/>
+    <aura:attribute name="newIRCondition" type="Boolean" default="false"/>
+    <aura:attribute name="newIRConditionCheck" type="Boolean"/>
+    <aura:attribute name="newtargetcaseRecord" type="Case"/>
+    <aura:attribute name="newcaseRecord" type="Case"/>
+    <aura:attribute name="newcaseError" type="String"/> 
+    
+    <force:recordData aura:id="caseRecordCreator"
+                      targetRecord="{!v.newtargetcaseRecord}"
+                      targetFields="{!v.newcaseRecord}"
+                      targetError="{!v.newcaseError}"
+                      fields="Subject, Status, Priority, DueDate__c, Contract__c"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:if isTrue="{!v.newIRConditionCheck}">
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:input aura:id="caseField" label="Subject" value="{!v.newcaseRecord.Subject}" disabled="true"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:select name="statusstr" label="Status" value="{!v.newcaseRecord.Status}" disabled="true">
+                    <option value="New">New</option>
+                    <option value="Scheduled">Scheduled</option>
+                </lightning:select>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:select name="priorityStr" label="Priority" value="{!v.newcaseRecord.Priority}" disabled="true">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </lightning:select>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:input aura:id="caseField" label="Due Date" value="{!v.newcaseRecord.DueDate__c}" type="Date" disabled="true"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <div align="right">
+            <lightning:button label="Save" variant="brand" onclick="{!c.SaveinspectionRecord}"/>
+        </div>
+    </aura:if>
+    <!-- Display Lightning Data Service errors -->
+    <aura:if isTrue="{!not(empty(v.newcaseError))}">
+        <div class="recordError">
+            {!v.newcaseError}
+        </div>
+    </aura:if>
+    
+    <!--added below code to implement RPP-10876-->
+    <aura:if isTrue="{!v.newIRCondition}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div>
+                    <b>A prior Inspection Report case has been created on this Space in the last 60 days – Are you sure you want to raise another case?</b>
+                </div>
+                <br/>
+                <div>
+                    <center>
+                        <lightning:button variant="neutral" label="Cancel" title="Cancel" onclick="{! c.closeModel }"/>
+                        <lightning:button variant="brand" label="Yes" title="Yes" onclick="{! c.yesCreate }"/>
+                    </center>
+                </div>
+            </div>
+            
+        </section>            
+    </aura:if>
+    
+    <!--added below code to implement RPP-10876-->
+    
+    <aura:if isTrue="{!v.reasonPicklist}">
+        <div class="slds-p-bottom_x-small">
+            <form>
+                <lightning:select  aura:id= "options" name="selectItem" label="Select Reason" onchange="{!c.onReasonSelection}" required="true">
+                    <option value="">choose one...</option>        
+                    <option value="Requested by Leasing">Requested by Leasing</option>
+                    <option value="Change of Retailer">Change of Retailer</option>
+                    <option value="Change of Scope">Change of Scope</option>
+                    <option value="Other">Other</option>
+                </lightning:select>
+            </form>
+        </div>
+        <div class = "slds-hide" aura:id = "reasonErrorMsg">
+            <p style="color:red">Please complete this field</p>
+        </div>
+        
+        <div class = "slds-hide" aura:id = "reasonTextBox">
+            <h1 style="color:red; text-align:left; float:left;">*</h1>
+            <h6 style="text-align:right;float:left;"> Other Reason</h6> 
+            <p>
+                <lightning:textarea aura:id ="enterText" name="OtherReason" value=""  />
+            </p> 
+        </div>
+        <div class = "slds-hide" aura:id = "otherReasonErrorMsg">
+            <p style="color:red">Please complete this field</p>
+        </div>
+        <div class="slds-modal__container">
+            <div>
+                <center>
+                    <lightning:button variant="neutral" label="Cancel" title="Cancel" onclick="{! c.closeMode }"/>
+                    <lightning:button variant="brand" label="OK" title="OK" onclick="{! c.okCreate }"/>
+                </center>
+            </div>
+        </div>
+        
+    </aura:if>
+</aura:component>

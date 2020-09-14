@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Account Sponsor</fullName>
+        <default>false</default>
+        <label>Account Sponsor</label>
+    </customValue>
+    <customValue>
+        <fullName>BX (Brand Experience)</fullName>
+        <default>false</default>
+        <label>BX (Brand Experience)</label>
+    </customValue>
+    <customValue>
+        <fullName>Leasing Lead</fullName>
+        <default>false</default>
+        <label>Leasing Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Admin Lead</fullName>
+        <default>false</default>
+        <label>Retail Admin Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Delivery Lead</fullName>
+        <default>false</default>
+        <label>Retail Delivery Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Design Account Manager</fullName>
+        <default>false</default>
+        <label>Retail Design Account Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Account Team Coordinator</fullName>
+        <default>false</default>
+        <label>Account Team Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Design</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Retail Design</label>
+    </customValue>
+    <customValue>
+        <fullName>Solicitor Firm</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Solicitor Firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Leasing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Leasing</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Admin</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Retail Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Delivery</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Retail Delivery</label>
+    </customValue>
+    <masterLabel>Account Team Role</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

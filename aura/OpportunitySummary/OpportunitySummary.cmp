@@ -1,0 +1,121 @@
+<aura:component controller="ApproveSummaryTracking" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:handler name="init" value="{!this}" action="{! c.init }"/>
+    <aura:attribute type = "String" name ="rentVarianceColor" default=""/>
+    <aura:attribute type = "String" name ="annualMinColor" default=""/>
+    <aura:attribute type = "String" name ="proposedStartDateColor" default=""/>
+    <aura:attribute type = "String" name ="termYearColor" default=""/>
+    <aura:attribute type = "String" name ="termMonthColor" default=""/>
+    <aura:attribute type = "String" name ="termDayColor" default=""/>
+    <aura:attribute type = "String" name ="totalForecastCapitalColor" default=""/>
+    <aura:attribute type = "String" name ="capitalVarianceColor" default=""/>
+    <aura:attribute type = "String" name ="forecastPRentYear1Color" default=""/>
+    <aura:attribute type = "String" name ="totalPromoLevyColor" default=""/>
+    <aura:attribute type = "String" name ="recoverableAreaColor" default=""/>
+    <aura:attribute type = "String" name ="rentableAreaColor" default=""/>
+    <div class="slds-section slds-is-open">
+        <lightning:recordViewForm objectApiName="Opportunity" 
+                                  recordId="{! v.recordId}">
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Objective</span>
+            </h3>
+            <lightning:layout multipleRows="true">
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="BackgroundIssue__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="Financials__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="OptionsRecommendations__c"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Property Info </span>
+            </h3>
+            <lightning:layout multipleRows="true">
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="Property__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="Space__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="{!v.recoverableAreaColor}" flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField class="{!v.recoverableAreaColor}" fieldName="RecoverableArea__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="{!v.rentableAreaColor}" flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField class="{!v.rentableAreaColor}" fieldName="RentableArea__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="{!v.proposedStartDateColor}" flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField class="{!v.proposedStartDateColor}" fieldName="ProposedStartDate__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="{!v.termYearColor}" flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField class="{!v.termYearColor}" fieldName="TermYr__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="{!v.termMonthColor}" flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField class="{!v.termMonthColor}" fieldName="TermMonths__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="{!v.termDayColor}" flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField class="{!v.termDayColor}" fieldName="TermDays__c"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Budget and Rent Info </span>
+            </h3>
+            <lightning:layout multipleRows="true">
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="BudgetRent__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="BudgetCapital__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="{!v.annualMinColor}" flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField class="{!v.annualMinColor}" fieldName="AnnualMinimumRent__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="{!v.totalForecastCapitalColor}" flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField class="{!v.totalForecastCapitalColor}" fieldName="TotalForecastCapital__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="{!v.capitalVarianceColor}" flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField class="{!v.capitalVarianceColor}" fieldName="CapitalVariance__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="RentVariance__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="CapitalVarianceAmount__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="RentVarianceAmount__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                <lightning:outputField fieldName="Stretch_Rent__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="Stretch_Rent_Variance__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="LeasingSpreadPercent__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="{!v.forecastPRentYear1Color}" flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField class="{!v.forecastPRentYear1Color}" fieldName="ForecastedPercentageRentYear1__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem class="{!v.totalPromoLevyColor}" flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField class="{!v.totalPromoLevyColor}" fieldName="TotalPromotionLevy__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="NoOfRiskClausesIncluded__c"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">RCAs Reviewed</span>
+            </h3>
+            <lightning:layout multipleRows="true">
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="ImpactedbyanRCA__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:outputField fieldName="RCAsReviewed__c"/>
+                </lightning:layoutItem>
+             </lightning:layout>
+        </lightning:recordViewForm>
+    </div>
+</aura:component>

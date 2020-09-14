@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Market</fullName>
+        <default>false</default>
+        <label>Market</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed Step Amount</fullName>
+        <default>false</default>
+        <label>Fixed Step Amount</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed Amount</fullName>
+        <default>false</default>
+        <label>Fixed Amount</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed %</fullName>
+        <default>false</default>
+        <label>Fixed %</label>
+    </customValue>
+    <customValue>
+        <fullName>CPI</fullName>
+        <default>false</default>
+        <label>CPI</label>
+    </customValue>
+    <customValue>
+        <fullName>CPI+</fullName>
+        <default>false</default>
+        <label>CPI+</label>
+    </customValue>
+    <customValue>
+        <fullName>NZI</fullName>
+        <default>false</default>
+        <label>NZI</label>
+    </customValue>
+    <customValue>
+        <fullName>Market (NZI)</fullName>
+        <default>false</default>
+        <label>Market (NZI)</label>
+    </customValue>
+    <customValue>
+        <fullName>NZ+</fullName>
+        <default>false</default>
+        <label>NZ+</label>
+    </customValue>
+    <masterLabel>Review Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

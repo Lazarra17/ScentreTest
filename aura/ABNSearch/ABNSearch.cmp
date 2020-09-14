@@ -1,0 +1,231 @@
+<aura:component controller = "ABNSearchController" implements="force:hasSObjectName,lightning:availableForFlowScreens,force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute type="Boolean" name="isLoading" default="true"/>
+    <aura:attribute type="Boolean" name="showABN" default="false"/>
+    <aura:attribute type="Boolean" name="showACN" default="false"/>
+    <aura:attribute type="Boolean" name="showNZBN" default="false"/>
+    <aura:attribute type="Object" name="abnResult"/>
+    <aura:attribute type="Object" name="acnResult"/>
+    <aura:attribute type="Object" name="nzbnResult"/>
+    <aura:attribute type="Object" name="mainRecord"/>
+    <aura:attribute type="Object" name="mainRecordError"/>
+    <aura:attribute type="Object" name="mainRecordMaster"/>
+    <aura:attribute type="String" name="abnBusinessNames"/> 
+    <aura:attribute type="String" name="abnBusinessNamestring"/> 
+    <aura:attribute type="String" name="acnBusinessNames"/> 
+    <aura:attribute type="String" name="acnBusinessNamestring"/> 
+    <aura:attribute type="String" name="recordCountry" />
+    <aura:attribute type="String" name="abnErrorMessage"/>
+    <aura:attribute type="String" name="acnErrorMessage" />
+    <aura:attribute type="String" name="nzbnErrorMessage" />
+    <aura:attribute name="abnBusinessNamesoptions" type="List"/>
+    <aura:attribute name="acnBusinessNamesoptions" type="List"/>
+    <aura:attribute type="Boolean" name="displaycomponent" default="false"/>
+    <aura:attribute type="String" name="activecontracts" default="0"/>
+    <aura:if isTrue="{! v.sObjectName == 'Account'}">
+        <force:recordData aura:id="opportunityRecord" 
+                          recordId="{!v.recordId}" 
+                          targetRecord="{!v.mainRecordMaster}" 
+                          targetFields="{!v.mainRecord}" 
+                          targetError="{!v.mainRecordError}" 
+                          fields="Id,ABNNZBN__c, ACN__c, BillingCountry, ABNNZBNStatus__c,LesseeName__c,TradingName__c"
+                          recordUpdated="{!c.searchABN}"
+                          mode="EDIT"/>
+    </aura:if>
+    <aura:if isTrue="{! v.sObjectName == 'Lead'}">
+        <force:recordData aura:id="leadRecord" 
+                          recordId="{!v.recordId}" 
+                          targetRecord="{!v.mainRecordMaster}" 
+                          targetFields="{!v.mainRecord}" 
+                          targetError="{!v.mainRecordError}" 
+                          fields="ABNNZBN__c, ACN__c, Country, ABNNZBNStatus__c"
+                          recordUpdated="{!c.searchABN}"
+                          mode="EDIT"/>
+    </aura:if>
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <aura:if isTrue="{! v.isLoading }">
+        <lightning:spinner alternativeText="Loading" />
+    </aura:if>
+    <aura:if isTrue="{! v.displaycomponent}">
+        <aura:if isTrue="{!v.recordCountry == 'Australia'}">
+            <aura:if isTrue="{!v.showACN}">
+                <div class="slds-section slds-is-open">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Section Title">ACN Details</span>
+                    </h3>
+                    <aura:if isTrue="{! v.acnErrorMessage != null}">
+                        <lightning:card title="{!v.acnErrorMessage}">
+                        </lightning:card>
+                    </aura:if>
+                    <aura:if isTrue="{!and(v.acnErrorMessage==null,v.showACN)}">
+                        <div aria-hidden="false" class="slds-section__content">
+                            <lightning:layout multipleRows="true">
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="acnNumber" label="ACN Number" value="{!v.acnResult.abn}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="acnStatus" label="Status" value="{!v.acnResult.abnStatus}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="acnEntityName" label="Lessee Name" value="{!v.acnResult.entityName}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="acnEntityType" label="Type" value="{!v.acnResult.entityTypeName}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="acnState" label="State" value="{!v.acnResult.addressState}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="acnEntityTypeCode" label="Type Code" value="{!v.acnResult.entityTypeCode}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="acnPostCode" label="Post Code" value="{!v.acnResult.addressPostCode}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="acnGstDate" label="Goods and Services Tax (GST) from:" value="{!v.acnResult.gst}" type="date" disabled="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+                                    <lightning:radioGroup name="radioGroup" label="Trading Name"
+                                                          options="{!v.acnBusinessNamesoptions}"
+                                                          value="{!v.acnBusinessNamestring}"
+                                                          type="radio"/>
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <aura:if isTrue="{!v.sObjectName!='Lead'}">
+                                <div align="right" style="padding-top:21px">
+                                    <lightning:button name="acnupdatebutton" variant="brand" label="Update Details" onclick="{!c.updateAccountdata}"/>
+                                </div>
+                            </aura:if>
+                        </div>
+                    </aura:if>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.showABN}">
+                <div class="slds-section slds-is-open">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Section Title">ABN Details</span>
+                    </h3>
+                    <aura:if isTrue="{!v.abnErrorMessage!=null}">
+                        <lightning:card title="{!v.abnErrorMessage}">
+                        </lightning:card>
+                    </aura:if>
+                    <aura:if isTrue="{!and(v.abnErrorMessage==null,v.showABN)}">
+                        <div aria-hidden="false" class="slds-section__content">
+                            <lightning:layout multipleRows="true">
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="abnNumber" label="ABN Number" value="{!v.abnResult.abn}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="status" label="Status" value="{!v.abnResult.abnStatus}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="entityName" label="Lessee Name" value="{!v.abnResult.entityName}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="entityType" label="Type" value="{!v.abnResult.entityTypeName}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="state" label="State" value="{!v.abnResult.addressState}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="entityTypeCode" label="Type Code" value="{!v.abnResult.entityTypeCode}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="postCode" label="Post Code" value="{!v.abnResult.addressPostCode}" readonly="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <lightning:input aura:id="gstDate" label="Goods and Services Tax (GST) from:" value="{!v.abnResult.gst}" type="date" disabled="true"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                      largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+                                    <lightning:radioGroup name="radioGroup" label="Trading Name"
+                                                          options="{!v.abnBusinessNamesoptions}"
+                                                          value="{!v.abnBusinessNamestring}"
+                                                          type="radio"/>
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                            <aura:if isTrue="{!v.sObjectName!='Lead'}">
+                                <div align="right" style="padding-top:21px">
+                                    <lightning:button name="abnupdatebutton" variant="brand" label="Update Details" onclick="{!c.updateAccountdata}"/>
+                                </div>
+                            </aura:if>
+                        </div>
+                    </aura:if>
+                </div>
+            </aura:if>
+        </aura:if>
+        <aura:if isTrue="{!!v.displaycomponent}">
+            <lightning:button variant="brand" label="Verify ABN" onclick="{!c.saveAccountdetails}"/>
+        </aura:if>
+        <aura:if isTrue="{! v.recordCountry == 'New Zealand'}">
+            <aura:if isTrue="{! v.showNZBN}">
+                <div class="slds-section slds-is-open">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Section Title">NZBN Details</span>
+                    </h3>
+                    <aura:if isTrue="{! v.nzbnErrorMessage != null}">
+                        <lightning:card title="{!v.nzbnErrorMessage}">
+                        </lightning:card>
+                    </aura:if>
+                    <div aria-hidden="false" class="slds-section__content">
+                        <lightning:layout multipleRows="true">
+                            <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                  largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                <lightning:input aura:id="nzbnNumber" label="NZBN Number" value="{!v.nzbnResult.nzbn}" readonly="true"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                  largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                <lightning:input aura:id="nzStatus" label="Status" value="{!v.nzbnResult.entityStatusDescription}" readonly="true"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                  largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                <lightning:input aura:id="nzEntityName" label="Lessee Name" value="{!v.nzbnResult.entityName}" readonly="true"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                  largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                <lightning:input aura:id="nzEntityType" label="Type" value="{!v.nzbnResult.entityTypeDescription}" readonly="true"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                  largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                <lightning:input aura:id="nzState" label="State" readonly="true"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                  largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                <lightning:input aura:id="nzEntityTypeCode" label="Type Code" value="{!v.nzbnResult.entityTypeCode}" readonly="true"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                  largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                <lightning:input aura:id="nzPostCode" label="Post Code" readonly="true"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" 
+                                                  largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                <lightning:input aura:id="nzGstDate" label="Goods and Services Tax (GST) from:" value="{!v.nzbnResult.gstEffectiveDate}" type="date" disabled="true"/>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                        <aura:if isTrue="{!v.sObjectName!='Lead'}">
+                            <div align="right" style="padding-top:21px">
+                                <lightning:button name="nzbnupdatebutton" variant="brand" label="Update Details" onclick="{!c.updateAccountdata}"/>
+                            </div>
+                        </aura:if>
+                    </div>
+                </div>
+            </aura:if>
+        </aura:if>
+    </aura:if>
+</aura:component>

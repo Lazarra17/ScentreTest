@@ -1,0 +1,174 @@
+<aura:component controller="ClauseSelectionController" implements="lightning:availableForFlowScreens,force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes" access="global" >
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <aura:attribute name="selectedClause" type="list" />
+    <aura:attribute name="tempSelectedClause" type="list" />
+    <aura:attribute name="idToggled" type="String" />
+    <aura:attribute name="availableClause" type="list" />
+    <aura:attribute name="clauseType" type="String" default="Special Condition"/>
+    <aura:attribute name="searchKey" type="String" default=""/>
+    <aura:attribute name="typeOptions" type="sObject[]"/>
+    <aura:attribute name="displayClauses" type="list"/>
+    <aura:attribute name="precedentClauses" type="list" />
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="oppClauseId" type="String" default=""/>
+    <aura:attribute name="isSaveDisabled" type="Boolean" default = "true"/>
+    
+    <aura:attribute name="isOppLocked" type="Boolean" default="false"/>
+    
+    <aura:handler name="onSaveSuccess" event="force:recordSaveSuccess" action="{!c.handleSaveSuccess}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!--div id = "header" class = "slds-border_bottom" style = "padding-bottom: 15px; margin-bottom: 15px;">
+        <div class="slds-text-heading_large slds-text-align_center">Manage Clauses</div>
+    </div--> 
+    <c:Toast />
+    
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    
+    <!--<c:OpportunityButtonsTab recordId = "{! v.recordId}"/>-->
+    <aura:if isTrue="{!v.isOppLocked}">
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+            <h2>You cannot modify clauses when opportunity is locked.</h2>
+        </div>
+    </aura:if>
+    <lightning:tabset>
+        <lightning:tab label="Available Clauses">
+            <!--force:recordData aura:id="oppClause"
+                              recordId="{!v.oppClauseId}"
+                              fields="full"
+                              targetRecord="{!v.oppClauseRecord}"
+                              mode="EDIT"/-->
+            <lightning:layout horizontalAlign="left">
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:select aura:id="clauseId" value="{!v.clauseType}" name="clause" label="Select Clause Type" onchange="{!c.search}">
+                        <aura:iteration items="{!v.typeOptions}" var="item">
+                            <option selected = "{! item.value == v.clauseType}" text="{!item.label}" value="{!item.value}"/>
+                        </aura:iteration> 
+                    </lightning:select>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input aura:id="keywordId" type="text" name="keyword" label="Search Keywords" value="{!v.searchKey}" onchange="{!c.search}">
+                    </lightning:input>
+                </lightning:layoutItem> 
+            </lightning:layout>
+            
+            <div class="slds-box slds-fluid slds-scrollable slds-m-left_small slds-m-top_medium">
+                <h2 style="font-size:18px;">Available Clauses</h2><br></br>
+                <div class="slds-m-left_small">
+                    <aura:iteration items="{!v.displayClauses}" var="avail">
+                        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                            <tr>
+                                <th>
+                                    <div class="slds-text-body_regular" style="word-break:break-word; white-space: normal;"><strong>{!avail.clauseAvailable.Name}</strong></div>
+                                    <div class="slds-text-body_regular">{!avail.clauseAvailable.RecordType.Name}</div>
+                                    <div class = "block-with-text" style="white-space: normal;">
+                                    	<p>{!avail.clauseAvailable.ClauseDetails__c}</p>
+                                    </div> <br></br>
+                                    <!--div style="white-space: normal; text-align: justify;">{!avail.ReasonRecommendation__c}</div><br></br-->
+                                </th>
+                                <aura:if isTrue="{!!v.isOppLocked}">
+                                    <div class="slds-float--right"> 
+                                        <th> 
+                                            <lightning:input name="{!avail.clauseAvailable.Id}" type="toggle" checked="{!avail.isSelected}" messageToggleActive="" messageToggleInactive="" onchange="{!c.changeIsSelectedTrue}"/>
+                                        </th>
+                                    </div>
+                                </aura:if>
+                            </tr>
+                        </table>
+                    </aura:iteration>
+                </div>
+            </div>
+        </lightning:tab>
+        <lightning:tab label="Selected Clauses">
+            <div class="slds-box slds-fluid slds-scrollable slds-m-left_small slds-m-top_xx-large">
+                <h2 style="font-size:18px;">Selected Clauses</h2> <br></br>
+                <div class="slds-m-left_small">
+                    <aura:iteration items="{!v.precedentClauses}" var="prec">
+                        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                            <tr>
+                                <th> 
+                                    <div class="slds-text-body_regular" style="word-break:break-word; white-space: normal;"><strong>{!prec.Name}</strong></div>
+                                    <div class="slds-text-body_regular">{!prec.RecordType.Name}</div>
+                                    <!--div style="white-space: normal; text-align: justify">{!prec.ClauseDetails__c}</div> <br></br-->
+                                    <div style="white-space: normal; text-align: justify">{!prec.ReasonRecommendation__c}</div> <br></br>
+                                </th>
+                            </tr>
+                        </table>
+                    </aura:iteration>
+                    <aura:iteration items="{!v.selectedClause}" var="clauses">
+                        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                            <tr>
+                                <th>
+                                    <div class="slds-text-body_regular" style="word-break:break-word; white-space: normal"><strong style="padding-right:5px">{!clauses.Name}</strong>
+                                        <aura:if isTrue = "{! clauses.ReferencedClause__r.HighRiskClause__c}">
+                                            <lightning:icon iconName="utility:warning" alternativeText="Warning!" variant="warning" size="xx-small" class="lightning-icon"/>
+                                        </aura:if>
+                                    </div>
+                                    <div class="slds-text-body_regular">{!clauses.RecordType.Name}</div>
+
+                                    <aura:if isTrue = "{! clauses.ReferencedClause__r.HighRiskClause__c || clauses.ReferencedClause__r.RiskApplies__c}">
+                                    	<div style="white-space: normal; text-align: justify;">{!clauses.ReasonRecommendation__c}</div><br></br>
+                                        <aura:set attribute = "else">
+                                        	<div style="white-space: normal; text-align: justify;">{!clauses.ClauseDetails__c}</div><br></br>
+                                        </aura:set>
+                                    </aura:if>
+                                </th>
+                                <aura:if isTrue="{!!v.isOppLocked}">
+                                    <div class="slds-float--right"> 
+                                        <th>
+                                            <lightning:button aura:id="edit" name="{!clauses.Id}"  label="Edit" onclick="{!c.edit}"/>
+                                            <lightning:button aura:id="delete" name="{!clauses.Id}" label="Delete" onclick="{!c.delete}"/>
+                                        </th>
+                                    </div>
+                                </aura:if> 
+                            </tr>
+                        </table>
+                    </aura:iteration>
+                    <aura:iteration items="{!v.tempSelectedClause}" var="avail">
+                        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal" style="word-break:break-word">
+                            <tr>
+                                <th>
+                                    <div class="slds-text-body_regular" style="word-break:break-word; white-space: normal;"><strong style="padding-right: 5px">{!avail.clauseAvailable.Name}</strong>
+                                        <aura:if isTrue = "{! avail.clauseAvailable.HighRiskClause__c}">
+                                            <lightning:icon iconName="utility:warning" alternativeText="Warning!" variant="warning" size="xx-small" class="lightning-icon"/>
+                                        </aura:if>
+                                    </div>
+                                    <div class="slds-text-body_regular">{!avail.clauseAvailable.RecordType.Name}</div>
+                                    
+                                    <aura:if isTrue = "{! avail.clauseAvailable.HighRiskClause__c || avail.ReferencedClause__r.RiskApplies__c}">
+                                    	<lightning:textarea name="reason" required="true" value="{!avail.clauseAvailable.ReasonRecommendation__c}" label="Reason" maxlength="32768" /><br></br>
+                                        <aura:set attribute = "else">
+                                        	<div style="white-space: normal; text-align: justify;">{!avail.clauseAvailable.ClauseDetails__c}</div> <br></br>
+                                        </aura:set>
+                                    </aura:if>
+                                </th>
+                                <aura:if isTrue="{!!v.isOppLocked}">
+                                    <div class="slds-float--right"> 
+                                        <th> 
+                                            <lightning:input name="{!avail.clauseAvailable.Id}" type="toggle" checked="{!avail.isSelected}" messageToggleActive="" messageToggleInactive="" onchange="{!c.changeIsSelectedFalse}"/>
+                                        </th>
+                                    </div>
+                                </aura:if>
+                            </tr>
+                        </table>
+                    </aura:iteration>
+                </div>
+            </div>
+            
+            <aura:if isTrue="{!!v.isOppLocked}">
+                <div class=" slds-m-top_small slds-float--right" style = "padding-bottom: 15px; margin-bottom: 15px">
+                   <lightning:button aura:id="done" label="Done" onclick="{!c.closeModal}"/>
+                    <lightning:button aura:id="save" variant="brand" label="Save" onclick="{!c.save}" disabled = "{! v.isSaveDisabled}"/>
+                </div>
+            </aura:if>
+            <br/>
+            <br/>
+        </lightning:tab>
+    </lightning:tabset>
+    <!--
+    <div id = "footer" class = "slds-border_top" style = "padding-top: 15px; margin-top: 42px;">
+        <div class = "slds-text-align_right">
+            <lightning:button aura:id="done" label="Done" onclick="{!c.closeModal}"/>
+        </div>
+    </div> -->
+</aura:component>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>9</activeVersionNumber>
+    <description>LV04 - Bank Guarantee or Security Deposit Management</description>
+    <masterLabel>CON_LV04BankGuaranteeorSecurityDepositManagement</masterLabel>
+</FlowDefinition>

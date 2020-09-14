@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>NR</fullName>
+        <default>false</default>
+        <label>Non Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>PE</fullName>
+        <default>false</default>
+        <label>External Precinct</label>
+    </customValue>
+    <customValue>
+        <fullName>ATM</fullName>
+        <default>false</default>
+        <label>ATM</label>
+    </customValue>
+    <customValue>
+        <fullName>EX</fullName>
+        <default>false</default>
+        <label>Car Park - External</label>
+    </customValue>
+    <customValue>
+        <fullName>PM</fullName>
+        <default>false</default>
+        <label>Car Park - Permanent</label>
+    </customValue>
+    <customValue>
+        <fullName>IT</fullName>
+        <default>false</default>
+        <label>Car Park - Internal</label>
+    </customValue>
+    <customValue>
+        <fullName>VL</fullName>
+        <default>false</default>
+        <label>Car Park - Valet</label>
+    </customValue>
+    <customValue>
+        <fullName>NA</fullName>
+        <default>true</default>
+        <label>Not Applicable</label>
+    </customValue>
+    <description>Space Billing Category</description>
+    <masterLabel>Space Billing Category</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

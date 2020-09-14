@@ -1,0 +1,27 @@
+<aura:component controller="SpaceManagementBatchHelper" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="showComponent" type="Boolean" default="false"/>
+    <aura:attribute name="isBatchProcessing" type="Boolean" default="false"/>
+    <aura:attribute name="message" type="String" default=""/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+    <lightning:card title="Process Split / Merge Budget Records">
+        <div class="slds-m-left_small">
+            <lightning:button label="Check Split/Merge Space Budget Status" class="slds-p-horizontal_small" onclick="{!c.checkStatus}" />
+            <lightning:button label="Process Split/Merge Space Budget" class="slds-p-horizontal_small" onclick="{!c.processBatch}"/>
+        </div>
+        <aura:if isTrue="{!v.showComponent}">
+            <div style="position: relative;">
+                <div style="position: relative; display: inline-block;" class="slds-m-right_small slds-p-bottom_small slds-m-left_large">
+                    <aura:if isTrue="{!v.isBatchProcessing}">
+                        <lightning:spinner alternative-text="Loading" size="small"></lightning:spinner>
+                    </aura:if>
+                </div>
+                <div class="slds-m-left_small slds-m-top_small" style="position: relative;display: inline-block;">
+                    {!v.message}
+                </div>
+                
+            </div>
+        </aura:if>
+        
+    </lightning:card>
+</aura:component>

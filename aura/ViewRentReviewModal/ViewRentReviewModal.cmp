@@ -1,0 +1,35 @@
+<aura:component >
+    <aura:attribute name="rentReviewId"  type="String"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="showReviewType" type="Boolean" default="false"/>
+    <aura:attribute name="standardReview" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+        
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="large" aura:id="spinner"/>
+    </aura:if>
+    
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+	
+    <lightning:recordEditForm objectApiName="OpportunityLineItem" 
+                              recordId="{! v.rentReviewId}"
+                              onsuccess="{! c.successSaving}"
+                              onerror="{! c.errorSaving}"
+                              onsubmit="{! c.onSubmit}">
+        <lightning:messages />
+        <lightning:inputField fieldName="StandardReviewType__c" onchange="{! c.standardReviewChange}"/>
+        <aura:if isTrue="{! v.showReviewType}">
+            <lightning:inputField fieldName="ReviewType__c"/>
+            <lightning:inputField fieldName="RentReviewAmount__c"/>
+        </aura:if>
+        <lightning:inputField fieldName="CPIType__c"/>
+        <lightning:inputField fieldName="EffectiveFromDate__c"/>
+        <lightning:inputField fieldName="EffectiveToDate__c"/>
+        <lightning:inputField fieldName="Description"/>
+		<lightning:inputField fieldName="CappedPercent__c"/>
+        <br/>
+        <lightning:button variant="brand" type="submit" label="Save" />
+    </lightning:recordEditForm>
+    
+</aura:component>

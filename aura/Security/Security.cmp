@@ -1,0 +1,116 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForRecordHome,lightning:availableForFlowScreens" access="global" controller="SecurityController">
+    <aura:attribute type="Boolean" name="showSpinner" default="true"/>
+    <aura:attribute type="Boolean" name="isReadOnly" default="false"/>
+    <aura:attribute type="List" name="column"/>
+    <aura:attribute type="Object[]" name="affiliationWrapper"/>
+	<aura:attribute type="Object" name="oppRecord" />
+    <aura:attribute type="Object" name="oppRecordError" />
+    <aura:attribute type="Object" name="oppRecordMaster" />
+    <aura:attribute type="Boolean" name="doCreateRCA" default = "false" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    
+    <force:recordData aura:id="opportunityRecord" 
+    				  recordId="{!v.recordId}" 
+    				  targetRecord="{!v.oppRecordMaster}" 
+    				  targetFields="{!v.oppRecord}" 
+    				  targetError="{!v.oppRecordError}"
+                      recordUpdated="{!c.closeSpinner}"
+                      mode = "EDIT"
+    				  fields="Id, RecordType.DeveloperName, SecurityDeposit__c, SecurityDepositMonths__c, SecurityDepositWeeks__c, SecurityDepositDays__c, 
+                              NationalAgreement__r.RequiredSecurityDepositDays__c, NationalAgreement__r.RequiredSecurityDepositMonths__c, 
+                              NationalAgreement__r.RequiredSecurityDepositWeeks__c, NationalAgreement__c, Account.PartnershipSegmentation__c,
+                              NationalAgreement__r.Account__r.PartnershipSegmentation__c"/>
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="medium" aura:id="spinner"/>
+    </aura:if>
+         <c:ToastMessage aura:id = "toast"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <aura:if isTrue="{! v.isReadOnly}">
+        <lightning:recordEditForm aura:id = "oppRecordEditForm"
+                                  objectApiName="Opportunity" 
+                                  recordId="{! v.recordId}"
+                                  onsuccess="{! c.successSaving}"
+                                  onerror="{! c.errorSaving}"
+                                  onsubmit="{! c.onSubmit}">
+            <lightning:layout multipleRows="true">
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:inputField fieldName="SecurityDepositType__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:inputField fieldName="GuaranteesType__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:inputField aura:id="NumberofGuarantors" fieldName="NumberofGuarantors__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:inputField aura:id="SecurityDeposit" fieldName="SecurityDeposit__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:inputField aura:id="SecurityDepositMonths" fieldName="SecurityDepositMonths__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:inputField fieldName="SecurityDepositWeeks__c"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <lightning:inputField fieldName="SecurityDepositDays__c"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="12" smallDeviceSize="12" mediumDeviceSize="12">
+                    <div style="padding-top: 22px;text-align: center;">
+                        <lightning:button variant="brand" type="submit" label="Confirm" />
+                        <lightning:button variant="brand" label="Add Guarantors" onclick="{! c.toggleModal }"/>
+                    </div>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:recordEditForm>
+        <aura:set attribute="else">
+            <lightning:recordViewForm objectApiName="Opportunity"
+                                      recordId="{! v.recordId}">
+                <lightning:layout multipleRows="true">
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:outputField fieldName="SecurityDepositType__c"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:outputField fieldName="GuaranteesType__c"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:outputField aura:id="NumberofGuarantors" fieldName="NumberofGuarantors__c" disabled="true"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:outputField fieldName="SecurityDeposit__c"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:outputField fieldName="SecurityDepositMonths__c"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:outputField fieldName="SecurityDepositWeeks__c"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:outputField fieldName="SecurityDepositDays__c"/>
+                    </lightning:layoutItem>
+                </lightning:layout>
+                <lightning:layout>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="12" smallDeviceSize="12" mediumDeviceSize="12">
+                        <div style="padding-top: 22px;text-align: center;">
+                            <lightning:button variant="brand" label="Add Guarantors" onclick="{! c.toggleModal }"/>
+                        </div>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:recordViewForm>
+        </aura:set>
+    </aura:if>
+    <br/>
+    <lightning:datatable columns="{! v.column }"
+                         data="{! v.affiliationWrapper }"
+                         keyField="recordId"
+                         hideCheckboxColumn="true"
+                         onsave="{! c.handleSave}"/>
+</aura:component>

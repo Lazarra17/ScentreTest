@@ -1,0 +1,195 @@
+<aura:component controller="GroupRenewalController" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global" >
+    
+    <!-- This will expand modal width to 90% viewport-->    
+    <ltng:require styles="{!$Resource.Modal_Width_Expand}"/>
+    
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    
+    
+    <aura:attribute type="Boolean" name="isLoading" default="false"/>
+    <aura:attribute type="Boolean" name="isDataServiceLoading" default="true"/>
+    <aura:attribute type="Boolean" name="saveEnabled" default="false"/>
+    <aura:attribute type="Boolean" name="showResults" default="false"/>
+    
+    
+    <aura:attribute name="draftOpps" type="Object"/>
+    <aura:attribute name="errMsg" type="String"/>
+    
+    <aura:attribute name="draftValues" type="Object" default="[]"/>
+    <aura:attribute name="dealTypes" type="String[]" default="[]"/>
+    <aura:attribute name="oppOwnerId" type="Id" />
+    <aura:attribute name="savedOpps" type="Opportunity[]" default="[]"/>
+    <aura:attribute name="leaseEndDate" type="Date" default=""/>
+    
+    <lightning:notificationsLibrary aura:id="notifLib"/> 
+    
+    
+    <aura:if isTrue="{!v.showResults}">
+        
+        <c:GroupRenewalResults OpportunityList="{!v.savedOpps}"/>
+        
+        <aura:set attribute="else">
+            
+            <form class="slds-form">
+                <aura:if isTrue="{! v.isLoading || v.isDataServiceLoading }">
+                    <lightning:spinner alternativeText="Loading" size="medium" variant="base"/>
+                </aura:if> 
+                
+                
+                <div class="table-sticky">
+                    <table class="slds-table">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                
+                                <th class="t-checkbox" scope="col">
+                                    <lightning:input aura:id="select all" type="checkbox" name="select all" onchange="{!c.onSelectAllChange}"/>
+                                </th>                    
+                                
+                                <th class="wide-col" scope="col">
+                                    <div class="slds-m-horizontal_xx-small" title="Account Name">Account Name</div>
+                                </th>
+                                <th class="wide-col" scope="col">
+                                    <div class="slds-m-horizontal_xx-small" title="Property Name">Property</div>
+                                </th>
+                                <th class="narrow-col" scope="col">
+                                    <div class="slds-m-horizontal_xx-small" title="Space Name">Space</div>
+                                </th>
+                                <th class="wide-col" scope="col">
+                                    <div class="slds-m-horizontal_xx-small" title="Annual Minimun Rent">Annual Minimun Rent</div>
+                                </th>
+                                
+                                <th class="wide-col" scope="col" >
+                                    <div class="slds-m-horizontal_xx-small" title="Forecast Achieved Date">Forecast Achieved Date</div>
+                                </th>                        
+                                
+                                <th scope="col">
+                                    <div class="slds-m-horizontal_xx-small" title="Deal Type">Deal Type</div>
+                                </th>                        
+                                
+                                <th class="wide-col" scope="col">
+                                    <div class="slds-m-horizontal_xx-small" title="Proposed Start Date">Proposed Start Date</div>
+                                </th>            
+                                
+                                <th scope="col">
+                                    <div class="slds-m-horizontal_xx-small" title="Term (Years)">Term (Years)</div>
+                                </th>              
+                                <th  scope="col">
+                                    <div class="slds-m-horizontal_xx-small" title="Term (Months)">Term (Months)</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-m-horizontal_xx-small" title="Term (Days)">Term (Days)</div>
+                                </th>
+                                <th class="wide-col" scope="col">
+                                    <div class="slds-m-horizontal_xx-small" title="Lease End Date">Lease End Date</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.draftOpps}" var="draft" indexVar="idx">
+                                <tr class="slds-hint-parent">
+                                    
+                                    <td data-label="Select Row" class="t-checkbox">
+                                        <div class="slds-truncate" title="Select Row">
+                                            <lightning:input type="checkbox" name="select row" checked="{!draft.isSelected}" onchange="{!c.onRowSelectChange}"/>
+                                        </div>
+                                    </td>
+                                    
+                                    <td data-label="Account Name">
+                                        <div class="slds-truncate">
+                                            <lightning:input title="{!draft.accountName}" value="{!draft.accountName}" readonly="true" />
+                                        </div>
+                                    </td>
+                                    <td data-label="Property Name">
+                                        <div class="slds-truncate" title="Select Row">
+                                            <lightning:input title="{!draft.propertyName}" value="{!draft.propertyName}" readonly="true"/>
+                                        </div>
+                                    </td>  
+                                    <td data-label="Space Name">
+                                        <div class="slds-truncate" title="Select Row">
+                                            <lightning:input title="{!draft.spaceName}" value="{!draft.spaceName}" readonly="true" />
+                                        </div>
+                                    </td>       
+                                    
+                                    <td data-label="Annual Minimum Rent">
+                                        <div class="slds-truncate" title="Select Row">
+                                            <lightning:input style="text-align:center" type="number" formatter="currency" name="annualMinRent" step="0.01" value="{!draft.annualMinRent}"/>
+                                        </div>
+                                    </td>  
+                                    <td data-label="Forecast Achieved Date">
+                                        <lightning:input type="date" name="forecastAchievedDate" value="{!draft.forecastAchievedDate}"/>
+                                    </td>  
+                                    <td data-label="Deal Type">
+                                        <div class="slds-truncate">
+                                            <lightning:select name="select" value="{!draft.dealType}" label="Deal Type" variant="label-hidden">
+                                                <aura:iteration items="{!v.dealTypes}" var="dealType">
+                                                    <option text="{!dealType}"></option>
+                                                </aura:iteration>
+                                            </lightning:select>
+                                        </div>
+                                    </td>  
+                                    
+                                    <td data-label="Proposed Start Date">
+                                        <div class="slds-truncate" title="Select Row" data-index="{!idx}">
+                                            <lightning:input type="date" name="proposedStartDate" value="{!draft.proposedStartDate}" onchange="{!c.calculateEndDate}"/>
+                                        </div>
+                                    </td>  
+                                    <td data-label="Term Years">
+                                        <div class="slds-truncate" data-index="{!idx}">
+                                            <lightning:input type="number" name="termYears" value="{!draft.termYears}" step="1" onchange="{!c.calculateEndDate}"/>
+                                        </div>
+                                    </td>  
+                                    <td data-label="Term Months">
+                                        <div class="slds-truncate" data-index="{!idx}">
+                                            <lightning:input type="number" name="termMonths" value="{!draft.termMonths}" step="1" onchange="{!c.calculateEndDate}"/>
+                                        </div>
+                                    </td>  
+                                    <td data-label="Term Days">
+                                        <div class="slds-truncate" data-index="{!idx}">
+                                            <lightning:input type="number" name="termDays" value="{!draft.termDays}" step="1" onchange="{!c.calculateEndDate}"/>
+                                        </div>
+                                    </td>
+                                    <td data-label="Lease End Date">
+                                        <div class="slds-truncate" data-index="{!idx}">
+                                            <lightning:input title="{!draft.leaseEndDate}" readonly="true" type="date" name="leaseEndDate" value="{!draft.leaseEndDate}"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </aura:iteration>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="footer-relative">
+                    <div aura:id="errorMessage" class="slds-text-color_error slds-hide">
+                        <lightning:icon iconName="utility:error" alternativeText="Error!" variant="error" size="small"/>
+                        <h2>Error Saving Opportunities</h2>
+                        <h3>{!v.errMsg}</h3>
+                        <br/>
+                        
+                    </div>
+                    <lightning:layout>
+                        <lightning:layoutItem size="4">
+                            <lightning:recordEditForm objectApiName="Opportunity" onsubmit="{!c.saveDrafts}" onload="{!c.dataServiceLoad}">
+                                <div class="slds-grid slds-gutters">
+                                    <div class="slds-col slds-size_2-of-3">
+                                        <lightning:inputField fieldName="PrimaryContact__c" class="slds-p-around_small"/>
+                                    </div>
+                                    <div class="slds-col slds-size_2-of-3">
+                                        <lightning:inputField fieldName="Group_Renewal_Retail_Admin__c" class="slds-p-around_small"/>
+                                    </div>
+                                </div>
+                                <lightning:buttonGroup>
+                                    <lightning:button type="submit" variant="brand" label="Create Group Renewals" disabled="{!!v.saveEnabled}"/>
+                                </lightning:buttonGroup>   
+                            </lightning:recordEditForm>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    
+                </div>
+            </form>
+        </aura:set>
+    </aura:if>    
+    
+    
+    
+</aura:component>

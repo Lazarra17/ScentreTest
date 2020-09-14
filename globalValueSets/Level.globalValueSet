@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>14 - External</fullName>
+        <default>false</default>
+        <label>14 - External</label>
+    </customValue>
+    <customValue>
+        <fullName>CP - Car Park</fullName>
+        <default>false</default>
+        <label>CP - Car Park</label>
+    </customValue>
+    <customValue>
+        <fullName>L00 - 0</fullName>
+        <default>false</default>
+        <label>L00 - 0</label>
+    </customValue>
+    <customValue>
+        <fullName>L01 - 1</fullName>
+        <default>false</default>
+        <label>L01 - 1</label>
+    </customValue>
+    <customValue>
+        <fullName>L01 - 01M</fullName>
+        <default>false</default>
+        <label>L01 - 01M</label>
+    </customValue>
+    <customValue>
+        <fullName>L02 - 2</fullName>
+        <default>false</default>
+        <label>L02 - 2</label>
+    </customValue>
+    <customValue>
+        <fullName>L03 - 3</fullName>
+        <default>false</default>
+        <label>L03 - 3</label>
+    </customValue>
+    <customValue>
+        <fullName>L04 - 4</fullName>
+        <default>false</default>
+        <label>L04 - 4</label>
+    </customValue>
+    <customValue>
+        <fullName>L05 - 5</fullName>
+        <default>false</default>
+        <label>L05 - 5</label>
+    </customValue>
+    <customValue>
+        <fullName>L06 - 6</fullName>
+        <default>false</default>
+        <label>L06 - 6</label>
+    </customValue>
+    <customValue>
+        <fullName>L07 - 7</fullName>
+        <default>false</default>
+        <label>L07 - 7</label>
+    </customValue>
+    <customValue>
+        <fullName>LMS - Main Street</fullName>
+        <default>false</default>
+        <label>LMS - Main Street</label>
+    </customValue>
+    <customValue>
+        <fullName>LMZ - mezzanine</fullName>
+        <default>false</default>
+        <label>LMZ - mezzanine</label>
+    </customValue>
+    <customValue>
+        <fullName>LOW - LOWER</fullName>
+        <default>false</default>
+        <label>LOW - LOWER</label>
+    </customValue>
+    <customValue>
+        <fullName>LVB - B</fullName>
+        <default>false</default>
+        <label>LVB - B</label>
+    </customValue>
+    <customValue>
+        <fullName>LVG - GROUND</fullName>
+        <default>false</default>
+        <label>LVG - GROUND</label>
+    </customValue>
+    <customValue>
+        <fullName>PAD - Padsite</fullName>
+        <default>false</default>
+        <label>PAD - Padsite</label>
+    </customValue>
+    <masterLabel>Level</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

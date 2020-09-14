@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Opportunity_Clause_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>OPC_CompactLayout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>OPC_CompactLayout</fullName>
+        <fields>Name</fields>
+        <fields>Type__c</fields>
+        <fields>ReferencedClause__c</fields>
+        <fields>RiskApplies__c</fields>
+        <fields>Opportunity__c</fields>
+        <fields>EffectiveFromDate__c</fields>
+        <fields>EffectiveToDate__c</fields>
+        <label>OPC Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>&lt;OPC&gt; - Represents a clause applied to a deal.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>CloneExcludedField</fullName>
+        <description>Exclude fields from opportunity clone</description>
+        <displayedFields>
+            <field>TechDMImportDateTime__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>TechDMOriginalSourceSystem__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>TechDMReleaseNo__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>TechDMSourceID__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>TechDMSourceSystem__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>TechDMXREFId__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>TechPrecedentClauseId__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>TECH_RiskLevel__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CloneExcludedField</label>
+    </fieldSets>
+    <fields>
+        <fullName>AcceptedAmount__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(ReferencedClause__r.SectionTitle__c, 
+&apos;A) Annual Minimum Rent&apos;, Opportunity__r.AnnualMinimumRent__c,
+&apos;D) Promotion Levy&apos;,Opportunity__r.TotalPromotionLevy__c,
+&apos;E) Percentage Rent&apos;,Opportunity__r.PercentageRentPercent__c
+,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Accepted Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Approved?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ClauseDetails__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the information required.</inlineHelpText>
+        <label>Clause Details</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CounterAmount__c</fullName>
+        <externalId>false</externalId>
+        <label>Counter Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CounterDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Counter Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EffectiveFromDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Effective From Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EffectiveToDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Effective To Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>High_Risk_Clause__c</fullName>
+        <description>This is to be used for reporting purpose. Refers to the high risk clause from clause library</description>
+        <externalId>false</externalId>
+        <formula>ReferencedClause__r.HighRiskClause__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>High Risk Clause</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsAutomated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Automated</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LeasingComment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please provide reasons why this clause is required on an Opportunity.</inlineHelpText>
+        <label>Leasing Comment</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Opportunity Clauses</relationshipLabel>
+        <relationshipName>Opportunity_Clauses</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ReasonRecommendation__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Retail Admin Use Only.</inlineHelpText>
+        <label>Reason Recommendation</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ReferencedClause__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Referenced Clause</label>
+        <referenceTo>ClauseLibrary__c</referenceTo>
+        <relationshipLabel>Opportunity Clause</relationshipLabel>
+        <relationshipName>Opportunity_Clauses</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RiskApplies__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This flag is ticked if there is a risk applied Clause associated with this space. Please contact Retail Admin for any questions.</inlineHelpText>
+        <label>Risk Applies?</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SubType__c</fullName>
+        <description>This is the sub type of the clause. It&apos;s dependent on type of clause</description>
+        <externalId>false</externalId>
+        <label>Sub Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetName>ClauseSubType</valueSetName>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Capped Occ Costs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Compensation Clause</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Co-Tenancy Agreement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Early termination rights</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Exclusion Zone</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Exclusivity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Option Lease</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Radius Clause</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Rent Free Period</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Right of Refusal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Security Deposit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Special Condition</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Step In Right</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Usage</controllingFieldValue>
+                <valueName>Usage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Aggregate Rent &gt;$7.5M</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Amendment to Repayment of Fitout Contribution</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Area &gt; 2500sqm</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Capital &gt; $5M</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Capped Outgoings, statutory charges</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Change in Usage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Delete or Amend Demolition Clause ability to invoke demo cl.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Delete or Amend Demolition Clause ability to invoke relocation cl.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Fitout Period</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Guarantee</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Lessee Owns Fitout paid for by fitout contrib.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Amendment to Lessor indemnities and warranties</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>National Change in Security Position</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>National Change in Usage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Deviation from Security Policy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Non-standard fitout period</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Reduced Outgoings</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Rent Review</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Rent Review which contravenes Act</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Term &lt;1Yr with Contribution</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Term &gt; 10 Years</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Loan, lien, lessee&apos;s right to caveat lease, sub-lease, mortgage, right of entry waiver</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Inconsistent Lessee Entity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Amendment to assignment/change in Control lease clause</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Deletion of Direct Debit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Trading without requirements</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Issuing lease without JV Approval</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Amendment to Gross Sales clause</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Miscellaneous</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TECH_RiskLevel__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(ReferencedClause__r.RiskLevel__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>TECH_RiskLevel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMImportDateTime__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMImportDateTime</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>TechDMOriginalSourceSystem__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMOriginalSourceSystem</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMReleaseNo__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMReleaseNo</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMSourceID__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMSourceID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMSourceSystem__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMSourceSystem</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMXREFId__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMXREF_Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechPrecedentClauseId__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_PrecedentClauseId</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>ClauseType</valueSetName>
+        </valueSet>
+    </fields>
+    <label>Opportunity Clause</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Opportunity Clauses Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Opportunity Clauses</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>OPC_LeasingClause</fullName>
+        <active>true</active>
+        <description>Deal specific clauses</description>
+        <label>Leasing Clause</label>
+        <picklistValues>
+            <picklist>SubType__c</picklist>
+            <values>
+                <fullName>Aggregate Rent %3E%247%2E5M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to Gross Sales clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to Lessor indemnities and warranties</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to Repayment of Fitout Contribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to assignment%2Fchange in Control lease clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Area %3E 2500sqm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital %3E %245M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capped Occ Costs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capped Outgoings%2C statutory charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change in Usage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Co-Tenancy Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compensation Clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delete or Amend Demolition Clause ability to invoke demo cl%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delete or Amend Demolition Clause ability to invoke relocation cl%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deletion of Direct Debit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deviation from Security Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Early termination rights</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exclusion Zone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exclusivity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitout Period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inconsistent Lessee Entity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issuing lease without JV Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lessee Owns Fitout paid for by fitout contrib%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan%2C lien%2C lessee%27s right to caveat lease%2C sub-lease%2C mortgage%2C right of entry waiver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Change in Security Position</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Change in Usage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-standard fitout period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Option Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percentage Rent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radius Clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reduced Outgoings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Free Period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review which contravenes Act</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Right of Refusal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security Deposit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Condition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Step In Right</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term %3C1Yr with Contribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term %3E 10 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading without requirements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Usage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Acceptance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Counter Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promo Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Condition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Usage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>OPC_PrecedentClause</fullName>
+        <active>true</active>
+        <description>Account specific clauses</description>
+        <label>Precedent Clause</label>
+        <picklistValues>
+            <picklist>SubType__c</picklist>
+            <values>
+                <fullName>Aggregate Rent %3E%247%2E5M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to Gross Sales clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to Lessor indemnities and warranties</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to Repayment of Fitout Contribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to assignment%2Fchange in Control lease clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Area %3E 2500sqm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital %3E %245M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capped Occ Costs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capped Outgoings%2C statutory charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change in Usage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Co-Tenancy Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compensation Clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delete or Amend Demolition Clause ability to invoke demo cl%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delete or Amend Demolition Clause ability to invoke relocation cl%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deletion of Direct Debit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deviation from Security Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Early termination rights</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exclusion Zone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exclusivity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitout Period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inconsistent Lessee Entity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issuing lease without JV Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lessee Owns Fitout paid for by fitout contrib%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan%2C lien%2C lessee%27s right to caveat lease%2C sub-lease%2C mortgage%2C right of entry waiver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Change in Security Position</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Change in Usage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-standard fitout period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Option Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percentage Rent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radius Clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reduced Outgoings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Free Period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review which contravenes Act</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Right of Refusal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security Deposit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Condition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Step In Right</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term %3C1Yr with Contribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term %3E 10 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading without requirements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Usage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Promo Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Condition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Usage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>OPC_StandardResponseClause</fullName>
+        <active>true</active>
+        <description>Record type to list all clauses for Acceptance and Counter offer letter</description>
+        <label>Standard Response Clause</label>
+        <picklistValues>
+            <picklist>SubType__c</picklist>
+            <values>
+                <fullName>Aggregate Rent %3E%247%2E5M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Area %3E 2500sqm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital %3E %245M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capped Occ Costs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change in Usage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Co-Tenancy Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compensation Clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Early termination rights</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exclusion Zone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exclusivity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitout Period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Change in Security Position</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Change in Usage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-standard fitout period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Option Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percentage Rent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radius Clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reduced Outgoings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Free Period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review which contravenes Act</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Right of Refusal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security Deposit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Condition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Step In Right</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term %3C1Yr with Contribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term %3E 10 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Usage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Acceptance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Counter Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promo Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>ReferencedClause__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RiskApplies__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ClauseDetails__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EffectiveFromDate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EffectiveToDate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LeasingComment__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Opportunity__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ReferencedClause__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RiskApplies__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ClauseDetails__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EffectiveFromDate__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EffectiveToDate__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LeasingComment__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Opportunity__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>ReferencedClause__c</searchFilterFields>
+        <searchFilterFields>Type__c</searchFilterFields>
+        <searchFilterFields>RiskApplies__c</searchFilterFields>
+        <searchFilterFields>EffectiveFromDate__c</searchFilterFields>
+        <searchFilterFields>EffectiveToDate__c</searchFilterFields>
+        <searchFilterFields>LeasingComment__c</searchFilterFields>
+        <searchFilterFields>Opportunity__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>OPC_LockClauseDetailWhenSpecialType</fullName>
+        <active>false</active>
+        <description>stop the user to edit the Clause Details when the type is Special Condition.</description>
+        <errorConditionFormula>AND(ISCHANGED( ClauseDetails__c ),  
+OR(TEXT( Type__c ) = &apos;Special Condition&apos;,TEXT( Type__c ) = &apos;RCA&apos;),
+ $Profile.Name = &apos;SCG-Retail Lease&apos;)</errorConditionFormula>
+        <errorMessage>Can not edit the clause details because type is special condition</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OPC_LockFieldsonDealAchieved</fullName>
+        <active>true</active>
+        <description>The system must prevent Users from modifying key details on the Opportunity Record once the deal is achieved</description>
+        <errorConditionFormula>AND(Opportunity__r.DealAchieved__c,$Profile.Name &lt;&gt; &quot;SCG-Sys DataMigration&quot;,$Profile.Name &lt;&gt; &quot;SCG-Sys Integration&quot;,
+ISPICKVAL(Type__c,&quot;Usage&quot;),
+ISCHANGED(ClauseDetails__c))</errorConditionFormula>
+        <errorMessage>You cannot modify a number of key fields within the Opportunity Record once the deal has been achieved</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OPC_RequiredReasonRecommendation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+	NOT(IsAutomated__c),
+	ReferencedClause__r.HighRiskClause__c,
+	OR(
+		ReasonRecommendation__c == ReferencedClause__r.ReasonRecommendation__c,
+		ISNULL(ReasonRecommendation__c),
+		ISBLANK(ReasonRecommendation__c)
+	)
+)</errorConditionFormula>
+        <errorDisplayField>ReasonRecommendation__c</errorDisplayField>
+        <errorMessage>The following condition/s require risk approval, please provide your recommendation/input for approval before submitting your request</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

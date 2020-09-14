@@ -1,0 +1,1652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>PRC_PrecedentClauseRecordPage</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>PRC_PrecedentClauseRecordPage</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>PRC_PrecedentClauseCompactLayout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>PRC_PrecedentClauseCompactLayout</fullName>
+        <fields>Name</fields>
+        <fields>Account__c</fields>
+        <fields>Type__c</fields>
+        <fields>Status__c</fields>
+        <fields>EffectiveToDate__c</fields>
+        <label>PRC - Precedent Clause Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>&lt;PRC&gt; - Represents the link between clauses and agreed clauses for an account at National level.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Precedent Clauses</relationshipLabel>
+        <relationshipName>PrecedentClauses</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>BlanketBGAmount__c</fullName>
+        <externalId>false</externalId>
+        <label>Blanket BG Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>BlanketBGDeedExpiryDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Blanket BG Deed Expiry Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BlanketBGDeedRequired__c</fullName>
+        <externalId>false</externalId>
+        <label>Blanket BG Deed Required</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BlanketBGDetails__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Blanket Bank Guarantee Details</inlineHelpText>
+        <label>Blanket BG Details</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BlanketBGExpiryDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Blanket BG Expiry Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BlanketBGReviewDeadline__c</fullName>
+        <externalId>false</externalId>
+        <label>Blanket BG Review Deadline</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BlanketBGReviewStatus__c</fullName>
+        <externalId>false</externalId>
+        <label>Blanket BG Review Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BlanketBGReviewTerms__c</fullName>
+        <externalId>false</externalId>
+        <label>Blanket BG Review Terms</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>BreakType__c</fullName>
+        <externalId>false</externalId>
+        <label>Break Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>BreakType</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CurrentMaximumThreshold__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Maximum Threshold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CurrentMinimumThreshold__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Minimum Threshold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EffectiveToDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Effective To Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FitOutPeriod__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter number of days.</inlineHelpText>
+        <label>Fit Out Period</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GuaranteesType__c</fullName>
+        <description>List different types of guarantees</description>
+        <externalId>false</externalId>
+        <label>Guarantees Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GuaranteeTextTypes</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Nil_Holdover_Increase__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This flag used to promo increases should not be automatically added in case of Holdover</description>
+        <externalId>false</externalId>
+        <label>Nil Holdover Increase</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PercentageRentComments__c</fullName>
+        <externalId>false</externalId>
+        <label>Percentage Rent Comments</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PercentageRentPercent__c</fullName>
+        <externalId>false</externalId>
+        <label>Percentage Rent %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>PromoPercentage__c</fullName>
+        <externalId>false</externalId>
+        <label>Promo Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>PromoReviewCappedPercent__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Nationally agreed capped % for promo reviews</inlineHelpText>
+        <label>Promo Review Capped %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>PromoReviewDescription__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Captures the promo review details that has been nationally agreed</inlineHelpText>
+        <label>Promo Review Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PromoReviewType__c</fullName>
+        <externalId>false</externalId>
+        <label>Promo Review Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>StandardPromoReviewType__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetName>ReviewType</valueSetName>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>Market</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>Fixed Step Amount</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>Fixed Amount</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>Fixed %</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>CPI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>CPI+</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>NZI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>Market (NZI)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>NZ+</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ReferencedClause__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It&apos;s for linking the precedent clause with the existing clause in the clause library</description>
+        <externalId>false</externalId>
+        <label>Referenced Clause</label>
+        <referenceTo>ClauseLibrary__c</referenceTo>
+        <relationshipLabel>Precedent Clauses</relationshipLabel>
+        <relationshipName>PrecedentClauses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RentReviewCappedPercent__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Nationally agreed capped % for Rent review</inlineHelpText>
+        <label>Rent Review Capped %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>RentReviewDescription__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Capture the Nationally agreed rent review details</inlineHelpText>
+        <label>Rent Review Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>RentReviewPercent__c</fullName>
+        <externalId>false</externalId>
+        <label>Rent Review %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>RentReviewType__c</fullName>
+        <externalId>false</externalId>
+        <label>Rent Review Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>StandardReviewTypes__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetName>ReviewType</valueSetName>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>Market</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>Fixed Step Amount</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>Fixed Amount</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>Fixed %</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>CPI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>CPI+</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>NZI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>Market (NZI)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Non-standard</controllingFieldValue>
+                <valueName>NZ+</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RequiredSecurityDepositDays__c</fullName>
+        <externalId>false</externalId>
+        <label>Required Security Deposit (Days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RequiredSecurityDepositMonths__c</fullName>
+        <defaultValue>4</defaultValue>
+        <externalId>false</externalId>
+        <label>Required Security Deposit (Months)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RequiredSecurityDepositWeeks__c</fullName>
+        <externalId>false</externalId>
+        <label>Required Security Deposit (Weeks)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SecurityDepositRequired__c</fullName>
+        <externalId>false</externalId>
+        <label>Security Deposit Required</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SecurityDepositType__c</fullName>
+        <externalId>false</externalId>
+        <label>Security Deposit Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SecurityDepositTypes</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SecurityPositionComments__c</fullName>
+        <externalId>false</externalId>
+        <label>Security Position Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>StandardPromoReviewType__c</fullName>
+        <description>All standard review types for promo</description>
+        <externalId>false</externalId>
+        <label>Standard Promo Review Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>StandardReviewTypes</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>StandardReviewTypes__c</fullName>
+        <description>Standard Review Types</description>
+        <externalId>false</externalId>
+        <label>Standard Review Types</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>StandardReviewTypes</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                    <label>Inactive</label>
+                </value>
+                <value>
+                    <fullName>Pending Approval</fullName>
+                    <default>false</default>
+                    <label>Pending Approval</label>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TechDMImportDateTime__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMImportDateTime</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>TechDMOriginalSourceSystem__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMOriginalSourceSystem</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMReleaseNo__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMReleaseNo</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMSourceID__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMSourceID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMSourceSystem__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMSourceSystem</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMXREF_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>Tech_DMXREF_Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>ClauseType</valueSetName>
+        </valueSet>
+    </fields>
+    <label>Precedent Clause</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Account__c</columns>
+        <columns>Comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>IncorrectName</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Type__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>startsWith</operation>
+            <value>a0Y</value>
+        </filters>
+        <label>Incorrect Name</label>
+    </listViews>
+    <nameField>
+        <label>Clause Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Precedent Clauses</pluralLabel>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>PRC_NationalAgreements</fullName>
+        <active>true</active>
+        <description>This to capture Rent review, percentage rent, security position and fitout period</description>
+        <label>National Agreements</label>
+        <picklistValues>
+            <picklist>BlanketBGDeedRequired__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BlanketBGReviewStatus__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BreakType__c</picklist>
+            <values>
+                <fullName>Artificial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Natural</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GuaranteesType__c</picklist>
+            <values>
+                <fullName>Company with Parent Guarantees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Company with Personal Guarantees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Guarantees by Franchisee</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PromoReviewType__c</picklist>
+            <values>
+                <fullName>CPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed %25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Step Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market %28NZI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RentReviewType__c</picklist>
+            <values>
+                <fullName>CPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed %25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Step Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market %28NZI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SecurityDepositRequired__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SecurityDepositType__c</picklist>
+            <values>
+                <fullName>Bank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blanket Bank Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cash</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>StandardPromoReviewType__c</picklist>
+            <values>
+                <fullName>CPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B1%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B1%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B2%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B2%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B3%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B3%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed 4%2E0%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed 4%2E5%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed 5%2E0%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B2%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B2%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B3%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B3%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>StandardReviewTypes__c</picklist>
+            <values>
+                <fullName>CPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B1%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B1%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B2%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B2%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B3%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B3%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed 4%2E0%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed 4%2E5%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed 5%2E0%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B2%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B2%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B3%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B3%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Acceptance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Counter Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promo Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Condition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Usage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>PRC_NationalPrecedentClauses</fullName>
+        <active>true</active>
+        <description>This Captures the clauses at National level</description>
+        <label>National Precedent Clauses</label>
+        <picklistValues>
+            <picklist>BlanketBGDeedRequired__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BlanketBGReviewStatus__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BreakType__c</picklist>
+            <values>
+                <fullName>Artificial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Natural</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GuaranteesType__c</picklist>
+            <values>
+                <fullName>Company with Parent Guarantees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Company with Personal Guarantees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Company with limited personal guarantees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Guarantees by Franchisee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sole Trader or Partnership</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PromoReviewType__c</picklist>
+            <values>
+                <fullName>CPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed %25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Step Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market %28NZI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RentReviewType__c</picklist>
+            <values>
+                <fullName>CPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed %25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Step Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market %28NZI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SecurityDepositRequired__c</picklist>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SecurityDepositType__c</picklist>
+            <values>
+                <fullName>Bank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cash</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>StandardPromoReviewType__c</picklist>
+            <values>
+                <fullName>CPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B1%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B1%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B2%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B2%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B3%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B3%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed 4%2E0%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed 4%2E5%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed 5%2E0%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B2%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B2%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B3%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B3%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>StandardReviewTypes__c</picklist>
+            <values>
+                <fullName>CPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B1%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B1%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B2%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B2%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B3%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPI%2B3%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed 4%2E0%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed 4%2E5%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed 5%2E0%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B2%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B2%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B3%2E0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ CPI%2B3%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Acceptance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Counter Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promo Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Condition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Usage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EffectiveToDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EffectiveToDate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Type__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EffectiveToDate__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Type__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Account__c</searchFilterFields>
+        <searchFilterFields>EffectiveToDate__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Type__c</searchFilterFields>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EffectiveToDate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>PRC_CheckBlanketBGDetailsAreEntered</fullName>
+        <active>true</active>
+        <description>If the security deposit type is Blanket Bank Guarantee then Blanket BG details should be entered</description>
+        <errorConditionFormula>AND(ISPICKVAL(SecurityDepositType__c,&apos;Blanket Bank Guarantee&apos;),ISBLANK(BlanketBGDetails__c))</errorConditionFormula>
+        <errorMessage>Please enter the Blanket BG Details for the security deposit type &quot;Blanket Bank Guarantee&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRC_CheckMinandMaxThreshold</fullName>
+        <active>true</active>
+        <description>Current Minimum Threshold should be less than the Current Maximum Threshold.</description>
+        <errorConditionFormula>CurrentMaximumThreshold__c &lt;= CurrentMinimumThreshold__c</errorConditionFormula>
+        <errorMessage>Current Minimum Threshold should be less than the Current Maximum Threshold</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRC_CheckSeurityDepositWeeksMonthsYears</fullName>
+        <active>true</active>
+        <description>User can only enter only one of the values Required Security Deposit (Days), Required Security Deposit (Months), Required Security Deposit (Years)</description>
+        <errorConditionFormula>AND(ISPICKVAL(SecurityDepositRequired__c,&apos;Yes&apos;),
+OR(
+AND(ISBLANK(RequiredSecurityDepositDays__c),ISBLANK(RequiredSecurityDepositMonths__c),ISBLANK(RequiredSecurityDepositWeeks__c)),
+OR(
+AND(NOT(ISBLANK(RequiredSecurityDepositWeeks__c)),NOT(ISBLANK(RequiredSecurityDepositMonths__c))),
+AND(NOT(ISBLANK(RequiredSecurityDepositWeeks__c)),NOT(ISBLANK(RequiredSecurityDepositDays__c))),
+AND(NOT(ISBLANK(RequiredSecurityDepositDays__c)),NOT(ISBLANK(RequiredSecurityDepositMonths__c))),
+AND(NOT(ISBLANK(RequiredSecurityDepositDays__c)),NOT(ISBLANK(RequiredSecurityDepositMonths__c)),NOT(ISBLANK(RequiredSecurityDepositWeeks__c)))
+)
+)
+)</errorConditionFormula>
+        <errorMessage>1) Only one value can be entered in either Required Security Deposit (Weeks),Required 
+    Security Deposit (Months) or Required Security Deposit (Days)
+2) All Required Security Deposit fields can not be BLANK</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRC_CurrentMinMaxThreshold</fullName>
+        <active>false</active>
+        <description>If user enters the value in Current Minimum Threshold, then Current Maximum Threshold should be entered and it’s applicable other way round as well.</description>
+        <errorConditionFormula>OR(AND( ISBLANK( CurrentMaximumThreshold__c ), NOT(ISBLANK( CurrentMinimumThreshold__c ))), AND( ISBLANK( CurrentMinimumThreshold__c ), NOT(ISBLANK( CurrentMaximumThreshold__c ))))</errorConditionFormula>
+        <errorMessage>Both Current Minimum Threshold and Current Maximum Threshold should be entered</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRC_PromoPercentageOnNationalAgreement</fullName>
+        <active>false</active>
+        <description>“It is mandatory for the user to enter the Promo Percentage on the National Agreement, if any of the field  Current Maximum Threshold &amp; Current Minimum Threshold is not blank</description>
+        <errorConditionFormula>AND(OR(NOT( ISBLANK( CurrentMaximumThreshold__c ) ) , NOT( ISBLANK(  CurrentMinimumThreshold__c ) )),  ISBLANK( PromoPercentage__c ) )</errorConditionFormula>
+        <errorMessage>Promo Percentage needs to be populated if Current Maximum Threshold or Current Minimum Threshold is not blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRC_RecordCreateRestriction</fullName>
+        <active>true</active>
+        <description>National agreement can be only created by to Retail admin team</description>
+        <errorConditionFormula>AND( 
+AND( 
+($Profile.Name != &quot;SCG-Retail Admin&quot;), 
+($Profile.Name != &quot;System Administrator&quot;), 
+($Profile.Name != &quot;SCG-SysAdm&quot;), 
+($Profile.Name != &quot;SCG-Sys DataMigration&quot;)),  
+ISNEW(),
+OR(
+ISPICKVAL(Account__r.PartnershipSegmentation__c,&quot;Strategic Partner&quot;),
+ISPICKVAL(Account__r.PartnershipSegmentation__c,&quot;Growth Partner&quot;) 
+)
+)</errorConditionFormula>
+        <errorMessage>Only Retail admin team can create the national agreement or precedent clauses for Strategic Partner or Growth Partner Accounts</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRC_RecordUpdateRestriction</fullName>
+        <active>true</active>
+        <description>National agreement can be only changed to Retail admin team</description>
+        <errorConditionFormula>AND( 
+AND( 
+($Profile.Name != &quot;SCG-Retail Admin&quot;), 
+($Profile.Name != &quot;System Administrator&quot;), 
+($Profile.Name != &quot;SCG-SysAdm&quot;), 
+($Profile.Name != &quot;SCG-Sys DataMigration&quot;)),  
+NOT(ISNEW()),
+OR(
+ISPICKVAL(Account__r.PartnershipSegmentation__c,&quot;Strategic Partner&quot;),
+ISPICKVAL(Account__r.PartnershipSegmentation__c,&quot;Growth Partner&quot;) 
+)
+)</errorConditionFormula>
+        <errorMessage>Only Retail admin team can change the national agreement or precedent clauses for Strategic Partner or Growth Partner Accounts</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

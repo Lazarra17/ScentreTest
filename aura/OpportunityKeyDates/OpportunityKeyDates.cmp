@@ -1,0 +1,148 @@
+<aura:component implements="lightning:availableForFlowScreens,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <ltng:require scripts="{!$Resource.Moment}" />
+    <!--<aura:import library="lightning:notificationsLibrary" property="notifications"/>-->
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="targtefieldRecord" type="Object"/>
+    <aura:attribute name="record2" type="Object"/>
+    <aura:attribute name="isReadOnly" type="boolean" default="false"/>
+    <aura:attribute name="targtefieldRecord2" type="Object"/>
+    <aura:attribute name="hasEditAccess" type="boolean" default="true"/>
+    <aura:attribute name="dbproposedendDate" type="Date"/>
+    <aura:attribute name="displaybuttons" type="boolean" default="true"/>
+    <aura:attribute name="isStoreRoom" type="boolean" default="true"/>
+    <aura:attribute type="Boolean" name="showSpinner" default="false"/>
+    <aura:method name="savekeydates" action="{!c.savekeydates}" access="PUBLIC"/>
+    <force:recordData aura:id="opptykeydateRec"
+                      layoutType="COMPACT"
+                      recordId="{!v.recordId}"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.targtefieldRecord}"
+                      fields="Id,FitoutDays__c,ProposedStartDate__c,CurrencyIsoCode,
+                              ProposedEndDate__c,TermYr__c,TermMonths__c,TermDays__c,
+                              ProposedRentCommencementDate__c,ProposedHandoverDate__c,RecordType.DeveloperName,Property__r.Country__c,CloseDate,ProposedShopOpeningDate__c"
+                      mode="EDIT"/>
+    <force:recordData aura:id="opptykeydateRec2"
+                      layoutType="COMPACT"
+                      recordId="{!v.recordId}"
+                      targetRecord="{!v.record2}"
+                      targetFields="{!v.targtefieldRecord2}"
+                      fields="Id,FitoutDays__c,ProposedStartDate__c,CurrencyIsoCode,
+                              ProposedEndDate__c,TermYr__c,TermMonths__c,TermDays__c,
+                              ProposedRentCommencementDate__c,ProposedHandoverDate__c,RecordType.DeveloperName,CloseDate,ProposedShopOpeningDate__c"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+    <c:ToastMessage aura:id = "toast-keyDates"/>
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="medium" aura:id="spinner"/>
+    </aura:if>
+    <div class="slds-section slds-is-open">
+        <h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small">Key Dates</span>
+        </h3>
+        <div aria-hidden="false" class="slds-section__content">
+            <lightning:layout multipleRows="true">  
+                <aura:if isTrue="{!!v.isReadOnly}">
+                    <aura:if isTrue="{!v.isStoreRoom}">
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <lightning:input aura:id="proposedHandoverDate" label="Handover Date" value="{!v.targtefieldRecord.ProposedHandoverDate__c}" type="date" onchange="{!c.changeTerm}" readonly="{!v.isReadOnly}"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <lightning:input aura:id="fitoutdays" label="Fitout Days" value="{!v.targtefieldRecord.FitoutDays__c}" type="number" readonly="true"/>
+                        </lightning:layoutItem>
+                    </aura:if>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:input aura:id="closedate" label="Forecast Achieved Date" value="{!v.targtefieldRecord.CloseDate}" type="date" disabled="false"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">       
+                        <lightning:input aura:id="proposedshopopeningdate" label="Proposed Shop Opening Date" value="{!v.targtefieldRecord.ProposedShopOpeningDate__c}" type="date" disabled="false"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <label class="slds-form-element__label" style="margin-right: 12px; margin-bottom: 0px;" for="proposedStartDate">Proposed Start Date</label>
+                        <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                            <lightning:helptext content="This is the date the Retailer will trade / pay rent."/>
+                        </div>
+                        <lightning:input aura:id="proposedStartDate" style="margin-top: -20px" value="{!v.targtefieldRecord.ProposedStartDate__c}" type="date" onchange="{!c.changeTerm}" readonly="{!v.isReadOnly}"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <label class="slds-form-element__label" style="margin-right: 12px; margin-bottom: 0px;" for="proposedRentCommencementDate">Proposed Rent Commencement Date</label>
+                        <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                            <lightning:helptext content="NZ Only - This is the date the Retailer will begin to pay rent."/>
+                        </div>
+                        <lightning:input aura:id="proposedRentCommencementDate" style="margin-top: -20px" value="{!v.targtefieldRecord.ProposedRentCommencementDate__c}" onchange="{!c.changeTerm}" type="date" readonly="{!v.isReadOnly}"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <label class="slds-form-element__label" style="margin-right: 12px; margin-bottom: 0px;" for="proposedEndDate">Proposed End Date</label>
+                        <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                            <lightning:helptext content="Reminder - blackout period 1/10 to 31/3."/>
+                        </div>
+                        <lightning:input aura:id="proposedEndDate" style="margin-top: -20px" value="{!v.targtefieldRecord.ProposedEndDate__c}" type="date" onchange="{!c.changeTerm}" readonly="{!v.isReadOnly}"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:input aura:id="termyears" label="Term (Year)" value="{!v.targtefieldRecord.TermYr__c}" type="number" onchange="{!c.changeTerm}" readonly="{!v.isReadOnly}"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:input aura:id="termmonths" label="Term (Months)" value="{!v.targtefieldRecord.TermMonths__c}" type="number" onchange="{!c.changeTerm}" readonly="{!v.isReadOnly}"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:input aura:id="termdays" label="Term (days)" value="{!v.targtefieldRecord.TermDays__c}" type="number" onchange="{!c.changeTerm}" readonly="{!v.isReadOnly}" />
+                    </lightning:layoutItem>
+                    <aura:set attribute="else">
+                        <aura:if isTrue="{!v.isStoreRoom}">
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                                <lightning:input aura:id="proposedHandoverDate" label="Handover Date" value="{!v.targtefieldRecord2.ProposedHandoverDate__c}" type="date" onchange="{!c.changeTerm}" disabled="{!v.isReadOnly}"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                                <lightning:input aura:id="fitoutdays" label="Fitout Days" value="{!v.targtefieldRecord2.FitoutDays__c}" type="number" readonly="true"/>
+                            </lightning:layoutItem>
+                        </aura:if>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <lightning:input aura:id="closedate" label="Forecast Achieved Date" value="{!v.targtefieldRecord2.CloseDate}" type="date" disabled="{!v.isReadOnly}"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">       
+                            <lightning:input aura:id="proposedshopopeningdate" label="Proposed Shop Opening Date" value="{!v.targtefieldRecord2.ProposedShopOpeningDate__c}" type="date" disabled="{!v.isReadOnly}"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <label class="slds-form-element__label" style="margin-right: 12px; margin-bottom: 0px;" for="proposedStartDate">Proposed Start Date</label>
+                            <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                                <lightning:helptext content="This is the date the Retailer will trade / pay rent."/>
+                            </div>
+                            <lightning:input aura:id="proposedStartDate" style="margin-top: -20px" value="{!v.targtefieldRecord2.ProposedStartDate__c}" type="date" onchange="{!c.changeTerm}" disabled="{!v.isReadOnly}"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <label class="slds-form-element__label" style="margin-right: 12px; margin-bottom: 0px;" for="proposedRentCommencementDate">Proposed Rent Commencement Date</label>
+                            <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                                <lightning:helptext content="NZ Only - This is the date the Retailer will begin to pay rent."/>
+                            </div>
+                            <lightning:input aura:id="proposedRentCommencementDate" style="margin-top: -20px" value="{!v.targtefieldRecord2.ProposedRentCommencementDate__c}" onchange="{!c.changeTerm}" type="date" disabled="{!v.isReadOnly}"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <label class="slds-form-element__label" style="margin-right: 12px; margin-bottom: 0px;" for="proposedEndDate">Proposed End Date</label>
+                            <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                                <lightning:helptext content="Reminder - blackout period 1/10 to 31/3."/>
+                            </div>
+                            <lightning:input aura:id="proposedEndDate" style="margin-top: -20px" value="{!v.targtefieldRecord2.ProposedEndDate__c}" type="date" onchange="{!c.changeTerm}" disabled="{!v.isReadOnly}"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <lightning:input aura:id="termyears" label="Term (Year)" value="{!v.targtefieldRecord2.TermYr__c}" type="number" onchange="{!c.changeTerm}" readonly="{!v.isReadOnly}"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <lightning:input aura:id="termmonths" label="Term (Months)" value="{!v.targtefieldRecord2.TermMonths__c}" type="number" onchange="{!c.changeTerm}" readonly="{!v.isReadOnly}"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <lightning:input aura:id="termdays" label="Term (days)" value="{!v.targtefieldRecord2.TermDays__c}" type="number" onchange="{!c.changeTerm}" readonly="{!v.isReadOnly}" />
+                        </lightning:layoutItem>
+                        
+                    </aura:set>
+                </aura:if>
+            </lightning:layout>
+            <div align="right">
+                <aura:if isTrue="{!v.displaybuttons}">
+                    <aura:if isTrue="{!!v.isReadOnly}">  
+                        <lightning:button variant="brand" label="Save" onclick="{!c.savekeydates}"/>
+                    </aura:if> 
+                </aura:if>
+            </div>
+        </div>
+    </div>
+</aura:component>

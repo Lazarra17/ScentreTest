@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>CLA_LeasingAdmin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule to share Clause Library to Leasing Admin (Read Only)</description>
+        <label>CLA - Leasing Admin</label>
+        <sharedTo>
+            <role>LeasingAdmin</role>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CLA_RetailGeneralManagerAndSubordinates</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule to share Clause Library to Retail General Manager (Read Only)</description>
+        <label>CLA - Retail General Manager and Subordinates</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManager</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CLA_RetailGeneralManagerOperationsAndSubordinates</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule to share Clause Library to Retail General Manager Operations (Read Only)</description>
+        <label>CLA - Retail General Manager Operations and Subordinates</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManagerOperations</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>DMShareWithLeasingAdmin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>DM Share With Leasing Admin</label>
+        <sharedTo>
+            <roleAndSubordinates>LeasingAdmin</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <role>DMUser</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>DMShareWithRetailManager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>DM Share With Retail Manager</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManager</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <role>DMUser</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>DMShareWithRetailManagerOperations</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>DM Share With Retail Manager Operations</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManagerOperations</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <role>DMUser</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>DMShareWithRetailManager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>DM Share With Retail Manager</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManager</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <role>DMUser</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>DMShareWithRetailManagerOperations</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>DM Share With Retail Manager Operations</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManagerOperations</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <role>DMUser</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>OPP_RetailGeneralManagerAndSubordinates</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule to share Opportunity to Retail General Manager (Read and Write)</description>
+        <label>OPP - Retail General Manager and Subordinates</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManager</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>OPP_RetailGeneralManagerOperationsAndSubordinates</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule to share Opportunity to Retail General Manager Operations (Read Only)</description>
+        <label>OPP - Retail General Manager Operations and Subordinates</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManagerOperations</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>SharewithSolicitors</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Sharing rule to share opportunities with Solicitors</description>
+        <label>Share with Solicitors</label>
+        <sharedTo>
+            <role>RetailSolicitor</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Executive</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

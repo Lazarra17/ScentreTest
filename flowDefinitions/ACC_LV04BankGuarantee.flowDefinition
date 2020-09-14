@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>7</activeVersionNumber>
+    <description>Bulk Lease Variation for LV04 Bank Guarantee and Security Deposit Management</description>
+    <masterLabel>ACC_LV04BankGuarantee</masterLabel>
+</FlowDefinition>

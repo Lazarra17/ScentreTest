@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,lightning:actionOverride" access="global" >
+    
+    <div aura:id="Modalbox" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <div class="slds-modal__content">
+                <lightning:button variant="base" class="slds-float_right slds-m-right_small"  onclick="{!c.closeModal }">
+                    <lightning:icon iconName="utility:close" size="small"/>  
+                </lightning:button>
+                <ui:message severity="error" closable="false">
+                    {!$Label.c.NewCaseButtonOverride} 
+                </ui:message>
+            </div>
+        </div>
+    </div>
+    <div aura:id="overlay" class="slds-backdrop slds-backdrop--open"></div>   
+    <div class="slds-backdrop " aura:id="Modalbackdrop"></div>
+</aura:component>

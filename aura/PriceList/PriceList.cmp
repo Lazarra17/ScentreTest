@@ -1,0 +1,17 @@
+<aura:component controller="OpportunityLineItemController" implements="flexipage:availableForRecordHome,force:hasRecordId"> <!--inherit recordId attribute-->
+    <aura:attribute name="priceData" type="Object"/>
+    <aura:attribute name="productLabel" type="Double[]"/>
+    <aura:attribute name="recoverableArea" type="Double"/>
+    <aura:attribute name="usableArea" type="Double"/>
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    
+    <lightning:input name="recoverableArea" label="Recoverable Area" type="number"
+                     value="{!v.recoverableArea}" formatter="currency" step="0.01" onchange="{!c.areaChange}" /> <br/>
+    
+    <lightning:datatable data="{! v.priceData }" 
+        columns="{! v.productLabel }" 
+        keyField="id"
+        hideCheckboxColumn="true"/>
+
+</aura:component>

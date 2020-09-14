@@ -1,0 +1,6 @@
+<aura:event type="COMPONENT" description="Event template">
+    <aura:attribute name="typeValue" type="String" />
+    <aura:attribute name="subtypeValue" type="String" />
+    <aura:attribute name="typeApiName" type="String" default="Type" />
+    <aura:attribute name="subtypeApiName" type="String" default="SubType__c" />
+</aura:event>

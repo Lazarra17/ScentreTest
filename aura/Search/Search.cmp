@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute type = "String[]" name = "searchFieldList" />
+    <aura:attribute type = "Object[]" name = "searchList" />
+    <aura:attribute type = "String" name = "label" default = "Search" />
+    <aura:attribute type = "String" name = "variant" default = "standard" />
+    
+    <aura:registerEvent name="searchResult" type="c:SearchEvent"/>
+    
+    <div style = "margin: 10px 0px 10px 0px;">
+		<lightning:input type="search" variant = "{! v.variant}" 
+						 label="{! v.label}" name="search" 
+						 onchange = "{! c.search}" placeholder = "Search"/>
+	</div>
+</aura:component>

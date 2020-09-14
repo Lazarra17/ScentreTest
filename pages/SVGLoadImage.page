@@ -1,0 +1,48 @@
+<apex:page showheader="false" sidebar="false">
+    <apex:includeScript value="{!$Resource.Jquery}"/>
+    <apex:includeScript value="{!$Resource.SvgPanZoom}"/>
+
+  <body>
+    <div id="container"></div>
+  </body>
+  <script>
+       $(function() {
+        var lastEventListener = null;
+
+        function createNewEmbed(src){
+          var embed = document.createElement('embed');
+          embed.setAttribute('style', 'width: 100%; height: 500px; border:1px solid black;');
+          embed.setAttribute('type', 'image/svg+xml');
+          embed.setAttribute('src', src);
+
+          document.getElementById('container').appendChild(embed)
+
+          lastEventListener = function(){
+            svgPanZoom(embed, {
+              zoomEnabled: true,
+              controlIconsEnabled: true
+            });
+          }
+          embed.addEventListener('load', lastEventListener)
+
+          return embed
+        }
+        
+        var lastEmbedSrc = '{!$CurrentPage.parameters.image}'
+          , lastEmbed = createNewEmbed(lastEmbedSrc);
+		console.log('lastEmbedSrc', lastEmbedSrc);
+        function removeEmbed(){
+          // Destroy svgpanzoom
+          svgPanZoom(lastEmbed).destroy()
+          // Remove event listener
+          lastEmbed.removeEventListener('load', lastEventListener)
+          // Null last event listener
+          lastEventListener = null
+          // Remove embed element
+          document.getElementById('container').removeChild(lastEmbed)
+          // Null reference to embed
+          lastEmbed = null
+        }
+      });
+  </script>
+</apex:page>

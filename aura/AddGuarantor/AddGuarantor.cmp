@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="oppRecordId" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <lightning:flow aura:id="flow" onstatuschange="{!c.statusChange}"/>
+</aura:component>

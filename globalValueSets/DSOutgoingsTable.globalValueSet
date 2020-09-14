@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Std</fullName>
+        <default>true</default>
+        <label>Std</label>
+    </customValue>
+    <customValue>
+        <fullName>Other1</fullName>
+        <default>false</default>
+        <label>Other1</label>
+    </customValue>
+    <customValue>
+        <fullName>Other2</fullName>
+        <default>false</default>
+        <label>Other2</label>
+    </customValue>
+    <masterLabel>DS Outgoings Table</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,45 @@
+<aura:component controller = "DisplayRiskClauseController" implements="flexipage:availableForRecordHome" access="global" >
+	<aura:attribute name="recordId" type="String" />
+	<aura:attribute name="isLoading" type="Boolean" default="true" />
+	<aura:attribute name="columns" type="Object" />
+    <aura:attribute name="oppRecord" type="Object" />
+    <aura:attribute name="oppRecordError" type="Object" />
+    <aura:attribute name="oppRecordMaster" type="Object" />
+    <aura:attribute name="opportunityClauseTemp" type="Object[]" />
+	<aura:attribute name="opportunityClauseMaster" type="Object[]" />
+    <aura:attribute name="filteredOpportunityClause" type="Object[]" />
+    <aura:attribute name="searchFieldList" type="String[]" default="['Name']" />
+    
+    <force:recordData aura:id="opportunityRecord" 
+    				  recordId="{!v.recordId}" 
+    				  targetRecord="{!v.oppRecordMaster}" 
+    				  targetFields="{!v.oppRecord}" 
+    				  targetError="{!v.oppRecordError}" 
+    				  fields="Id, OwnerId, StageName"
+    				  recordUpdated="{! c.getTableRecords}" />
+    
+    <!--c:Search aura:id="search" 
+    		  searchFieldList="{! v.searchFieldList}" 
+    		  searchList="{! v.opportunityClauseMaster}" 
+    		  searchResult="{! c.catchSearchResult}" 
+    		  variant="label-hidden" /-->
+
+    <div class="slds-section slds-is-open">
+		<h3 class="slds-section__title slds-theme_shade">
+		    <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Risk</span>
+		</h3>
+        <lightning:datatable errors="{! v.tableErrors}" 
+        					 hideCheckboxColumn="true" 
+        					 draftValues="{! v.opportunityClauseTemp}" 
+        					 data="{! v.filteredOpportunityClause}" 
+        					 columns="{! v.columns}" 
+        					 keyField="clauseId" 
+        					 onsave="{! c.handleSave}" 
+        					 oncellchange="{! c.handleEditCell}"
+        					 oncancel="{! c.handleCancel}" />
+    </div>
+
+    <aura:if isTrue="{! v.isLoading }">
+        <lightning:spinner alternativeText="Loading" />
+    </aura:if>
+</aura:component>

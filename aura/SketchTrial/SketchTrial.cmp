@@ -1,0 +1,4 @@
+<aura:component >
+	<ltng:require scripts="{!$Resource.Sketch}" 
+              afterScriptsLoaded="{!c.setup}"/>	
+</aura:component>

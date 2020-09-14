@@ -1,0 +1,26 @@
+<aura:component controller="ItemsToApproveController" implements="flexipage:availableForAllPageTypes,force:appHostable" access="global" >
+    
+    <aura:attribute name="itemsList" type="ItemsToApproveController.ItemToApproveWrapper[]"  />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    	<lightning:card>
+            <div class="slds-card__header-title slds-truncate header">
+                <b>Items to Approve</b>
+            </div>
+            <aura:if isTrue="{!not(empty(v.itemsList))}">
+                <ui:scrollerWrapper>
+                <div class="" style="height:75vh;">
+                    <aura:iteration items="{!v.itemsList}" var="item">
+                        <c:ItemToApprove item="{!item}" />
+                    </aura:iteration>
+                </div>
+                    </ui:scrollerWrapper>
+                <aura:set attribute="else">
+                    <br/>
+                    <center>No approval requests need your attention right now.</center>
+                    <br/>
+                </aura:set>
+            </aura:if>
+        </lightning:card>
+</aura:component>

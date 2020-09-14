@@ -1,0 +1,22 @@
+<aura:component implements="lightning:availableForFlowScreens" access="global">
+    <aura:attribute name="columnsStr" type="String" />
+    <aura:attribute name="columns" type="List" />
+    <aura:attribute name="dataArr" type="String[]"/>
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="selectedRows" type="String[]" />
+    <aura:attribute name="columnWidth" type="Integer" default="120" />
+    
+    
+    <aura:attribute name="key" type="String" default="Id"/>
+    
+    <aura:handler name="init" value="{!this}" action="{! c.doInit }"/>
+    
+    <lightning:datatable keyField="{!v.key}"
+                         data="{!v.data}"
+                         columns="{!v.columns}"
+                         selectedRows ="{!v.selectedRows}"
+                         onrowselection="{!c.getSelectedId}"
+                         minColumnWidth="{!v.columnWidth}"
+                         />
+
+</aura:component>

@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CapitalAmountRange__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Capital Amount Range</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>-10000000 to 10000000</fullName>
+                    <default>true</default>
+                    <label>-10000000 to 10000000</label>
+                </value>
+                <value>
+                    <fullName>5000.01 to 10000000</fullName>
+                    <default>false</default>
+                    <label>5000.01 to 10000000</label>
+                </value>
+                <value>
+                    <fullName>10000.01 to 10000000</fullName>
+                    <default>false</default>
+                    <label>10000.01 to 10000000</label>
+                </value>
+                <value>
+                    <fullName>0.01-10000000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>0.01-10000000</label>
+                </value>
+                <value>
+                    <fullName>10000.01-10000000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>10000.01-10000000</label>
+                </value>
+                <value>
+                    <fullName>25000.01-10000000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>25000.01-10000000</label>
+                </value>
+                <value>
+                    <fullName>40000.01 to 10000000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>40000.01 to 10000000</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CapitalRange__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Capital Range</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>-100000 to 100000</fullName>
+                    <default>true</default>
+                    <label>-100000 to 100000</label>
+                </value>
+                <value>
+                    <fullName>10.01 to 100000</fullName>
+                    <default>false</default>
+                    <label>10.01 to 100000</label>
+                </value>
+                <value>
+                    <fullName>20.01 to 100000</fullName>
+                    <default>false</default>
+                    <label>20.01 to 100000</label>
+                </value>
+                <value>
+                    <fullName>0-19</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>0-19</label>
+                </value>
+                <value>
+                    <fullName>0-19.99</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>0-19.99</label>
+                </value>
+                <value>
+                    <fullName>0.01-100000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>0.01-100000</label>
+                </value>
+                <value>
+                    <fullName>0.01-19.99</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>0.01-19.99</label>
+                </value>
+                <value>
+                    <fullName>0.01-9999</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>0.01-9999</label>
+                </value>
+                <value>
+                    <fullName>1-19</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>1-19</label>
+                </value>
+                <value>
+                    <fullName>20-29</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>20-29</label>
+                </value>
+                <value>
+                    <fullName>20-29.99</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>20-29.99</label>
+                </value>
+                <value>
+                    <fullName>20.01-100000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>20.01-100000</label>
+                </value>
+                <value>
+                    <fullName>30-9999</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>30-9999</label>
+                </value>
+                <value>
+                    <fullName>30.01 to 100000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>30.01 to 100000</label>
+                </value>
+                <value>
+                    <fullName>30.01-100000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>30.01-100000</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FieldAPIName__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Field API Name</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>COO__c</fullName>
+                    <default>false</default>
+                    <label>COO__c</label>
+                </value>
+                <value>
+                    <fullName>CorporateLegal__c</fullName>
+                    <default>false</default>
+                    <label>CorporateLegal__c</label>
+                </value>
+                <value>
+                    <fullName>DirectorLARSNZDevelopment__c</fullName>
+                    <default>false</default>
+                    <label>DirectorLARSNZDevelopment__c</label>
+                </value>
+                <value>
+                    <fullName>GMLARS__c</fullName>
+                    <default>false</default>
+                    <label>GMLARS__c</label>
+                </value>
+                <value>
+                    <fullName>GMRetailAdmin__c</fullName>
+                    <default>false</default>
+                    <label>GMRetailAdmin__c</label>
+                </value>
+                <value>
+                    <fullName>GroupGeneralManagerLARS__c</fullName>
+                    <default>false</default>
+                    <label>GroupGeneralManagerLARS__c</label>
+                </value>
+                <value>
+                    <fullName>RMLARS__c</fullName>
+                    <default>false</default>
+                    <label>RMLARS__c</label>
+                </value>
+                <value>
+                    <fullName>RMRetailAdmin__c</fullName>
+                    <default>false</default>
+                    <label>RMRetailAdmin__c</label>
+                </value>
+                <value>
+                    <fullName>CentreManager__c</fullName>
+                    <default>false</default>
+                    <label>CentreManager__c</label>
+                </value>
+                <value>
+                    <fullName>RetailManager__c</fullName>
+                    <default>false</default>
+                    <label>RetailManager__c</label>
+                </value>
+                <value>
+                    <fullName>Development_Executive__c</fullName>
+                    <default>false</default>
+                    <label>Development_Executive__c</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LeaseType__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Lease Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>OPP_CommercialLeasing</fullName>
+                    <default>true</default>
+                    <label>OPP_CommercialLeasing</label>
+                </value>
+                <value>
+                    <fullName>OPP - Retail Leasing</fullName>
+                    <default>false</default>
+                    <label>OPP - Retail Leasing</label>
+                </value>
+                <value>
+                    <fullName>OPP - Store Room Leasing</fullName>
+                    <default>false</default>
+                    <label>OPP - Store Room Leasing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RentAmountRange__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Rent Amount Range</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>-10000000 to 10000000</fullName>
+                    <default>true</default>
+                    <label>-10000000 to 10000000</label>
+                </value>
+                <value>
+                    <fullName>-10000000 to -15000.01</fullName>
+                    <default>false</default>
+                    <label>-10000000 to -15000.01</label>
+                </value>
+                <value>
+                    <fullName>-10000000 to -20000.01</fullName>
+                    <default>false</default>
+                    <label>-10000000 to -20000.01</label>
+                </value>
+                <value>
+                    <fullName>-10000000 to -25000.01</fullName>
+                    <default>false</default>
+                    <label>-10000000 to -25000.01</label>
+                </value>
+                <value>
+                    <fullName>-10000000 to -30000.01</fullName>
+                    <default>false</default>
+                    <label>-10000000 to -30000.01</label>
+                </value>
+                <value>
+                    <fullName>-10000000 to -35000.01</fullName>
+                    <default>false</default>
+                    <label>-10000000 to -35000.01</label>
+                </value>
+                <value>
+                    <fullName>-10000000 to -40000.01</fullName>
+                    <default>false</default>
+                    <label>-10000000 to -40000.01</label>
+                </value>
+                <value>
+                    <fullName>-10000000 to -45000.01</fullName>
+                    <default>false</default>
+                    <label>-10000000 to -45000.01</label>
+                </value>
+                <value>
+                    <fullName>0.01-10000000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>0.01-10000000</label>
+                </value>
+                <value>
+                    <fullName>10000.01-10000000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>10000.01-10000000</label>
+                </value>
+                <value>
+                    <fullName>25000.01-10000000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>25000.01-10000000</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RentRange__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Rent Range</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>-100000 to 100000</fullName>
+                    <default>true</default>
+                    <label>-100000 to 100000</label>
+                </value>
+                <value>
+                    <fullName>-100000 to -00.01</fullName>
+                    <default>false</default>
+                    <label>-100000 to -00.01</label>
+                </value>
+                <value>
+                    <fullName>-100000 to -03.01</fullName>
+                    <default>false</default>
+                    <label>-100000 to -03.01</label>
+                </value>
+                <value>
+                    <fullName>-100000 to -10.01</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>-100000 to -10.01</label>
+                </value>
+                <value>
+                    <fullName>-100000 to -25.01</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>-100000 to -25.01</label>
+                </value>
+                <value>
+                    <fullName>0-9</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>0-9</label>
+                </value>
+                <value>
+                    <fullName>0-9.99</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>0-9.99</label>
+                </value>
+                <value>
+                    <fullName>0.01-100000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>0.01-100000</label>
+                </value>
+                <value>
+                    <fullName>0.01-9.99</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>0.01-9.99</label>
+                </value>
+                <value>
+                    <fullName>0.01-9999</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>0.01-9999</label>
+                </value>
+                <value>
+                    <fullName>1-9</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>1-9</label>
+                </value>
+                <value>
+                    <fullName>10-29</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>10-29</label>
+                </value>
+                <value>
+                    <fullName>10-29.99</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>10-29.99</label>
+                </value>
+                <value>
+                    <fullName>10-9999</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>10-9999</label>
+                </value>
+                <value>
+                    <fullName>10.01-100000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>10.01-100000</label>
+                </value>
+                <value>
+                    <fullName>30-9999</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>30-9999</label>
+                </value>
+                <value>
+                    <fullName>30.01-100000</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>30.01-100000</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Role</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Accounts Receivable Admin</fullName>
+                    <default>false</default>
+                    <label>Accounts Receivable Admin</label>
+                </value>
+                <value>
+                    <fullName>Administration Manager</fullName>
+                    <default>false</default>
+                    <label>Administration Manager</label>
+                </value>
+                <value>
+                    <fullName>Asset General Manager</fullName>
+                    <default>false</default>
+                    <label>Asset General Manager</label>
+                </value>
+                <value>
+                    <fullName>Centre Manager</fullName>
+                    <default>false</default>
+                    <label>Centre Manager</label>
+                </value>
+                <value>
+                    <fullName>Chief Operating Officer</fullName>
+                    <default>false</default>
+                    <label>Chief Operating Officer</label>
+                </value>
+                <value>
+                    <fullName>Commercial Leasing Admin</fullName>
+                    <default>false</default>
+                    <label>Commercial Leasing Admin</label>
+                </value>
+                <value>
+                    <fullName>Commercial Leasing General Manager</fullName>
+                    <default>false</default>
+                    <label>Commercial Leasing General Manager</label>
+                </value>
+                <value>
+                    <fullName>Commercial Leasing Regional Manager</fullName>
+                    <default>false</default>
+                    <label>Commercial Leasing Regional Manager</label>
+                </value>
+                <value>
+                    <fullName>Commercial Property Manager</fullName>
+                    <default>false</default>
+                    <label>Commercial Property Manager</label>
+                </value>
+                <value>
+                    <fullName>Commercial Retail Manager</fullName>
+                    <default>false</default>
+                    <label>Commercial Retail Manager</label>
+                </value>
+                <value>
+                    <fullName>Corporate Legal</fullName>
+                    <default>false</default>
+                    <label>Corporate Legal</label>
+                </value>
+                <value>
+                    <fullName>Development Executive</fullName>
+                    <default>false</default>
+                    <label>Development Executive</label>
+                </value>
+                <value>
+                    <fullName>Director LARS &amp; NZ Development</fullName>
+                    <default>false</default>
+                    <label>Director LARS &amp; NZ Development</label>
+                </value>
+                <value>
+                    <fullName>Fitout Contributions Admin</fullName>
+                    <default>false</default>
+                    <label>Fitout Contributions Admin</label>
+                </value>
+                <value>
+                    <fullName>General Manager Leasing</fullName>
+                    <default>false</default>
+                    <label>General Manager Leasing</label>
+                </value>
+                <value>
+                    <fullName>General Manager Retail Design</fullName>
+                    <default>false</default>
+                    <label>General Manager Retail Design</label>
+                </value>
+                <value>
+                    <fullName>GM of Corporate Accounting</fullName>
+                    <default>false</default>
+                    <label>GM of Corporate Accounting</label>
+                </value>
+                <value>
+                    <fullName>GM Retail Admin &amp; Delivery</fullName>
+                    <default>false</default>
+                    <label>GM Retail Admin &amp; Delivery</label>
+                </value>
+                <value>
+                    <fullName>Group General Manager - LARS</fullName>
+                    <default>false</default>
+                    <label>Group General Manager - LARS</label>
+                </value>
+                <value>
+                    <fullName>Leasing Executive</fullName>
+                    <default>false</default>
+                    <label>Leasing Executive</label>
+                </value>
+                <value>
+                    <fullName>Leasing Finance Analyst</fullName>
+                    <default>false</default>
+                    <label>Leasing Finance Analyst</label>
+                </value>
+                <value>
+                    <fullName>Regional Manager - LARS</fullName>
+                    <default>false</default>
+                    <label>Regional Manager - LARS</label>
+                </value>
+                <value>
+                    <fullName>Regional Manager Retail Design</fullName>
+                    <default>false</default>
+                    <label>Regional Manager Retail Design</label>
+                </value>
+                <value>
+                    <fullName>Regional Mgr Retail Admin</fullName>
+                    <default>false</default>
+                    <label>Regional Mgr Retail Admin</label>
+                </value>
+                <value>
+                    <fullName>Regional Mgr Retail Delivery</fullName>
+                    <default>false</default>
+                    <label>Regional Mgr Retail Delivery</label>
+                </value>
+                <value>
+                    <fullName>Reg Retailer Account Admin</fullName>
+                    <default>false</default>
+                    <label>Reg Retailer Account Admin</label>
+                </value>
+                <value>
+                    <fullName>Retail Admin Assistant</fullName>
+                    <default>false</default>
+                    <label>Retail Admin Assistant</label>
+                </value>
+                <value>
+                    <fullName>Retail Administrator</fullName>
+                    <default>false</default>
+                    <label>Retail Administrator</label>
+                </value>
+                <value>
+                    <fullName>Retail Delivery Coordinator</fullName>
+                    <default>false</default>
+                    <label>Retail Delivery Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Retail Design Manager</fullName>
+                    <default>false</default>
+                    <label>Retail Design Manager</label>
+                </value>
+                <value>
+                    <fullName>Retail Design Team Leader</fullName>
+                    <default>false</default>
+                    <label>Retail Design Team Leader</label>
+                </value>
+                <value>
+                    <fullName>Retail Manager</fullName>
+                    <default>false</default>
+                    <label>Retail Manager</label>
+                </value>
+                <value>
+                    <fullName>Revenue Administrator</fullName>
+                    <default>false</default>
+                    <label>Revenue Administrator</label>
+                </value>
+                <value>
+                    <fullName>Revenue Assurance Manager</fullName>
+                    <default>false</default>
+                    <label>Revenue Assurance Manager</label>
+                </value>
+                <value>
+                    <fullName>Risk Executive</fullName>
+                    <default>false</default>
+                    <label>Risk Executive</label>
+                </value>
+                <value>
+                    <fullName>RM &amp; National Retail Design Coordinator</fullName>
+                    <default>false</default>
+                    <label>RM &amp; National Retail Design Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Senior Retail Administrator</fullName>
+                    <default>false</default>
+                    <label>Senior Retail Administrator</label>
+                </value>
+                <value>
+                    <fullName>Snr Retail Design Mgr</fullName>
+                    <default>false</default>
+                    <label>Snr Retail Design Mgr</label>
+                </value>
+                <value>
+                    <fullName>Solicitor Firm</fullName>
+                    <default>false</default>
+                    <label>Solicitor Firm</label>
+                </value>
+                <value>
+                    <fullName>Team Coordinator Retail Design</fullName>
+                    <default>false</default>
+                    <label>Team Coordinator Retail Design</label>
+                </value>
+                <value>
+                    <fullName>Tenancy Coordinator</fullName>
+                    <default>false</default>
+                    <label>Tenancy Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Third Party Leasing Agent</fullName>
+                    <default>false</default>
+                    <label>Third Party Leasing Agent</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Tier__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Tier</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Tier 1</fullName>
+                    <default>true</default>
+                    <label>Tier 1</label>
+                </value>
+                <value>
+                    <fullName>Tier 2</fullName>
+                    <default>false</default>
+                    <label>Tier 2</label>
+                </value>
+                <value>
+                    <fullName>Tier 3</fullName>
+                    <default>false</default>
+                    <label>Tier 3</label>
+                </value>
+                <value>
+                    <fullName>Tier 4</fullName>
+                    <default>false</default>
+                    <label>Tier 4</label>
+                </value>
+                <value>
+                    <fullName>All</fullName>
+                    <default>false</default>
+                    <label>All</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Retail Initial Approval</fullName>
+                    <default>false</default>
+                    <label>Retail Initial Approval</label>
+                </value>
+                <value>
+                    <fullName>Retail Risk Approval</fullName>
+                    <default>false</default>
+                    <label>Retail Risk Approval</label>
+                </value>
+                <value>
+                    <fullName>Retail Final Approval</fullName>
+                    <default>false</default>
+                    <label>Retail Final Approval</label>
+                </value>
+                <value>
+                    <fullName>Commercial Initial Approval</fullName>
+                    <default>false</default>
+                    <label>Commercial Initial Approval</label>
+                </value>
+                <value>
+                    <fullName>Commercial Risk Approval</fullName>
+                    <default>false</default>
+                    <label>Commercial Risk Approval</label>
+                </value>
+                <value>
+                    <fullName>Commercial Final Approval</fullName>
+                    <default>false</default>
+                    <label>Commercial Final Approval</label>
+                </value>
+                <value>
+                    <fullName>Store Room License Approval</fullName>
+                    <default>false</default>
+                    <label>Store Room License Approval</label>
+                </value>
+                <value>
+                    <fullName>Commercial RM Approval</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Commercial RM Approval</label>
+                </value>
+                <value>
+                    <fullName>Retail RM Approval</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Retail RM Approval</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>projectrole__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Project Role</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Accounts Receivable Admin</fullName>
+                    <default>true</default>
+                    <label>Accounts Receivable Admin</label>
+                </value>
+                <value>
+                    <fullName>Administration Manager</fullName>
+                    <default>false</default>
+                    <label>Administration Manager</label>
+                </value>
+                <value>
+                    <fullName>Asset General Manager</fullName>
+                    <default>false</default>
+                    <label>Asset General Manager</label>
+                </value>
+                <value>
+                    <fullName>Centre Manager</fullName>
+                    <default>false</default>
+                    <label>Centre Manager</label>
+                </value>
+                <value>
+                    <fullName>Chief Operating Officer</fullName>
+                    <default>false</default>
+                    <label>Chief Operating Officer</label>
+                </value>
+                <value>
+                    <fullName>Commercial Leasing Admin</fullName>
+                    <default>false</default>
+                    <label>Commercial Leasing Admin</label>
+                </value>
+                <value>
+                    <fullName>Commercial Leasing General Manager</fullName>
+                    <default>false</default>
+                    <label>Commercial Leasing General Manager</label>
+                </value>
+                <value>
+                    <fullName>Commercial Leasing Regional Manager</fullName>
+                    <default>false</default>
+                    <label>Commercial Leasing Regional Manager</label>
+                </value>
+                <value>
+                    <fullName>Commercial Property Manager</fullName>
+                    <default>false</default>
+                    <label>Commercial Property Manager</label>
+                </value>
+                <value>
+                    <fullName>Commercial Retail Manager</fullName>
+                    <default>false</default>
+                    <label>Commercial Retail Manager</label>
+                </value>
+                <value>
+                    <fullName>Corporate Legal</fullName>
+                    <default>false</default>
+                    <label>Corporate Legal</label>
+                </value>
+                <value>
+                    <fullName>D&amp;C Special Project Coordinator</fullName>
+                    <default>false</default>
+                    <label>D&amp;C Special Project Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Development Executive</fullName>
+                    <default>false</default>
+                    <label>Development Executive</label>
+                </value>
+                <value>
+                    <fullName>Development Finance Manager</fullName>
+                    <default>false</default>
+                    <label>Development Finance Manager</label>
+                </value>
+                <value>
+                    <fullName>Director LARS &amp; NZ Development</fullName>
+                    <default>false</default>
+                    <label>Director LARS &amp; NZ Development</label>
+                </value>
+                <value>
+                    <fullName>Fitout Contributions Admin</fullName>
+                    <default>false</default>
+                    <label>Fitout Contributions Admin</label>
+                </value>
+                <value>
+                    <fullName>General Manager Leasing</fullName>
+                    <default>false</default>
+                    <label>General Manager Leasing</label>
+                </value>
+                <value>
+                    <fullName>General Manager Retail Design</fullName>
+                    <default>false</default>
+                    <label>General Manager Retail Design</label>
+                </value>
+                <value>
+                    <fullName>GM of Corporate Accounting</fullName>
+                    <default>false</default>
+                    <label>GM of Corporate Accounting</label>
+                </value>
+                <value>
+                    <fullName>GM Retail Admin &amp; Delivery</fullName>
+                    <default>false</default>
+                    <label>GM Retail Admin &amp; Delivery</label>
+                </value>
+                <value>
+                    <fullName>Group General Manager - LARS</fullName>
+                    <default>false</default>
+                    <label>Group General Manager - LARS</label>
+                </value>
+                <value>
+                    <fullName>Leasing Executive</fullName>
+                    <default>false</default>
+                    <label>Leasing Executive</label>
+                </value>
+                <value>
+                    <fullName>Leasing Finance Analyst</fullName>
+                    <default>false</default>
+                    <label>Leasing Finance Analyst</label>
+                </value>
+                <value>
+                    <fullName>Project Regional Manager - LARS</fullName>
+                    <default>false</default>
+                    <label>Project Regional Manager - LARS</label>
+                </value>
+                <value>
+                    <fullName>Project Retail Administrator</fullName>
+                    <default>false</default>
+                    <label>Project Retail Administrator</label>
+                </value>
+                <value>
+                    <fullName>Project Retail Design Manager</fullName>
+                    <default>false</default>
+                    <label>Project Retail Design Manager</label>
+                </value>
+                <value>
+                    <fullName>Regional Manager - LARS</fullName>
+                    <default>false</default>
+                    <label>Regional Manager - LARS</label>
+                </value>
+                <value>
+                    <fullName>Regional Manager Retail Design</fullName>
+                    <default>false</default>
+                    <label>Regional Manager Retail Design</label>
+                </value>
+                <value>
+                    <fullName>Regional Mgr Retail Admin</fullName>
+                    <default>false</default>
+                    <label>Regional Mgr Retail Admin</label>
+                </value>
+                <value>
+                    <fullName>Regional Mgr Retail Delivery</fullName>
+                    <default>false</default>
+                    <label>Regional Mgr Retail Delivery</label>
+                </value>
+                <value>
+                    <fullName>Reg Retailer Account Admin</fullName>
+                    <default>false</default>
+                    <label>Reg Retailer Account Admin</label>
+                </value>
+                <value>
+                    <fullName>Retail Admin Assistant</fullName>
+                    <default>false</default>
+                    <label>Retail Admin Assistant</label>
+                </value>
+                <value>
+                    <fullName>Retail Administrator</fullName>
+                    <default>false</default>
+                    <label>Retail Administrator</label>
+                </value>
+                <value>
+                    <fullName>Retail Delivery Coordinator</fullName>
+                    <default>false</default>
+                    <label>Retail Delivery Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Retail Design Manager</fullName>
+                    <default>false</default>
+                    <label>Retail Design Manager</label>
+                </value>
+                <value>
+                    <fullName>Retail Design Team Leader</fullName>
+                    <default>false</default>
+                    <label>Retail Design Team Leader</label>
+                </value>
+                <value>
+                    <fullName>Retail Manager</fullName>
+                    <default>false</default>
+                    <label>Retail Manager</label>
+                </value>
+                <value>
+                    <fullName>Revenue Administrator</fullName>
+                    <default>false</default>
+                    <label>Revenue Administrator</label>
+                </value>
+                <value>
+                    <fullName>Revenue Assurance Manager</fullName>
+                    <default>false</default>
+                    <label>Revenue Assurance Manager</label>
+                </value>
+                <value>
+                    <fullName>Risk Executive</fullName>
+                    <default>false</default>
+                    <label>Risk Executive</label>
+                </value>
+                <value>
+                    <fullName>RM &amp; National Retail Design Coordinator</fullName>
+                    <default>false</default>
+                    <label>RM &amp; National Retail Design Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Senior Retail Administrator</fullName>
+                    <default>false</default>
+                    <label>Senior Retail Administrator</label>
+                </value>
+                <value>
+                    <fullName>Snr Retail Design Mgr</fullName>
+                    <default>false</default>
+                    <label>Snr Retail Design Mgr</label>
+                </value>
+                <value>
+                    <fullName>Solicitor Firm</fullName>
+                    <default>false</default>
+                    <label>Solicitor Firm</label>
+                </value>
+                <value>
+                    <fullName>Team Coordinator Retail Design</fullName>
+                    <default>false</default>
+                    <label>Team Coordinator Retail Design</label>
+                </value>
+                <value>
+                    <fullName>Tenancy Coordinator</fullName>
+                    <default>false</default>
+                    <label>Tenancy Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Tenancy Delivery Manager</fullName>
+                    <default>false</default>
+                    <label>Tenancy Delivery Manager</label>
+                </value>
+                <value>
+                    <fullName>Third Party Leasing Agent</fullName>
+                    <default>false</default>
+                    <label>Third Party Leasing Agent</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Opportunity Approval Matrix</label>
+    <listViews>
+        <fullName>CommercialFinal</fullName>
+        <columns>MasterLabel</columns>
+        <columns>Role__c</columns>
+        <columns>FieldAPIName__c</columns>
+        <columns>Tier__c</columns>
+        <columns>RentAmountRange__c</columns>
+        <columns>RentRange__c</columns>
+        <columns>CapitalAmountRange__c</columns>
+        <columns>CapitalRange__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MasterLabel</field>
+            <operation>contains</operation>
+            <value>CommercialFinal</value>
+        </filters>
+        <label>Commercial Final</label>
+    </listViews>
+    <listViews>
+        <fullName>CommercialInitial</fullName>
+        <columns>MasterLabel</columns>
+        <columns>Role__c</columns>
+        <columns>FieldAPIName__c</columns>
+        <columns>Tier__c</columns>
+        <columns>RentAmountRange__c</columns>
+        <columns>RentRange__c</columns>
+        <columns>CapitalAmountRange__c</columns>
+        <columns>CapitalRange__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MasterLabel</field>
+            <operation>contains</operation>
+            <value>CommercialInitial</value>
+        </filters>
+        <label>Commercial Initial</label>
+    </listViews>
+    <listViews>
+        <fullName>CommercialRisk</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>Role__c</columns>
+        <columns>FieldAPIName__c</columns>
+        <columns>CapitalRange__c</columns>
+        <columns>LeaseType__c</columns>
+        <columns>RentRange__c</columns>
+        <columns>Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MasterLabel</field>
+            <operation>contains</operation>
+            <value>CommercialRisk</value>
+        </filters>
+        <label>Commercial Risk</label>
+    </listViews>
+    <listViews>
+        <fullName>RetailFinal</fullName>
+        <columns>MasterLabel</columns>
+        <columns>LeaseType__c</columns>
+        <columns>Role__c</columns>
+        <columns>Tier__c</columns>
+        <columns>RentAmountRange__c</columns>
+        <columns>RentRange__c</columns>
+        <columns>CapitalAmountRange__c</columns>
+        <columns>CapitalRange__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MasterLabel</field>
+            <operation>contains</operation>
+            <value>RetailFinal</value>
+        </filters>
+        <label>Retail Final</label>
+    </listViews>
+    <listViews>
+        <fullName>RetailInitial</fullName>
+        <columns>MasterLabel</columns>
+        <columns>Role__c</columns>
+        <columns>Tier__c</columns>
+        <columns>RentAmountRange__c</columns>
+        <columns>RentRange__c</columns>
+        <columns>CapitalAmountRange__c</columns>
+        <columns>CapitalRange__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MasterLabel</field>
+            <operation>contains</operation>
+            <value>RetailInitial</value>
+        </filters>
+        <label>Retail Initial</label>
+    </listViews>
+    <listViews>
+        <fullName>RetailRisk</fullName>
+        <columns>MasterLabel</columns>
+        <columns>FieldAPIName__c</columns>
+        <columns>Role__c</columns>
+        <columns>Tier__c</columns>
+        <columns>Type__c</columns>
+        <columns>LeaseType__c</columns>
+        <columns>CapitalRange__c</columns>
+        <columns>RentRange__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MasterLabel</field>
+            <operation>contains</operation>
+            <value>RetailRisk</value>
+        </filters>
+        <label>Retail Risk</label>
+    </listViews>
+    <pluralLabel>Opportunity Approval Matrices</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

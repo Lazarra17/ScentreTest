@@ -1,0 +1,10 @@
+<aura:component controller="PropertyMapsController" implements="flexipage:availableForRecordHome,force:lightningQuickAction,force:hasRecordId">   
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+ 
+    <aura:attribute name="imageLocation" type="String"/>
+    <lightning:card title="Property Map" iconName="standard:account">
+        <aura:if isTrue="{!v.imageLocation}">
+            <c:SVGIframe imageLocation="{!v.imageLocation}"/>
+        </aura:if>
+    </lightning:card>
+</aura:component>

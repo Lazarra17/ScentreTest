@@ -1,0 +1,10 @@
+.THIS .slds-textarea {
+    height:400px;
+}
+.THIS .align {
+    display: inline-block;
+    vertical-align: top;
+}
+.THIS .textbox-min-height {
+    min-height:130px;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>To trigger bulk lease variation for miscellaneous for all the contracts against the property</description>
+    <flowDefinition>PRO_BulkLeaseVariation</flowDefinition>
+    <label>Create Lease Variation</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

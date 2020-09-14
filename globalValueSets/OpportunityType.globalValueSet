@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>New Retailer</fullName>
+        <default>false</default>
+        <label>New Retailer</label>
+    </customValue>
+    <customValue>
+        <fullName>New Lease</fullName>
+        <default>false</default>
+        <label>New Lease</label>
+    </customValue>
+    <masterLabel>Opportunity Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

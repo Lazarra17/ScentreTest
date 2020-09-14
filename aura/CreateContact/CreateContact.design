@@ -1,0 +1,5 @@
+<design:component>
+    <design:attribute name="accountRecTypeId" label="Account Record Type Id" />
+	<design:attribute name="contactId" label="Contact Id" />
+    <design:attribute name="accountId" label="Account Id"/>
+</design:component>

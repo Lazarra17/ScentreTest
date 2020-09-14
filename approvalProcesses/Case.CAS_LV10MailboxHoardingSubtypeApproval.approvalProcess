@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Executive</submitter>
+        <type>roleSubordinates</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>CaseNumber</field>
+        <field>Property__c</field>
+        <field>Space__c</field>
+        <field>Account</field>
+        <field>JDELeaseNumber__c</field>
+        <field>Status</field>
+        <field>Owner</field>
+        <field>Type</field>
+        <field>SubType__c</field>
+        <field>Amount__c</field>
+        <field>InvoiceDescription__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>TechRetailManager__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>Owner:User.Id  &lt;&gt; TechRetailManager__c</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Retail Manager Approval</label>
+        <name>RetailManagerApproval</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>TechCentreManager__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>Owner:User.Id = TechRetailManager__c</formula>
+        </entryCriteria>
+        <label>Centre Manager Approval</label>
+        <name>CentreManagerApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Approval process for LV10 - Centre / RAS Team Lease Variations - Mailbox or Hoarding</description>
+    <emailTemplate>unfiled$public/CAS_CaseApprovalRequest</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1 AND (2 OR 3) AND 4</booleanFilter>
+        <criteriaItems>
+            <field>Case.RecordType</field>
+            <operation>equals</operation>
+            <value>LVI - Centre Team</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SubType__c</field>
+            <operation>equals</operation>
+            <value>Manual Billing</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SubType__c</field>
+            <operation>equals</operation>
+            <value>Mailbox Charges</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New,Invalid Request,Rejected</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>CAS_CaseApproveNotification</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>CAS_SetApprovedToTrue</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CAS_SetJDESentStatus</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CAS_SetStatusToApproved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>CAS_CaseRejectionNotification</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>StatusRejected</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>CAS_SetStatusToPendingApproval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>CAS_LV10MailboxHoardingSubtypeApproval</label>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

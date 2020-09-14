@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>S832</fullName>
+        <default>false</default>
+        <label>Alterations</label>
+    </customValue>
+    <customValue>
+        <fullName>P832</fullName>
+        <default>false</default>
+        <label>Alterations (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP53</fullName>
+        <default>false</default>
+        <label>Alterations (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S954</fullName>
+        <default>false</default>
+        <label>Asian Groceries</label>
+    </customValue>
+    <customValue>
+        <fullName>P954</fullName>
+        <default>false</default>
+        <label>Asian Groceries (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP65</fullName>
+        <default>false</default>
+        <label>Asian Groceries (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S891</fullName>
+        <default>false</default>
+        <label>Automotive Showrooms</label>
+    </customValue>
+    <customValue>
+        <fullName>P891</fullName>
+        <default>false</default>
+        <label>Automotive Showrooms (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>S921</fullName>
+        <default>false</default>
+        <label>Bakeries / Patisseries</label>
+    </customValue>
+    <customValue>
+        <fullName>P921</fullName>
+        <default>false</default>
+        <label>Bakeries / Patisseries (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP58</fullName>
+        <default>false</default>
+        <label>Bakeries / Patisseries (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S813</fullName>
+        <default>false</default>
+        <label>Barbers</label>
+    </customValue>
+    <customValue>
+        <fullName>P813</fullName>
+        <default>false</default>
+        <label>Barbers (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP49</fullName>
+        <default>false</default>
+        <label>Barbers (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>W241</fullName>
+        <default>false</default>
+        <label>Bars &amp; Clubs</label>
+    </customValue>
+    <customValue>
+        <fullName>S812</fullName>
+        <default>false</default>
+        <label>Beauticians</label>
+    </customValue>
+    <customValue>
+        <fullName>P812</fullName>
+        <default>false</default>
+        <label>Beauticians (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP48</fullName>
+        <default>false</default>
+        <label>Beauticians (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M212</fullName>
+        <default>false</default>
+        <label>Big W</label>
+    </customValue>
+    <customValue>
+        <fullName>M315</fullName>
+        <default>false</default>
+        <label>Bi-Lo</label>
+    </customValue>
+    <customValue>
+        <fullName>S421</fullName>
+        <default>false</default>
+        <label>Books</label>
+    </customValue>
+    <customValue>
+        <fullName>P421</fullName>
+        <default>false</default>
+        <label>Books (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP21</fullName>
+        <default>false</default>
+        <label>Books (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>W221</fullName>
+        <default>false</default>
+        <label>Bowling Alleys</label>
+    </customValue>
+    <customValue>
+        <fullName>M711</fullName>
+        <default>false</default>
+        <label>Bunnings</label>
+    </customValue>
+    <customValue>
+        <fullName>S911</fullName>
+        <default>false</default>
+        <label>Butcher</label>
+    </customValue>
+    <customValue>
+        <fullName>P911</fullName>
+        <default>false</default>
+        <label>Butcher (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP55</fullName>
+        <default>false</default>
+        <label>Butcher (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>SF21</fullName>
+        <default>false</default>
+        <label>Cafe</label>
+    </customValue>
+    <customValue>
+        <fullName>PF21</fullName>
+        <default>false</default>
+        <label>Cafe (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP69</fullName>
+        <default>false</default>
+        <label>Cafe (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S461</fullName>
+        <default>false</default>
+        <label>Cards</label>
+    </customValue>
+    <customValue>
+        <fullName>P461</fullName>
+        <default>false</default>
+        <label>Cards (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP25</fullName>
+        <default>false</default>
+        <label>Cards (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>W312</fullName>
+        <default>false</default>
+        <label>Car Wash</label>
+    </customValue>
+    <customValue>
+        <fullName>S521</fullName>
+        <default>false</default>
+        <label>Chemist</label>
+    </customValue>
+    <customValue>
+        <fullName>P521</fullName>
+        <default>false</default>
+        <label>Chemist (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP28</fullName>
+        <default>false</default>
+        <label>Chemist (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S141</fullName>
+        <default>false</default>
+        <label>Children&apos;s Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>P141</fullName>
+        <default>false</default>
+        <label>Children&apos;s Fashion (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP06</fullName>
+        <default>false</default>
+        <label>Children&apos;s Fashion (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S241</fullName>
+        <default>false</default>
+        <label>Children&apos;s Footwear</label>
+    </customValue>
+    <customValue>
+        <fullName>P241</fullName>
+        <default>false</default>
+        <label>Children&apos;s Footwear (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP14</fullName>
+        <default>false</default>
+        <label>Children&apos;s Footwear (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>W111</fullName>
+        <default>false</default>
+        <label>Cinemas</label>
+    </customValue>
+    <customValue>
+        <fullName>M313</fullName>
+        <default>false</default>
+        <label>Coles Smk</label>
+    </customValue>
+    <customValue>
+        <fullName>S953</fullName>
+        <default>false</default>
+        <label>Confectionery</label>
+    </customValue>
+    <customValue>
+        <fullName>P953</fullName>
+        <default>false</default>
+        <label>Confectionery (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP64</fullName>
+        <default>false</default>
+        <label>Confectionery (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S561</fullName>
+        <default>false</default>
+        <label>Cosmetics</label>
+    </customValue>
+    <customValue>
+        <fullName>P561</fullName>
+        <default>false</default>
+        <label>Cosmetics (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP33</fullName>
+        <default>false</default>
+        <label>Cosmetics (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S321</fullName>
+        <default>false</default>
+        <label>Costume Jewellery</label>
+    </customValue>
+    <customValue>
+        <fullName>P321</fullName>
+        <default>false</default>
+        <label>Costume Jewellery (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP17</fullName>
+        <default>false</default>
+        <label>Costume Jewellery (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M325</fullName>
+        <default>false</default>
+        <label>Countdown</label>
+    </customValue>
+    <customValue>
+        <fullName>M611</fullName>
+        <default>false</default>
+        <label>Dan Murphy</label>
+    </customValue>
+    <customValue>
+        <fullName>M113</fullName>
+        <default>false</default>
+        <label>David Jones</label>
+    </customValue>
+    <customValue>
+        <fullName>S941</fullName>
+        <default>false</default>
+        <label>Delicatessen</label>
+    </customValue>
+    <customValue>
+        <fullName>P941</fullName>
+        <default>false</default>
+        <label>Delicatessen (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP61</fullName>
+        <default>false</default>
+        <label>Delicatessen (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S571</fullName>
+        <default>false</default>
+        <label>Discount Cosmetics</label>
+    </customValue>
+    <customValue>
+        <fullName>P571</fullName>
+        <default>false</default>
+        <label>Discount Cosmetics (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP34</fullName>
+        <default>false</default>
+        <label>Discount Cosmetics (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S511</fullName>
+        <default>false</default>
+        <label>Discount Variety</label>
+    </customValue>
+    <customValue>
+        <fullName>P511</fullName>
+        <default>false</default>
+        <label>Discount Variety (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP27</fullName>
+        <default>false</default>
+        <label>Discount Variety (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M119</fullName>
+        <default>false</default>
+        <label>Farmers</label>
+    </customValue>
+    <customValue>
+        <fullName>Z211</fullName>
+        <default>false</default>
+        <label>Financial Services</label>
+    </customValue>
+    <customValue>
+        <fullName>S311</fullName>
+        <default>false</default>
+        <label>Fine Jewellery</label>
+    </customValue>
+    <customValue>
+        <fullName>P311</fullName>
+        <default>false</default>
+        <label>Fine Jewellery (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP16</fullName>
+        <default>false</default>
+        <label>Fine Jewellery (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S913</fullName>
+        <default>false</default>
+        <label>Fish</label>
+    </customValue>
+    <customValue>
+        <fullName>P913</fullName>
+        <default>false</default>
+        <label>Fish (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP57</fullName>
+        <default>false</default>
+        <label>Fish (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S581</fullName>
+        <default>false</default>
+        <label>Florist</label>
+    </customValue>
+    <customValue>
+        <fullName>P581</fullName>
+        <default>false</default>
+        <label>Florist (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP35</fullName>
+        <default>false</default>
+        <label>Florist (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M312</fullName>
+        <default>false</default>
+        <label>Food for Less</label>
+    </customValue>
+    <customValue>
+        <fullName>M318</fullName>
+        <default>false</default>
+        <label>Foodland</label>
+    </customValue>
+    <customValue>
+        <fullName>M324</fullName>
+        <default>false</default>
+        <label>Foodtown</label>
+    </customValue>
+    <customValue>
+        <fullName>W421</fullName>
+        <default>false</default>
+        <label>Foreign Exchange</label>
+    </customValue>
+    <customValue>
+        <fullName>M316</fullName>
+        <default>false</default>
+        <label>Franklins</label>
+    </customValue>
+    <customValue>
+        <fullName>S931</fullName>
+        <default>false</default>
+        <label>Fruit &amp; Vegetable</label>
+    </customValue>
+    <customValue>
+        <fullName>P931</fullName>
+        <default>false</default>
+        <label>Fruit &amp; Vegetable (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP59</fullName>
+        <default>false</default>
+        <label>Fruit &amp; Vegetable (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>W261</fullName>
+        <default>false</default>
+        <label>Function Centres</label>
+    </customValue>
+    <customValue>
+        <fullName>S711</fullName>
+        <default>false</default>
+        <label>Furniture / Floor Coverings</label>
+    </customValue>
+    <customValue>
+        <fullName>P711</fullName>
+        <default>false</default>
+        <label>Furniture / Floor Coverings (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP45</fullName>
+        <default>false</default>
+        <label>Furniture / Floor Coverings (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S231</fullName>
+        <default>false</default>
+        <label>General Footwear</label>
+    </customValue>
+    <customValue>
+        <fullName>P231</fullName>
+        <default>false</default>
+        <label>General Footwear (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP13</fullName>
+        <default>false</default>
+        <label>General Footwear (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S951</fullName>
+        <default>false</default>
+        <label>General Groceries</label>
+    </customValue>
+    <customValue>
+        <fullName>P951</fullName>
+        <default>false</default>
+        <label>General Groceries (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP62</fullName>
+        <default>false</default>
+        <label>General Groceries (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S541</fullName>
+        <default>false</default>
+        <label>Gifts / Souvenirs</label>
+    </customValue>
+    <customValue>
+        <fullName>P541</fullName>
+        <default>false</default>
+        <label>Gifts / Souvenirs (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP31</fullName>
+        <default>false</default>
+        <label>Gifts / Souvenirs (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M111</fullName>
+        <default>false</default>
+        <label>Grace Bros</label>
+    </customValue>
+    <customValue>
+        <fullName>W251</fullName>
+        <default>false</default>
+        <label>Gymnasiums</label>
+    </customValue>
+    <customValue>
+        <fullName>S811</fullName>
+        <default>false</default>
+        <label>Hairdressers</label>
+    </customValue>
+    <customValue>
+        <fullName>P811</fullName>
+        <default>false</default>
+        <label>Hairdressers (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP47</fullName>
+        <default>false</default>
+        <label>Hairdressers (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S151</fullName>
+        <default>false</default>
+        <label>Handbags &amp; Luggage</label>
+    </customValue>
+    <customValue>
+        <fullName>P151</fullName>
+        <default>false</default>
+        <label>Handbags &amp; Luggage (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP07</fullName>
+        <default>false</default>
+        <label>Handbags &amp; Luggage (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S721</fullName>
+        <default>false</default>
+        <label>Hardware / Garden</label>
+    </customValue>
+    <customValue>
+        <fullName>P721</fullName>
+        <default>false</default>
+        <label>Hardware / Garden (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP46</fullName>
+        <default>false</default>
+        <label>Hardware / Garden (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M114</fullName>
+        <default>false</default>
+        <label>Harris Scarfe</label>
+    </customValue>
+    <customValue>
+        <fullName>M511</fullName>
+        <default>false</default>
+        <label>Harvey Norman</label>
+    </customValue>
+    <customValue>
+        <fullName>S952</fullName>
+        <default>false</default>
+        <label>Health Foods</label>
+    </customValue>
+    <customValue>
+        <fullName>P952</fullName>
+        <default>false</default>
+        <label>Health Foods (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP63</fullName>
+        <default>false</default>
+        <label>Health Foods (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S611</fullName>
+        <default>false</default>
+        <label>Home Aggregators</label>
+    </customValue>
+    <customValue>
+        <fullName>P611</fullName>
+        <default>false</default>
+        <label>Home Aggregators (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP37</fullName>
+        <default>false</default>
+        <label>Home Aggregators (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S641</fullName>
+        <default>false</default>
+        <label>Home Decor</label>
+    </customValue>
+    <customValue>
+        <fullName>P641</fullName>
+        <default>false</default>
+        <label>Home Decor (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP41</fullName>
+        <default>false</default>
+        <label>Home Decor (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Z231</fullName>
+        <default>false</default>
+        <label>Insurance Services</label>
+    </customValue>
+    <customValue>
+        <fullName>M321</fullName>
+        <default>false</default>
+        <label>Jewel Rainbow Smk</label>
+    </customValue>
+    <customValue>
+        <fullName>S621</fullName>
+        <default>false</default>
+        <label>Kitchenware / Tableware</label>
+    </customValue>
+    <customValue>
+        <fullName>P621</fullName>
+        <default>false</default>
+        <label>Kitchenware / Tableware (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP38</fullName>
+        <default>false</default>
+        <label>Kitchenware / Tableware (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M213</fullName>
+        <default>false</default>
+        <label>K Mart</label>
+    </customValue>
+    <customValue>
+        <fullName>S831</fullName>
+        <default>false</default>
+        <label>Laundry / Dry Cleaning</label>
+    </customValue>
+    <customValue>
+        <fullName>P831</fullName>
+        <default>false</default>
+        <label>Laundry / Dry Cleaning (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP52</fullName>
+        <default>false</default>
+        <label>Laundry / Dry Cleaning (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S112</fullName>
+        <default>false</default>
+        <label>Lingerie</label>
+    </customValue>
+    <customValue>
+        <fullName>P112</fullName>
+        <default>false</default>
+        <label>Lingerie (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP03</fullName>
+        <default>false</default>
+        <label>Lingerie (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S971</fullName>
+        <default>false</default>
+        <label>Liquor</label>
+    </customValue>
+    <customValue>
+        <fullName>P971</fullName>
+        <default>false</default>
+        <label>Liquor (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP67</fullName>
+        <default>false</default>
+        <label>Liquor (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>W231</fullName>
+        <default>false</default>
+        <label>Lotteries</label>
+    </customValue>
+    <customValue>
+        <fullName>Z511</fullName>
+        <default>false</default>
+        <label>Mall Merchandising</label>
+    </customValue>
+    <customValue>
+        <fullName>S631</fullName>
+        <default>false</default>
+        <label>Manchester / Soft Furnishings</label>
+    </customValue>
+    <customValue>
+        <fullName>P631</fullName>
+        <default>false</default>
+        <label>Manchester / Soft Furnishings (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP39</fullName>
+        <default>false</default>
+        <label>Manchester / Soft Furnishings (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Z221</fullName>
+        <default>false</default>
+        <label>Medical Services</label>
+    </customValue>
+    <customValue>
+        <fullName>S121</fullName>
+        <default>false</default>
+        <label>Men&apos;s Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>P121</fullName>
+        <default>false</default>
+        <label>Men&apos;s Fashion (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP04</fullName>
+        <default>false</default>
+        <label>Men&apos;s Fashion (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S221</fullName>
+        <default>false</default>
+        <label>Men&apos;s Footwear</label>
+    </customValue>
+    <customValue>
+        <fullName>P221</fullName>
+        <default>false</default>
+        <label>Men&apos;s Footwear (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP12</fullName>
+        <default>false</default>
+        <label>Men&apos;s Footwear (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>SM11</fullName>
+        <default>false</default>
+        <label>Mobile Phones &amp; Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>PM11</fullName>
+        <default>false</default>
+        <label>Mobile Phones &amp; Accessories (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP44</fullName>
+        <default>false</default>
+        <label>Mobile Phones &amp; Accessories (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S431</fullName>
+        <default>false</default>
+        <label>Music / Videos / DVDs</label>
+    </customValue>
+    <customValue>
+        <fullName>P431</fullName>
+        <default>false</default>
+        <label>Music / Videos / DVDs (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP22</fullName>
+        <default>false</default>
+        <label>Music / Videos / DVDs (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M112</fullName>
+        <default>false</default>
+        <label>Myer</label>
+    </customValue>
+    <customValue>
+        <fullName>S814</fullName>
+        <default>false</default>
+        <label>Nail Bars</label>
+    </customValue>
+    <customValue>
+        <fullName>P814</fullName>
+        <default>false</default>
+        <label>Nail Bars (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>M322</fullName>
+        <default>false</default>
+        <label>Newmart</label>
+    </customValue>
+    <customValue>
+        <fullName>S471</fullName>
+        <default>false</default>
+        <label>Newsagents / Stationery</label>
+    </customValue>
+    <customValue>
+        <fullName>P471</fullName>
+        <default>false</default>
+        <label>Newsagents / Stationery (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP26</fullName>
+        <default>false</default>
+        <label>Newsagents / Stationery (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Z111</fullName>
+        <default>false</default>
+        <label>Non-Reporting retailers</label>
+    </customValue>
+    <customValue>
+        <fullName>M512</fullName>
+        <default>false</default>
+        <label>Norman Ross</label>
+    </customValue>
+    <customValue>
+        <fullName>Z311</fullName>
+        <default>false</default>
+        <label>Office Suites</label>
+    </customValue>
+    <customValue>
+        <fullName>S821</fullName>
+        <default>false</default>
+        <label>Optometrists</label>
+    </customValue>
+    <customValue>
+        <fullName>P821</fullName>
+        <default>false</default>
+        <label>Optometrists (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP51</fullName>
+        <default>false</default>
+        <label>Optometrists (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S153</fullName>
+        <default>false</default>
+        <label>Other Fashion Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>P153</fullName>
+        <default>false</default>
+        <label>Other Fashion Accessories (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP09</fullName>
+        <default>false</default>
+        <label>Other Fashion Accessories (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Z241</fullName>
+        <default>false</default>
+        <label>Other Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Z331</fullName>
+        <default>false</default>
+        <label>Other Sundries</label>
+    </customValue>
+    <customValue>
+        <fullName>WP01</fullName>
+        <default>false</default>
+        <label>Pad Sites (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M326</fullName>
+        <default>false</default>
+        <label>Pak N Save</label>
+    </customValue>
+    <customValue>
+        <fullName>S531</fullName>
+        <default>false</default>
+        <label>Perfumery</label>
+    </customValue>
+    <customValue>
+        <fullName>P531</fullName>
+        <default>false</default>
+        <label>Perfumery (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP29</fullName>
+        <default>false</default>
+        <label>Perfumery (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S591</fullName>
+        <default>false</default>
+        <label>Pets</label>
+    </customValue>
+    <customValue>
+        <fullName>P591</fullName>
+        <default>false</default>
+        <label>Pets (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP36</fullName>
+        <default>false</default>
+        <label>Pets (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S411</fullName>
+        <default>false</default>
+        <label>Photographic</label>
+    </customValue>
+    <customValue>
+        <fullName>P411</fullName>
+        <default>false</default>
+        <label>Photographic (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>M323</fullName>
+        <default>false</default>
+        <label>Pick n Pay</label>
+    </customValue>
+    <customValue>
+        <fullName>S912</fullName>
+        <default>false</default>
+        <label>Poultry</label>
+    </customValue>
+    <customValue>
+        <fullName>P912</fullName>
+        <default>false</default>
+        <label>Poultry (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP56</fullName>
+        <default>false</default>
+        <label>Poultry (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>SF31</fullName>
+        <default>false</default>
+        <label>Restaurant</label>
+    </customValue>
+    <customValue>
+        <fullName>PF31</fullName>
+        <default>false</default>
+        <label>Restaurant (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP71</fullName>
+        <default>false</default>
+        <label>Restaurant (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M319</fullName>
+        <default>false</default>
+        <label>Safeway Smk</label>
+    </customValue>
+    <customValue>
+        <fullName>Z301</fullName>
+        <default>false</default>
+        <label>Seating</label>
+    </customValue>
+    <customValue>
+        <fullName>W313</fullName>
+        <default>false</default>
+        <label>Service Stations</label>
+    </customValue>
+    <customValue>
+        <fullName>S833</fullName>
+        <default>false</default>
+        <label>Shoe Repairs &amp; Key Cutting</label>
+    </customValue>
+    <customValue>
+        <fullName>P833</fullName>
+        <default>false</default>
+        <label>Shoe Repairs &amp; Key Cutting (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP54</fullName>
+        <default>false</default>
+        <label>Shoe Repairs &amp; Key Cutting (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S551</fullName>
+        <default>false</default>
+        <label>Soaps</label>
+    </customValue>
+    <customValue>
+        <fullName>P551</fullName>
+        <default>false</default>
+        <label>Soaps (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP32</fullName>
+        <default>false</default>
+        <label>Soaps (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>W311</fullName>
+        <default>false</default>
+        <label>Spare Parts</label>
+    </customValue>
+    <customValue>
+        <fullName>S441</fullName>
+        <default>false</default>
+        <label>Sport</label>
+    </customValue>
+    <customValue>
+        <fullName>P441</fullName>
+        <default>false</default>
+        <label>Sport (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP23</fullName>
+        <default>false</default>
+        <label>Sport (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S251</fullName>
+        <default>false</default>
+        <label>Sporting Footwear</label>
+    </customValue>
+    <customValue>
+        <fullName>P251</fullName>
+        <default>false</default>
+        <label>Sporting Footwear (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP15</fullName>
+        <default>false</default>
+        <label>Sporting Footwear (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M320</fullName>
+        <default>false</default>
+        <label>Spudshed</label>
+    </customValue>
+    <customValue>
+        <fullName>Z321</fullName>
+        <default>false</default>
+        <label>Storerooms</label>
+    </customValue>
+    <customValue>
+        <fullName>S152</fullName>
+        <default>false</default>
+        <label>Sunglasses</label>
+    </customValue>
+    <customValue>
+        <fullName>P152</fullName>
+        <default>false</default>
+        <label>Sunglasses (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP08</fullName>
+        <default>false</default>
+        <label>Sunglasses (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>SF11</fullName>
+        <default>false</default>
+        <label>Takeaway</label>
+    </customValue>
+    <customValue>
+        <fullName>PF11</fullName>
+        <default>false</default>
+        <label>Takeaway (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP68</fullName>
+        <default>false</default>
+        <label>Takeaway (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M211</fullName>
+        <default>false</default>
+        <label>Target</label>
+    </customValue>
+    <customValue>
+        <fullName>S661</fullName>
+        <default>false</default>
+        <label>Technology Aggregators</label>
+    </customValue>
+    <customValue>
+        <fullName>P661</fullName>
+        <default>false</default>
+        <label>Technology Aggregators (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>S651</fullName>
+        <default>false</default>
+        <label>Technology Pure Brands</label>
+    </customValue>
+    <customValue>
+        <fullName>P651</fullName>
+        <default>false</default>
+        <label>Technology Pure Brands (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>M219</fullName>
+        <default>false</default>
+        <label>The Warehouse</label>
+    </customValue>
+    <customValue>
+        <fullName>S961</fullName>
+        <default>false</default>
+        <label>Tobacco</label>
+    </customValue>
+    <customValue>
+        <fullName>P961</fullName>
+        <default>false</default>
+        <label>Tobacco (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP66</fullName>
+        <default>false</default>
+        <label>Tobacco (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S451</fullName>
+        <default>false</default>
+        <label>Toys &amp; Hobbies</label>
+    </customValue>
+    <customValue>
+        <fullName>P451</fullName>
+        <default>false</default>
+        <label>Toys &amp; Hobbies (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP24</fullName>
+        <default>false</default>
+        <label>Toys &amp; Hobbies (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M411</fullName>
+        <default>false</default>
+        <label>Toys R Us</label>
+    </customValue>
+    <customValue>
+        <fullName>W411</fullName>
+        <default>false</default>
+        <label>Travel</label>
+    </customValue>
+    <customValue>
+        <fullName>S131</fullName>
+        <default>false</default>
+        <label>Unisex Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>P131</fullName>
+        <default>false</default>
+        <label>Unisex Fashion (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP05</fullName>
+        <default>false</default>
+        <label>Unisex Fashion (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>Z411</fullName>
+        <default>false</default>
+        <label>Vacant Area</label>
+    </customValue>
+    <customValue>
+        <fullName>W321</fullName>
+        <default>false</default>
+        <label>Vending Machines</label>
+    </customValue>
+    <customValue>
+        <fullName>W211</fullName>
+        <default>false</default>
+        <label>Video Gaming / Play Ctrs</label>
+    </customValue>
+    <customValue>
+        <fullName>S331</fullName>
+        <default>false</default>
+        <label>Watches</label>
+    </customValue>
+    <customValue>
+        <fullName>P331</fullName>
+        <default>false</default>
+        <label>Watches (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP18</fullName>
+        <default>false</default>
+        <label>Watches (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S111</fullName>
+        <default>false</default>
+        <label>Women&apos;s Clothing</label>
+    </customValue>
+    <customValue>
+        <fullName>P111</fullName>
+        <default>false</default>
+        <label>Women&apos;s Clothing (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP02</fullName>
+        <default>false</default>
+        <label>Women&apos;s Clothing (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>S211</fullName>
+        <default>false</default>
+        <label>Women&apos;s Footwear</label>
+    </customValue>
+    <customValue>
+        <fullName>P211</fullName>
+        <default>false</default>
+        <label>Women&apos;s Footwear (MM)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP11</fullName>
+        <default>false</default>
+        <label>Women&apos;s Footwear (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M311</fullName>
+        <default>false</default>
+        <label>Woolworths</label>
+    </customValue>
+    <customValue>
+        <fullName>M412</fullName>
+        <default>false</default>
+        <label>World 4 Kids</label>
+    </customValue>
+    <customValue>
+        <fullName>M317</fullName>
+        <default>false</default>
+        <label>Action Smk</label>
+    </customValue>
+    <customValue>
+        <fullName>M327</fullName>
+        <default>false</default>
+        <label>New World</label>
+    </customValue>
+    <customValue>
+        <fullName>WP19</fullName>
+        <default>false</default>
+        <label>Photographic (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP43</fullName>
+        <default>false</default>
+        <label>Technology Aggregators (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP42</fullName>
+        <default>false</default>
+        <label>Technology Pure Brands (PS)</label>
+    </customValue>
+    <customValue>
+        <fullName>M115</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>John Martins</label>
+    </customValue>
+    <customValue>
+        <fullName>M520</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>M520</label>
+    </customValue>
+    <customValue>
+        <fullName>M117</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Waltons</label>
+    </customValue>
+    <customValue>
+        <fullName>M118</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Dairmaru</label>
+    </customValue>
+    <customValue>
+        <fullName>M214</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Super K</label>
+    </customValue>
+    <customValue>
+        <fullName>M215</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Venture</label>
+    </customValue>
+    <customValue>
+        <fullName>M216</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fosseys</label>
+    </customValue>
+    <customValue>
+        <fullName>M217</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Deka</label>
+    </customValue>
+    <customValue>
+        <fullName>M218</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Rendells</label>
+    </customValue>
+    <customValue>
+        <fullName>M220</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pakuranga Marketplace</label>
+    </customValue>
+    <customValue>
+        <fullName>M221</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Briscoes</label>
+    </customValue>
+    <customValue>
+        <fullName>M399</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aldi</label>
+    </customValue>
+    <customValue>
+        <fullName>M413</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Manukau Markets</label>
+    </customValue>
+    <customValue>
+        <fullName>M513</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Triffits</label>
+    </customValue>
+    <customValue>
+        <fullName>M514</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McEwans</label>
+    </customValue>
+    <customValue>
+        <fullName>M515</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BBC</label>
+    </customValue>
+    <customValue>
+        <fullName>M516</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Billy Guyatt</label>
+    </customValue>
+    <customValue>
+        <fullName>M517</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Habitat Furniture</label>
+    </customValue>
+    <customValue>
+        <fullName>M518</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Radfords</label>
+    </customValue>
+    <customValue>
+        <fullName>M519</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Farmers Home</label>
+    </customValue>
+    <customValue>
+        <fullName>M116</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>McDonnell &amp; East</label>
+    </customValue>
+    <masterLabel>Superfine Category</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

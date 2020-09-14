@@ -1,0 +1,34 @@
+<aura:component controller="AddReviewModalController">
+    <aura:attribute name="oppRecordId" type="String"/>
+    <aura:attribute name="pricebookEntryId" type="String"/>
+    <aura:attribute name="product2Id" type="String"/>
+    <aura:attribute name="showReviewType" type="Boolean" default="false"/>
+    <aura:attribute name="oppLineRecord" type="Object"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <lightning:notificationsLibrary aura:id="notifLibError"/>
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="large" aura:id="spinner"/>
+    </aura:if>
+    <c:ToastMessage aura:id = "toastMessage"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    
+    <lightning:recordEditForm objectApiName="OpportunityLineItem" 
+                              onsubmit="{!c.onSubmit}">
+        <!--<lightning:messages/>-->
+        
+        <lightning:inputField id="standardreviewtype" fieldName="StandardReviewType__c" onchange="{!c.standardReviewChange}"/>
+        <aura:if isTrue="{! v.showReviewType}">
+            <lightning:inputField fieldName="ReviewType__c"/>
+            <lightning:inputField fieldName="RentReviewAmount__c"/>
+        </aura:if>
+        <lightning:inputField fieldName="CPIType__c"/>
+        <lightning:inputField fieldName="EffectiveFromDate__c"/>
+        <lightning:inputField fieldName="EffectiveToDate__c"/>
+        <lightning:inputField fieldName="Description"/>
+		<lightning:inputField fieldName="CappedPercent__c"/>
+        <div align="right" style="padding-top:21px">
+        	<lightning:button variant="brand" type="submit" label="Save"/>
+       </div>
+    </lightning:recordEditForm>
+    
+</aura:component>

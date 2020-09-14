@@ -1,0 +1,265 @@
+<aura:component controller="OpportunityLineItemController" implements="lightning:availableForFlowScreens,flexipage:availableForRecordHome,force:hasRecordId"> <!--inherit recordId attribute-->
+    <ltng:require scripts="{!$Resource.Moment}" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="initRun" type="Boolean" default="false"/>
+    <aura:attribute name="recordMode" type="String" default="VIEW"/>   
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="recordHandlerAttr" type="String"/>
+    <aura:attribute name="totpromolevy" type="String"/>
+    <aura:attribute name="displaybuttons" type="boolean" default="true"/> 
+    <aura:attribute name="displaykeydays" type="boolean" default="true"/> 
+    <aura:attribute name="hasEditAccess" type="boolean" default="false"/>
+    <aura:attribute name="calculated" type="boolean" default="false"/>
+    <aura:attribute name="isReadOnly" type="boolean" default="true"/>
+    <aura:attribute name="rent" type="Double"/>
+    <aura:attribute name="promotionFundInclude" type="Boolean" default="true"/>
+    <aura:attribute name="reasonForNoPromotionFund" type="String"/>				<!-- RPP - 10985  1/4/2020-->
+    <aura:attribute name="percentageRentInclude" type="Boolean" default="true"/>
+    <aura:attribute name="spaceType" type="String"/>
+    <aura:attribute name="nzProperty" type="String"/>
+    <aura:attribute name="userUITheme" type="String"/>
+    <aura:attribute name="isLEX" type="Boolean" default="true"/>
+    <aura:attribute name="showBudgetTable" type="Boolean" default="true"/>
+    <aura:attribute name="showWizardHeader" type="Boolean" default="false"/>
+    <aura:attribute name="isNZProperty" type="Boolean" default="false"/>
+    <aura:attribute name="promoThresholdApplies" type="Boolean" default="true"/>
+    <aura:attribute name="grossSales" type="Double"/>
+    <aura:attribute name="securitydeposit" type="Double"/>
+    <aura:attribute name="pecentageOfRent" type="Double"/>
+    <aura:attribute name="totalPromoLevy" type="Double"/>
+    <aura:attribute name="totalOutgoings" type="Double"/>
+    <aura:attribute name="pecentageRent" type="Double"/>
+    <aura:attribute name="promotionFund" type="Double"/>
+    <aura:attribute name="totalGrossRent" type="Double"/>
+    <aura:attribute name="leaseType" type="String"/>
+    <aura:attribute name="pecentageRentType" type="String"/>
+    <aura:attribute name="testBoolean" type="Boolean" default="false"/>    
+    <aura:attribute name="record" type="Object" 
+                    description="The record object to be displayed"/>
+    <aura:attribute name="record3" type="Object" 
+                    description="The record object to be displayed"/>
+    <aura:attribute name="recordRead" type="Object" 
+                    description="The record object to be displayed"/>
+    <aura:attribute name="simpleRecord" type="Object" 
+                    description="A simplified view record object to be displayed"/>
+    <aura:attribute name="simpleRecordEdit" type="Object" 
+                    description="A simplified edit record object to be displayed"/>
+    <aura:attribute name="simpleRecordEditNoRent" type="Object" 
+                    description="A simplified edit record object to be displayed"/>
+    <aura:attribute name="recordError" type="String" 
+                    description="An error message bound to force:recordData"/>
+    <aura:attribute name="budgetInfoList" type="Object"/>
+    <aura:attribute name="budgetInfoColumnList" type="List"/>
+    <aura:method name="calculateDetails" action="{!c.rentCalculate}" access="PUBLIC"/>
+    <aura:method name="saveDetails" action="{!c.handleRent}" access="PUBLIC"/>
+    <force:recordData aura:id="recordHandler"
+                      layoutType="COMPACT"
+                      recordId="{!v.recordId}"
+                      fields="Type,OccupancyCost__c,Name,FitoutContribution__c,BudgetCapital__c,ProposedEndDate__c,ProposedRentCommencementDate__c,ProposedStartDate__c,TermDays__c,TermMonths__c,TermYr__c,FitoutDays__c,ForecastedPercentageRentYear1__c,BreakAmount__c,BreakType__c,ReasonForArtificialBreak__c,ForecastedTurnoverYear1__c,ProposedHandoverDate__c,PercentageRentPercent__c,DealAchieved__c,TotalPromotionLevy__c ,TotalOutgoings__c , PromoLevyIncluded__c,Reason_for_No_Promo_Levy__c, RentInAdvance__c,AnnualMinimumRent__c,PercentageRentIncluded__c,DealType__c,Space__r.LatestJVBudget__r.EffectiveDate__c, 
+					  PercentageRentAmount__c, Space__r.LatestBudget__r.EffectiveDate__c, Space__r.LatestForecast__r.EffectiveDate__c, Space__r.UsableArea__c, Space__r.Type__c, Space__r.RentableArea__c, Space__r.LatestForecastedRent__c, Space__r.LatestJVBudgetedRent__c, Space__r.LatestBudgetedRent__c,CloseDate,ProposedShopOpeningDate__c"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.simpleRecordEdit}"
+                      mode="EDIT"/>
+    <force:recordData aura:id="recordHandlerNoRent"
+                      layoutType="COMPACT"
+                      recordId="{!v.recordId}"
+                      fields="Type,OccupancyCost__c,Name,FitoutContribution__c,BudgetCapital__c,ProposedEndDate__c,ProposedRentCommencementDate__c,ProposedStartDate__c,TermDays__c,TermMonths__c,TermYr__c,FitoutDays__c,ForecastedPercentageRentYear1__c,BreakAmount__c,BreakType__c,ReasonForArtificialBreak__c,ForecastedTurnoverYear1__c,ProposedHandoverDate__c,PercentageRentPercent__c,DealAchieved__c,TotalPromotionLevy__c ,TotalOutgoings__c , PromoLevyIncluded__c,Reason_for_No_Promo_Levy__c, RentInAdvance__c,AnnualMinimumRent__c,PercentageRentIncluded__c,DealType__c,Space__r.LatestJVBudget__r.EffectiveDate__c, 
+					  PercentageRentAmount__c, Space__r.LatestBudget__r.EffectiveDate__c, Space__r.LatestForecast__r.EffectiveDate__c, Space__r.UsableArea__c, Space__r.Type__c, Space__r.RentableArea__c, Space__r.LatestForecastedRent__c, Space__r.LatestJVBudgetedRent__c, Space__r.LatestBudgetedRent__c,CloseDate,ProposedShopOpeningDate__c"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.record3}"
+                      targetFields="{!v.simpleRecordEditNoRent}"
+                      mode="EDIT"/>
+    <force:recordData aura:id="recordHandler2"
+                      layoutType="COMPACT"
+                      recordId="{!v.recordId}"
+					  fields="Type,
+                              OccupancyCost__c,
+                              Name,FitoutContribution__c,
+                              BudgetCapital__c,
+                              ProposedEndDate__c,
+                              ProposedRentCommencementDate__c,
+                              ProposedStartDate__c,
+                              TermDays__c,
+                              TermMonths__c,
+                              TermYr__c,FitoutDays__c,
+                              ForecastedPercentageRentYear1__c,
+                              BreakAmount__c,
+                              BreakType__c,
+                              ReasonForArtificialBreak__c,
+                              ForecastedTurnoverYear1__c,
+                              ProposedHandoverDate__c,
+                              PercentageRentPercent__c,
+                              DealAchieved__c,TotalPromotionLevy__c ,
+                              TotalOutgoings__c, 
+                              PromoLevyIncluded__c,
+                              Reason_for_No_Promo_Levy__c, 
+                              RentInAdvance__c,
+                              AnnualMinimumRent__c,
+                              PercentageRentIncluded__c,
+                              DealType__c,
+                              PercentageRentAmount__c, 
+                              
+                              Space__r.UsableArea__c, 
+                              Space__r.Type__c, 
+                              Space__r.RentableArea__c, 
+                              Space__r.LatestForecastedRent__c, 
+                              Space__r.LatestJVBudgetedRent__c, 
+                              Space__r.LatestBudgetedRent__c,
+                              CloseDate,
+                              ProposedShopOpeningDate__c"
+                      
+                      
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.recordRead}"
+                      targetFields="{!v.simpleRecord}"/>
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="medium" aura:id="spinner"/>
+    </aura:if>
+    
+    <!-- Display a lightning card with details about the record -->
+    <aura:if isTrue="{!v.showWizardHeader}">
+        <c:OpportunityWizardheader recordId="{!v.recordId}"/>
+    </aura:if>
+    
+    <c:ToastMessage aura:id = "toastRent"/>
+    
+    <div class="Record Details">
+        <!--<lightning:card iconName="standard:opportunity" title="{!v.simpleRecordEdit.Name}" >-->
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Deal Calculator</span>
+            </h3>
+            <div aria-hidden="false" class="slds-section__content">
+                <lightning:layout multipleRows="true">
+                    
+                    <aura:if isTrue="{!!v.isReadOnly}">
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <lightning:select name="leaseType" aura:id="calculationform" label="Deal Type" value="{!v.simpleRecordEdit.DealType__c}"  onchange="{!c.onSelectChange}" disabled="{!v.isReadOnly}">
+                                <option value="Semi Gross">Semi Gross</option>
+                                <option value="Net">Net</option>
+                                <option value="Gross">Gross</option>   
+                            </lightning:select>	
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <lightning:input aura:id="calculationform" name="rent" label="Rent" type="number" value="{!v.simpleRecordEdit.AnnualMinimumRent__c}" formatter="currency" step="0.01" onchange="{!c.rentCalculate}" readonly="{!v.isReadOnly}"/>
+                        </lightning:layoutItem>
+                        <aura:if isTrue="{!v.isNZProperty}">
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                                <lightning:input name="promoThresholdApplies" label="Promo Threshold Applies?" type="checkbox" checked="{!v.promoThresholdApplies}" disabled="{!v.isReadOnly}"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                		    </lightning:layoutItem>
+                        </aura:if>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <lightning:input name="promotionFundInclude" label="Promotion Levy Applicable ?" type="checkbox" checked="{!v.promotionFundInclude}" onchange="{!c.rentCalculate}" disabled="{!v.isReadOnly}"/><br/>			<!-- RPP - 10985 old Label="Promotion Rent Included ?"-->
+                            <lightning:input name="reasonForNoPromotionFund" label="Reason for No/Changed Promo Levy" value="{!v.simpleRecordEdit.Reason_for_No_Promo_Levy__c}" onchange="{!c.rentCalculate}" disabled="{!v.isReadOnly}"/>			<!-- RPP - 10985  1/4/2020-->
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <lightning:input name="percentageRentInclude" label="Percentage Rent Applicable ?" type="checkbox" checked="{!v.simpleRecordEdit.PercentageRentIncluded__c}" onchange="{!c.rentCalculate}" disabled="{!v.isReadOnly}"/>		<!-- RPP - 10985 old label="Percentage Rent Included ?"-->
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            Promotion Fund : <lightning:formattedNumber value="{!v.promotionFund}" style="currency"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        	Total Gross Rent : <lightning:formattedNumber value="{!v.totalGrossRent}" style="currency"/>
+                        </lightning:layoutItem>
+                        
+                        <aura:set attribute="else">
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                                <lightning:select name="leaseType" aura:id="calculationform" label="Deal Type" value="{!v.simpleRecord.DealType__c}"  onchange="{!c.onSelectChange}" disabled="{!v.isReadOnly}">
+                                    <option value="Semi Gross">Semi Gross</option>
+                                    <option value="Net">Net</option>
+                                    <option value="Gross">Gross</option>   
+                                </lightning:select>	
+                            </lightning:layoutItem>
+                            
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                                <lightning:input aura:id="calculationform" name="rent" label="Rent" type="number" value="{!v.simpleRecord.AnnualMinimumRent__c}" formatter="currency" step="0.01" onchange="{!c.rentCalculate}" readonly="{!v.isReadOnly}"/>
+                            </lightning:layoutItem>
+                            <aura:if isTrue="{!v.isNZProperty}">
+                                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                                    <lightning:input name="promoThresholdApplies" label="Promo Threshold Applies?" type="checkbox" checked="{!v.promoThresholdApplies}" disabled="{!v.isReadOnly}"/>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                				</lightning:layoutItem>
+                            </aura:if>
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                                <lightning:input name="promotionFundInclude" label="Promotion Levy Applicable ?" type="checkbox" checked="{!v.promotionFundInclude}" onchange="{!c.rentCalculate}" disabled="{!v.isReadOnly}"/><br/>  <!-- RPP - 10985 old label="Promotion Levy Included ?"-->
+                                <lightning:input name="reasonForNoPromotionFund" label="Reason for No/Changed Promo Levy" value="{!v.simpleRecord.Reason_for_No_Promo_Levy__c}" onchange="{!c.rentCalculate}" disabled="{!v.isReadOnly}"/>			<!-- RPP - 10985  1/4/2020-->
+                        	</lightning:layoutItem>
+                        	<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            	<lightning:input name="percentageRentInclude" label="Percentage Rent Applicable ?" type="checkbox" checked="{!v.simpleRecordEdit.PercentageRentIncluded__c}" onchange="{!c.rentCalculate}" disabled="{!v.isReadOnly}"/>  <!-- RPP - 10985 old label="Percentage Rent Included ?"-->
+                            </lightning:layoutItem>
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                                Promotion Fund : <lightning:formattedNumber value="{!v.promotionFund}" style="currency"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                                Total Gross Rent : <lightning:formattedNumber value="{!v.totalGrossRent}" style="currency"/>
+                            </lightning:layoutItem>
+                        </aura:set>
+                    </aura:if>
+                </lightning:layout>
+                
+            </div>
+            <aura:if isTrue="{!v.isLEX}">
+                <aura:if isTrue="{!v.showBudgetTable}">
+                    <lightning:datatable columns="{! v.budgetInfoColumnList }"
+                                         data="{! v.budgetInfoList }"
+                                         keyField="id"
+                                         hideCheckboxColumn="true"/>
+                </aura:if>
+            </aura:if><br/>
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Fitout Contribution</span>
+            </h3><br/>
+            
+            <aura:if isTrue="{!!v.isReadOnly}">
+                <lightning:layout multipleRows="true">
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:input aura:id="budgetcapital" name="BudgetCapital" label="Budget Capital" type="number" value="{!v.simpleRecord.BudgetCapital__c}" formatter="currency" step="0.01" readonly="true"/>
+                    </lightning:layoutItem>
+                    
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:input aura:id="fitoutcontri" name="FitoutContribution" label="Fitout Contribution" value="{!v.simpleRecordEdit.FitoutContribution__c}" type="number" formatter="currency" step="0.01" readonly="{!v.isReadOnly}"/>
+                    </lightning:layoutItem>			
+                </lightning:layout>
+                <aura:set attribute="else">
+                    <lightning:layout multipleRows="true">
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <lightning:input aura:id="budgetcapital" name="BudgetCapital" label="Budget Capital" type="number" value="{!v.simpleRecord.BudgetCapital__c}" formatter="currency" step="0.01" readonly="true"/>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                            <lightning:input aura:id="fitoutcontri" name="FitoutContribution" label="Fitout Contribution" value="{!v.simpleRecord.FitoutContribution__c}" type="number" formatter="currency" step="0.01" readonly="{!v.isReadOnly}"/>
+                        </lightning:layoutItem>			
+                    </lightning:layout>			
+                </aura:set>
+            </aura:if>
+            <br/>			
+            
+            <!--TBD Display a lightning card with details about the record for Fitout Contribution -->
+            <c:PercentageRent displaybuttons="false" aura:id="percentRentComponent" totalOutgoings="{!v.totalOutgoings}" totalPromoLevy="{!v.totalPromoLevy}" pecentageOfRent="{!v.pecentageOfRent}" doCalculation="{!v.simpleRecordEdit.PercentageRentIncluded__c}" recordId="{!v.recordId}" rent="{!v.simpleRecordEdit.AnnualMinimumRent__c}" isReadOnly="{!v.isReadOnly}"/>
+            <aura:if isTrue="{!v.displaykeydays}">
+                <c:OpportunityKeyDates aura:id="keydatesComponent" recordId="{!v.recordId}" displaybuttons="false" isReadOnly="{!v.isReadOnly}"/>
+            </aura:if>
+        </div>
+        <div align="right">
+            <aura:if isTrue="{!!v.isReadOnly}">
+                <!--<lightning:button label="Calculate" onclick="{!c.rentCalculate}" class="slds-m-top_medium" />	-->
+                <lightning:button label="Save" variant="brand" onclick="{!c.handleRent}" class="slds-m-top_medium" />
+            </aura:if>	
+        </div>
+        <!--</lightning:card>-->
+    </div>
+    
+    <!-- Display Lightning Data Service errors, if any -->
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            {!v.recordError}</div>
+    </aura:if>
+    
+</aura:component>

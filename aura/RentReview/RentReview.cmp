@@ -1,0 +1,128 @@
+<aura:component controller="RentReviewController" implements="lightning:availableForFlowScreens,force:appHostable,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome" access="global">
+    <ltng:require scripts="{!$Resource.Moment}" />
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="rentRevPbEntry" type="String"/>
+    <aura:attribute name="promoRevPbEntry" type="String"/>
+    <aura:attribute name="rentReviewProdId" type="String"/>
+    <aura:attribute name="promoRevProdId" type="String"/>
+    <aura:attribute name="oppLineItemList" type="Object"/>
+    <aura:attribute name="promoRevItemList" type="Object"/>
+    <aura:attribute name="oppLineItemColumnList" type="List"/>
+    <aura:attribute name="promoLineItemColumnList" type="List"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="true"/>
+    <aura:attribute type="Boolean" name="isReadOnly" default="false"/>
+    <!-- RPP - 9653 6-May-2020 -->
+    <aura:attribute name="oppLineItemRentRows" type="List"/>
+    <aura:attribute name="oppLineItemPromoRows" type="List"/>
+    <aura:attribute name="rentReviewEnabled" type="boolean" default="true"/>
+    <aura:attribute name="promoReviewEnabled" type="boolean" default="true"/>
+    <aura:attribute name="rentStdRevType" type="String"/>
+    <aura:attribute name="rentCPIType" type="String"/>
+    <aura:attribute name="promoStdRevType" type="String"/>
+    <aura:attribute name="promoCPIType" type="String"/>
+    <aura:attribute name="stdRevTypeValues" type="List"/>
+    <aura:attribute name="CPITypeValues" type="List"/>
+    <!-- RPP - 9653 6-May-2020 -->
+    
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <c:Toast />
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="large" aura:id="spinner"/>
+    </aura:if>
+    
+    <div class="Record Details"> 
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Rent Review <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px"><lightning:helptext content="Will default from the Property or Account overide where applicable."/></div></span>
+            </h3>
+            <br/>
+            
+            <aura:if isTrue="{! v.oppLineItemList.length > 0}">
+                <!-- RPP - 9653 6-May-2020 -->
+                <lightning:layout horizontalAlign="spread" multipleRows="true">
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="6" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                         <lightning:select name="cpiType"  label="CPI Type" value="{!v.rentCPIType}" disabled="{!v.rentReviewEnabled}">
+                              <option value="choose">--None--</option> 
+        					  <aura:iteration items="{!v.CPITypeValues}" var="c">
+                                  <option value="{!c}">{!c}</option>
+                              </aura:iteration> 
+                         </lightning:select>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="6" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                        <lightning:select name="reviewType"  label="Standard Review Type" value="{!v.rentStdRevType}" disabled="{!v.rentReviewEnabled}">
+                              <option value="choose">--None--</option> 
+        					  <aura:iteration items="{!v.stdRevTypeValues}" var="s">
+                                  <option value="{!s}">{!s}</option>
+                              </aura:iteration>  
+                         </lightning:select> 
+                    </lightning:layoutItem>
+                </lightning:layout>
+                <div class="slds-align_absolute-center">
+                	<lightning:button variant="brand" label="Update" title="Update" onclick="{! c.handleUpdateRentReview }" disabled="{!v.rentReviewEnabled}"/>
+                </div><br/>
+                <!-- RPP - 9653 6-May-2020 -->
+                <lightning:datatable columns="{! v.oppLineItemColumnList }"
+                                     data="{! v.oppLineItemList }"
+                                     keyField="id"
+                                     hideCheckboxColumn="false"
+                                     onrowaction="{! c.viewLineItem}"
+                                     onrowselection="{! c.handleRowSelectionRentReview }"/>
+                
+                <br/>
+            </aura:if>
+            <div align="right" style="padding-top:7px">
+                <aura:if isTrue="{! v.isReadOnly }">
+                    <lightning:button variant="brand" label="Add Rent Review" onclick="{! c.toggleModal }" name="{! v.rentRevPbEntry}"/>
+                </aura:if>
+            </div>
+        </div>
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Promo Review</span>
+            </h3>
+            <br/>
+            <aura:if isTrue="{!v.promoRevItemList.length > 0}">
+                <!-- RPP - 9653 6-May-2020 -->
+                <lightning:layout horizontalAlign="spread" multipleRows="true">
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="6" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                         <lightning:select name="cpiType"  label="CPI Type" value="{!v.promoCPIType}" disabled="{!v.promoReviewEnabled}">
+                              <option value="choose">--None--</option> 
+        					  <aura:iteration items="{!v.CPITypeValues}" var="c">
+                                  <option value="{!c}">{!c}</option>
+                              </aura:iteration>
+                         </lightning:select>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="auto" padding="around-small" size="6" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                         <lightning:select name="reviewType"  label="Standard Review Type" value="{!v.promoStdRevType}" disabled="{!v.promoReviewEnabled}">
+                              <option value="choose">--None--</option> 
+        					  <aura:iteration items="{!v.stdRevTypeValues}" var="s">
+                                  <option value="{!s}">{!s}</option>
+                              </aura:iteration>   
+                         </lightning:select>
+                    </lightning:layoutItem>
+                </lightning:layout>
+                <div class="slds-align_absolute-center">
+                	<lightning:button variant="brand" label="Update" title="Update" onclick="{! c.handleUpdatePromoReview }" disabled="{!v.promoReviewEnabled}"/>
+                </div><br/>
+                <!-- RPP - 9653 6-May-2020 -->
+                <lightning:datatable columns="{! v.promoLineItemColumnList }"
+                                     data="{! v.promoRevItemList }"
+                                     keyField="id"
+                                     hideCheckboxColumn="false"
+                                     onrowaction="{! c.viewLineItem}"
+                                     onrowselection="{! c.handleRowSelectionPromoReview }"/>
+                <br/>
+            </aura:if>
+            <div align="right" style="padding-top:7px">
+                <aura:if isTrue="{! v.isReadOnly }">
+                    <lightning:button variant="brand" label="Add Promo Review" onclick="{! c.toggleModal }" name="{! v.promoRevPbEntry}"/>
+                </aura:if>
+            </div>
+        </div>
+    </div>
+    
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+</aura:component>

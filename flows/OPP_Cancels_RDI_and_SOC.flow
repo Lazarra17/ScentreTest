@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Cancels related RDI and SOC Cases when Opportunity Status = Closed Cancelled, triggered by OPP_OnOpportunityInsertUpdate Process</description>
+    <interviewLabel>OPP_Cancels RDI and SOC {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>OPP_Cancels RDI and SOC upon Oppty DNP</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Cancels RDI and SOC Cases related on the DNP&apos;d Opportunity based on the criteria below</description>
+        <name>Cancels_RDI_and_SOC_Cases</name>
+        <label>Cancels RDI and SOC Cases</label>
+        <locationX>221</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Updates_Bypass_Field</targetReference>
+        </connector>
+        <filters>
+            <field>Opportunity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Preliminary</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Services</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Defects - Release Contribution</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Defects - Do Not Release Contribution</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Subject</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Retail Design Instruction</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Subject</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Statement of Completion</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>NWR_Reason__c</field>
+            <value>
+                <stringValue>Opportunity Cancelled</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>No Works Required</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates TECH_Bypass Validation Rule field in Opportunities</description>
+        <name>Updates_Bypass_Field</name>
+        <label>Updates Bypass Field</label>
+        <locationX>399</locationX>
+        <locationY>50</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Closed - Cancelled</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>TECH_Bypass_Validation_Rule__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Cancels_RDI_and_SOC_Cases</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Stores the Opportunity Id from OPP_OnOpportunityInsertUpdate</description>
+        <name>recordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+</Flow>

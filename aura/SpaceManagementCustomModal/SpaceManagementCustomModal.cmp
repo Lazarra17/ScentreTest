@@ -1,0 +1,70 @@
+<aura:component >
+    <aura:attribute type = "String" name = "modalMode"/>
+    <aura:attribute type = "Object" name = "lostSpace" />
+    
+    <aura:registerEvent name="save" type="c:SpaceManagementEvent"/>
+    
+    <aura:method name="newLostSpace" action="{!c.createNewLostSpace}">
+    	<aura:attribute type = "Decimal" name="lostSpaceArea"/>
+    </aura:method>
+    
+	<div role="dialog" tabindex="-1" aria-labelledby="header43" aura:id="modalbox" class="slds-modal slds-fade-in-close slds-modal--large" >
+        <div class="slds-modal__container">
+            <div class="slds-modal__header">
+                <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModal}">
+                    <lightning:icon iconName="utility:close" size="medium" variant="inverse"/>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="header43" class="slds-text-heading--medium">
+                	{! v.modalMode}
+                </h2>
+            </div>
+            <div class="slds-modal__content slds-p-top--x-large slds-p-around--medium" aura:id="modalbody" id="modalbody">
+                <aura:if isTrue = "{! v.modalMode == 'Confirm'}">
+                	Are you sure you want to proceed with the changes?	
+                </aura:if>
+                <aura:if isTrue = "{! v.modalMode == 'Lost Space'}">
+                    Please create Lost Space before proceeding
+                    <br/>
+                    <div>
+                        <lightning:layout multipleRows="true">
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" 
+                                                  largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                <lightning:input label="Area (Sqm)" name="myname" value="{! v.lostSpace.RentableArea__c}" disabled = "true"/>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" 
+                                                  largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                                <!--lightning:input label="Type" name="myname" value="{! v.lostSpace.Type__c}" disabled = "true"/-->
+                                <lightning:select name="Type" label="Type" required="true" value="{! v.lostSpace.Type__c}">
+									<option value="20">Space Bank</option>
+									<option value="21">Common Mall</option>
+									<option value="21">Re-design</option>
+								</lightning:select>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                        <lightning:layout multipleRows="true">
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12">
+                                <lightning:input label="Space Name" name="spaceName" value = "{! v.lostSpace.Name}"
+                                                 required = "true" aura:id = "spaceName" maxlength = "6"/>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                        <lightning:layout multipleRows="true">
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" 
+                                                  largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+                                <lightning:textarea name="reasonForChange" value="{! v.lostSpace.ReasonForChange__c}" 
+                                                    label="Reason for Change" required = "true" aura:id = "reasonForChange"/>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </div>
+                </aura:if>
+            </div>
+            <div class="slds-modal__footer">
+                <div align = "right">
+                    <lightning:button variant="neutral" label="Cancel" onclick="{! c.closeModal}" />
+                    <lightning:button variant="brand" label="Save" onclick="{! c.save}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slds-backdrop slds-backdrop--close" aura:id="modalBackdrop"></div>
+</aura:component>

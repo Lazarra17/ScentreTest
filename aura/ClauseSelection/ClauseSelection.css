@@ -1,0 +1,22 @@
+.THIS .slds-icon{
+    fill : rgb(232, 17, 17);
+}
+.THIS .lightning-icon{
+    vertical-align:2px;
+}
+
+/* styles for '...' */ 
+.THIS .block-with-text {
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    max-height: 14.6em;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.4em;
+    text-align: justify;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

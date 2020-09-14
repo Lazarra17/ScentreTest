@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Rent</fullName>
+        <default>false</default>
+        <label>Rent</label>
+    </customValue>
+    <customValue>
+        <fullName>Outgoing</fullName>
+        <default>false</default>
+        <label>Outgoing</label>
+    </customValue>
+    <customValue>
+        <fullName>Gross</fullName>
+        <default>false</default>
+        <label>Gross</label>
+    </customValue>
+    <customValue>
+        <fullName>Net</fullName>
+        <default>false</default>
+        <label>Net</label>
+    </customValue>
+    <customValue>
+        <fullName>Semi-gross</fullName>
+        <default>false</default>
+        <label>Semi-gross</label>
+    </customValue>
+    <customValue>
+        <fullName>Incentive</fullName>
+        <default>false</default>
+        <label>Incentive</label>
+    </customValue>
+    <customValue>
+        <fullName>Rent Review</fullName>
+        <default>false</default>
+        <label>Rent Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Promo &amp; Marketing</fullName>
+        <default>false</default>
+        <label>Promo &amp; Marketing</label>
+    </customValue>
+    <masterLabel>Family</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

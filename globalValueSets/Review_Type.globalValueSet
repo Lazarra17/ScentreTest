@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Fixed Amount</fullName>
+        <default>false</default>
+        <label>Fixed Amount</label>
+    </customValue>
+    <customValue>
+        <fullName>CPI+</fullName>
+        <default>false</default>
+        <label>CPI+</label>
+    </customValue>
+    <masterLabel>Review Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

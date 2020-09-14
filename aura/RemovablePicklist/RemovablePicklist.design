@@ -1,0 +1,6 @@
+<design:component>
+	<design:attribute name="picklist" label="picklist" />
+    <design:attribute name="currentSelect" label="currentSelect" />
+    <design:attribute name="previousSelect" label="previousSelect" />
+    <design:attribute name="outPicklist" label="outPicklist"/>
+</design:component>

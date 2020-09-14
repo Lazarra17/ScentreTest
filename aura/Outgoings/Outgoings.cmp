@@ -1,0 +1,80 @@
+<aura:component controller="OpportunityLineItemController" implements="lightning:availableForFlowScreens,flexipage:availableForRecordHome,force:hasRecordId"> <!--inherit recordId attribute-->
+    <!--<aura:import library="lightning:notificationsLibrary" property="notifications"/>-->
+	<lightning:notificationsLibrary aura:id="notifLib"/>
+    <aura:attribute name="priceData" type="list"/>
+    <aura:attribute name="recoverableArea" type="Double"/>
+    <aura:attribute name="usableArea" type="Double"/>
+    <aura:attribute type = "String" name ="recordId"/>
+    <aura:attribute type = "Boolean" name ="ispriceEditable" default="null"/>
+    <aura:attribute name="saveLocalStorage" type="Boolean" default="false"/>
+    <aura:attribute name="nooutgoings" type="Boolean" default="false"/>
+    <aura:attribute name="errors" type="Object" default="[]"/>
+    <aura:attribute name="draftValues" type="Object" default="[]"/>
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:attribute name="nooutgoingsmessage" type="String" default=""/>
+    <aura:attribute name="atomicChanges" type="Object" default="[]"/>
+    <aura:attribute type="Boolean" name="isReadOnly" default="false"/>
+    <aura:attribute type="Boolean" name="showoutgoingrefresh" default="false"/>
+    <aura:attribute type="sObject" name = "targetrecord" />
+    <aura:attribute type="sObject" name = "targetfieldRecord" />
+    <aura:attribute type="Boolean" name="isShow" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{! c.init }"/>
+    <force:recordData aura:id="record"
+                      recordId="{!v.recordId}"
+                      fields="Id, Name, TotalOutgoings__c,TotalOutgoingsperSQM__c, ProposedRentCommencementDate__c"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.targetrecord}"
+                      targetFields="{!v.targetfieldRecord}"
+                      mode="VIEW"/>
+     <c:ToastMessage aura:id = "toasto"/>
+    
+    <div class="spinner">
+        <aura:if isTrue="{!v.isShow}">
+            <lightning:spinner alternativeText="Loading"/>
+        </aura:if>
+    </div>
+    
+    <aura:if isTrue="{!!v.nooutgoings}">
+        <lightning:recordViewForm recordId="{!v.recordId}" objectApiName="Opportunity">
+            <lightning:layout  multipleRows="true">
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <label class="slds-form-element__label" style="margin-right: 12px; margin-bottom: 0px;" for="recoverableArea">Recoverable Area</label>
+                    <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                        <lightning:helptext content="Indicate the total recoverable area for outgoings. Please note any change will require approval."/>
+                    </div>
+                        <lightning:input name="recoverableArea" style="margin-top: -20px" type="number" value="{!v.recoverableArea}" step="0.01" disabled="{! !v.isReadOnly}"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <br/>
+                    <aura:if isTrue="{!v.isReadOnly}">
+                        <lightning:button variant="brand" label="Update Area" onclick="{!c.updatearea}"/>
+                    </aura:if>
+                    <aura:if isTrue="{!v.showoutgoingrefresh}">
+                        <lightning:button variant="brand" label="Refresh Outgoings" onclick="{!c.refreshOutgoingsCtrl}"/>
+                    </aura:if>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:outputField fieldName="TotalOutgoings__c" />
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:outputField fieldName="TotalOutgoingsperSQM__c" />
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:recordViewForm>
+        <lightning:datatable errors="{! v.errors }"
+                             hideCheckboxColumn="true"
+                             draftValues="{!v.draftValues}"
+                             data="{! v.mydata }" 
+                             columns="{! v.mycolumns }" 
+                             keyField="Id"
+                             onsave="{!c.handleSave}"
+                             oncellchange="{! c.handleEditCell }"
+                             oncancel="{! c.handleCancel }"/>
+        <aura:set attribute="else">
+            <ui:message title="{!v.nooutgoingsmessage}" severity="info" closable="false">
+            </ui:message>
+        </aura:set>
+    </aura:if> 
+</aura:component>

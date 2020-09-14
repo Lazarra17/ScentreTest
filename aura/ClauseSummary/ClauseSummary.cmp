@@ -1,0 +1,93 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global" 
+                controller="ClauseSummaryController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:attribute name="listOfSelectedClauses" type="list"/> 
+    <aura:attribute name="listOfPaginatedClauses" type="list"/> 
+    <aura:attribute name="startPage" type="Integer" />
+    <aura:attribute name="endPage" type="Integer"/>
+    <aura:attribute name="totalRecordsCount" type="Integer"/>
+    <aura:attribute name="pageSize" type="Integer" default="3"/>
+    <aura:attribute name="currentPage" type="integer" default="1"/>
+    <aura:attribute name="totalPagesCount" type="integer"/>
+    <aura:attribute name="noRecordsFound" type="boolean"/>
+    <aura:attribute name="title" type="string" default="Selected Clauses" />
+    
+    <h3 class="slds-section__title slds-theme_shade">
+        <span class="slds-truncate slds-p-horizontal_small" title="Section Title">{!v.title}: {!v.totalRecordsCount}</span>
+    </h3>
+    <aura:if isTrue="{!v.noRecordsFound}">
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">
+            <span class="slds-assistive-text">error</span>
+            <h2>No records found.</h2>
+        </div>
+        <aura:set attribute="else"> 
+            <table class="slds-table slds-table_bordered slds-max-medium-table_stacked-horizontal">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate" title="Clause Name">Clause Name</div>
+                        </th>
+                        <th class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate" title="Type">Type</div>
+                        </th>
+                        <th class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate" title="Subtype">Subtype</div>
+                        </th>
+                        <th class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate" title="Risk Applies">Risk Applies</div>
+                        </th>
+                        <th class="slds-text-title_caps" scope="col">
+                            <div class="slds-truncate" title="Reason">Reason</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.listOfPaginatedClauses}" var="cl">
+                        <tr class="slds-hint-parent">
+                            <td data-label="Clause Name">
+                                <div class="slds-truncate" title="{!cl.Name}">{!cl.Name}</div>
+                            </td>
+                            <td data-label="Clause Type">
+                                <div class="slds-truncate" title="{!cl.Type__c}">{!cl.Type__c}</div>
+                            </td>
+                            <td data-label="Subtype">
+                                <div class="slds-truncate" title="{!cl.SubType__c}">{!cl.SubType__c}</div>
+                            </td>
+                            <td data-label="Risk Applies">
+                                <div class="slds-truncate" title="{!cl.ReferencedClause__r.RiskApplies__c}">
+                                    <lightning:input type="checkbox"  name="{!cl.ReferencedClause__r.RiskApplies__c}" checked="{!cl.ReferencedClause__r.RiskApplies__c}" disabled="true"/>
+                                </div>
+                            </td>	
+                            <td data-label="Reason">
+                                <div class="slds-cell-wrap" title="{!cl.ReasonRecommendation__c}">{!cl.ReasonRecommendation__c}</div>
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+            <br/>
+            <div class="slds-align_absolute-center">         
+                <lightning:button label="Previous"
+                                  disabled="{!v.startPage == 0}"  
+                                  onclick="{!c.navigation}"
+                                  variant="brand"
+                                  iconName="utility:back"
+                                  name="previous"/>
+                
+                <span class="slds-badge slds-badge_lightest"
+                      style="margin-right: 10px;margin-left: 10px;">
+                    Page {!v.currentPage} / {!v.totalPagesCount}
+                </span>
+                <lightning:button label="Next"
+                                  disabled="{!(v.endPage + 1) >= v.totalRecordsCount}" 
+                                  onclick="{!c.navigation}"
+                                  variant="brand"
+                                  iconName="utility:forward"
+                                  iconPosition="right"
+                                  name="next"/>
+            </div>  
+        </aura:set> 
+    </aura:if>
+</aura:component>

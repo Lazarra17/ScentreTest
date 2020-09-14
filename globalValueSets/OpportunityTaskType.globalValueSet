@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>01 - Accept Disclosure Statement</fullName>
+        <default>false</default>
+        <label>Accept Disclosure Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>02 - Add Clauses and Special Conditions</fullName>
+        <default>false</default>
+        <label>Add Clauses and Special Conditions</label>
+    </customValue>
+    <customValue>
+        <fullName>33 - Approve Changes to Opportunity (If needed for Victoria)</fullName>
+        <default>false</default>
+        <label>Approve Changes to Opportunity (If needed for Victoria)</label>
+    </customValue>
+    <customValue>
+        <fullName>56 - Assignment Pack signed by incoming and outgoing Retailer</fullName>
+        <default>false</default>
+        <label>Assignment Pack signed by incoming and outgoing Retailer</label>
+    </customValue>
+    <customValue>
+        <fullName>34 - Attach or Complete Inspection Report</fullName>
+        <default>false</default>
+        <label>Attach or Complete Inspection Report</label>
+    </customValue>
+    <customValue>
+        <fullName>87 - Attach or Complete SDIC</fullName>
+        <default>false</default>
+        <label>Attach or Complete SDIC</label>
+    </customValue>
+    <customValue>
+        <fullName>50 - Business and Financials</fullName>
+        <default>false</default>
+        <label>Business and Financials</label>
+    </customValue>
+    <customValue>
+        <fullName>03 - Certify Lease</fullName>
+        <default>false</default>
+        <label>Certify Lease </label>
+    </customValue>
+    <customValue>
+        <fullName>46 - Conditions of Assignment</fullName>
+        <default>false</default>
+        <label>Conditions of Assignment</label>
+    </customValue>
+    <customValue>
+        <fullName>66 - Confirm JV Approval not required</fullName>
+        <default>false</default>
+        <label>Confirm JV Approval not required</label>
+    </customValue>
+    <customValue>
+        <fullName>Confirm Settlement Completed</fullName>
+        <default>false</default>
+        <label>Confirm Settlement Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>04 - Create MTC</fullName>
+        <default>false</default>
+        <label>Create MTC</label>
+    </customValue>
+    <customValue>
+        <fullName>05 - Create SOC</fullName>
+        <default>false</default>
+        <label>Create SOC</label>
+    </customValue>
+    <customValue>
+        <fullName>54 - CRM and Lease Executive Document Recommendation</fullName>
+        <default>false</default>
+        <label>CRM and Lease Executive Document Recommendation</label>
+    </customValue>
+    <customValue>
+        <fullName>53 - CRM and Lease Executive Interview Date</fullName>
+        <default>false</default>
+        <label>CRM and Lease Executive Interview Date</label>
+    </customValue>
+    <customValue>
+        <fullName>06 - Documents Back</fullName>
+        <default>false</default>
+        <label>Documents Back</label>
+    </customValue>
+    <customValue>
+        <fullName>29 - Enter Deal Terms</fullName>
+        <default>false</default>
+        <label>Enter Deal Terms</label>
+    </customValue>
+    <customValue>
+        <fullName>26 - File Registered Lease Document</fullName>
+        <default>false</default>
+        <label>File Registered Lease Document</label>
+    </customValue>
+    <customValue>
+        <fullName>07 - Generate Acceptance (w/ Modifications)</fullName>
+        <default>false</default>
+        <label>Generate Acceptance (w/ Modifications)</label>
+    </customValue>
+    <customValue>
+        <fullName>08 - Generate and Issue Checksheet</fullName>
+        <default>false</default>
+        <label>Generate and Issue Checksheet</label>
+    </customValue>
+    <customValue>
+        <fullName>09 - Generate Owner’s Pack and Submit for JV Approval</fullName>
+        <default>false</default>
+        <label>Generate Owner’s Pack and Submit for JV Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>31 - Generate Proposal Letter</fullName>
+        <default>false</default>
+        <label>Generate Proposal Letter</label>
+    </customValue>
+    <customValue>
+        <fullName>10 - Generate Tenancy Instruction</fullName>
+        <default>false</default>
+        <label>Generate Tenancy Instruction</label>
+    </customValue>
+    <customValue>
+        <fullName>11 - GM Leasing Approve Checksheet</fullName>
+        <default>false</default>
+        <label>GM Leasing Approve Checksheet</label>
+    </customValue>
+    <customValue>
+        <fullName>27 - GM Retail Admin Approve Checksheet</fullName>
+        <default>false</default>
+        <label>GM Retail Admin Approve Checksheet</label>
+    </customValue>
+    <customValue>
+        <fullName>70 - Initial Cost Estimate</fullName>
+        <default>false</default>
+        <label>Initial Cost Estimate</label>
+    </customValue>
+    <customValue>
+        <fullName>84 - Inspection Report</fullName>
+        <default>false</default>
+        <label>Inspection Report</label>
+    </customValue>
+    <customValue>
+        <fullName>39 - Instruct Solicitor</fullName>
+        <default>false</default>
+        <label>Instruct Solicitor</label>
+    </customValue>
+    <customValue>
+        <fullName>62 - Issue Documents to Commercial Tenant</fullName>
+        <default>false</default>
+        <label>Issue Documents to Commercial Tenant</label>
+    </customValue>
+    <customValue>
+        <fullName>13 - Issue Lease Documents</fullName>
+        <default>false</default>
+        <label>Issue Lease Documents</label>
+    </customValue>
+    <customValue>
+        <fullName>41 - JV Approval</fullName>
+        <default>false</default>
+        <label>JV Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>81 - Lease Negotiations</fullName>
+        <default>false</default>
+        <label>Lease Negotiations</label>
+    </customValue>
+    <customValue>
+        <fullName>47 - Lessee Application Form</fullName>
+        <default>false</default>
+        <label>Lessee Application Form</label>
+    </customValue>
+    <customValue>
+        <fullName>73 - Licence Agreement sent to the Retailer</fullName>
+        <default>false</default>
+        <label>Licence Agreement sent to the Retailer</label>
+    </customValue>
+    <customValue>
+        <fullName>80 - LI RA Query</fullName>
+        <default>false</default>
+        <label>LI RA Query</label>
+    </customValue>
+    <customValue>
+        <fullName>16 - Obligations Received</fullName>
+        <default>false</default>
+        <label>Obligations Received</label>
+    </customValue>
+    <customValue>
+        <fullName>60 - Pre-Acceptance REAA Approval</fullName>
+        <default>false</default>
+        <label>Pre-Acceptance REAA Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>59 - Pre-DS REAA Approval</fullName>
+        <default>false</default>
+        <label>Pre-DS REAA Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>61 - Pre-Execute REAA Approval</fullName>
+        <default>false</default>
+        <label>Pre-Execute REAA Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>55 - Prepare Assignment Pack</fullName>
+        <default>false</default>
+        <label>Prepare Assignment Pack</label>
+    </customValue>
+    <customValue>
+        <fullName>37 - Prepare Counter Offer</fullName>
+        <default>false</default>
+        <label>Prepare Counter Offer</label>
+    </customValue>
+    <customValue>
+        <fullName>15 - Prepare Lease Instruction</fullName>
+        <default>false</default>
+        <label>Prepare Lease Instruction</label>
+    </customValue>
+    <customValue>
+        <fullName>78 - Proposal Leasing Query</fullName>
+        <default>false</default>
+        <label>Proposal Leasing Query</label>
+    </customValue>
+    <customValue>
+        <fullName>79 - Proposal RA Query</fullName>
+        <default>false</default>
+        <label>Proposal RA Query</label>
+    </customValue>
+    <customValue>
+        <fullName>14 - Provide Lease Plan</fullName>
+        <default>false</default>
+        <label>Provide Lease Plan</label>
+    </customValue>
+    <customValue>
+        <fullName>48 - Purchaser Application Form</fullName>
+        <default>false</default>
+        <label>Purchaser Application Form</label>
+    </customValue>
+    <customValue>
+        <fullName>76 - RA Review Opportunity</fullName>
+        <default>false</default>
+        <label>RA Review Opportunity</label>
+    </customValue>
+    <customValue>
+        <fullName>19 - Receive Certified Lease</fullName>
+        <default>false</default>
+        <label>Receive Certified Lease</label>
+    </customValue>
+    <customValue>
+        <fullName>43 - Receive Direct Debit Form</fullName>
+        <default>false</default>
+        <label>Receive Direct Debit Form</label>
+    </customValue>
+    <customValue>
+        <fullName>35 - Receive Disclosure Statement</fullName>
+        <default>false</default>
+        <label>Receive Disclosure Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>74 - Received Signed Licence Agreement from Retailer</fullName>
+        <default>false</default>
+        <label>Received Signed Licence Agreement from Retailer</label>
+    </customValue>
+    <customValue>
+        <fullName>45 - Receive Hoarding payment</fullName>
+        <default>false</default>
+        <label>Receive Hoarding payment</label>
+    </customValue>
+    <customValue>
+        <fullName>72 - Receive PLI</fullName>
+        <default>false</default>
+        <label>Receive PLI</label>
+    </customValue>
+    <customValue>
+        <fullName>82 - Receive Registration Fees</fullName>
+        <default>false</default>
+        <label>Receive Registration Fees</label>
+    </customValue>
+    <customValue>
+        <fullName>42 - Receive Rent in Advance</fullName>
+        <default>false</default>
+        <label>Receive Rent in Advance</label>
+    </customValue>
+    <customValue>
+        <fullName>44 - Receive Security Deposit / BG</fullName>
+        <default>false</default>
+        <label>Receive Security Deposit / BG</label>
+    </customValue>
+    <customValue>
+        <fullName>58 - Receive Variation of Lease Letter signed by the Retailer</fullName>
+        <default>false</default>
+        <label>Receive Variation of Lease Letter signed by the Retailer</label>
+    </customValue>
+    <customValue>
+        <fullName>51 - References</fullName>
+        <default>false</default>
+        <label>References</label>
+    </customValue>
+    <customValue>
+        <fullName>17 - Register Lease</fullName>
+        <default>false</default>
+        <label>Register Lease</label>
+    </customValue>
+    <customValue>
+        <fullName>85 - Request Survey Plan</fullName>
+        <default>false</default>
+        <label>Request Survey Plan</label>
+    </customValue>
+    <customValue>
+        <fullName>65 - Revenue Assurance Manual Processing</fullName>
+        <default>false</default>
+        <label>Revenue Assurance Manual Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>75 - Revenue Assurance Review and Trigger to JDE</fullName>
+        <default>false</default>
+        <label>Revenue Assurance Review and Trigger to JDE</label>
+    </customValue>
+    <customValue>
+        <fullName>18 - Review and Distribute Tenancy Instruction</fullName>
+        <default>false</default>
+        <label>Review and Distribute Tenancy Instruction</label>
+    </customValue>
+    <customValue>
+        <fullName>30 - Review Opportunity Before Triggering Approvals</fullName>
+        <default>false</default>
+        <label>Review Opportunity Before Triggering Approvals</label>
+    </customValue>
+    <customValue>
+        <fullName>20 - RM Leasing Execute Documents</fullName>
+        <default>false</default>
+        <label>RM Leasing Execute Documents</label>
+    </customValue>
+    <customValue>
+        <fullName>28 - RM Retail Admin Execute Documents</fullName>
+        <default>false</default>
+        <label>RM Retail Admin Execute Documents</label>
+    </customValue>
+    <customValue>
+        <fullName>40 - Send Acceptance (w/ Modifications)</fullName>
+        <default>false</default>
+        <label>Send Acceptance (w/ Modifications)</label>
+    </customValue>
+    <customValue>
+        <fullName>21 - Send Counter Offer</fullName>
+        <default>false</default>
+        <label>Send Counter Offer</label>
+    </customValue>
+    <customValue>
+        <fullName>22 - Send Disclosure Statement</fullName>
+        <default>false</default>
+        <label>Send Disclosure Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>32 - Send Disclosure Statement (only for Victoria)</fullName>
+        <default>false</default>
+        <label>Send Disclosure Statement (only for Victoria)</label>
+    </customValue>
+    <customValue>
+        <fullName>23 - Send Documents for Execution</fullName>
+        <default>false</default>
+        <label>Send Documents for Execution</label>
+    </customValue>
+    <customValue>
+        <fullName>24 - Send Documents to JV for Execution</fullName>
+        <default>false</default>
+        <label>Send Documents to JV for Execution</label>
+    </customValue>
+    <customValue>
+        <fullName>63 - Send Executed Lease to Lessee</fullName>
+        <default>false</default>
+        <label>Send Executed Lease to Lessee</label>
+    </customValue>
+    <customValue>
+        <fullName>64 - Send Executed Lease to Lessor</fullName>
+        <default>false</default>
+        <label>Send Executed Lease to Lessor</label>
+    </customValue>
+    <customValue>
+        <fullName>25 - Send Executed Lease to Solicitor</fullName>
+        <default>false</default>
+        <label>Send Executed Lease to Solicitor</label>
+    </customValue>
+    <customValue>
+        <fullName>57 - Send Variation of Lease Letter to Retailer</fullName>
+        <default>false</default>
+        <label>Send Variation of Lease Letter to Retailer</label>
+    </customValue>
+    <customValue>
+        <fullName>71 - Sketch Plan</fullName>
+        <default>false</default>
+        <label>Sketch Plan</label>
+    </customValue>
+    <customValue>
+        <fullName>49 - Statement of Assets and Liability</fullName>
+        <default>false</default>
+        <label>Statement of Assets and Liability</label>
+    </customValue>
+    <customValue>
+        <fullName>68 - Submit for Final Approval</fullName>
+        <default>false</default>
+        <label>Submit for Final Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>77 - Submit For Initial Approval</fullName>
+        <default>false</default>
+        <label>Submit For Initial Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>52 - Supporting Documents</fullName>
+        <default>false</default>
+        <label>Supporting Documents</label>
+    </customValue>
+    <customValue>
+        <fullName>86 - Survey Plan Received</fullName>
+        <default>false</default>
+        <label>Survey Plan Received</label>
+    </customValue>
+    <customValue>
+        <fullName>83 - Tenancy Instruction Lease Plan Issue</fullName>
+        <default>false</default>
+        <label>Tenancy Instruction Lease Plan Issue</label>
+    </customValue>
+    <customValue>
+        <fullName>38 - Update Cost Estimate</fullName>
+        <default>false</default>
+        <label>Update Cost Estimate</label>
+    </customValue>
+    <customValue>
+        <fullName>36 - Update Deal Terms</fullName>
+        <default>false</default>
+        <label>Update Deal Terms</label>
+    </customValue>
+    <customValue>
+        <fullName>67 - Update the Opportunity and Resubmit for Approval</fullName>
+        <default>false</default>
+        <label>Update the Opportunity and Resubmit for Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Generate Offer Letter</fullName>
+        <default>false</default>
+        <label>Generate Offer Letter</label>
+    </customValue>
+    <customValue>
+        <fullName>Issue Offer Letter</fullName>
+        <default>false</default>
+        <label>Issue Offer Letter</label>
+    </customValue>
+    <customValue>
+        <fullName>Receive Signed Offer Letter</fullName>
+        <default>false</default>
+        <label>Receive Signed Offer Letter</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Administrator Review</fullName>
+        <default>false</default>
+        <label>Retail Administrator Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Accept Offer Letter</fullName>
+        <default>false</default>
+        <label>Accept Offer Letter</label>
+    </customValue>
+    <customValue>
+        <fullName>Submit for Approval</fullName>
+        <default>false</default>
+        <label>Submit for Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Update Case Terms &amp; Resubmit for Approval</fullName>
+        <default>false</default>
+        <label>Update Case Terms &amp; Resubmit for Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Case Ready For Review</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Case Ready For Review</label>
+    </customValue>
+    <masterLabel>Opportunity Task Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

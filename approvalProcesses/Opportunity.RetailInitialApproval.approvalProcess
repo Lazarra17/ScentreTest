@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>allInternalUsers</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Type</field>
+        <field>BackgroundIssue__c</field>
+        <field>OptionsRecommendations__c</field>
+        <field>Financials__c</field>
+        <field>Property__c</field>
+        <field>Space__c</field>
+        <field>Account</field>
+        <field>RecoverableArea__c</field>
+        <field>RentableArea__c</field>
+        <field>ProposedStartDate__c</field>
+        <field>FitoutDays__c</field>
+        <field>TermYr__c</field>
+        <field>TermMonths__c</field>
+        <field>TermDays__c</field>
+        <field>DealType__c</field>
+        <field>CurrentRent__c</field>
+        <field>BudgetRent__c</field>
+        <field>LatestApprovedRent__c</field>
+        <field>AnnualMinimumRent__c</field>
+        <field>RentVarianceAmount__c</field>
+        <field>RentVariance__c</field>
+        <field>BudgetCapital__c</field>
+        <field>LatestApprovedCapital__c</field>
+        <field>TotalForecastCapital__c</field>
+        <field>CapitalVarianceAmount__c</field>
+        <field>CapitalVariance__c</field>
+        <field>PercentageRentPercent__c</field>
+        <field>TotalPromotionLevy__c</field>
+        <field>RiskSummary__c</field>
+        <field>SecurityDepositType__c</field>
+        <field>SecurityDeposit__c</field>
+        <field>NumberofGuarantors__c</field>
+        <field>UsageClause__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>RMLARS__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>RM LARS Approval Step</description>
+        <entryCriteria>
+            <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Pending Initial Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.RMLARS__c</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>RM - LARS Approval</label>
+        <name>RMLARSApproval</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>RMRetailAdmin__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>RM Retail Admin Approval Step</description>
+        <entryCriteria>
+            <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Pending Initial Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.RMRetailAdmin__c</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>RM Retail Admin Approval</label>
+        <name>RMRetailAdminApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>GMRetailAdmin__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>GM Retail Admin Approval Step</description>
+        <entryCriteria>
+            <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Pending Initial Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.GMRetailAdmin__c</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>GM Retail Admin Approval</label>
+        <name>GMRetailAdminApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>GMLARS__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>GM - LARS Approval Step</description>
+        <entryCriteria>
+            <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Pending Initial Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.GMLARS__c</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>GM - LARS Approval</label>
+        <name>GMLARSApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>GroupGeneralManagerLARS__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Group General Manager LARS Approval Step</description>
+        <entryCriteria>
+            <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Pending Initial Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.GroupGeneralManagerLARS__c</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Group General Manager LARS Approval</label>
+        <name>GroupGeneralManagerLARSApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>DirectorLARSNZDevelopment__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Director LARS &amp; NZ Development Approval Step</description>
+        <entryCriteria>
+            <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Pending Initial Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.DirectorLARSNZDevelopment__c</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Director LARS &amp; NZ Development Approval</label>
+        <name>DirectorLARSNZDevelopmentApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>CorporateLegal__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Corporate Legal Approval Step</description>
+        <entryCriteria>
+            <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Pending Initial Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.CorporateLegal__c</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Corporate Legal Approval</label>
+        <name>CorporateLegalApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>COO__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>COO Approval Step</description>
+        <entryCriteria>
+            <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Pending Initial Approval</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.COO__c</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.ApprovalStatus__c</field>
+                <operation>equals</operation>
+            </criteriaItems>
+        </entryCriteria>
+        <label>COO Approval</label>
+        <name>COOApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Initial approval process for Retail Opportunity.</description>
+    <emailTemplate>unfiled$public/RetailApprovalRequest</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>(1 OR 12) AND 2 AND 3 AND (4 OR 5 OR 6 OR 7 OR 8 OR 9 OR 10 OR 11)</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.ApprovalStatus__c</field>
+            <operation>equals</operation>
+            <value>Initial Approval Rejected</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordType</field>
+            <operation>equals</operation>
+            <value>Retail Leasing</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.SpecialityLeaseType__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RMLARS__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.GMLARS__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.GroupGeneralManagerLARS__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.DirectorLARSNZDevelopment__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.CorporateLegal__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.COO__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.GMRetailAdmin__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RMRetailAdmin__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.ApprovalStatus__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>OPP_ApprovalApprovedEmailAlert</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>OPP_InitialApprovalGranted</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>OPPUpdateLatestApprovedCapital</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>OPPUpdateLatestApprovedRent</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>OPP_ApprovalRejectedEmailAlert</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>OPP_InitialApprovalRejected</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>OPP_RejectionTask</name>
+            <type>Task</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>OPP_PendingInitialApproval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Retail Initial Approval</label>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

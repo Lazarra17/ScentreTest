@@ -1,0 +1,75 @@
+<aura:component controller="CovidCasePageController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="fieldsToShowInChild" type="List"/>
+    <aura:attribute name="section1iconName" type="String" default="utility:chevrondown"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="isViewMode" type="Boolean" default="true"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false" />
+    
+    <aura:registerEvent name="changeMode" type="c:updateCovidCaseModeEvent" />
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <div class="exampleHolder">
+            <lightning:spinner alternativeText="Loading" size="medium" />
+        </div>
+    </aura:if>
+    
+    <div class="slds-section slds-is-open" aura:id="section">
+        <h3 class="slds-section__title">
+            <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action" onclick="{!c.toggleSection}">
+                <lightning:icon iconName="{!v.section1iconName}" title="" size="x-small" />
+                <span class="slds-truncate slds-p-left--x-small" title="{!v.fieldsToShowInChild.key}">{!v.fieldsToShowInChild.key}</span>
+            </button>
+        </h3>
+        <div aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+            <aura:if isTrue="{!v.isViewMode}">
+                <div class="slds-grid slds-wrap">
+                    <aura:iteration items="{!v.fieldsToShowInChild.value}" var="fieldLabel">
+                        
+                        <div class="slds-col slds-size_6-of-12">
+                            <div class="slds-border_bottom">
+                                <table class="slds-table slds-table_cell-buffer">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="slds-line-clamp_large"><lightning:outputField fieldName="{!fieldLabel.Field_API_Name__c}" /></p>
+                                            </td>
+                                            <aura:if isTrue="{!fieldLabel.Is_Ready_Only__c}">
+                                                <aura:set attribute="else">
+                                                    <td>
+                                                        <div class="slds-float_right">
+                                                            <button onclick="{!c.inlineEditName}" class="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small" title="Edit">
+                                                                <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="edit"/>
+                                                            </button>
+                                                        </div>
+                                                    </td>    
+                                                </aura:set>
+                                            </aura:if>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </aura:iteration>
+                </div>
+                <aura:set attribute="else">
+                    <!--<lightning:messages />-->
+                    <div class="slds-grid slds-wrap">
+                        <aura:iteration items="{!v.fieldsToShowInChild.value}" var="fieldLabel">
+                            <div class="slds-col slds-size_6-of-12">
+                            	<aura:if isTrue="{!or(fieldLabel.Field_API_Name__c == 'Type', fieldLabel.Field_API_Name__c == 'SubType__c')}">
+                                	<aura:if isTrue="{!fieldLabel.Field_API_Name__c == 'Type'}">
+                                    	<c:DependentSubtypePicklistForCovidCase recordId="{!v.recordId}"/>
+                                    </aura:if>
+                                	<aura:set attribute="else">
+                                    	<lightning:inputField name="{!fieldLabel.MasterLabel}" fieldName="{!fieldLabel.Field_API_Name__c}" disabled="{!fieldLabel.Is_Ready_Only__c}" onchange="{!c.fieldChanged}" required="{!fieldLabel.Is_Required__c}"/>
+                                    </aura:set>
+                            	</aura:if>
+                            </div>
+                        </aura:iteration>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

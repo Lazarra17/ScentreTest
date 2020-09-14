@@ -1,0 +1,10 @@
+<aura:event type="COMPONENT" description="Event template">
+    <aura:attribute type="String" name="mode" />
+    <aura:attribute type="String" name="action" />    
+    <aura:attribute type="Object" name="space" />
+    <aura:attribute type="Object[]" name="spaceList" />
+    
+    <aura:attribute type="String" name="type" />
+    <aura:attribute type="String" name="title" />
+    <aura:attribute type="String" name="message" />
+</aura:event>

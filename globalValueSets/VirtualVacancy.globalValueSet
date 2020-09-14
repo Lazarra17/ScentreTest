@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>V_H</fullName>
+        <default>false</default>
+        <label>VH</label>
+    </customValue>
+    <customValue>
+        <fullName>V_M</fullName>
+        <default>false</default>
+        <label>VM</label>
+    </customValue>
+    <customValue>
+        <fullName>V_L</fullName>
+        <default>false</default>
+        <label>VL</label>
+    </customValue>
+    <customValue>
+        <fullName>No</fullName>
+        <default>false</default>
+        <label>No</label>
+    </customValue>
+    <masterLabel>Virtual Vacancy</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

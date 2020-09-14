@@ -1,0 +1,1985 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>PRO_PropertyRecordPage</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>PRO_PropertyCompactLayout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>PRO_PropertyCompactLayout</fullName>
+        <fields>Name</fields>
+        <fields>NumberofShops__c</fields>
+        <fields>GLA__c</fields>
+        <fields>MATAmountmil__c</fields>
+        <fields>NumberofTenantParkingBays__c</fields>
+        <fields>Type__c</fields>
+        <fields>PropertyOwnershipType__c</fields>
+        <fields>CustomerWebsite__c</fields>
+        <label>PRO - Property Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>&lt;PRO&gt; - Used to capture the list of Scentre Group Shopping Centres</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>ActualRentableArea__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Rentable Area</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActualUsableArea__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Usable Area</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Agent</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Properties</relationshipLabel>
+        <relationshipName>Properties</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AirConditioningArea__c</fullName>
+        <description>This field is used to store Air Con area which is used to calculate the rates of DS products displayed in ACT and SA Proerties.</description>
+        <externalId>false</externalId>
+        <label>Air Conditioning Area</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ApplicableOutgoings__c</fullName>
+        <externalId>false</externalId>
+        <label>Applicable Outgoings</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>OutgoingProducts</valueSetName>
+        </valueSet>
+        <visibleLines>7</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AssignmentSolicitorThreshold__c</fullName>
+        <externalId>false</externalId>
+        <label>Assignment Solicitor Threshold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>BUDSUserID__c</fullName>
+        <externalId>false</externalId>
+        <label>BUDS User ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BankAccountAddress__c</fullName>
+        <externalId>false</externalId>
+        <label>Bank Account Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BankAccountName__c</fullName>
+        <externalId>false</externalId>
+        <label>Bank Account Name</label>
+        <length>100</length>
+        <maskChar>X</maskChar>
+        <maskType>lastFour</maskType>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>BankAccountNumber__c</fullName>
+        <externalId>false</externalId>
+        <label>Bank Account Number</label>
+        <length>100</length>
+        <maskChar>X</maskChar>
+        <maskType>lastFour</maskType>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>BankBSB__c</fullName>
+        <externalId>false</externalId>
+        <label>Bank BSB</label>
+        <length>10</length>
+        <maskChar>X</maskChar>
+        <maskType>lastFour</maskType>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>BankName__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Bank Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Properties (Bank Name)</relationshipLabel>
+        <relationshipName>BankName</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Properties</relationshipLabel>
+        <relationshipName>Properties</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CentreType__c</fullName>
+        <externalId>false</externalId>
+        <label>Centre Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Regional</fullName>
+                    <default>false</default>
+                    <label>Regional</label>
+                </value>
+                <value>
+                    <fullName>Sub-regional</fullName>
+                    <default>false</default>
+                    <label>Sub-regional</label>
+                </value>
+                <value>
+                    <fullName>CBD</fullName>
+                    <default>false</default>
+                    <label>CBD</label>
+                </value>
+                <value>
+                    <fullName>Supermarket centres</fullName>
+                    <default>false</default>
+                    <label>Supermarket centres</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CommanMallArea__c</fullName>
+        <description>This field is used to store Comman Mall area which is used to calculate the rates of DS products displayed in ACT and SA Proerties.</description>
+        <externalId>false</externalId>
+        <label>Comman Mall Area</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CommercialCommunicationsFooter__c</fullName>
+        <description>Stores the footer for commercial opportunities.</description>
+        <externalId>false</externalId>
+        <label>Commercial Communications Footer</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ConstructionCompany__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Construction Company</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Properties (Construction Company)</relationshipLabel>
+        <relationshipName>ConstructionCompany</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CorporateWebsite__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Corporate website for retailers, investors</inlineHelpText>
+        <label>Corporate Website</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Country</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CustomerWebsite__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer Facing Website</inlineHelpText>
+        <label>Customer Website</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>DAClause__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For Retail Admin Use Only.</inlineHelpText>
+        <label>DA Clause</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DISCheckPropertyName__c</fullName>
+        <externalId>false</externalId>
+        <formula>OR(Name=&quot;Carousel&quot;,Name=&quot;Innaloo&quot;,Name=&quot;Innaloo Megacentre&quot;,Name=&quot;Whitford City&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DIS_Check_Property_Name</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DesignCompanion__c</fullName>
+        <description>It&apos;s part of the proposal pack to be sent to retailer</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Design Companion</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>DesignCriteriaKiosk__c</fullName>
+        <description>It&apos;s part of proposal pack to be sent to retailer. This is only displayed when space&apos;s type is Kiosk and status is not Project</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Design Criteria - Kiosk</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>DesignCriteriaProject__c</fullName>
+        <description>It&apos;s part of proposal pack to be sent to retailer. This is only displayed when space&apos;s status is Project</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Design Criteria - Project</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>DesignCriteriaShop__c</fullName>
+        <description>It&apos;s part of proposal pack to be sent to retailer. This is only displayed when space&apos;s type is Shop and status is not Project</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Design Criteria - Shop</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>DesignCriteria__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Design Criteria</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>DexusProperty__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Dexus Property</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Direct_Debit_Form__c</fullName>
+        <externalId>false</externalId>
+        <label>Direct Debit Form</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>DraftLease__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Draft Lease</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>ExtendedTradePSM__c</fullName>
+        <externalId>false</externalId>
+        <label>Extended Trade PSM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FitoutRequirementsProject__c</fullName>
+        <description>It&apos;s part of proposal pack to be sent to retailer. This is only displayed when space&apos;s status is Project</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Fitout Requirements - Project</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>FitoutRequirements__c</fullName>
+        <description>It&apos;s part of proposal pack to be sent to retailer. This is only displayed when space&apos;s status is not Project</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Fitout Requirements</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>FloorPlan__c</fullName>
+        <description>It&apos;s part of proposal pack to be sent to retailer.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Floor Plan</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>GLA_Air_Con__c</fullName>
+        <externalId>false</externalId>
+        <label>GLA Air Con</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GLA_Outgoings__c</fullName>
+        <externalId>false</externalId>
+        <label>GLA Outgoings</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GLA_Rates_and_Taxes__c</fullName>
+        <externalId>false</externalId>
+        <label>GLA Rates and Taxes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GLA__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Gross Lettable Area</inlineHelpText>
+        <label>GLA</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HealthSafetyGuide__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Health &amp; Safety Guide</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>HoardingRequirement__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Hoarding Requirement</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>HoldingCompaniesName__c</fullName>
+        <description>This field is used to store conactinated holding company name from propery ownership records.</description>
+        <externalId>false</externalId>
+        <label>Holding Companies Name</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>JDEPropertyNumber__c</fullName>
+        <externalId>true</externalId>
+        <label>JDE Property Number</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LandDescription__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Retail Admin Use Only.</inlineHelpText>
+        <label>Land Description</label>
+        <length>5000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LeaseSolicitorThreshold__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Solicitor Threshold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LeasingGGM__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Properties (Leasing GGM)</description>
+        <externalId>false</externalId>
+        <label>Leasing GGM</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>LeasingGMMs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LeasingGM__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Properties (Leasing GM)</description>
+        <externalId>false</externalId>
+        <label>Leasing GM</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Properties2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LeasingRM__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Drives reporting. To be manually updated.</description>
+        <externalId>false</externalId>
+        <label>Leasing RM</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Properties1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MATAmount__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximum Annual Turnover For Retail Admin Use Only for Annual Audit Purposes.</inlineHelpText>
+        <label>MAT Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MATAmountmil__c</fullName>
+        <externalId>false</externalId>
+        <label>MAT Amount ($mil)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MATFoodPSM__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximum Annual Turnover For Retail Admin Use Only for Annual Audit Purposes.</inlineHelpText>
+        <label>MAT Food PSM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MATNonFoodPSM__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximum Annual Turnover For Retail Admin Use Only for Annual Audit Purposes.</inlineHelpText>
+        <label>MAT Non-Food PSM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MATServicesPSM__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximum Annual Turnover For Retail Admin Use Only for Annual Audit Purposes.</inlineHelpText>
+        <label>MAT Services PSM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MATVariance__c</fullName>
+        <externalId>false</externalId>
+        <label>MAT % Variance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MajorTenantsList__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For Retail Admin Use Only.</inlineHelpText>
+        <label>Major Tenants List</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MiscellaneousSolicitorThreshold__c</fullName>
+        <externalId>false</externalId>
+        <label>Miscellaneous Solicitor Threshold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>NumberofShops__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For Retail Admin Use Only for Annual Audit Purposes.</inlineHelpText>
+        <label>No of Shops</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NumberofStorages__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For Retail Admin Use Only for Annual Audit Purposes.</inlineHelpText>
+        <label>No of Storages</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NumberofTenantParkingBays__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For Retail Admin Use Only for Annual Audit Purposes.</inlineHelpText>
+        <label>No of Tenant Parking Bays</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OperatingExpenses__c</fullName>
+        <description>Used to merge the operating expenses details for the Property into the Disclosure Statement Document. This field is only visible for System Admins and Business Support Users.</description>
+        <externalId>false</externalId>
+        <label>Operating Expenses</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>OperatingHours__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For Retail Admin Use Only.</inlineHelpText>
+        <label>Operating Hours</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>OutgoingsArea__c</fullName>
+        <description>This field is used to store Outgoings area which is used to calculate the rates of DS products displayed in ACT and SA Proerties.</description>
+        <externalId>false</externalId>
+        <label>Outgoings Area</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PSM_Sunday_Trade_Air_Con__c</fullName>
+        <externalId>false</externalId>
+        <label>$PSM Sunday Trade Air Con</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>PSM_Sunday_Trade_Outgoings__c</fullName>
+        <externalId>false</externalId>
+        <label>$PSM Sunday Trade Outgoings</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>PriceBook__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Price Book</label>
+        <referenceTo>Pricebook2</referenceTo>
+        <relationshipLabel>Properties (PriceBook)</relationshipLabel>
+        <relationshipName>PropertiesPriceBook</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProjectCentreEmailAlt__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Centre Email Alt</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProjectCentreEmail__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Centre Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PropertyAddress__c</fullName>
+        <externalId>false</externalId>
+        <formula>PropertyStreet__c &amp; BR() &amp; PropertyCity__c &amp; BR() &amp;  PropertyState__c  &amp; BR() &amp; PropertyPostcode__c  &amp; BR() &amp;  Text(Country__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PropertyCity__c</fullName>
+        <externalId>false</externalId>
+        <label>Property City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PropertyMgtCompany__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Property Mgt Company</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Properties (Property Mgt Company)</relationshipLabel>
+        <relationshipName>PropertyMgtCompany</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PropertyOwnershipType__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Ownership Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>OwnershipType</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PropertyPostcode__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Postcode</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PropertyShortName__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Short Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PropertyState__c</fullName>
+        <externalId>false</externalId>
+        <label>Property State</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PropertyStatus__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                    <label>Inactive</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PropertyStreet__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Street</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PublicHoliday__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Name, 
+&quot;Airport West&quot;, &quot;AFL Grand Final day,&quot;,
+&quot;Casey Central&quot;, &quot;AFL Grand Final day,&quot;,
+&quot;Doncaster&quot;, &quot;AFL Grand Final day,&quot;,
+&quot;Fountain Gate&quot;, &quot;AFL Grand Final day,&quot;,
+&quot;Geelong&quot;, &quot;AFL Grand Final day,&quot;,
+&quot;Knox&quot;, &quot;AFL Grand Final day,&quot;,
+&quot;Knox Ozone&quot;, &quot;AFL Grand Final day,&quot;,
+&quot;Knox City Office Tower&quot;, &quot;AFL Grand Final day,&quot;,
+&quot;Plenty Valley&quot;, &quot;AFL Grand Final day,&quot;,
+&quot;Southland&quot;, &quot;AFL Grand Final day,&quot;,
+&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Public Holiday</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RatesandTaxesArea__c</fullName>
+        <description>This field is used to store Rates and Taxes Area which is used to calculate the rates of DS products displayed in ACT and SA Proerties.</description>
+        <externalId>false</externalId>
+        <label>Rates and Taxes Area</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Redbook__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Redbook</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>RegionOwner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Region Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>RegionOwner</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RegionalCategory2__c</fullName>
+        <externalId>false</externalId>
+        <label>Regional Category 2</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>QLD Managed</fullName>
+                    <default>false</default>
+                    <label>QLD Managed</label>
+                </value>
+                <value>
+                    <fullName>SA Managed</fullName>
+                    <default>false</default>
+                    <label>SA Managed</label>
+                </value>
+                <value>
+                    <fullName>VIC Managed</fullName>
+                    <default>false</default>
+                    <label>VIC Managed</label>
+                </value>
+                <value>
+                    <fullName>NSW Managed2</fullName>
+                    <default>false</default>
+                    <label>NSW Managed2</label>
+                </value>
+                <value>
+                    <fullName>NSW Managed1</fullName>
+                    <default>false</default>
+                    <label>NSW Managed1</label>
+                </value>
+                <value>
+                    <fullName>WA Managed</fullName>
+                    <default>false</default>
+                    <label>WA Managed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RegionalCategory__c</fullName>
+        <externalId>false</externalId>
+        <label>Regional Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NSW2</fullName>
+                    <default>false</default>
+                    <label>NSW2</label>
+                </value>
+                <value>
+                    <fullName>WA / QLD</fullName>
+                    <default>false</default>
+                    <label>WA / QLD</label>
+                </value>
+                <value>
+                    <fullName>NSW1</fullName>
+                    <default>false</default>
+                    <label>NSW1</label>
+                </value>
+                <value>
+                    <fullName>SA / VIC</fullName>
+                    <default>false</default>
+                    <label>SA / VIC</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RentReviewType__c</fullName>
+        <externalId>false</externalId>
+        <label>Rent Review Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>StandardReviewTypes</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ReportedRentableArea__c</fullName>
+        <externalId>false</externalId>
+        <label>Reported Rentable Area</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReportedUsableArea__c</fullName>
+        <externalId>false</externalId>
+        <label>Reported Usable Area</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RepresentationHordingExtra__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;, or any de-fitting of the premises at the expiration or determination of the lease&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Representation Hording Extra</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RetaiDesignRM__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Drives reporting</description>
+        <externalId>false</externalId>
+        <label>Retail Design RM</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Properties</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RetailAdminRM__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Retail Admin RM</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Properties3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RetailCommunicationsFooter__c</fullName>
+        <description>Stores the footer for Commercial opportunities</description>
+        <externalId>false</externalId>
+        <label>Retail Communications Footer</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RetailTenantsGuide__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Retail Tenant&apos;s Guide</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Retail_Admin__c</fullName>
+        <description>RPP-10729
+This determines who is/are the Retail Administrator/s responsible for the property record, this is mainly use for the reporting purpose due to the shared responsibility (1 or more Retail Administrator/s are responsible for the same property) as the Property Team record (Retail Administrator role) cannot be used to do the report/dashboard drill down.</description>
+        <externalId>false</externalId>
+        <label>Retail Admin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rollover_Year__c</fullName>
+        <description>Field used in Conga Document (DS) to change the year value on documents based on financial rollover requirements.</description>
+        <externalId>false</externalId>
+        <label>Rollover Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ScentreGridDSPricingGuide__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>ScentreGrid DS/Pricing Guide</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>ServicesAndFacilities__c</fullName>
+        <externalId>false</externalId>
+        <label>Services And Facilities</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>ServicesAndFacilities</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>StandardPromoReviewType__c</fullName>
+        <description>Promo Standard Review Types related to Property</description>
+        <externalId>false</externalId>
+        <label>Standard Promo Review Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>StandardReviewTypes</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>StoreroomLessorEntity__c</fullName>
+        <description>This field is used to store concatenated Lessor Entity details for storerooms including the ABN(s).</description>
+        <externalId>false</externalId>
+        <label>Storeroom Lessor Entity</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>StoreroomLicenseSection17__c</fullName>
+        <externalId>false</externalId>
+        <label>Storeroom License (Section 17)</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>StoreroomLicenseSection18__c</fullName>
+        <externalId>false</externalId>
+        <label>Storeroom License (Section 18)</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>StoreroomLicenseSection19__c</fullName>
+        <externalId>false</externalId>
+        <label>Storeroom License (Section 19)</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SurrenderSolicitorThreshold__c</fullName>
+        <externalId>false</externalId>
+        <label>Surrender Solicitor Threshold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>TECH_Retail_Design_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This lookup will store the User Id of Retail Design Manager from Property Team</description>
+        <externalId>false</externalId>
+        <label>TECH_Retail Design Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Properties4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TechDMImportDateTime__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMImportDateTime</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>TechDMOriginalSourceSystem__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMOriginalSourceSystem</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMReleaseNo__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMReleaseNo</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMSourceID__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMSourceID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMSourceSystem__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMSourceSystem</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMXREFId__c</fullName>
+        <externalId>true</externalId>
+        <label>Tech_DMXREF_Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tech_ConcatenatedAccountACN__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_ConcatenatedAccountACN</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tech_ConcatenatedHoldingCompanyName__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_ConcatenatedHoldingCompanyName</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TenancyMix__c</fullName>
+        <description>It&apos;s part of the proposal pack to be sent to retailer</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For use in Disclosure Statement Proposal Packs.</inlineHelpText>
+        <label>Tenancy Mix</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Tier__c</fullName>
+        <externalId>false</externalId>
+        <label>Tier</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Tier 1</fullName>
+                    <default>true</default>
+                    <label>Tier 1</label>
+                </value>
+                <value>
+                    <fullName>Tier 2</fullName>
+                    <default>false</default>
+                    <label>Tier 2</label>
+                </value>
+                <value>
+                    <fullName>Tier 3</fullName>
+                    <default>false</default>
+                    <label>Tier 3</label>
+                </value>
+                <value>
+                    <fullName>Tier 4</fullName>
+                    <default>false</default>
+                    <label>Tier 4</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TitleParticulars__c</fullName>
+        <externalId>false</externalId>
+        <label>Title Particulars</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TotalOccupiedArea__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Occupied Area</label>
+        <summarizedField>Space__c.RentableArea__c</summarizedField>
+        <summaryFilterItems>
+            <field>Space__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Leased Spaces</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Space__c.OccupancyStatus__c</field>
+            <operation>equals</operation>
+            <value>2 - Leasing Issues, 3 - LBNT (Leased but not trading), 4 - Held Vacancies, 5 - Trading New Retailers, 7 - Holdovers, 9 - Trading</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Space__c.Property__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>TotalRentableArea__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Rentable Area</label>
+        <summarizedField>Space__c.RentableArea__c</summarizedField>
+        <summaryFilterItems>
+            <field>Space__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Leased Spaces</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Space__c.Property__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>TradingHoursEntLeisurePcnt__c</fullName>
+        <description>Trading Hours (Entertainment &amp; Leisure Precinct)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Trading Hours (Entertainment &amp; Leisure Precinct)</inlineHelpText>
+        <label>Trading Hours (Ent. &amp; Leisure Pcnt)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TradingHoursInterchangeConcourse__c</fullName>
+        <externalId>false</externalId>
+        <label>Trading Hours (Interchange Concourse)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TradingHoursRestaurantPrecinct__c</fullName>
+        <externalId>false</externalId>
+        <label>Trading Hours (Restaurant Precinct)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TradingHoursRetailConcourse__c</fullName>
+        <externalId>false</externalId>
+        <label>Trading Hours (Retail Concourse)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TradingHoursRetailInterchange__c</fullName>
+        <externalId>false</externalId>
+        <label>Trading Hours (Retail Interchange)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Traffic_Count_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Traffic Count Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Retail</fullName>
+                    <default>false</default>
+                    <label>Retail</label>
+                </value>
+                <value>
+                    <fullName>Office</fullName>
+                    <default>false</default>
+                    <label>Office</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>VariationSolicitorThreshold__c</fullName>
+        <externalId>false</externalId>
+        <label>Variation Solicitor Threshold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>YearlyTrafficCount__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For Retail Admin Use Only for Annual Audit Purposes.</inlineHelpText>
+        <label>Yearly Traffic Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Property</label>
+    <listViews>
+        <fullName>AUProperties</fullName>
+        <columns>NAME</columns>
+        <columns>JDEPropertyNumber__c</columns>
+        <columns>CentreType__c</columns>
+        <columns>GLA__c</columns>
+        <columns>PropertyState__c</columns>
+        <columns>PriceBook__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <label>AU Properties</label>
+    </listViews>
+    <listViews>
+        <fullName>AU_Properties_w_Centre_Code</fullName>
+        <columns>NAME</columns>
+        <columns>PropertyShortName__c</columns>
+        <columns>JDEPropertyNumber__c</columns>
+        <columns>CentreType__c</columns>
+        <columns>GLA__c</columns>
+        <columns>PropertyState__c</columns>
+        <columns>PriceBook__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <label>AU Properties w Centre Code</label>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>JDEPropertyNumber__c</columns>
+        <columns>CentreType__c</columns>
+        <columns>GLA__c</columns>
+        <columns>Type__c</columns>
+        <columns>PropertyOwnershipType__c</columns>
+        <columns>PropertyStatus__c</columns>
+        <columns>PropertyCity__c</columns>
+        <columns>PropertyState__c</columns>
+        <columns>PropertyShortName__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>NZProperties</fullName>
+        <columns>NAME</columns>
+        <columns>JDEPropertyNumber__c</columns>
+        <columns>CentreType__c</columns>
+        <columns>GLA__c</columns>
+        <columns>CURRENCY_ISO_CODE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Country__c</field>
+            <operation>equals</operation>
+            <value>New Zealand</value>
+        </filters>
+        <label>NZ Properties</label>
+    </listViews>
+    <nameField>
+        <label>Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Properties</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>JDEPropertyNumber__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CentreType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PropertyOwnershipType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PropertyStatus__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PropertyCity__c</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>JDEPropertyNumber__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CentreType__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PropertyOwnershipType__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PropertyStatus__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PropertyCity__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>JDEPropertyNumber__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CentreType__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PropertyOwnershipType__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PropertyStatus__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PropertyCity__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>JDEPropertyNumber__c</searchFilterFields>
+        <searchFilterFields>CentreType__c</searchFilterFields>
+        <searchFilterFields>Type__c</searchFilterFields>
+        <searchFilterFields>PropertyOwnershipType__c</searchFilterFields>
+        <searchFilterFields>PropertyStatus__c</searchFilterFields>
+        <searchFilterFields>PropertyCity__c</searchFilterFields>
+        <searchResultsAdditionalFields>JDEPropertyNumber__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CentreType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PropertyOwnershipType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PropertyStatus__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PropertyCity__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>PRO_CheckPricebookCurrencyCode</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(NOT(ISBLANK(PriceBook__c)) ,TEXT(CurrencyIsoCode)!=TEXT(PriceBook__r.CurrencyIsoCode))</errorConditionFormula>
+        <errorMessage>Pricebook Currency don&apos;t match with Property Currency</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PRO_CheckPropertyCurrencyCode</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(
+AND(ISPICKVAL(Country__c, &apos;Australia&apos;), NOT(ISPICKVAL(CurrencyIsoCode,&apos;AUD&apos;))),
+AND(ISPICKVAL(Country__c, &apos;New Zealand&apos;), NOT(ISPICKVAL(CurrencyIsoCode,&apos;NZD&apos;)))
+)</errorConditionFormula>
+        <errorMessage>Country and Currency code don&apos;t match</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>InsuranceBankGuaranteeDetails</fullName>
+        <availability>online</availability>
+        <description>Show the list from Property Team for Insurance and Bank Gaurantee</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Insurance &amp; Bank Guarantee Details</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/lightning/r/Report/00O2P000000KtcaUAC/view?fv0={!Property__c.Id}</url>
+    </webLinks>
+</CustomObject>

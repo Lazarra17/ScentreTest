@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Sole Trader or Partnership</fullName>
+        <default>false</default>
+        <label>Sole Trader or Partnership</label>
+    </customValue>
+    <customValue>
+        <fullName>Company with Personal Guarantees</fullName>
+        <default>false</default>
+        <label>Company with Personal Guarantees</label>
+    </customValue>
+    <customValue>
+        <fullName>Company with Parent Guarantees</fullName>
+        <default>false</default>
+        <label>Company with Parent Guarantees</label>
+    </customValue>
+    <customValue>
+        <fullName>Company with limited personal guarantees</fullName>
+        <default>false</default>
+        <label>Company with limited personal guarantees</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Guarantees by Franchisee</fullName>
+        <default>false</default>
+        <label>Personal Guarantees by Franchisee</label>
+    </customValue>
+    <masterLabel>Guarantee Text Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

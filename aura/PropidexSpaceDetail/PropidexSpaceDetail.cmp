@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+	<aura:handler name="spaceDetails" event="c:SpaceDetails"
+    action="{!c.spaceDetails}"/>
+    <aura:attribute name="spaceId" type="String"/>
+    <lightning:card title="Space Details" iconName="standard:account">
+        <c:SVGDemoWithIframe />
+        <h1>Space Info</h1>
+        <p>{!v.spaceId}</p>
+    </lightning:card>
+</aura:component>

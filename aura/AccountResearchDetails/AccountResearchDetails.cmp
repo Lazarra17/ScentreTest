@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="recordId" type="Id" default=""/>
+    <aura:attribute name="fields" type="string[]" default="[PartnershipSegmentation__c,Cluster__c,SuperfineCategory__c]"/>
+</aura:component>

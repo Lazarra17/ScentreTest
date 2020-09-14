@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Air Con</fullName>
+        <default>false</default>
+        <label>Air Con</label>
+    </customValue>
+    <customValue>
+        <fullName>Cafe Court</fullName>
+        <default>false</default>
+        <label>Cafe Court</label>
+    </customValue>
+    <customValue>
+        <fullName>Cleaning</fullName>
+        <default>false</default>
+        <label>Cleaning</label>
+    </customValue>
+    <customValue>
+        <fullName>Council Rates</fullName>
+        <default>false</default>
+        <label>Council Rates</label>
+    </customValue>
+    <customValue>
+        <fullName>Emergency Levy</fullName>
+        <default>false</default>
+        <label>Emergency Levy</label>
+    </customValue>
+    <customValue>
+        <fullName>Food Court</fullName>
+        <default>false</default>
+        <label>Food Court</label>
+    </customValue>
+    <customValue>
+        <fullName>Land Tax</fullName>
+        <default>false</default>
+        <label>Land Tax</label>
+    </customValue>
+    <customValue>
+        <fullName>Operating Expenses</fullName>
+        <default>false</default>
+        <label>Operating Expenses</label>
+    </customValue>
+    <customValue>
+        <fullName>Rubbish</fullName>
+        <default>false</default>
+        <label>Rubbish</label>
+    </customValue>
+    <customValue>
+        <fullName>Sunday Trade - Air Con</fullName>
+        <default>false</default>
+        <label>Sunday Trade - Air Con</label>
+    </customValue>
+    <customValue>
+        <fullName>Sunday Trade</fullName>
+        <default>false</default>
+        <label>Sunday Trade</label>
+    </customValue>
+    <customValue>
+        <fullName>Waste</fullName>
+        <default>false</default>
+        <label>Waste</label>
+    </customValue>
+    <customValue>
+        <fullName>Water Rates</fullName>
+        <default>false</default>
+        <label>Water Rates</label>
+    </customValue>
+    <customValue>
+        <fullName>Sunday Trade - Operating Expenses</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sunday Trade - Operating Expenses</label>
+    </customValue>
+    <description>Fields to maintain outgoing products name</description>
+    <masterLabel>Outgoing Products</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

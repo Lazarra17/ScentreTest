@@ -1,0 +1,83 @@
+<aura:component controller="ContentVersionListController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="columns" type="Object" />
+    <aura:attribute name="contentversionWrapper" type="Object" />
+    <aura:attribute name="contentversionWrapperTemp" type="Object" />
+    <aura:attribute name="isLoading" type="Boolean" default = "true" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <div>
+        <aura:if isTrue="{! v.isLoading }">
+            <lightning:spinner alternativeText="Loading" />
+        </aura:if>
+        
+        <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-max-medium-table--stacked-horizontal slds-table_fixed-layout">
+            <thead>
+                <tr class="slds-text-title--caps">
+                    <th>Final Version?</th>
+                    <th style="word-wrap: break-word">Title</th>
+                    <th>Category</th>
+                    <th>Type</th>
+                    <th>Owner</th>
+                    <th>Last Modified</th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{! v.contentversionWrapper.contentVersionList}" var="cVersion">
+                    <tr>
+                        <td>
+                            <lightning:input type="checkbox" 
+                                             name="isFinalVersion" 
+                                             variant="label-hidden" 
+                                             checked="{! cVersion.contentVersion.FinalVersion__c}" />
+                        </td>
+                        <td class="slds-cell-wrap">
+                            <!--<lightning:icon iconName="standard:file" alternativeText="File" />-->
+                            <!--lightning:formattedText linkify="true" value="{! cVersion.contentVersion.Title}" /-->
+                            
+                           	<a href="{! '/' + cVersion.contentVersion.ContentDocumentId}" target="_blank">
+                           		<div>
+                           			<lightning:formattedText value="{! cVersion.contentVersion.Title}" />
+                           		</div>
+                           	</a>
+                        </td>
+                        <td>
+                            <lightning:select class = "documentSelect" 
+                                              variant="label-hidden" 
+                                              name="{! cVersion.contentVersion.Id}" 
+                                              value="{! cVersion.contentVersion.DocumentCategory__c}"
+                                              onchange = "{! c.getDocTypeList}">
+                                <option value = "">--None--</option>
+                                <aura:iteration items="{! v.contentversionWrapper.documentCategoryList}" var="category">
+                                    <option selected="{! category == cVersion.contentVersion.DocumentCategory__c}" value = "{! category}">{! category}</option>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td>
+                            <lightning:select class = "documentSelect" 
+                                              variant="label-hidden" 
+                                              name="type" 
+                                              value="{! cVersion.contentVersion.DocumentType__c}">
+                                <option value = "">--None--</option>
+                                <aura:iteration items="{! cVersion.docTypePicklistValue}" var="type">
+                                    <option selected="{! type == cVersion.contentVersion.DocumentType__c}" value = "{! type}">{! type}</option>
+                                </aura:iteration>
+                            </lightning:select>
+                        </td>
+                        <td>
+                            <lightning:formattedText value="{! cVersion.contentVersion.Owner.Name}" />
+                        </td>
+                        <td>
+                            <!-- lightning:input type="Date" readonly="true" name="lastmodifieddate"
+                              variant = "label-hidden" 
+                              value="{! cVersion.lastModifiedDate}"/-->
+                            <lightning:formattedDateTime value="{! cVersion.lastModifiedDate}" year="numeric" month="2-digit" day="2-digit"/>
+                        </td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+        <div align="right" style = "margin-top: 10px;">
+            <lightning:button variant="brand" label="Save" title="save" onclick="{! c.handleSave}"/>
+        </div>
+    </div>
+</aura:component>

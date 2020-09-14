@@ -1,0 +1,3 @@
+<apex:page >
+    <c:ApprovalHistoryTracking Oppid="0062P000002W62OQAS"></c:ApprovalHistoryTracking> 
+</apex:page>

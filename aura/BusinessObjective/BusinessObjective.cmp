@@ -1,0 +1,52 @@
+<aura:component controller="OpportunityLineItemController" implements="lightning:availableForFlowScreens,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="targtefieldRecord" type="Object"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute type="Boolean" name="isReadOnly" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <c:ToastMessage aura:id = "toast"/>
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <!--<aura:import library="lightning:notificationsLibrary" property="notifications"/>-->
+    <force:recordData aura:id="opptyobjectivedetail"
+                      recordId="{!v.recordId}"
+                      targetFields="{!v.targtefieldRecord}"
+                      fields="Id,BackgroundIssue__c,OptionsRecommendations__c,Financials__c"
+                      mode="EDIT"/>
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="medium" aura:id="spinner" lternativeText="Loading"/>
+    </aura:if>
+	
+    <lightning:layout multipleRows="true">
+        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+            <label class="slds-form-element__label" style="margin-right: 12px; margin-bottom: 0px;" for="backgroundIssue">Background/Issue</label>
+            <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                <lightning:helptext content="Please enter relevant information about the Space and previous retailer and why you are leasing the Shop."/>
+            </div>
+             <ui:inputTextArea aura:id="backgroundIssue" class="textbox-min-height" value="{!v.targtefieldRecord.BackgroundIssue__c}" disabled="{! !v.isReadOnly}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+            <label class="slds-form-element__label" style = "margin-right: 12px; margin-bottom: 0px;" for="backgroundIssue">Financials</label>
+            <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                <lightning:helptext content="Provide any additional financial information which supports this Opportunity. i.e. Proposed rent vs budget, proposed capital vs budget. Comparison to retailers portfolio and/or same category within the Property."/>
+            </div>
+            <ui:inputTextArea  aura:id="backgroundIssue" class="textbox-min-height" value="{!v.targtefieldRecord.Financials__c}" disabled="{! !v.isReadOnly}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem  flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">   
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" style = "margin-right: 12px; margin-bottom: 0px;" for="Options/Recommendations">Options/Recommendations</label>
+                <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                    <lightning:helptext content="In this section you should outline the options considered for this Opportunity and your recommended retailer for this Space."/>
+                </div>
+             <ui:inputTextArea  class="textbox-min-height" aura:id="Options/Recommendations"  value="{!v.targtefieldRecord.OptionsRecommendations__c}" disabled="{! !v.isReadOnly}"/>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <div align="right" style="padding-top:21px">
+        <aura:if isTrue="{! v.isReadOnly}">
+            <lightning:button variant="brand" label="Save" onclick="{!c.savedetails}"/>
+        </aura:if>
+    </div>
+</aura:component>

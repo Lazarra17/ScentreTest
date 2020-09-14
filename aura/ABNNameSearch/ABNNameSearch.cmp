@@ -1,0 +1,66 @@
+<aura:component controller="ABNNameSearchController" implements="lightning:availableForFlowScreens,force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute type="Boolean" name="isLoading" default="false"/>
+    <aura:attribute type="Boolean" name="displayComponent" default="false"/>
+    <aura:attribute type="List" name="column"/>
+    <aura:attribute type="Object[]" name="ABNTradingNameSearchResultWrapper" />
+    <aura:attribute type="Object[]" name="ABNLesseNameSearchResultWrapper" />
+    <aura:attribute type="Object[]" name="NZBNTradingNameSearchResultWrapper" />
+    <aura:attribute type="Object[]" name="NZBNLesseNameSearchResultWrapper" />
+    <aura:attribute type="String" name="activecontracts" default="0"/>
+    <!--aura:attribute type="Object[]" name="NZBNNameSearchResultWrapper" /-->
+    <aura:attribute type="Object" name="mainRecord"/>
+    <aura:attribute type="Object" name="mainRecordError"/>
+    <aura:attribute type="Object" name="mainRecordMaster"/>
+    <force:recordData aura:id="accountRecord" 
+                      recordId="{!v.recordId}" 
+                      targetRecord="{!v.mainRecordMaster}" 
+                      targetFields="{!v.mainRecord}" 
+                      targetError="{!v.mainRecordError}" 
+                      fields="ABNNZBN__c, ACN__c, BillingCountry, Name, TradingName__c, LesseeName__c"
+                      recordUpdated="{!c.searchAccountName}"
+                      mode="EDIT"/>
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <aura:if isTrue="{! v.isLoading }">
+        <lightning:spinner alternativeText="Loading" />
+    </aura:if>
+    <aura:if isTrue="{! v.displayComponent}">
+        <aura:if isTrue="{! v.mainRecord.BillingCountry == 'Australia'}">
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Trading Name ABN Search</span>
+            </h3>
+            <lightning:datatable columns="{! v.column }"
+                                 data="{! v.ABNTradingNameSearchResultWrapper }"
+                                 keyField="Abn"
+                                 hideCheckboxColumn="true"
+                                 onrowaction="{! c.updateTradingName }"/>
+            <br/>
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Lessee Name ABN Search</span>
+            </h3>
+            <lightning:datatable columns="{! v.column }"
+                                 data="{! v.ABNLesseNameSearchResultWrapper }"
+                                 keyField="Abn"
+                                 hideCheckboxColumn="true"
+                                 onrowaction="{! c.updateLesseeName }"/>
+        </aura:if>
+        <aura:if isTrue="{! v.mainRecord.BillingCountry == 'New Zealand'}">
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Trading Name NZBN Search</span>
+            </h3>
+            <lightning:datatable columns="{! v.column }"
+                                 data="{! v.NZBNTradingNameSearchResultWrapper }"
+                                 keyField="nzbn"
+                                 hideCheckboxColumn="true"
+                                 onrowaction="{! c.updateTradingName }"/>
+            <br/>
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Lessee Name NZBN Search</span>
+            </h3>
+            <lightning:datatable columns="{! v.column }"
+                                 data="{! v.NZBNLesseNameSearchResultWrapper }"
+                                 keyField="nzbn"
+                                 hideCheckboxColumn="true"
+                                 onrowaction="{! c.updateLesseeName }"/>
+        </aura:if>
+    </aura:if>
+</aura:component>

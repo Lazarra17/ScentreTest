@@ -1,0 +1,52 @@
+<aura:component controller = "OutgoingsRefreshController" 
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute type = "Object[]" name = "columns" />
+    <aura:attribute type = "Object[]" name = "opportunityMasterList" />
+    <aura:attribute type = "Object[]" name = "filterOpportunityList" />
+    <aura:attribute type = "Object" name = "rentDateRange" />
+    <aura:attribute type = "Object" name = "propertyRecord" />
+    <aura:attribute type = "Object" name = "propertyRecordError" />
+    <aura:attribute type = "Object" name = "propertyRecordMaster" />
+    <aura:attribute type = "Integer" name = "noofrecordtoupdate" />
+    
+    <c:ToastMessage aura:id = "toast" />
+	
+    <div aura:id="spinner">
+        <lightning:spinner alternativeText="Loading" size="medium" variant = "brand"/>
+    </div>
+    
+    <force:recordData aura:id="propertyRecord" 
+                      recordId="{!v.recordId}" 
+                      targetRecord="{!v.propertyRecordMaster}" 
+                      targetFields="{!v.propertyRecord}" 
+                      targetError="{!v.propertyRecordError}" 
+                      fields="Id, PriceBook__c"
+                      recordUpdated="{! c.getTableRecords}" />
+    
+    <div>
+        <lightning:layout>
+        	<lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="4" largeDeviceSize="4" padding="around-small">
+            	<lightning:input type="date" name="fromDate" label="From date" value = "{! v.rentDateRange.fromDate}" />
+            </lightning:layoutItem>
+            <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="4" largeDeviceSize="4" padding="around-small">
+            	<lightning:input type="date" name="toDate" label="To date" value = "{! v.rentDateRange.toDate}" />
+            </lightning:layoutItem>
+            <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="4" largeDeviceSize="4" padding="around-small">
+                <div style = "padding-top: 24px;">
+                    <lightning:buttonGroup>
+                        <lightning:button variant="Neutral" label="Search" title="Search" onclick="{! c.filterOpportunity }" />
+                        <lightning:button variant="brand" label="Refresh" title="Refresh" onclick="{! c.refreshOppLineItem }" />
+                    </lightning:buttonGroup>
+                </div>
+                
+            </lightning:layoutItem>
+        </lightning:layout>
+        You are about ot refresh {!v.filterOpportunityList} Opportunities
+        <lightning:datatable
+                             keyField="Id"
+                             data="{! v.filterOpportunityList}"
+                             columns="{! v.columns}"
+                             initialWidth = "50px"
+                             hideCheckboxColumn="true"/>
+    </div>
+</aura:component>

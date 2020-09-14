@@ -1,0 +1,9 @@
+<aura:component controller="NextApprover" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute type="String" name="nextApproverName"/>
+    <!--<b>
+        <aura:if isTrue="{!nextApproverName != ''}"> 
+         <h2 class="applyColor"><span align="center">Pending Approver: <ui:outputText value="{!v.nextApproverName}"/></span></h2>
+        </aura:if>    
+    </b>-->
+</aura:component>

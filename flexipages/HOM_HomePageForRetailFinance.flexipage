@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Assigned to Retail Finance Users</description>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>dashboardName</name>
+                <value>RpLlSyCocrFEdMRMpTWlVCvmvEQDWX</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>hideOnError</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>desktopDashboards:embeddedDashboard</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>top</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <mode>Replace</mode>
+        <name>bottomLeft</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <mode>Replace</mode>
+        <name>bottomRight</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>RunSpaceManagementBatch</componentName>
+            <visibilityRule>
+                <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+                <criteria>
+                    <leftValue>{!$User.FirstName}</leftValue>
+                    <operator>CONTAINS</operator>
+                    <rightValue>Alex</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!$User.FirstName}</leftValue>
+                    <operator>CONTAINS</operator>
+                    <rightValue>Amy</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!$User.Profile.Name}</leftValue>
+                    <operator>CONTAINS</operator>
+                    <rightValue>System Administrator</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!$User.LastName}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>Quay</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentName>runtime_sales_activities:todayTaskContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>home:eventContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>home:recentRecordContainer</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>sidebar</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>HOM - Home Page for Retail Finance</masterLabel>
+    <parentFlexiPage>home__desktopDefault</parentFlexiPage>
+    <template>
+        <name>home:desktopTemplate</name>
+    </template>
+    <type>HomePage</type>
+</FlexiPage>

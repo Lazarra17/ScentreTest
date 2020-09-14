@@ -1,0 +1,33 @@
+<aura:component controller="DisplayRiskClauseController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction,force:hasSObjectName" access="global" >
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="sobjecttype" type="String" default="{!v.sObjectName}"/>
+    <aura:attribute name="recordId" type="String" access="Global"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:attribute name="counter" type="String"/>
+    <aura:attribute name="helptextstring" type="String"/>
+    <aura:attribute name="titletextstring" type="String" default="Property High Risk"/>
+    <aura:attribute name="enableBack" type="Boolean" default="false"/>
+    <aura:attribute name="opptyURL" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="vfHost" type="String"
+                    default="{!$Label.c.VFURL}"/>
+    <div class="slds-align_absolute-right">
+        <h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small" title="Section Title">{!v.titletextstring}</span>
+            <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                <lightning:helptext content="{!v.helptextstring}" class = "helptext"/>
+            </div>
+        </h3>
+        <lightning:datatable data="{!v.mydata}"
+                             columns="{!v.mycolumns}"
+                             keyField="Id"
+                             hideCheckboxColumn="true"
+                             showRowNumberColumn="true">
+        </lightning:datatable>
+        <aura:if isTrue="{!v.enableBack}">
+            <br></br> <lightning:button value="back" label="Back" onclick="{!c.gotoBack}">
+            </lightning:button>            
+        </aura:if>
+    </div>
+
+</aura:component>

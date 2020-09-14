@@ -1,0 +1,54 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="item" type="object" />
+    
+    <lightning:card variant="Narrow" iconName="standard:approval">
+        <aura:set attribute="title">
+            <lightning:button variant="base" label="{!v.item.name}" title="{!v.item.name}" onclick="{!c.handleNavigate}"/>
+        </aura:set>
+        
+        <aura:set attribute="actions">
+            <div class="slds-p-around_medium container lgc-bg">
+                <lightning:buttonMenu alternativeText="Show menu" menuAlignment="right" onselect="{!c.handleApproval}">
+                    <lightning:menuItem value="Approve" label="Approve" />
+                    <lightning:menuItem value="Reject" label="Reject" />
+                    <lightning:menuItem value="Reassign" label="Reassign" />
+                </lightning:buttonMenu>
+            </div>
+        </aura:set>
+        
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-2 slds-medium-size_1-of-2">
+            	<p>Record: {!v.item.objectName}</p>
+            </div>
+        </div>
+        
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-2 slds-medium-size_1-of-2">
+            	<p>Retailer: {!v.item.retailer}</p>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-2 slds-medium-size_1-of-2">
+            	<p>Type: {!v.item.caseType}</p>
+            </div>
+        </div>
+        
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-2 slds-medium-size_1-of-2">
+            	<p>Shop Number: {!v.item.shopNumber}</p>
+                
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-2 slds-medium-size_1-of-2">
+            	<p>Subtype: {!v.item.caseSubtype}</p>
+            </div>
+        </div>
+        
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-2 slds-medium-size_1-of-2">
+				<p>Property: {!v.item.property}</p>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-2 slds-medium-size_1-of-2">
+            	<p>Submitted By: {!v.item.submittedBy}</p>
+            </div>
+        </div>
+    </lightning:card>
+    {!v.body}
+</aura:component>

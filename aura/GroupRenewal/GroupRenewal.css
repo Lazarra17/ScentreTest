@@ -1,0 +1,44 @@
+/* To fix date picker overflow issue when in a table */
+.THIS table{
+  table-layout: fixed;
+}
+
+.THIS .wide-col {
+    width: 11%;
+    max-width: fit-content;
+}
+
+.THIS .narrow-col {
+    width: 5%;
+}
+
+/* To align checkboxes with other row input elements */
+.THIS .t-checkbox {
+    vertical-align: bottom;
+    width: 2rem;
+    padding-bottom: 0.4rem;
+}
+.THIS td.t-checkbox {
+    padding-bottom: 0.8rem;
+    
+}
+
+.THIS .table-sticky {
+	overflow-y: auto;  
+    overflow-x: hidden;
+    max-height: 450px;
+    margin-bottom: 20px;
+    padding-right: 5px;
+}
+
+.THIS .table-sticky > table > thead > tr > th {
+    position: sticky;
+    top: 0;
+    z-index:2000;
+}
+
+.THIS .footer-relative {
+    position: relative;
+    bottom: 0;
+    z-index: 2000;
+}

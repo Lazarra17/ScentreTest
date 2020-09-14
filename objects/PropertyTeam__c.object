@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>PRT_PropertyTeamRecordPage</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>PRT_PropertyTeamRecordPage</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>PRT_PropertyTeamCompactLayout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>PRT_PropertyTeamCompactLayout</fullName>
+        <fields>Property__c</fields>
+        <fields>TeamMember__c</fields>
+        <label>PRT - Property Team Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>&lt;PRT&gt; - Represents a internal team working for the property eg. Centre Manager, Facility Manager, RDM, Leasing Executive, Development Leasing Executive</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>You should only select Third party type accounts.</errorMessage>
+            <filterItems>
+                <field>Account.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>ACCThirdParty</value>
+            </filterItems>
+            <infoMessage>You can only select Third party type accounts.</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Property Team (Account)</relationshipLabel>
+        <relationshipName>Account</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(!TeamMember__r.IsActive, RecordType.DeveloperName=&apos;PRT_InternalTeamMember&apos;),false,IF(ISBLANK(EndDate__c),
+IF(StartDate__c &lt;= TODAY(),TRUE,FALSE),
+(AND(StartDate__c &lt;= TODAY(),
+TODAY() &lt;= EndDate__c))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EndDate__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LeasingAgent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Leasing Agent</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Property Team</relationshipLabel>
+        <relationshipName>Property_Team</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Property__c</fullName>
+        <externalId>false</externalId>
+        <label>Property</label>
+        <referenceTo>Property__c</referenceTo>
+        <relationshipLabel>Property Team</relationshipLabel>
+        <relationshipName>Property_Team</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Role</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>RoleType</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>StartDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TeamMember__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Team Member</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Property_Team</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TechDMImportDateTime__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMImportDateTime</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>TechDMOriginalSourceSystem__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMOriginalSourceSystem</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMReleaseNo__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMReleaseNo</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMSourceID__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMSourceID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMSourceSystem__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMSourceSystem</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMXREFId__c</fullName>
+        <externalId>true</externalId>
+        <label>Tech_DMXREF_Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Property Team</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PRT-{0000}</displayFormat>
+        <label>Property Team Member Name</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Property Team</pluralLabel>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>PRT_ExternalTeamMember</fullName>
+        <active>true</active>
+        <description>Used to assign a Solicitor Firm to the Property Team.</description>
+        <label>PRT - External Team Member</label>
+        <picklistValues>
+            <picklist>Role__c</picklist>
+            <values>
+                <fullName>Architectural Technician</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COVID19 Case Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facilities Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Filing Clerk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REAA Approver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retailer Account Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solicitor Firm - Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Party Leasing Agent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>PRT_InternalTeamMember</fullName>
+        <active>true</active>
+        <description>Used to assign an individual (Scentre Group employee or external Solicitor User) to the Property Team.</description>
+        <label>PRT - Internal Team Member</label>
+        <picklistValues>
+            <picklist>Role__c</picklist>
+            <values>
+                <fullName>Accounts Receivable Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Administration Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Architectural Technician</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asset General Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COVID19 Case Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Centre Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chief Operating Officer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Leasing Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Leasing General Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Leasing Regional Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Property Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Retail Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Legal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D%26C Special Project Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development Finance Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director LARS %26 NZ Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facilities Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Filing Clerk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitout Contributions Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GM Retail Admin%C2%A0%26 Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GM of Corporate Accounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Manager Leasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Manager Retail Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group General Manager - LARS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group Renewal Admin Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leasing Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leasing Finance Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project Regional Manager - LARS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project Retail Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project Retail Design Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REAA Approver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RM %26 National Retail Design Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reg Retailer Account Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Manager - LARS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Manager Retail Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Mgr Retail Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Mgr Retail Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Admin Assistant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Delivery Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Design Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Design Team Leader</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retailer Account Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revenue Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revenue Assurance Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Senior Retail Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Snr Retail Design Mgr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solicitor Firm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solicitor Firm - Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Team Coordinator Retail Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tenancy Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tenancy Delivery Manager</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>Property__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>TeamMember__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>StartDate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EndDate__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Property__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>TeamMember__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>StartDate__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EndDate__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Property__c</searchFilterFields>
+        <searchFilterFields>TeamMember__c</searchFilterFields>
+        <searchFilterFields>Account__c</searchFilterFields>
+        <searchFilterFields>StartDate__c</searchFilterFields>
+        <searchFilterFields>EndDate__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>PT_ValidateUserLicense</fullName>
+        <active>true</active>
+        <description>PT_ValidateUserLicense</description>
+        <errorConditionFormula>AND(TeamMember__c!=null,
+TeamMember__r.Profile.UserLicense.Name!=&apos;Salesforce&apos;,
+TeamMember__r.Profile.UserLicense.Name!=&apos;Salesforce Platform&apos;)</errorConditionFormula>
+        <errorMessage>You cannot add non salesforce licence user as team member</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

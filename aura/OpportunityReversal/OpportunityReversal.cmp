@@ -1,0 +1,26 @@
+<aura:component controller="OpportunityReversal" access="global" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:registerEvent name="appEvent" type="c:OpportunityReversalConfirmation"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <aura:handler event="c:OpportunityReversalConfirmation" action="{!c.handleApplicationEvent}"/>
+    <aura:attribute name="opptyStage" type="String" default="" />
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="recordError" type="String" description="An error message bound to force:recordData"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!--Component Start--> 
+    <div class="slds-text-align_center slds-m-around_x-medium">
+        <lightning:button variant="brand" label="Reverse Opportunity" onclick="{!c.handleShowModal}"/>
+    </div>
+    <c:ToastMessage aura:id = "toastRent"/>
+    <!--Component End-->
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="medium" aura:id="spinner"/>
+    </aura:if>
+    
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            {!v.recordError}</div>
+    </aura:if>
+    
+</aura:component>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>No work required</fullName>
+        <default>false</default>
+        <label>No work required</label>
+    </customValue>
+    <customValue>
+        <fullName>Work required as follows</fullName>
+        <default>false</default>
+        <label>Work required as follows</label>
+    </customValue>
+    <customValue>
+        <fullName>Not applicable</fullName>
+        <default>false</default>
+        <label>Not applicable</label>
+    </customValue>
+    <customValue>
+        <fullName>General</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>General</label>
+    </customValue>
+    <customValue>
+        <fullName>Repair damaged fixtures as follows</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Repair damaged fixtures as follows</label>
+    </customValue>
+    <description>Used by Case Object for Inspection Report type</description>
+    <masterLabel>Maintain Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

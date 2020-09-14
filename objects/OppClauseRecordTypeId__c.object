@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>LeasingClause__c</fullName>
+        <description>Id of opportunity record type Lease Clause</description>
+        <externalId>false</externalId>
+        <label>Leasing Clause</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PrecedentClause__c</fullName>
+        <description>Id of record type precedent clause</description>
+        <externalId>false</externalId>
+        <label>Precedent Clause</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>OppClauseRecordTypeId</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,69 @@
+<aura:component controller="CovidCasePageController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="section1iconName" type="String" default="utility:chevrondown"/>
+    <aura:attribute name="fieldsToShow" type="List"/>
+    <!--<aura:attribute name="assessmentOfRequest" type="Boolean" default="false" />
+    <aura:attribute name="informationOnRequest" type="Boolean" default="false" />
+    <aura:attribute name="retailAssistanceAssessment" type="Boolean" default="false" />-->
+    <aura:attribute name="isViewModeParent" type="Boolean" default="true" />
+    <aura:attribute name="showSpinner" type="Boolean" default="true" />
+    <aura:attribute name="typeValue" type="String" />
+    <aura:attribute name="subtypeValue" type="String" />
+    <aura:attribute name="isSectionAccessible" type="Boolean" default="false" />
+    <aura:attribute name="caseRecordTypeId" type="String" />
+    <aura:attribute name="caseLocked" type="Boolean" default="false" />
+    
+    <aura:handler name="changeMode" event="c:updateCovidCaseModeEvent" action="{!c.changeMode}" />
+    <aura:handler name="cmpEvent" event="c:setCaseTypeValues" action="{!c.setTypeValues}"/>
+    
+    <c:ToastMessage aura:id = "toastRent"/>
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <div class="exampleHolder">
+            <lightning:spinner alternativeText="Loading" size="medium" />
+        </div>
+    </aura:if>
+    
+    <article class="slds-card">
+        <!--<div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
+                            <span>Case</span>
+                        </a>
+                    </h2>
+                </div>
+            </header>
+        </div>-->
+        <aura:if isTrue="{!v.isViewModeParent}">
+            
+            <lightning:recordViewForm recordId="{!v.recordId}" objectApiName="Case">
+                <div class="slds-card__body slds-card__body_inner">
+                    <aura:iteration items="{!v.fieldsToShow}" var="sectionName" indexVar="mapKey">
+                        <c:CovidCasePageSection fieldsToShowInChild="{!sectionName}" aura:id="cComp" recordId="{!v.recordId}"/>
+                    </aura:iteration>
+                </div>
+            </lightning:recordViewForm>
+            
+            <aura:set attribute="else">
+                <lightning:recordEditForm aura:id="caseForm" recordId="{!v.recordId}" objectApiName="Case" onload="{!c.handleOnLoad}" onsubmit="{!c.handleSave}" onerror="{!c.handleError}" onsuccess="{!c.handleSuccess}" recordTypeId="{!v.caseRecordTypeId}">
+                    <div class="slds-card__body slds-card__body_inner">
+                        <aura:iteration items="{!v.fieldsToShow}" var="sectionName" indexVar="mapKey">
+                            <c:CovidCasePageSection fieldsToShowInChild="{!sectionName}" aura:id="cComp" recordId="{!v.recordId}" isViewMode="{!v.isViewModeParent}"/>
+                        </aura:iteration>
+                        <div class="slds-align_absolute-center">
+                            <lightning:button class="slds-m-top_small" label="Cancel" onclick="{!c.handleReset}" />
+                            <lightning:button class="slds-m-top_small" type="submit" label="Update" />
+                        </div>
+                    </div>
+                </lightning:recordEditForm>
+            </aura:set>
+        </aura:if>
+        <footer class="slds-card__footer">
+            <!--<a class="slds-card__footer-action" href="javascript:void(0);">View All
+                <span class="slds-assistive-text">Accounts</span>
+            </a>-->
+        </footer>
+    </article>
+</aura:component>

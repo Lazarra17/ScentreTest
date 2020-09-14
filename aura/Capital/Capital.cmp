@@ -1,0 +1,129 @@
+<aura:component controller="FeesChargesController" implements="lightning:availableForFlowScreens,force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes" access="global">
+    <!-- ATTRIBUTE -->
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="isLoading" type="Boolean" default="true" />
+    <aura:attribute name="feesChargesWrapper" type="Object[]" />
+    <aura:attribute name="filteredFeesChargesWrapper" type="Object[]" />
+    <aura:attribute name="feesChargesWrapperTemp" type="Object[]" />
+    <aura:attribute name="searchFieldList" type="String[]" default="['productName']" />
+    <aura:attribute name="oppRecord" type="Object" />
+    <aura:attribute name="oppRecordError" type="Object" />
+    <aura:attribute name="oppRecordMaster" type="Object" />
+    <aura:attribute type="Boolean" name="isReadOnly" default="false"/>
+    <aura:attribute name="variance" type = "Decimal" />
+    <aura:attribute name="totalCapitalCost" type = "Decimal" />
+
+    <aura:attribute name="tableErrors" type="Object" />
+
+    <aura:attribute name="columns" type="Object" />
+
+    <force:recordData aura:id="opportunityRecord" 
+    				  recordId="{!v.recordId}" 
+    				  targetRecord="{!v.oppRecordMaster}" 
+    				  targetFields="{!v.oppRecord}" 
+    				  targetError="{!v.oppRecordError}" 
+    				  fields="Id, Pricebook2Id, TotalFitoutContribution__c, TotalDCCost__c, TotalLessorWorksCost__c, 
+    				  		  Space__r.LatestBudgetedCapital__c, Space__c, ReturnOnInvestment__c"
+    				  recordUpdated="{! c.getTableRecords}" />
+	<c:ToastMessage aura:id = "toast"/>
+    <div class="slds-section slds-is-open">
+		<h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Capital <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px"><lightning:helptext content="These are costs agreed to be paid by the lessor. Entry by RDC."/></div></span>
+		</h3>
+		<lightning:layout multipleRows="true">
+			<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="3" mediumDeviceSize="3" smallDeviceSize="12">
+			    <!-- lightning:input aura:id="totalCapitalCost" 
+			    				 formatter="currency" 
+			    				 label="Total Capital Cost" 
+			    				 value="{!'$' + v.totalCapitalCost}"
+			    				 type="Decimal" 
+			    				 step="0.01" 
+			    				 readonly="true"/-->
+			    				 
+				<div class="slds-form-element">
+					<label class="slds-form-element__label slds-no-flex">
+						Total Capital Cost
+					</label>
+					<div class="slds-form-element__control slds-grow">
+						<lightning:formattedNumber value="{! v.totalCapitalCost}"
+												   style = "currency" 
+												   currencyCode="AUD" 
+												   currencyDisplayAs="symbol"/>
+					</div>
+				</div>
+			</lightning:layoutItem>
+			<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="3" mediumDeviceSize="3" smallDeviceSize="12">
+			    <!-- lightning:input aura:id="latestBudgetedCapital" 
+			    				 formatter="currency" 
+			    				 label="Latest Budgeted Capital" 
+			    				 value="{!'$' + v.oppRecord.Space__r.LatestBudgetedCapital__c}"
+			    				 type="Decimal" 
+			    				 step="0.01" 
+			    				 readonly="true"/-->
+				<div class="slds-form-element">
+					<label class="slds-form-element__label slds-no-flex">
+						Latest Budgeted Capital
+					</label>
+					<div class="slds-form-element__control slds-grow">
+						<lightning:formattedNumber value="{! v.oppRecord.Space__r.LatestBudgetedCapital__c}"
+												   style = "currency" 
+												   currencyCode="AUD" 
+												   currencyDisplayAs="symbol"/>
+					</div>
+				</div>
+			</lightning:layoutItem>
+			<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="3" mediumDeviceSize="3" smallDeviceSize="12">
+			    <!-- lightning:input aura:id="variance" 
+			    				 formatter="currency" 
+			    				 label="Variance" 
+			    				 value="{!'$' + v.variance}"
+			    				 type="Decimal" 
+			    				 step="0.01" 
+			    				 readonly="true"/-->
+				<div class="slds-form-element">
+					<label class="slds-form-element__label slds-no-flex">
+						Variance
+					</label>
+					<div class="slds-form-element__control slds-grow">
+						<lightning:formattedNumber value="{!v.variance}"
+												   style = "currency" 
+												   currencyCode="AUD" 
+												   currencyDisplayAs="symbol"/>
+					</div>
+				</div>
+			</lightning:layoutItem>
+			<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="3" mediumDeviceSize="3" smallDeviceSize="12">
+				<div class="slds-form-element">
+					<label class="slds-form-element__label slds-no-flex">
+						Return On Investment
+					</label>
+					<div class="slds-form-element__control slds-grow">
+						<lightning:formattedText value="{! ((v.oppRecord.ReturnOnInvestment__c != null) ? ((v.oppRecord.ReturnOnInvestment__c >= 0) ? v.oppRecord.ReturnOnInvestment__c + '%' : '(' + v.oppRecord.ReturnOnInvestment__c + '%)') : 0 + '%')}"/>
+					</div>
+				</div>
+			</lightning:layoutItem>
+		</lightning:layout>
+    </div>
+
+	<c:Search aura:id="search" 
+    		  searchFieldList="{! v.searchFieldList}" 
+    		  searchList="{! v.feesChargesWrapper}" 
+    		  searchResult="{! c.catchSearchResult}" 
+    		  variant="label-hidden" />
+
+    <div>
+        <lightning:datatable errors="{! v.tableErrors}" 
+        					 hideCheckboxColumn="true" 
+        					 draftValues="{! v.feesChargesWrapperTemp}" 
+        					 data="{! v.filteredFeesChargesWrapper}" 
+        					 columns="{! v.columns}" 
+        					 keyField="recordId" 
+        					 onsave="{! c.handleSave}" 
+        					 oncellchange="{! c.handleEditCell}"
+        					 oncancel="{! c.handleCancel}" />
+    </div>
+
+    <aura:if isTrue="{! v.isLoading }">
+        <lightning:spinner alternativeText="Loading" />
+    </aura:if>
+</aura:component>

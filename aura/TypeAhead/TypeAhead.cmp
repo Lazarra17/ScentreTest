@@ -1,0 +1,125 @@
+<aura:component controller="TypeaheadController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute Name="selItem" type="object" access="public" 
+                    description="This attribute can be used by parent component to read selected record"/>  
+    <aura:attribute Name="server_result" type="object[]" access="private" /> 
+    <aura:attribute name="searchText" type="String" />
+    <aura:attribute name="lookupIcon" type="String" access="public" default="standard:contact"/>
+    
+    <aura:attribute name="objectName" type="String" access="public" 
+                    description="Name of Object to be searched"/>
+    <aura:attribute name="field_API_text" type="String" access="public" 
+                    description="API Name of field, to be used to show text"/>
+    <aura:attribute name="field_API_val" type="String" access="public" 
+                    description="API Name of field, to be returned from component"/>
+    <aura:attribute name="field_API_search" type="String" access="public" 
+                    description="API Name of field to be searched"/>
+    <aura:attribute name="limit" type="Integer" access="public" default="10" 
+                    description="Total number of record to be returned"/>
+    <aura:attribute name="placeholder" type="String" access="public" 
+                    default="Space character is used to search" />
+    <aura:attribute name="conditionStr" type="String" default='' access='public' />
+    <aura:attribute name="existingVal" type="String" default='' access="public" />
+    
+    <aura:attribute name="last_SearchText" type="String" access="private" />
+    <aura:attribute name="last_ServerResult" type="object[]" access="private" /> 
+    <aura:attribute name="isDisabled" type="Boolean" default="" access="public" />
+    <aura:attribute name="blankError" type="Boolean" default="false" access="public" />
+    <aura:attribute name="allowToCreateNew" type="Boolean" default="false" />
+    <aura:handler name="change" value="{!v.blankError}" action="{!c.showBlankError}" />
+    <aura:handler name="change" value="{!v.selItem}" action="{!c.selItemChanged}" />
+        
+    <div class="slds"> 
+        <div class="slds-form-element" > 
+            <div class="slds-form-element__control">
+                <div class="slds-combobox_container slds-has-inline-listbox" style="height:33px"> <!-- height:33px -->
+                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open" 
+                         aria-expanded="true" aria-haspopup="listbox" role="combobox" style="width:95%">
+                        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
+                            <div>
+                                <aura:if isTrue="{!v.isDisabled}">
+                                    <ui:outputText value="" />
+                                    <aura:set attribute="else">
+                                        <aura:if isTrue="{! empty(v.selItem) }"> 
+                                            <input aura:id="inputBox" type="text" class="slds-input slds-combobox__input inputBoxClass" id="combobox-unique-id" 
+                                                   aria-activedescendant="listbox-option-unique-id-01" aria-autocomplete="list" 
+                                                   aria-controls="listbox-unique-id" autocomplete="off" role="combobox" value="{!v.searchText}"
+                                                   placeholder="{!v.placeholder}"
+                                                   oninput ="{!c.serverCall}" />
+                                            <span>
+                                                <button type="button" onclick="{!c.clearDropdown}"
+                                                        class="slds-button slds-button_icon slds-button_icon slds-pill__remove crossBtn" 
+                                                        title="Remove">
+                                                    <lightning:icon iconName="utility:close" size="small" alternativeText="Press delete or backspace to remove"/>
+                                                    <span class="slds-assistive-text">
+                                                        Remove
+                                                    </span>
+                                                </button>
+                                            </span>
+                                            <aura:set attribute="else"> 
+                                                <span class="slds-truncate_container_50">
+                                                    <div class="iconSpace slds-truncate"> 
+                                                        <span title="{#v.selItem.text}" class="slds-truncate">
+                                                            <lightning:icon iconName="{#v.lookupIcon}" size="small"/>
+                                                            <!--   <span class="slds-assistive-text">{#v.objectName}</span> -->
+                                                            <span class="slds-label slds-p-left_xx-small slds-truncate">{!v.selItem.text}</span>
+                                                        </span>
+                                                        <span>
+                                                            <button onclick="{!c.clearSelection}"
+                                                                    class="slds-button slds-button_icon slds-button_icon slds-pill__remove crossBtn" 
+                                                                    title="Remove">
+                                                                <lightning:icon iconName="utility:close" size="small"
+                                                                                alternativeText="Press delete or backspace to remove"/>
+                                                                <span class="slds-assistive-text" >Remove</span>
+                                                            </button>
+                                                        </span>
+                                                    </div> 
+                                                </span>
+                                            </aura:set>
+                                        </aura:if> 
+                                    </aura:set>
+                                </aura:if>
+                            </div> 
+                        </div>
+                        <!--<aura:if isTrue="{! greaterthanorequal(v.server_result.length,1) }">-->
+                            <aura:if isTrue="{! v.server_result.length > 0 }">
+                            <div id="listbox-unique-id" role="listbox">
+                                <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation"
+                                    style="display: block; min-width: auto; max-width: 100% ; width: 100%;">
+                                    <aura:iteration items="{!v.server_result}" var="item" indexVar="i">
+                                        <li role="presentation" class="slds-listbox__item" data-selectedIndex="{#i}" 
+                                            onclick="{!c.itemSelected}">
+                                            <span id="{#'listbox-option-unique-id-'+i+1}"  
+                                                  class="slds-media slds-listbox__option slds-listbox__option_entity 
+                                                         slds-listbox__option_has-meta" 
+                                                  role="option">
+                                                <span class="slds-media__figure optionIcon">
+                                                    <span class="slds-icon_container">
+                                                        <!--lightning:icon iconName="{#v.lookupIcon}" size="small"/-->
+                                                        <aura:if isTrue="{!item.val == ''}">
+                                                                <lightning:icon iconName="standard:record_create" size="small"/>
+                                                                <aura:set attribute="else">
+                                                            		<lightning:icon iconName="{#v.lookupIcon}" size="small"/>
+                                                            	</aura:set>
+                                                            </aura:if>
+                                                        <span class="slds-assistive-text">{#v.objectName}</span>
+                                                    </span>
+                                                </span>
+                                                <span class="slds-media__body singleRow">
+                                                    <span class="optionTitle slds-listbox__option-text slds-listbox__option-text_entity" 
+                                                          title="{#item.text}">
+                                                        {#item.text}
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </li>
+                                    </aura:iteration> 
+                                </ul>
+                            </div>
+                        </aura:if> 
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>     
+</aura:component>

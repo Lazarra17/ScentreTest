@@ -1,0 +1,61 @@
+<aura:component controller="GetSimilarAccountController" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="SimilarAccountsCluster" type="Object[]" />
+    <aura:attribute name="SimilarAccountsCategory" type="Object[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <lightning:card iconName="custom:custom57" title="Similar Retailers (Top 10) by Cluster">
+       <div class="slds-p-left--medium slds-p-right--medium">
+            <ul class="slds-list--vertical slds-has-dividers--top-space">
+                <aura:iteration items="{!v.SimilarAccountsCluster}" var="Con" indexVar="i">
+                    <li class="slds-list__item">                   
+                        <div class="slds-media">
+                            <div class="slds-media__body">
+                                   <div class="slds-m-top--small">
+                                    <ul class="slds-grid slds-wrap">
+                                        <a data-record="{!Con.CurrentRetailerTradingName__r.Id}" onclick="{!c.navToRecord}">
+                                            <h4 class="slds-text-heading--small slds-m-bottom--xx-small">{!Con.CurrentRetailerTradingName__r.Name}</h4>
+                                        </a>
+                                        <li class="slds-list__item slds-size--1-of-1"><span class="slds-text-color--weak slds-m-right--small">Current Rent: </span>  <lightning:formattedNumber value="{!Con.CurrentRent__c}" style="currency"/></li>
+                                        <li class="slds-list__item slds-size--1-of-1"><span class="slds-text-color--weak slds-m-right--small">Current Rent Per SQM: </span>  <lightning:formattedNumber value="{!Con.CurrentRentSQM__c}" style="currency"/></li>
+                                        <li class="slds-list__item slds-size--1-of-1"><span class="slds-text-color--weak slds-m-right--small">Property Name:</span> {!Con.Property__r.Name}</li>
+                                        <li class="slds-list__item slds-size--1-of-1"><span class="slds-text-color--weak slds-m-right--small">Space:</span> {!Con.Space__r.Name}</li>
+                                        <li class="slds-list__item slds-size--1-of-1"><span class="slds-text-color--weak slds-m-right--small">Lease Start Date:</span> {!Con.LeaseStartDate__c}</li>
+                                        <li class="slds-list__item slds-size--1-of-1"><span class="slds-text-color--weak slds-m-right--small">Lease End Date:</span> {!Con.LeaseEndDate__c}</li>
+                                    </ul>                                
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </aura:iteration>
+            </ul>
+        </div>
+    </lightning:card>
+<lightning:card iconName="custom:custom57" title="Similar Retailers (Top 10) by Category">
+        <div class="slds-p-left--medium slds-p-right--medium">
+            <ul class="slds-list--vertical slds-has-dividers--top-space">
+                <aura:iteration items="{!v.SimilarAccountsCategory}" var="Cat" indexVar="i">
+                    <li class="slds-list__item">                   
+                        <div class="slds-media">
+                            <div class="slds-media__body">
+                                   <div class="slds-m-top--small">
+                                    <ul class="slds-grid slds-wrap">
+                                        <a data-record="{!Cat.CurrentRetailerTradingName__r.Id}" onclick="{!c.navToRecord}">
+                                            <h4 class="slds-text-heading--small slds-m-bottom--xx-small">{!Cat.CurrentRetailerTradingName__r.Name}</h4>
+                                        </a>
+                                        <li class="slds-list__item slds-size--1-of-1"><span class="slds-text-color--weak slds-m-right--small">Current Rent: </span>  <lightning:formattedNumber value="{!Cat.CurrentRent__c}" style="currency"/></li>
+                                       <li class="slds-list__item slds-size--1-of-1"><span class="slds-text-color--weak slds-m-right--small">Current Rent Per SQM: </span>  <lightning:formattedNumber value="{!Cat.CurrentRentSQM__c}" style="currency"/></li>
+                                        <li class="slds-list__item slds-size--1-of-1"><span class="slds-text-color--weak slds-m-right--small">Property Name:</span> {!Cat.Property__r.Name}</li>
+                                        <li class="slds-list__item slds-size--1-of-1"><span class="slds-text-color--weak slds-m-right--small">Space:</span> {!Cat.Space__r.Name}</li>
+                                        <li class="slds-list__item slds-size--1-of-1"><span class="slds-text-color--weak slds-m-right--small">Lease Start Date:</span> {!Cat.LeaseStartDate__c}</li>
+                                        <li class="slds-list__item slds-size--1-of-1"><span class="slds-text-color--weak slds-m-right--small">Lease End Date:</span> {!Cat.LeaseEndDate__c}</li>
+                                    </ul>                                
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </aura:iteration>
+            </ul>
+        </div>
+    </lightning:card>
+</aura:component>

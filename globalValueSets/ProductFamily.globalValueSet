@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Fees &amp; Charges</fullName>
+        <default>false</default>
+        <label>Fees &amp; Charges</label>
+    </customValue>
+    <customValue>
+        <fullName>Incentive</fullName>
+        <default>false</default>
+        <label>Incentive</label>
+    </customValue>
+    <customValue>
+        <fullName>Promo &amp; Marketing</fullName>
+        <default>false</default>
+        <label>Promo &amp; Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Recoveries</fullName>
+        <default>false</default>
+        <label>Recoveries</label>
+    </customValue>
+    <customValue>
+        <fullName>Rent</fullName>
+        <default>false</default>
+        <label>Rent</label>
+    </customValue>
+    <customValue>
+        <fullName>Rent Review</fullName>
+        <default>false</default>
+        <label>Rent Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Services</fullName>
+        <default>false</default>
+        <label>Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Promo Review</fullName>
+        <default>false</default>
+        <label>Promo Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Capital</fullName>
+        <default>false</default>
+        <label>Capital</label>
+    </customValue>
+    <customValue>
+        <fullName>Outgoings</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Outgoings</label>
+    </customValue>
+    <customValue>
+        <fullName>Recoveries - Gross</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Recoveries - Gross</label>
+    </customValue>
+    <customValue>
+        <fullName>Recoveries - Net</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Recoveries - Net</label>
+    </customValue>
+    <customValue>
+        <fullName>Recoveries - Semi-Gross</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Recoveries - Semi-Gross</label>
+    </customValue>
+    <masterLabel>Product Family</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,51 @@
+<aura:component controller="OpportunityLineItemController">
+    <aura:attribute name="singleRec" type="Object"/>
+    <aura:attribute name="listPriceEditMode" type="boolean" default="false" />
+    <aura:attribute name="idToggled" type="String" />
+    
+    <tr>
+        <th scope="col" style="width:3.25rem; margin:auto;" class="slds-text-align--left">
+            <div class="slds-th__action slds-th__action--form">
+                <label class="slds-grid">
+                    <lightning:input name="{!v.singleRec.Id}" type="toggle" messageToggleActive="Enabled" messageToggleInactive="Disabled" checked="true" onchange="{!c.changeToggleValue}"/>
+                </label>
+            </div>
+        </th>
+        <td data-label="Item Name">
+            <div class="slds-truncate" >{!v.singleRec.productName}</div>
+        </td>
+        
+        <td ondblclick="{!c.inlineEditListPrice}" class="slds-cell-edit " >
+            <span class="slds-grid slds-grid_align-spread">
+                <!-- show input and output section based on boolean flag --> 
+                <aura:if isTrue="{!v.listPriceEditMode == false}">
+                    <span class="slds-truncate" title="List Price" style="text-align:left;">{!v.singleRec.rentPerSqm}</span>
+                    
+                    <aura:set attribute="else">
+                        <section  tabindex="0" class="slds-popover slds-popover_edit" role="dialog" style="position: relative; top: 0px">
+                            <div class="slds-popover__body">
+                                <div class="slds-form-element slds-grid slds-wrap">
+                                    <div class="slds-form-element__control slds-grow">
+                                        <ui:inputText class="slds-input inputFieldWidth"
+                                                      labelClass="slds-form-element__label slds-form-element__label_edit slds-no-flex"
+                                                      aura:id="inputId"
+                                                      blur="{!c.closeListPriceBox}"
+                                                      value="{!v.singleRec.rentPerSqm}" />
+                                    </div>
+                                </div>
+                            </div>
+                            <span id="form-end" tabindex="0"></span>
+                        </section>  
+                    </aura:set>  
+                </aura:if> 
+            </span>
+        </td>
+        
+        <td data-label="Total Price">
+            <div class="slds-truncate" >{!v.singleRec.price}</div>
+        </td>
+        
+        
+    </tr>
+    
+</aura:component>

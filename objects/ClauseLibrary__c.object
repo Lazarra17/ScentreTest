@@ -1,0 +1,2551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>CLAClauseLibraryRecordPage</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>CLA_CompactLayout</fullName>
+        <fields>Name</fields>
+        <fields>RiskApplies__c</fields>
+        <fields>ActivatedDate__c</fields>
+        <fields>Status__c</fields>
+        <label>CLA Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>&lt;CLA&gt; - Represents a list of clauses for scentre group eg. Standard Clauses, Non-Standard Clauses</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>ActivatedDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Activated Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ApplicableCountry__c</fullName>
+        <description>It&apos;s used to specify the clauses based on country</description>
+        <externalId>false</externalId>
+        <label>Applicable Country</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Country</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ApplicableState__c</fullName>
+        <externalId>false</externalId>
+        <label>Applicable State</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>States</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ClauseDetails__c</fullName>
+        <externalId>false</externalId>
+        <label>Clause Details</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DocumentLocation__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Location</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Upfront Price Components</fullName>
+                    <default>true</default>
+                    <label>Upfront Price Components</label>
+                </value>
+                <value>
+                    <fullName>LESSOR’S DISCLOSURE STATEMENT</fullName>
+                    <default>false</default>
+                    <label>LESSOR’S DISCLOSURE STATEMENT</label>
+                </value>
+                <value>
+                    <fullName>KEY DISCLOSURE ITEMS</fullName>
+                    <default>false</default>
+                    <label>KEY DISCLOSURE ITEMS</label>
+                </value>
+                <value>
+                    <fullName>PART 1. PREMISES</fullName>
+                    <default>false</default>
+                    <label>PART 1. PREMISES</label>
+                </value>
+                <value>
+                    <fullName>PART 2. TERM OF LEASE AND OPTION/S TO RENEW LEASE</fullName>
+                    <default>false</default>
+                    <label>PART 2. TERM OF LEASE AND OPTION/S TO RENEW LEASE</label>
+                </value>
+                <value>
+                    <fullName>PART 3. WORKS FIT OUT AND REFURBISHMENT</fullName>
+                    <default>false</default>
+                    <label>PART 3. WORKS FIT OUT AND REFURBISHMENT</label>
+                </value>
+                <value>
+                    <fullName>PART 4. RENT</fullName>
+                    <default>false</default>
+                    <label>PART 4. RENT</label>
+                </value>
+                <value>
+                    <fullName>PART 5. OUTGOINGS</fullName>
+                    <default>false</default>
+                    <label>PART 5. OUTGOINGS</label>
+                </value>
+                <value>
+                    <fullName>PART 6. OTHER COSTS</fullName>
+                    <default>false</default>
+                    <label>PART 6. OTHER COSTS</label>
+                </value>
+                <value>
+                    <fullName>PART 7. ALTERATION WORKS (INCLUDING RENOVATIONS, EXTENSIONS, REDEVELOPMENT, DEMOLITION)</fullName>
+                    <default>false</default>
+                    <label>PART 7. ALTERATION WORKS (INCLUDING RENOVATIONS, EXTENSIONS, REDEVELOPMENT, DEMOLITION)</label>
+                </value>
+                <value>
+                    <fullName>PART 8. TRADING HOURS</fullName>
+                    <default>false</default>
+                    <label>PART 8. TRADING HOURS</label>
+                </value>
+                <value>
+                    <fullName>PART 9. RETAIL SHOPPING CENTRE DETAILS</fullName>
+                    <default>false</default>
+                    <label>PART 9. RETAIL SHOPPING CENTRE DETAILS</label>
+                </value>
+                <value>
+                    <fullName>PART 10. OTHER DISCLOSURES</fullName>
+                    <default>false</default>
+                    <label>PART 10. OTHER DISCLOSURES</label>
+                </value>
+                <value>
+                    <fullName>ADDITIONAL RESPONSES FOR RECURRING LESSEE COMMENTS</fullName>
+                    <default>false</default>
+                    <label>ADDITIONAL RESPONSES FOR RECURRING LESSEE COMMENTS</label>
+                </value>
+                <value>
+                    <fullName>PART 11. LANDLORD ACKNOWLEDGEMENT AND SIGNING</fullName>
+                    <default>false</default>
+                    <label>PART 11. LANDLORD ACKNOWLEDGEMENT AND SIGNING</label>
+                </value>
+                <value>
+                    <fullName>ADVICE TO LESSOR</fullName>
+                    <default>false</default>
+                    <label>ADVICE TO LESSOR</label>
+                </value>
+                <value>
+                    <fullName>PART 4.  RENT</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>PART 4.  RENT</label>
+                </value>
+                <value>
+                    <fullName>Permitted Use</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Permitted Use</label>
+                </value>
+                <value>
+                    <fullName>Premises details</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Premises details</label>
+                </value>
+                <value>
+                    <fullName>Term of Lease</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Term of Lease</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>HighRiskClause__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This flag drives reporting on Opportunity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is applicable for Exclusions, Exclusivity and First Right of Refusal only.</inlineHelpText>
+        <label>High Risk Clause</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RCAInformation__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Information for the RCA for approvals</inlineHelpText>
+        <label>RCA Information</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ReasonRecommendation__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason Recommendation</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RiskApplies__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Risk Applies?</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RiskClauseApprovers__c</fullName>
+        <externalId>false</externalId>
+        <label>Risk Clause Approvers</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>RoleType</valueSetName>
+        </valueSet>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RiskClauseNotifyUsers__c</fullName>
+        <externalId>false</externalId>
+        <label>Risk Clause Notify Users</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>RoleType</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RiskLevel__c</fullName>
+        <externalId>false</externalId>
+        <label>Risk Level</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>RiskLevels</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SectionTitle__c</fullName>
+        <externalId>false</externalId>
+        <label>Section Title</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>A) Annual Minimum Rent</fullName>
+                    <default>false</default>
+                    <label>A) Annual Minimum Rent</label>
+                </value>
+                <value>
+                    <fullName>B) Annual increase of Minimum Rent and Promotion Levy</fullName>
+                    <default>false</default>
+                    <label>B) Annual increase of Minimum Rent and Promotion Levy</label>
+                </value>
+                <value>
+                    <fullName>C) Outgoings</fullName>
+                    <default>false</default>
+                    <label>C) Outgoings</label>
+                </value>
+                <value>
+                    <fullName>D) Promotion Levy</fullName>
+                    <default>false</default>
+                    <label>D) Promotion Levy</label>
+                </value>
+                <value>
+                    <fullName>E) Percentage Rent</fullName>
+                    <default>false</default>
+                    <label>E) Percentage Rent</label>
+                </value>
+                <value>
+                    <fullName>F) Services</fullName>
+                    <default>false</default>
+                    <label>F) Services</label>
+                </value>
+                <value>
+                    <fullName>G) Lessee contribution</fullName>
+                    <default>false</default>
+                    <label>G) Lessee contribution</label>
+                </value>
+                <value>
+                    <fullName>H) Hoarding costs associated with the fitout of the Premises</fullName>
+                    <default>false</default>
+                    <label>H) Hoarding costs associated with the fitout of the Premises</label>
+                </value>
+                <value>
+                    <fullName>Lessee</fullName>
+                    <default>false</default>
+                    <label>Lessee</label>
+                </value>
+                <value>
+                    <fullName>Premises</fullName>
+                    <default>false</default>
+                    <label>Premises</label>
+                </value>
+                <value>
+                    <fullName>1.1	Street address of premises</fullName>
+                    <default>false</default>
+                    <label>1.1	Street address of premises</label>
+                </value>
+                <value>
+                    <fullName>1.2	Plan of premises</fullName>
+                    <default>false</default>
+                    <label>1.2	Plan of premises</label>
+                </value>
+                <value>
+                    <fullName>1.3	Lettable area of premises</fullName>
+                    <default>false</default>
+                    <label>1.3	Lettable area of premises</label>
+                </value>
+                <value>
+                    <fullName>1.4 Existing structures, fixtures, plant and equipment in the premises, provided by the lessor (excluding any works, fit out and refurbishment described in Part 3)</fullName>
+                    <default>false</default>
+                    <label>1.4 Existing structures, fixtures, plant and equipment in the premises, provided by the lessor (excluding any works, fit out and refurbishment described in Part 3)</label>
+                </value>
+                <value>
+                    <fullName>2.1	Description of permitted use</fullName>
+                    <default>false</default>
+                    <label>2.1	Description of permitted use</label>
+                </value>
+                <value>
+                    <fullName>2.2	Is the permitted use described in item 2.1 exclusive to the lessee?</fullName>
+                    <default>false</default>
+                    <label>2.2	Is the permitted use described in item 2.1 exclusive to the lessee?</label>
+                </value>
+                <value>
+                    <fullName>5.3	Date lease expires</fullName>
+                    <default>false</default>
+                    <label>5.3	Date lease expires</label>
+                </value>
+                <value>
+                    <fullName>3 Number of car parking spaces</fullName>
+                    <default>false</default>
+                    <label>3 Number of car parking spaces</label>
+                </value>
+                <value>
+                    <fullName>4 Head Lease</fullName>
+                    <default>false</default>
+                    <label>4 Head Lease</label>
+                </value>
+                <value>
+                    <fullName>5.3	Length of term</fullName>
+                    <default>false</default>
+                    <label>5.3	Length of term</label>
+                </value>
+                <value>
+                    <fullName>9.1	Fit out works to be carried out by the lessee</fullName>
+                    <default>false</default>
+                    <label>9.1	Fit out works to be carried out by the lessee</label>
+                </value>
+                <value>
+                    <fullName>9.2	Is the lessor providing any contribution towards the cost of the lessee&apos;s fit out?</fullName>
+                    <default>false</default>
+                    <label>9.2	Is the lessor providing any contribution towards the cost of the lessee&apos;s fit out?</label>
+                </value>
+                <value>
+                    <fullName>14.1 Outgoings estimate (annual) for the 12 month period 1 January XXXX to 31 December XXXX</fullName>
+                    <default>false</default>
+                    <label>14.1 Outgoings estimate (annual) for the 12 month period 1 January XXXX to 31 December XXXX</label>
+                </value>
+                <value>
+                    <fullName>14.2 Outgoings estimate (annual) for the 12 month period 1 January XXXX to 31 December XXXX</fullName>
+                    <default>false</default>
+                    <label>14.2 Outgoings estimate (annual) for the 12 month period 1 January XXXX to 31 December XXXX</label>
+                </value>
+                <value>
+                    <fullName>14.3 Outgoings estimate (annual) for the 12 month period 1 January XXXX to 31 December XXXX</fullName>
+                    <default>false</default>
+                    <label>14.3 Outgoings estimate (annual) for the 12 month period 1 January XXXX to 31 December XXXX</label>
+                </value>
+                <value>
+                    <fullName>14.4 Outgoings estimate (annual) for the 12 month period 1 January XXXX to 31 December XXXX</fullName>
+                    <default>false</default>
+                    <label>14.4 Outgoings estimate (annual) for the 12 month period 1 January XXXX to 31 December XXXX</label>
+                </value>
+                <value>
+                    <fullName>18.1 Clause(s) in lease providing for relocation of lessee</fullName>
+                    <default>false</default>
+                    <label>18.1 Clause(s) in lease providing for relocation of lessee</label>
+                </value>
+                <value>
+                    <fullName>18.2 Clause(s) in lease providing for demolition of the premises or building/centre</fullName>
+                    <default>false</default>
+                    <label>18.2 Clause(s) in lease providing for demolition of the premises or building/centre</label>
+                </value>
+                <value>
+                    <fullName>19 Core trading hours relevant to the lessee</fullName>
+                    <default>false</default>
+                    <label>19 Core trading hours relevant to the lessee</label>
+                </value>
+                <value>
+                    <fullName>20 Lessee access to premises outside core trading hours</fullName>
+                    <default>false</default>
+                    <label>20 Lessee access to premises outside core trading hours</label>
+                </value>
+                <value>
+                    <fullName>21 Retail shopping centre details</fullName>
+                    <default>false</default>
+                    <label>21 Retail shopping centre details</label>
+                </value>
+                <value>
+                    <fullName>22 Annual turnover of the shopping centre</fullName>
+                    <default>false</default>
+                    <label>22 Annual turnover of the shopping centre</label>
+                </value>
+                <value>
+                    <fullName>23 Major/anchor tenants</fullName>
+                    <default>false</default>
+                    <label>23 Major/anchor tenants</label>
+                </value>
+                <value>
+                    <fullName>24 Floor plan and tenancy mix</fullName>
+                    <default>false</default>
+                    <label>24 Floor plan and tenancy mix</label>
+                </value>
+                <value>
+                    <fullName>25 Customer traffic flow information</fullName>
+                    <default>false</default>
+                    <label>25 Customer traffic flow information</label>
+                </value>
+                <value>
+                    <fullName>26 Causal mall licensing for common area</fullName>
+                    <default>false</default>
+                    <label>26 Causal mall licensing for common area</label>
+                </value>
+                <value>
+                    <fullName>3.3 Reserved spaces for use of the lessee only</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>3.3 Reserved spaces for use of the lessee only</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>ClauseStatuses</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SubType__c</fullName>
+        <description>This is sub type if clauses. It&apos;s dependent on the type of the clause</description>
+        <externalId>false</externalId>
+        <label>Sub Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetName>ClauseSubType</valueSetName>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Capped Occ Costs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Compensation Clause</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Co-Tenancy Agreement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Early termination rights</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Exclusion Zone</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Exclusivity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Option Lease</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Radius Clause</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Rent Free Period</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Right of Refusal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Security Deposit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Special Condition</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Special Condition</controllingFieldValue>
+                <valueName>Step In Right</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Promo Review</controllingFieldValue>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <controllingFieldValue>Rent Review</controllingFieldValue>
+                <valueName>Miscellaneous</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Usage</controllingFieldValue>
+                <valueName>Usage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Aggregate Rent &gt;$7.5M</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Amendment to Repayment of Fitout Contribution</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Area &gt; 2500sqm</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Capital &gt; $5M</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Capped Outgoings, statutory charges</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Change in Usage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Delete or Amend Demolition Clause ability to invoke demo cl.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Delete or Amend Demolition Clause ability to invoke relocation cl.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Fitout Period</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Guarantee</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Lessee Owns Fitout paid for by fitout contrib.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Amendment to Lessor indemnities and warranties</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>National Change in Security Position</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>National Change in Usage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Deviation from Security Policy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Reduced Outgoings</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Rent Review</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Rent Review which contravenes Act</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Term &lt;1Yr with Contribution</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Term &gt; 10 Years</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Loan, lien, lessee&apos;s right to caveat lease, sub-lease, mortgage, right of entry waiver</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Inconsistent Lessee Entity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Amendment to assignment/change in Control lease clause</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Deletion of Direct Debit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Trading without requirements</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Issuing lease without JV Approval</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>RCA</controllingFieldValue>
+                <valueName>Amendment to Gross Sales clause</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TECH_SortingOrder__c</fullName>
+        <externalId>false</externalId>
+        <label>TECH_SortingOrder</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMImportDateTime__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMImportDateTime</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>TechDMOriginalSourceSystem__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMOriginalSourceSystem</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMReleaseNo__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMReleaseNo</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMSourceID__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMSourceID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMSourceSystem__c</fullName>
+        <externalId>false</externalId>
+        <label>Tech_DMSourceSystem</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDMXREFId__c</fullName>
+        <externalId>true</externalId>
+        <label>Tech_DMXREF_Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>ClauseType</valueSetName>
+        </valueSet>
+    </fields>
+    <label>Clause Library</label>
+    <listViews>
+        <fullName>Active_Clauses</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>HighRiskClause__c</columns>
+        <columns>RiskApplies__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <label>Active Clauses</label>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>RiskLevel__c</columns>
+        <columns>RiskApplies__c</columns>
+        <columns>RiskClauseApprovers__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>HighRiskClause__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>ClauseswithRiskApplied</fullName>
+        <columns>NAME</columns>
+        <columns>RiskLevel__c</columns>
+        <columns>Type__c</columns>
+        <columns>RiskApplies__c</columns>
+        <columns>HighRiskClause__c</columns>
+        <columns>RiskClauseApprovers__c</columns>
+        <columns>RiskClauseNotifyUsers__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RiskApplies__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <label>Clauses with Risk Applied</label>
+    </listViews>
+    <listViews>
+        <fullName>SpecialConditions</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>HighRiskClause__c</columns>
+        <columns>RiskApplies__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Special Condition</value>
+        </filters>
+        <label>Special Conditions</label>
+    </listViews>
+    <listViews>
+        <fullName>StandardResponseClauses</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>ApplicableState__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Acceptance,Counter Offer</value>
+        </filters>
+        <label>Standard Response Clauses</label>
+    </listViews>
+    <nameField>
+        <label>Clause Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Clause Libraries</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CLA_RetailClauses</fullName>
+        <active>true</active>
+        <description>All retail related clauses</description>
+        <label>CLA - Retail Clauses</label>
+        <picklistValues>
+            <picklist>ApplicableCountry__c</picklist>
+            <values>
+                <fullName>Australia</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>New Zealand</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ApplicableState__c</picklist>
+            <values>
+                <fullName>ACT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NSW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NZ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>QLD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TAS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>DocumentLocation__c</picklist>
+            <values>
+                <fullName>KEY DISCLOSURE ITEMS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LESSOR%E2%80%99S DISCLOSURE STATEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 1%2E PREMISES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 10%2E OTHER DISCLOSURES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 2%2E TERM OF LEASE AND OPTION%2FS TO RENEW LEASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 3%2E WORKS FIT OUT AND REFURBISHMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 4%2E RENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 5%2E OUTGOINGS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 6%2E OTHER COSTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 7%2E ALTERATION WORKS %28INCLUDING RENOVATIONS%2C EXTENSIONS%2C REDEVELOPMENT%2C DEMOLITION%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 8%2E TRADING HOURS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 9%2E RETAIL SHOPPING CENTRE DETAILS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upfront Price Components</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RiskClauseApprovers__c</picklist>
+            <values>
+                <fullName>Chief Operating Officer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Legal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director LARS %26 NZ Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facilities Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Filing Clerk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GM Retail Admin%C2%A0%26 Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Manager Leasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group General Manager - LARS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REAA Approver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Mgr Retail Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solicitor Firm - Commercial</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RiskClauseNotifyUsers__c</picklist>
+            <values>
+                <fullName>Accounts Receivable Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Administration Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Architectural Technician</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asset General Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Centre Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chief Operating Officer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Leasing Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Leasing General Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Leasing Regional Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Property Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Retail Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Legal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D%26C Special Project Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development Finance Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director LARS %26 NZ Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facilities Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Filing Clerk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitout Contributions Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GM Retail Admin%C2%A0%26 Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GM of Corporate Accounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Manager Leasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Manager Retail Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group General Manager - LARS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leasing Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leasing Finance Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REAA Approver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RM %26 National Retail Design Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reg Retailer Account Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Manager - LARS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Manager Retail Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Mgr Retail Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Mgr Retail Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Admin Assistant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Delivery Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Design Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Design Team Leader</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revenue Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revenue Assurance Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Senior Retail Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Snr Retail Design Mgr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solicitor Firm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solicitor Firm - Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Team Coordinator Retail Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tenancy Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Party Leasing Agent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RiskLevel__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SectionTitle__c</picklist>
+            <values>
+                <fullName>1%2E1%09Street address of premises</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E2%09Plan of premises</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E3%09Lettable area of premises</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E4 Existing structures%2C fixtures%2C plant and equipment in the premises%2C provided by the lessor %28excluding any works%2C fit out and refurbishment described in Part 3%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E1%09Description of permitted use</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E2%09Is the permitted use described in item 2%2E1 exclusive to the lessee%3F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Number of car parking spaces</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 Head Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E3%09Date lease expires</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E3%09Length of term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E1%09Fit out works to be carried out by the lessee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E2%09Is the lessor providing any contribution towards the cost of the lessee%27s fit out%3F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>A%29 Annual Minimum Rent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B%29 Annual increase of Minimum Rent and Promotion Levy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C%29 Outgoings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D%29 Promotion Levy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E%29 Percentage Rent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F%29 Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G%29 Lessee contribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>H%29 Hoarding costs associated with the fitout of the Premises</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lessee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Premises</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Archived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejects</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superseded</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SubType__c</picklist>
+            <values>
+                <fullName>Aggregate Rent %3E%247%2E5M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to Gross Sales clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to Lessor indemnities and warranties</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to Repayment of Fitout Contribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to assignment%2Fchange in Control lease clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Area %3E 2500sqm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital %3E %245M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capped Occ Costs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capped Outgoings%2C statutory charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change in Usage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Co-Tenancy Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compensation Clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delete or Amend Demolition Clause ability to invoke demo cl%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delete or Amend Demolition Clause ability to invoke relocation cl%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deletion of Direct Debit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deviation from Security Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Early termination rights</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exclusion Zone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exclusivity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitout Period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inconsistent Lessee Entity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issuing lease without JV Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lessee Owns Fitout paid for by fitout contrib%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan%2C lien%2C lessee%27s right to caveat lease%2C sub-lease%2C mortgage%2C right of entry waiver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Change in Security Position</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Change in Usage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-standard fitout period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Option Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percentage Rent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radius Clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reduced Outgoings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Free Period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review which contravenes Act</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Right of Refusal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security Deposit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Condition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Step In Right</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term %3C1Yr with Contribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term %3E 10 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading without requirements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Usage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Promo Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Condition</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Usage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CLA_StandardResponses</fullName>
+        <active>true</active>
+        <description>All clauses for acceptance and counter offer letter</description>
+        <label>CLA - Standard Responses</label>
+        <picklistValues>
+            <picklist>ApplicableCountry__c</picklist>
+            <values>
+                <fullName>Australia</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>New Zealand</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ApplicableState__c</picklist>
+            <values>
+                <fullName>ACT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NSW</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>NZ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QLD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>DocumentLocation__c</picklist>
+            <values>
+                <fullName>ADDITIONAL RESPONSES FOR RECURRING LESSEE COMMENTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADVICE TO LESSOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KEY DISCLOSURE ITEMS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LESSOR%E2%80%99S DISCLOSURE STATEMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 1%2E PREMISES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 10%2E OTHER DISCLOSURES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 11%2E LANDLORD ACKNOWLEDGEMENT AND SIGNING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 2%2E TERM OF LEASE AND OPTION%2FS TO RENEW LEASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 3%2E WORKS FIT OUT AND REFURBISHMENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 4%2E RENT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 5%2E OUTGOINGS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 6%2E OTHER COSTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 7%2E ALTERATION WORKS %28INCLUDING RENOVATIONS%2C EXTENSIONS%2C REDEVELOPMENT%2C DEMOLITION%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 8%2E TRADING HOURS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PART 9%2E RETAIL SHOPPING CENTRE DETAILS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upfront Price Components</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RiskClauseApprovers__c</picklist>
+            <values>
+                <fullName>Architectural Technician</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chief Operating Officer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Legal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director LARS %26 NZ Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facilities Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Filing Clerk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GM Retail Admin%C2%A0%26 Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Manager Leasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group General Manager - LARS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REAA Approver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Mgr Retail Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solicitor Firm - Commercial</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RiskClauseNotifyUsers__c</picklist>
+            <values>
+                <fullName>Accounts Receivable Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Administration Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Architectural Technician</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asset General Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Centre Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chief Operating Officer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Leasing Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Leasing General Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Leasing Regional Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Property Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Retail Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Legal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D%26C Special Project Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development Finance Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director LARS %26 NZ Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facilities Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Filing Clerk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitout Contributions Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GM Retail Admin%C2%A0%26 Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GM of Corporate Accounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Manager Leasing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Manager Retail Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Group General Manager - LARS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leasing Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leasing Finance Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REAA Approver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RM %26 National Retail Design Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reg Retailer Account Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Manager - LARS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Manager Retail Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Mgr Retail Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Mgr Retail Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Admin Assistant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Delivery Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Design Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Design Team Leader</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revenue Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revenue Assurance Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Executive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Senior Retail Administrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Snr Retail Design Mgr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solicitor Firm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solicitor Firm - Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Team Coordinator Retail Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tenancy Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Party Leasing Agent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>RiskLevel__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SectionTitle__c</picklist>
+            <values>
+                <fullName>1%2E1%09Street address of premises</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E2%09Plan of premises</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E3%09Lettable area of premises</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E4 Existing structures%2C fixtures%2C plant and equipment in the premises%2C provided by the lessor %28excluding any works%2C fit out and refurbishment described in Part 3%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%2E1 Outgoings estimate %28annual%29 for the 12 month period 1 January XXXX to 31 December XXXX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%2E2 Outgoings estimate %28annual%29 for the 12 month period 1 January XXXX to 31 December XXXX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%2E3 Outgoings estimate %28annual%29 for the 12 month period 1 January XXXX to 31 December XXXX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%2E4 Outgoings estimate %28annual%29 for the 12 month period 1 January XXXX to 31 December XXXX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%2E1 Clause%28s%29 in lease providing for relocation of lessee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%2E2 Clause%28s%29 in lease providing for demolition of the premises or building%2Fcentre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19 Core trading hours relevant to the lessee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E1%09Description of permitted use</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E2%09Is the permitted use described in item 2%2E1 exclusive to the lessee%3F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20 Lessee access to premises outside core trading hours</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>21 Retail shopping centre details</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>22 Annual turnover of the shopping centre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>23 Major%2Fanchor tenants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>24 Floor plan and tenancy mix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25 Customer traffic flow information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>26 Causal mall licensing for common area</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Number of car parking spaces</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 Head Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E3%09Date lease expires</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E3%09Length of term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E1%09Fit out works to be carried out by the lessee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%2E2%09Is the lessor providing any contribution towards the cost of the lessee%27s fit out%3F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>A%29 Annual Minimum Rent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B%29 Annual increase of Minimum Rent and Promotion Levy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C%29 Outgoings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D%29 Promotion Levy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E%29 Percentage Rent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F%29 Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G%29 Lessee contribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>H%29 Hoarding costs associated with the fitout of the Premises</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lessee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Premises</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Archived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejects</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Superseded</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SubType__c</picklist>
+            <values>
+                <fullName>Aggregate Rent %3E%247%2E5M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to Lessor indemnities and warranties</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amendment to Repayment of Fitout Contribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Area %3E 2500sqm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital %3E %245M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capped Occ Costs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capped Outgoings%2C statutory charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change in Usage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Co-Tenancy Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compensation Clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delete or Amend Demolition Clause ability to invoke demo cl%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delete or Amend Demolition Clause ability to invoke relocation cl%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deviation from Security Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Early termination rights</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exclusion Zone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exclusivity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitout Period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guarantee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lessee Owns Fitout paid for by fitout contrib%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Change in Security Position</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Change in Usage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-standard fitout period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Option Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percentage Rent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radius Clause</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reduced Outgoings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Free Period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review which contravenes Act</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Right of Refusal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security Deposit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Condition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Step In Right</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term %3C1Yr with Contribution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term %3E 10 Years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Usage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Acceptance</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Counter Offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promo Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Review</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>RiskApplies__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ActivatedDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ApplicableState__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RiskLevel__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>RiskApplies__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ActivatedDate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>HighRiskClause__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RiskApplies__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ActivatedDate__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>RiskApplies__c</searchFilterFields>
+        <searchFilterFields>ActivatedDate__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchResultsAdditionalFields>RiskApplies__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ActivatedDate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>CLA_CannotChangeStatus</fullName>
+        <active>true</active>
+        <description>Only Retail Admin Regional Managers and Executives should be able change Status.</description>
+        <errorConditionFormula>ISCHANGED( Status__c ) &amp;&amp;
+(AND($Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+     $Profile.Name &lt;&gt; &quot;SCG-SysAdm&quot;,
+     $Profile.Name &lt;&gt; &quot;SCG-Sys DataMigration&quot;,
+     $Profile.Name &lt;&gt; &quot;SCG-Sys Integration&quot;,
+     OR($Profile.Name &lt;&gt; &quot;SCG-Retail Admin&quot; , $UserRole.Name &lt;&gt; &quot;Executive&quot;))) &amp;&amp;
+(OR(ISPICKVAL(Type__c, &apos;RCA&apos;),(ISPICKVAL(Type__c, &apos;Special Condition&apos;) &amp;&amp; RiskApplies__c = True)))</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>Only Retail Admin Regional Managers and Executives can change the Status of RCA Clause Library records</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CLA_ValidateRiskApprovers</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(RiskApplies__c,ISBLANK(RiskClauseApprovers__c))</errorConditionFormula>
+        <errorDisplayField>RiskClauseApprovers__c</errorDisplayField>
+        <errorMessage>Clauses with Risk must have Approvers.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CLA_ValidateSubTypeofRCA</fullName>
+        <active>true</active>
+        <description>If the &quot;Risk Applies&quot; or &quot;High Risk&quot; flags are checked, the sub type should be selected</description>
+        <errorConditionFormula>AND (OR(RiskApplies__c=True,HighRiskClause__c=True),ISPICKVAL(SubType__c,&apos;&apos;))</errorConditionFormula>
+        <errorMessage>Please enter the Sub Type for High Risk or Risk Applies clauses</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,71 @@
+<aura:component >
+    <aura:attribute type="String" name="mode" />
+    <aura:attribute type="Integer" name="selectedSpaceArea" />
+    <aura:attribute type="Integer" name="numberOfSpace" default = "1"/>
+    <aura:attribute type="Object[]" name="newSpaceList" />
+    <aura:attribute type="Object[]" name="typePicklistValueList"/>
+    
+    <aura:registerEvent name="showToast" type="c:ToastEvent"/>
+    <aura:registerEvent name="goBack" type="c:SpaceManagementEvent"/>
+    <aura:registerEvent name="throwError" type="c:SpaceManagementEvent"/>
+    <aura:registerEvent name="saveNewSpaces" type="c:SpaceManagementEvent"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    Selected Area : <lightning:formattedText value="{! v.selectedSpaceArea + 'sqm'}" />
+    <lightning:input aura:id="numberOfSpace"
+                     type="Number" 
+                     label="{! 'How many spaces do you want to ' + v.mode + ' into'}" 
+                     name="numberOfNewSpaces" 
+                     min="1"
+                     value = "{! v.numberOfSpace}"
+                     step = "1"
+                     required="true"
+                     onchange="{! c.addRemoveSpace}"/>
+    
+    <div style = "margin: 10px 0px 10px 0px;">
+        <aura:iteration items="{! v.newSpaceList}" var="newSpace" indexVar = "index">
+            <lightning:card title="{! 'New Space ' + (index+1)}" iconName="custom:custom85" variant = "narrow" footer = " ">
+                <div>
+                    <lightning:layout multipleRows="true">
+                    	<lightning:layoutItem flexibility="auto" padding="around-small" size="12" 
+                                              largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                            <lightning:input aura:id = "spaceName" label="Space Name" name="spaceName" 
+                                             value = "{! newSpace.Name}" required = "true" maxlength = "6"/>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                	<lightning:layout>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" 
+                                              largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                            <lightning:input aura:id = "area" type = "Number" step="0.01" label="Area (Sqm)" name="area" required = "true" 
+                                             value = "{! newSpace.RentableArea__c}" min = "1"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" 
+                                              largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                            <lightning:select aura:id = "type" name="selectItem" label="Type" value = "{! newSpace.Type__c}"
+                                              required = "true" title = "{! index}" onchange = "{! c.checkType}">
+                                <aura:iteration items = "{! v.typePicklistValueList}" var = "picklist" >
+                                    <option value="{! picklist.value}">{! picklist.label}</option>
+                                </aura:iteration>
+                            </lightning:select>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <aura:if isTrue = "{! newSpace.Type__c == '20' || newSpace.Type__c == '21' || newSpace.Type__c == '22'}">
+                    	<lightning:layout multipleRows="true">
+                            <lightning:layoutItem flexibility="auto" padding="around-small" size="12" 
+                                                  largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+                                <lightning:textarea aura:id = "reasonForChange" name="reasonForChange" value="{! newSpace.ReasonForChange__c}" 
+                                                    label="Reason for Change" required = "true"/>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </aura:if>
+                </div>
+            </lightning:card>
+        </aura:iteration>
+    </div>
+    
+    <div align = "right" class = "{! v.newSpaceList.length > 0 ? '' : 'slds-hide'}">
+        <lightning:button variant="neutral" label="Previous" onclick="{! c.previous}" />
+        <lightning:button variant="brand" label="Save" onclick="{! c.save}" />
+    </div>
+</aura:component>

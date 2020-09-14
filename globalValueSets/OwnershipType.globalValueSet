@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Fully Owned</fullName>
+        <default>false</default>
+        <label>Fully Owned</label>
+    </customValue>
+    <customValue>
+        <fullName>JV Partner</fullName>
+        <default>false</default>
+        <label>JV Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Managed</fullName>
+        <default>false</default>
+        <label>Managed</label>
+    </customValue>
+    <masterLabel>Ownership Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

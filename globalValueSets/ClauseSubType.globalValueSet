@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Aggregate Rent &gt;$7.5M</fullName>
+        <default>false</default>
+        <label>Aggregate Rent &gt;$7.5M</label>
+    </customValue>
+    <customValue>
+        <fullName>Amendment to Repayment of Fitout Contribution</fullName>
+        <default>false</default>
+        <label>Amendment to Repayment of Fitout Contribution</label>
+    </customValue>
+    <customValue>
+        <fullName>Area &gt; 2500sqm</fullName>
+        <default>false</default>
+        <label>Area &gt; 2500sqm</label>
+    </customValue>
+    <customValue>
+        <fullName>Capital &gt; $5M</fullName>
+        <default>false</default>
+        <label>Capital &gt; $5M</label>
+    </customValue>
+    <customValue>
+        <fullName>Capped Occ Costs</fullName>
+        <default>false</default>
+        <label>Capped Occ Costs</label>
+    </customValue>
+    <customValue>
+        <fullName>Capped Outgoings, statutory charges</fullName>
+        <default>false</default>
+        <label>Capped Outgoings, statutory charges</label>
+    </customValue>
+    <customValue>
+        <fullName>Change in Usage</fullName>
+        <default>false</default>
+        <label>Change in Usage</label>
+    </customValue>
+    <customValue>
+        <fullName>Compensation Clause</fullName>
+        <default>false</default>
+        <label>Compensation Clause</label>
+    </customValue>
+    <customValue>
+        <fullName>Co-Tenancy Agreement</fullName>
+        <default>false</default>
+        <label>Co-Tenancy Agreement</label>
+    </customValue>
+    <customValue>
+        <fullName>Delete or Amend Demolition Clause ability to invoke demo cl.</fullName>
+        <default>false</default>
+        <label>Delete or Amend Demolition Clause ability to invoke demo cl.</label>
+    </customValue>
+    <customValue>
+        <fullName>Delete or Amend Demolition Clause ability to invoke relocation cl.</fullName>
+        <default>false</default>
+        <label>Delete or Amend Demolition Clause ability to invoke relocation cl.</label>
+    </customValue>
+    <customValue>
+        <fullName>Early termination rights</fullName>
+        <default>false</default>
+        <label>Early termination rights</label>
+    </customValue>
+    <customValue>
+        <fullName>Exclusion Zone</fullName>
+        <default>false</default>
+        <label>Exclusion Zone</label>
+    </customValue>
+    <customValue>
+        <fullName>Exclusivity</fullName>
+        <default>false</default>
+        <label>Exclusivity</label>
+    </customValue>
+    <customValue>
+        <fullName>Fitout Period</fullName>
+        <default>false</default>
+        <label>Fitout Period</label>
+    </customValue>
+    <customValue>
+        <fullName>Guarantee</fullName>
+        <default>false</default>
+        <label>Guarantee</label>
+    </customValue>
+    <customValue>
+        <fullName>Lessee Owns Fitout paid for by fitout contrib.</fullName>
+        <default>false</default>
+        <label>Lessee Owns Fitout paid for by fitout contrib.</label>
+    </customValue>
+    <customValue>
+        <fullName>Amendment to Lessor indemnities and warranties</fullName>
+        <default>false</default>
+        <label>Amendment to Lessor indemnities and warranties</label>
+    </customValue>
+    <customValue>
+        <fullName>National Change in Security Position</fullName>
+        <default>false</default>
+        <label>National Change in Security Position</label>
+    </customValue>
+    <customValue>
+        <fullName>National Change in Usage</fullName>
+        <default>false</default>
+        <label>National Change in Usage</label>
+    </customValue>
+    <customValue>
+        <fullName>Deviation from Security Policy</fullName>
+        <default>false</default>
+        <label>Deviation from Security Policy</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-standard fitout period</fullName>
+        <default>false</default>
+        <label>Non-standard fitout period</label>
+    </customValue>
+    <customValue>
+        <fullName>Option Lease</fullName>
+        <default>false</default>
+        <label>Option Lease</label>
+    </customValue>
+    <customValue>
+        <fullName>Percentage Rent</fullName>
+        <default>false</default>
+        <label>Percentage Rent</label>
+    </customValue>
+    <customValue>
+        <fullName>Radius Clause</fullName>
+        <default>false</default>
+        <label>Radius Clause</label>
+    </customValue>
+    <customValue>
+        <fullName>Reduced Outgoings</fullName>
+        <default>false</default>
+        <label>Reduced Outgoings</label>
+    </customValue>
+    <customValue>
+        <fullName>Rent Free Period</fullName>
+        <default>false</default>
+        <label>Rent Free Period</label>
+    </customValue>
+    <customValue>
+        <fullName>Rent Review</fullName>
+        <default>false</default>
+        <label>Rent Review</label>
+    </customValue>
+    <customValue>
+        <fullName>Rent Review which contravenes Act</fullName>
+        <default>false</default>
+        <label>Rent Review which contravenes Act</label>
+    </customValue>
+    <customValue>
+        <fullName>Right of Refusal</fullName>
+        <default>false</default>
+        <label>Right of Refusal</label>
+    </customValue>
+    <customValue>
+        <fullName>Security Deposit</fullName>
+        <default>false</default>
+        <label>Security Deposit</label>
+    </customValue>
+    <customValue>
+        <fullName>Special Condition</fullName>
+        <default>false</default>
+        <label>Special Condition</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard</fullName>
+        <default>false</default>
+        <label>Standard</label>
+    </customValue>
+    <customValue>
+        <fullName>Step In Right</fullName>
+        <default>false</default>
+        <label>Step In Right</label>
+    </customValue>
+    <customValue>
+        <fullName>Term &lt;1Yr with Contribution</fullName>
+        <default>false</default>
+        <label>Term &lt;1Yr with Contribution</label>
+    </customValue>
+    <customValue>
+        <fullName>Term &gt; 10 Years</fullName>
+        <default>false</default>
+        <label>Term &gt; 10 Years</label>
+    </customValue>
+    <customValue>
+        <fullName>Usage</fullName>
+        <default>false</default>
+        <label>Usage</label>
+    </customValue>
+    <customValue>
+        <fullName>Loan, lien, lessee&apos;s right to caveat lease, sub-lease, mortgage, right of entry waiver</fullName>
+        <default>false</default>
+        <label>Loan, lien, lessee&apos;s right to caveat lease, sub-lease, mortgage, right of entry waiver</label>
+    </customValue>
+    <customValue>
+        <fullName>Inconsistent Lessee Entity</fullName>
+        <default>false</default>
+        <label>Inconsistent Lessee Entity</label>
+    </customValue>
+    <customValue>
+        <fullName>Amendment to assignment/change in Control lease clause</fullName>
+        <default>false</default>
+        <label>Amendment to assignment/change in Control lease clause</label>
+    </customValue>
+    <customValue>
+        <fullName>Deletion of Direct Debit</fullName>
+        <default>false</default>
+        <label>Deletion of Direct Debit</label>
+    </customValue>
+    <customValue>
+        <fullName>Trading without requirements</fullName>
+        <default>false</default>
+        <label>Trading without requirements</label>
+    </customValue>
+    <customValue>
+        <fullName>Issuing lease without JV Approval</fullName>
+        <default>false</default>
+        <label>Issuing lease without JV Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Amendment to Gross Sales clause</fullName>
+        <default>false</default>
+        <label>Amendment to Gross Sales clause</label>
+    </customValue>
+    <customValue>
+        <fullName>Miscellaneous</fullName>
+        <default>false</default>
+        <label>Miscellaneous</label>
+    </customValue>
+    <customValue>
+        <fullName>Amendment to Fitout Contribution Clawback</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Amendment to Fitout Contribution Clawback</label>
+    </customValue>
+    <customValue>
+        <fullName>Capped Outgoings</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Capped Outgoings</label>
+    </customValue>
+    <customValue>
+        <fullName>Delete or Amend Demolition Clause</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Delete or Amend Demolition Clause</label>
+    </customValue>
+    <customValue>
+        <fullName>Deletion or Amendment to Relocation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Deletion or Amendment to Relocation</label>
+    </customValue>
+    <customValue>
+        <fullName>Lessee entity not the owner of the brand</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Lessee entity not the owner of the brand</label>
+    </customValue>
+    <customValue>
+        <fullName>Lessee Owns Fitout</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Lessee Owns Fitout</label>
+    </customValue>
+    <customValue>
+        <fullName>Lessor indemnities and warranties</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Lessor indemnities and warranties</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Compliance with Security Position</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Non-Compliance with Security Position</label>
+    </customValue>
+    <description>This is dependent picklist of clause Type</description>
+    <masterLabel>Clause Sub Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

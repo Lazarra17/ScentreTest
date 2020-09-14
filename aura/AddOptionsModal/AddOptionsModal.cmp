@@ -1,0 +1,21 @@
+<aura:component controller="OpportunityOptionsController">
+    <aura:attribute name="oppRecordId" type="String"/>
+    <aura:attribute name="pricebookEntryId" type="String"/>
+    <aura:attribute name="product2Id" type="String"/>
+    <aura:attribute name="OpportunityLineItemRecord" type="OpportunityLineItem"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    
+    <lightning:notificationsLibrary aura:id="notifLibError"/>
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="large" aura:id="spinner"/>
+    </aura:if>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    
+    <lightning:recordEditForm objectApiName="OpportunityLineItem" onsubmit="{!c.insertOptionsRecords}">    
+        <lightning:inputField fieldName="OptionsTerm__c"/>
+        <lightning:inputField fieldName="Description"/>
+        <div align="right" style="padding-top:21px">
+            <lightning:button variant="brand"  label="Save" type="submit"/>
+        </div>
+    </lightning:recordEditForm>
+</aura:component>

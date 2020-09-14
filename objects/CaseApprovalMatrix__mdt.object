@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>ApproverRole__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>ApproverRole</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Accounts Receivable Admin</fullName>
+                    <default>false</default>
+                    <label>Accounts Receivable Admin</label>
+                </value>
+                <value>
+                    <fullName>Administration Manager</fullName>
+                    <default>false</default>
+                    <label>Administration Manager</label>
+                </value>
+                <value>
+                    <fullName>Asset General Manager</fullName>
+                    <default>false</default>
+                    <label>Asset General Manager</label>
+                </value>
+                <value>
+                    <fullName>Centre Manager</fullName>
+                    <default>false</default>
+                    <label>Centre Manager</label>
+                </value>
+                <value>
+                    <fullName>Chief Operating Officer</fullName>
+                    <default>false</default>
+                    <label>Chief Operating Officer</label>
+                </value>
+                <value>
+                    <fullName>Commercial Leasing Admin</fullName>
+                    <default>false</default>
+                    <label>Commercial Leasing Admin</label>
+                </value>
+                <value>
+                    <fullName>Commercial Leasing General Manager</fullName>
+                    <default>false</default>
+                    <label>Commercial Leasing General Manager</label>
+                </value>
+                <value>
+                    <fullName>Commercial Leasing Regional Manager</fullName>
+                    <default>false</default>
+                    <label>Commercial Leasing Regional Manager</label>
+                </value>
+                <value>
+                    <fullName>Commercial Property Manager</fullName>
+                    <default>false</default>
+                    <label>Commercial Property Manager</label>
+                </value>
+                <value>
+                    <fullName>Commercial Retail Manager</fullName>
+                    <default>false</default>
+                    <label>Commercial Retail Manager</label>
+                </value>
+                <value>
+                    <fullName>Corporate Legal</fullName>
+                    <default>false</default>
+                    <label>Corporate Legal</label>
+                </value>
+                <value>
+                    <fullName>Development Executive</fullName>
+                    <default>false</default>
+                    <label>Development Executive</label>
+                </value>
+                <value>
+                    <fullName>Development Finance Manager</fullName>
+                    <default>false</default>
+                    <label>Development Finance Manager</label>
+                </value>
+                <value>
+                    <fullName>Director LARS &amp; NZ Development</fullName>
+                    <default>false</default>
+                    <label>Director LARS &amp; NZ Development</label>
+                </value>
+                <value>
+                    <fullName>Fitout Contributions Admin</fullName>
+                    <default>false</default>
+                    <label>Fitout Contributions Admin</label>
+                </value>
+                <value>
+                    <fullName>General Manager Leasing</fullName>
+                    <default>false</default>
+                    <label>General Manager Leasing</label>
+                </value>
+                <value>
+                    <fullName>General Manager Retail Design</fullName>
+                    <default>false</default>
+                    <label>General Manager Retail Design</label>
+                </value>
+                <value>
+                    <fullName>GM of Corporate Accounting</fullName>
+                    <default>false</default>
+                    <label>GM of Corporate Accounting</label>
+                </value>
+                <value>
+                    <fullName>GM Retail Admin &amp; Delivery</fullName>
+                    <default>false</default>
+                    <label>GM Retail Admin &amp; Delivery</label>
+                </value>
+                <value>
+                    <fullName>Group General Manager - LARS</fullName>
+                    <default>false</default>
+                    <label>Group General Manager - LARS</label>
+                </value>
+                <value>
+                    <fullName>Leasing Executive</fullName>
+                    <default>false</default>
+                    <label>Leasing Executive</label>
+                </value>
+                <value>
+                    <fullName>Leasing Finance Analyst</fullName>
+                    <default>false</default>
+                    <label>Leasing Finance Analyst</label>
+                </value>
+                <value>
+                    <fullName>Regional Manager - LARS</fullName>
+                    <default>false</default>
+                    <label>Regional Manager - LARS</label>
+                </value>
+                <value>
+                    <fullName>Regional Manager Retail Design</fullName>
+                    <default>false</default>
+                    <label>Regional Manager Retail Design</label>
+                </value>
+                <value>
+                    <fullName>Regional Mgr Retail Admin</fullName>
+                    <default>false</default>
+                    <label>Regional Mgr Retail Admin</label>
+                </value>
+                <value>
+                    <fullName>Regional Mgr Retail Delivery</fullName>
+                    <default>false</default>
+                    <label>Regional Mgr Retail Delivery</label>
+                </value>
+                <value>
+                    <fullName>Reg Retailer Account Admin</fullName>
+                    <default>false</default>
+                    <label>Reg Retailer Account Admin</label>
+                </value>
+                <value>
+                    <fullName>Retail Admin Assistant</fullName>
+                    <default>false</default>
+                    <label>Retail Admin Assistant</label>
+                </value>
+                <value>
+                    <fullName>Retail Administrator</fullName>
+                    <default>false</default>
+                    <label>Retail Administrator</label>
+                </value>
+                <value>
+                    <fullName>Retail Delivery Coordinator</fullName>
+                    <default>false</default>
+                    <label>Retail Delivery Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Retail Design Manager</fullName>
+                    <default>false</default>
+                    <label>Retail Design Manager</label>
+                </value>
+                <value>
+                    <fullName>Retail Design Team Leader</fullName>
+                    <default>false</default>
+                    <label>Retail Design Team Leader</label>
+                </value>
+                <value>
+                    <fullName>Retailer Account Admin</fullName>
+                    <default>false</default>
+                    <label>Retailer Account Admin</label>
+                </value>
+                <value>
+                    <fullName>Retail Manager</fullName>
+                    <default>false</default>
+                    <label>Retail Manager</label>
+                </value>
+                <value>
+                    <fullName>Revenue Administrator</fullName>
+                    <default>false</default>
+                    <label>Revenue Administrator</label>
+                </value>
+                <value>
+                    <fullName>Revenue Assurance Manager</fullName>
+                    <default>false</default>
+                    <label>Revenue Assurance Manager</label>
+                </value>
+                <value>
+                    <fullName>Risk Executive</fullName>
+                    <default>false</default>
+                    <label>Risk Executive</label>
+                </value>
+                <value>
+                    <fullName>RM &amp; National Retail Design Coordinator</fullName>
+                    <default>false</default>
+                    <label>RM &amp; National Retail Design Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Senior Retail Administrator</fullName>
+                    <default>false</default>
+                    <label>Senior Retail Administrator</label>
+                </value>
+                <value>
+                    <fullName>Snr Retail Design Mgr</fullName>
+                    <default>false</default>
+                    <label>Snr Retail Design Mgr</label>
+                </value>
+                <value>
+                    <fullName>Solicitor Firm</fullName>
+                    <default>false</default>
+                    <label>Solicitor Firm</label>
+                </value>
+                <value>
+                    <fullName>Team Coordinator Retail Design</fullName>
+                    <default>false</default>
+                    <label>Team Coordinator Retail Design</label>
+                </value>
+                <value>
+                    <fullName>Tenancy Coordinator</fullName>
+                    <default>false</default>
+                    <label>Tenancy Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Third Party Leasing Agent</fullName>
+                    <default>false</default>
+                    <label>Third Party Leasing Agent</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FieldAPIName__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Field API Name</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>TechFinance__c</fullName>
+                    <default>true</default>
+                    <label>TechFinance__c</label>
+                </value>
+                <value>
+                    <fullName>TechGMLeasing__c</fullName>
+                    <default>false</default>
+                    <label>TechGMLeasing__c</label>
+                </value>
+                <value>
+                    <fullName>TechNSOTeamCoordinator__c</fullName>
+                    <default>false</default>
+                    <label>TechNSOTeamCoordinator__c</label>
+                </value>
+                <value>
+                    <fullName>TechRegionalLeasingManager__c</fullName>
+                    <default>false</default>
+                    <label>TechRegionalLeasingManager__c</label>
+                </value>
+                <value>
+                    <fullName>TechRegionalManager__c</fullName>
+                    <default>false</default>
+                    <label>TechRegionalManager__c</label>
+                </value>
+                <value>
+                    <fullName>TechRegionalManagerRetailAdmin__c</fullName>
+                    <default>false</default>
+                    <label>TechRegionalManagerRetailAdmin__c</label>
+                </value>
+                <value>
+                    <fullName>TechRevenueAssurance__c</fullName>
+                    <default>false</default>
+                    <label>TechRevenueAssurance__c</label>
+                </value>
+                <value>
+                    <fullName>TechCRM__c</fullName>
+                    <default>false</default>
+                    <label>TechCRM__c</label>
+                </value>
+                <value>
+                    <fullName>TechLeasingExecutive__c</fullName>
+                    <default>false</default>
+                    <label>TechLeasingExecutive__c</label>
+                </value>
+                <value>
+                    <fullName>TechLeasingFinanceAnalyst__c</fullName>
+                    <default>false</default>
+                    <label>TechLeasingFinanceAnalyst__c</label>
+                </value>
+                <value>
+                    <fullName>TechDirectorOfLeasing__c</fullName>
+                    <default>false</default>
+                    <label>TechDirectorOfLeasing__c</label>
+                </value>
+                <value>
+                    <fullName>TechCentreManager__c</fullName>
+                    <default>false</default>
+                    <label>TechCentreManager__c</label>
+                </value>
+                <value>
+                    <fullName>TechRetailAdmin__c</fullName>
+                    <default>false</default>
+                    <label>TechRetailAdmin__c</label>
+                </value>
+                <value>
+                    <fullName>TechRetailManager__c</fullName>
+                    <default>false</default>
+                    <label>TechRetailManager__c</label>
+                </value>
+                <value>
+                    <fullName>TechDevelopmentExecutive__c</fullName>
+                    <default>false</default>
+                    <label>TechDevelopmentExecutive__c</label>
+                </value>
+                <value>
+                    <fullName>TechDirectorLARSNZDevelopment__c</fullName>
+                    <default>false</default>
+                    <label>TechDirectorLARSNZDevelopment__c</label>
+                </value>
+                <value>
+                    <fullName>TechCommercialPropertyManager__c</fullName>
+                    <default>false</default>
+                    <label>TechCommercialPropertyManager__c</label>
+                </value>
+                <value>
+                    <fullName>TechRegRetailerAccountAdmin__c</fullName>
+                    <default>false</default>
+                    <label>TechRegRetailerAccountAdmin__c</label>
+                </value>
+                <value>
+                    <fullName>TechGMRetailAdmin__c</fullName>
+                    <default>false</default>
+                    <label>TechGMRetailAdmin__c</label>
+                </value>
+                <value>
+                    <fullName>TechGGManager__c</fullName>
+                    <default>false</default>
+                    <label>TechGGManager__c</label>
+                </value>
+                <value>
+                    <fullName>TechDevelopmentFinanceManager__c</fullName>
+                    <default>false</default>
+                    <label>TechDevelopmentFinanceManager__c</label>
+                </value>
+                <value>
+                    <fullName>TechRevenueAdministrator__c</fullName>
+                    <default>false</default>
+                    <label>TechRevenueAdministrator__c</label>
+                </value>
+                <value>
+                    <fullName>TechRetailAdminAssistant__c</fullName>
+                    <default>false</default>
+                    <label>TechRetailAdminAssistant__c</label>
+                </value>
+                <value>
+                    <fullName>TechRAS__c</fullName>
+                    <default>false</default>
+                    <label>TechRAS__c</label>
+                </value>
+                <value>
+                    <fullName>TechAdminManager__c</fullName>
+                    <default>false</default>
+                    <label>TechAdminManager__c</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>LVI - Request For Refund</fullName>
+                    <default>true</default>
+                    <label>LVI - Request For Refund</label>
+                </value>
+                <value>
+                    <fullName>LVI - Voluntary Work Approval</fullName>
+                    <default>false</default>
+                    <label>LVI - Voluntary Work Approval</label>
+                </value>
+                <value>
+                    <fullName>LVI - Issue Credit Note</fullName>
+                    <default>false</default>
+                    <label>LVI - Issue Credit Note</label>
+                </value>
+                <value>
+                    <fullName>LVI - Retail Admin Lease Variations</fullName>
+                    <default>false</default>
+                    <label>LVI - Retail Admin Lease Variations</label>
+                </value>
+                <value>
+                    <fullName>LVI - Lease Area Variation</fullName>
+                    <default>false</default>
+                    <label>LVI - Lease Area Variation</label>
+                </value>
+                <value>
+                    <fullName>LVI - Merchant Or Promotional Allowance</fullName>
+                    <default>false</default>
+                    <label>LVI - Merchant Or Promotional Allowance</label>
+                </value>
+                <value>
+                    <fullName>LVI - Conduct Market Review</fullName>
+                    <default>false</default>
+                    <label>LVI - Conduct Market Review</label>
+                </value>
+                <value>
+                    <fullName>LVI - Variance to Rent Commencement Date</fullName>
+                    <default>false</default>
+                    <label>LVI - Variance to Rent Commencement Date</label>
+                </value>
+                <value>
+                    <fullName>LVI - Trading Name Change</fullName>
+                    <default>false</default>
+                    <label>LVI - Trading Name Change</label>
+                </value>
+                <value>
+                    <fullName>LVI - Surrender a Lease</fullName>
+                    <default>false</default>
+                    <label>LVI - Surrender a Lease</label>
+                </value>
+                <value>
+                    <fullName>LVI - Terminate a Lease</fullName>
+                    <default>false</default>
+                    <label>LVI - Terminate a Lease</label>
+                </value>
+                <value>
+                    <fullName>LVI - Assignment of a Lease</fullName>
+                    <default>false</default>
+                    <label>LVI - Assignment of a Lease</label>
+                </value>
+                <value>
+                    <fullName>LVI - Manage Bank Guarantee</fullName>
+                    <default>false</default>
+                    <label>LVI - Manage Bank Guarantee</label>
+                </value>
+                <value>
+                    <fullName>LVI - Centre Team</fullName>
+                    <default>false</default>
+                    <label>LVI - Centre Team</label>
+                </value>
+                <value>
+                    <fullName>LVI - Leasing Finance</fullName>
+                    <default>false</default>
+                    <label>LVI - Leasing Finance</label>
+                </value>
+                <value>
+                    <fullName>Ancillary Tax Invoice Request</fullName>
+                    <default>false</default>
+                    <label>Ancillary Tax Invoice Request</label>
+                </value>
+                <value>
+                    <fullName>LVI - Miscellaneous</fullName>
+                    <default>false</default>
+                    <label>LVI - Miscellaneous</label>
+                </value>
+                <value>
+                    <fullName>Leasing Checksheet</fullName>
+                    <default>false</default>
+                    <label>Leasing Checksheet</label>
+                </value>
+                <value>
+                    <fullName>LV02 - Variation of Specialty Lease</fullName>
+                    <default>false</default>
+                    <label>LV02 - Variation of Specialty Lease</label>
+                </value>
+                <value>
+                    <fullName>LVI - Variation of Specialty Leases</fullName>
+                    <default>false</default>
+                    <label>LVI - Variation of Specialty Leases</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Case Approval Matrix</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>MasterLabel</columns>
+        <columns>Type__c</columns>
+        <columns>ApproverRole__c</columns>
+        <columns>FieldAPIName__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <pluralLabel>Case Approval Matrices</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

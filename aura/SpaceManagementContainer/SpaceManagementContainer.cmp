@@ -1,0 +1,55 @@
+<aura:component controller = "SpaceManagementController" 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,force:LightningQuickActionWithoutHeader">
+    <aura:attribute type="String" name="mode" default = "Merge"/>
+    <aura:attribute type="Integer" name="currentPage" default = "1"/>
+	<aura:attribute type="Property__c" name="propertyRecord"/>
+	<aura:attribute type="Property__c" name="propertyRecordMaster"/>
+	<aura:attribute type="Object" name="propertyRecordError"/>
+    <aura:attribute type="Object[]" name="spaceList"/>
+    <aura:attribute type="Object[]" name="newSpaceList"/>
+    <aura:attribute type="Object[]" name="typePicklistValueList"/>
+    <aura:attribute type="Object[]" name="selectedSpaceList"/>
+    <aura:attribute type="Object" name = "spaceWrapper" />
+    <aura:attribute type="Boolean" name="hasUserAccess" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!--aura:handler name="throwError" event="c:SpaceManagementEvent" action="{!c.catchError}"/-->
+    
+    <force:recordData aura:id="propertyRecord" 
+    				  recordId="{!v.recordId}" 
+    				  targetRecord="{!v.propertyRecordMaster}" 
+    				  targetFields="{!v.propertyRecord}" 
+    				  targetError="{!v.propertyRecordError}" 
+    				  mode = "VIEW"
+    				  fields="Id, JDEPropertyNumber__c, PropertyStatus__c"
+                      recordUpdated="{!c.handleRecordUpdate}"/>
+    
+    <div>
+        <c:Toast />
+        <div id = "spinner-handler">
+            <lightning:spinner variant="brand" size="large" aura:id="spinner"/>
+        </div>
+        
+    	<div id = "header" class = "slds-border_bottom" style = "padding-bottom: 15px; margin-bottom: 15px;">
+    		<div class="slds-text-heading_large slds-text-align_center">Space Management</div>
+        </div>
+        
+        <div>
+            <div class = "{! (v.currentPage != 1) ? 'slds-hide' : ''}">
+            	<c:SpaceManagementPage1 aura:id = "page-1" 
+                                        pushSelectedSpaces = "{! c.getSelectedSpace}" 
+                                        hasUserAccess = "{! v.hasUserAccess}"/>
+            </div>            
+            <div class = "{! (v.currentPage != 2) ? 'slds-hide' : ''}">
+            	<c:SpaceManagementPage2 aura:id = "page-2"
+                                        goBack = "{! c.goBack}"
+                                        saveNewSpaces = "{! c.confirmCreation}"/>
+            </div>
+            <div class = "{! (v.currentPage != 3) ? 'slds-hide' : ''}">
+            	<c:SpaceManagementPage3 aura:id = "page-3"/>
+            </div>
+        </div>
+    </div>
+    <c:SpaceManagementCustomModal aura:id = "custom-modal" 
+                                  save = "{!c.saveSpaces}"/>
+</aura:component>

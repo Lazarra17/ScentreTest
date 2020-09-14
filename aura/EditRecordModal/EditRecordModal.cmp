@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="recordId" type="String"/>
+    
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    
+    <force:recordEdit aura:id="edit" recordId="{! v.recordId}"/>
+    
+    <div style="float:right">
+        <lightning:button label="Save" onclick="{!c.save}" variant="brand"/>
+    </div>
+</aura:component>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>LEASharewithInternalUsers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share leads with all internal users</description>
+        <label>LEA - Share with Internal Users</label>
+        <sharedTo>
+            <roleAndSubordinates>Executive</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Executive</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>LEA_RetailGeneralManagerAndSubordinates</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule to share Lead to Retail General Manager and Subordinates (Read and write)</description>
+        <label>LEA - Retail General Manager and Subordinates</label>
+        <sharedTo>
+            <role>RetailGeneralManager</role>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

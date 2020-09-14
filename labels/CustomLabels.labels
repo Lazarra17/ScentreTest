@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ABNActiveContractErrorMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ABNActiveContractErrorMessage</shortDescription>
+        <value>There are active contracts linked to this account</value>
+    </labels>
+    <labels>
+        <fullName>ABNGUID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ABNGUID</shortDescription>
+        <value>guid=ed19f77e-8587-4292-a9cf-4c00ad377150</value>
+    </labels>
+    <labels>
+        <fullName>ABNNameSearch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ABNNameSearch</shortDescription>
+        <value>https://abr.business.gov.au/json/MatchingNames.aspx?name=</value>
+    </labels>
+    <labels>
+        <fullName>ABNURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ABNURL</shortDescription>
+        <value>https://abr.business.gov.au/json/AbnDetails.aspx?</value>
+    </labels>
+    <labels>
+        <fullName>ACCNewLine</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ACC_NewLine</shortDescription>
+        <value>a
+b</value>
+    </labels>
+    <labels>
+        <fullName>ACNURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ACNURL</shortDescription>
+        <value>https://abr.business.gov.au/json/AcnDetails.aspx?</value>
+    </labels>
+    <labels>
+        <fullName>Account_GroupLevelId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Group Level Id</shortDescription>
+        <value>0122P0000004Kj8QAE</value>
+    </labels>
+    <labels>
+        <fullName>Account_PropertyBasedId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Property Based Id</shortDescription>
+        <value>0122P0000004Kj9QAE</value>
+    </labels>
+    <labels>
+        <fullName>AncillaryTaxInvoicesRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AncillaryTaxInvoicesRoleToChatter</shortDescription>
+        <value>Centre Manager;Commercial Retail Manager;Leasing Finance Analyst</value>
+    </labels>
+    <labels>
+        <fullName>AppURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AppURL</shortDescription>
+        <value>https://scentre.lightning.force.com</value>
+    </labels>
+    <labels>
+        <fullName>Applicable_RDI_Contact_Roles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Applicable RDI Contact Roles</shortDescription>
+        <value>Tenant Leasing Contact,Leasing Contact,Designer,Design Contact,Shopfitter,Project Manager,Structural Consultant,Certifier,Mechanical Consultant,Hydraulic Consultant,Graphic Designer,Stylist,Consultant</value>
+    </labels>
+    <labels>
+        <fullName>BnkGuaranteeClaimAdminRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BnkGuaranteeClaimAdminRoleToChatter</shortDescription>
+        <value>General Manager Leasing;Centre Manager;Commercial Retail Manager</value>
+    </labels>
+    <labels>
+        <fullName>CAS_SOCRecordTypeID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CAS_SOCRecordTypeID</shortDescription>
+        <value>0122P0000004KjYQAU</value>
+    </labels>
+    <labels>
+        <fullName>CapitalTotalPriceReadWriteAccess</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CapitalTotalPriceProfileReadWriteAccess</shortDescription>
+        <value>SCG-Retail Delivery;SCG-Retail Lease;SCG-SysAdm;SCG-Retail Admin;SCG-Retail Admin</value>
+    </labels>
+    <labels>
+        <fullName>CaseManualErrorMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Manual Error Message</shortDescription>
+        <value>If Status is Manual, only the Case Owner should be able to change only the Status.</value>
+    </labels>
+    <labels>
+        <fullName>CaseRecordTypeForOwnerUpdate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CaseRecordTypeForOwnerUpdate</shortDescription>
+        <value>Inspection Report;Retail Design Instruction;Statement of Completion</value>
+    </labels>
+    <labels>
+        <fullName>CaseStatus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Status</shortDescription>
+        <value>Invalid Request</value>
+    </labels>
+    <labels>
+        <fullName>Case_LeasingChecksheet</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case_LeasingChecksheet</shortDescription>
+        <value>Leasing Checksheet</value>
+    </labels>
+    <labels>
+        <fullName>Case_LeasingChecksheetId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case_LeasingChecksheetId</shortDescription>
+        <value>0122P0000004KjVQAU</value>
+    </labels>
+    <labels>
+        <fullName>Case_ManageBankGuarantee</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case_ManageBankGuarantee</shortDescription>
+        <value>0122P0000004KjJQAU</value>
+    </labels>
+    <labels>
+        <fullName>Case_RetailDesignInstruction</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case_RetailDesignInstruction</shortDescription>
+        <value>0122P0000004KjXQAU</value>
+    </labels>
+    <labels>
+        <fullName>Case_TerminateALease</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case_TerminateALease</shortDescription>
+        <value>0122P0000004KjPQAU</value>
+    </labels>
+    <labels>
+        <fullName>CasesubTypeReturnExchange</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CasesubTypeReturnExchange</shortDescription>
+        <value>Return;Exchange</value>
+    </labels>
+    <labels>
+        <fullName>ChatterCancelledOppGeneric</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ChatterCancelledOppGeneric</shortDescription>
+        <value>Hi Team,
+
+The following Opportunity has been Cancelled:</value>
+    </labels>
+    <labels>
+        <fullName>ChatterCancelledOppRevAssurance</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chatter for Cancelled Opportunity to Rev Assurance</shortDescription>
+        <value>Following Opportunity is not proceeding
+
+Contract Name: {0}
+Trading Name: {1}
+Property: {2}
+Space Number: {3}
+
+For more details, please refer to:</value>
+    </labels>
+    <labels>
+        <fullName>ChatterPostRiskApprovedOpp</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chatter Post Risk Approved Opp Message</shortDescription>
+        <value>Documents Back task has been completed for Opportunity {0}</value>
+    </labels>
+    <labels>
+        <fullName>ContractStatus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ContractStatus</shortDescription>
+        <value>A;B;C;D;F;H;I;K;M;N;O;R;U</value>
+    </labels>
+    <labels>
+        <fullName>ContractStausforRisk</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ContractStausforRisk</shortDescription>
+        <value>D;F;H;I;K;N;C;O;R;U</value>
+    </labels>
+    <labels>
+        <fullName>DSValidationMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DSValidationMessage</shortDescription>
+        <value>Lessee name is NULL or stage is not Propose and Accept or Primary Contact is NULL</value>
+    </labels>
+    <labels>
+        <fullName>DisableChatterNotification</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DisableChatterNotification</shortDescription>
+        <value>false</value>
+    </labels>
+    <labels>
+        <fullName>Editableprofilesforoutgoins</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Editableprofilesforoutgoins</shortDescription>
+        <value>SCG-Retail Finance;SCG-Retail Admin;SCG-SysAdm;System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>Email_Ids_Rental_Asst_Batch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email_Ids_Rental_Asst_Batch</shortDescription>
+        <value>MNagi@Scentregroup.com, LYosuico@Scentregroup.com</value>
+    </labels>
+    <labels>
+        <fullName>ExistingBestBetErrorMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExistingBestBetErrorMessage</shortDescription>
+        <value>There&apos;s an existing Best Bet Opportunity for this Space. Please remove Best Bet flag before saving.</value>
+    </labels>
+    <labels>
+        <fullName>GenerateChequeRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GenerateChequeRoleToChatter</shortDescription>
+        <value>General Manager Leasing;Regional Leasing Manager</value>
+    </labels>
+    <labels>
+        <fullName>InspectionReportLeaseTerm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InspectionReportLeaseTerm</shortDescription>
+        <value>The above scope of works is applicable to 5 year lease term only.</value>
+    </labels>
+    <labels>
+        <fullName>LOOvalidationmessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LOO validation message</shortDescription>
+        <value>Stage must be before Issue Lease and must have Contact</value>
+    </labels>
+    <labels>
+        <fullName>LV02ReportLink</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LV02 Report Link</shortDescription>
+        <value>https://scentre.lightning.force.com/lightning/r/Report/00O2P000000KtdtUAC/view?fv0=</value>
+    </labels>
+    <labels>
+        <fullName>LVIEnvURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LVIEnvURL</shortDescription>
+        <value>scentre.lightning.force.com/lightning/r/</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Usage_Text</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Usage Text</shortDescription>
+        <value>Retail sale of &lt;xxxx&gt;, excluding &lt;xxxx&gt;, trading as &lt;Trading Name&gt;</value>
+    </labels>
+    <labels>
+        <fullName>LeaseVariationErrorMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lease Variation Error Message</shortDescription>
+        <value>The values for Opportunity or Space required for this Lease Variation is null. Please check the Contract Record.</value>
+    </labels>
+    <labels>
+        <fullName>LeaseVariationFieldValidationMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lease Variation Field Validation Message</shortDescription>
+        <value>The value you entered doesn&apos;t meet the validation criteria for this input field.</value>
+    </labels>
+    <labels>
+        <fullName>LeasingFinanceRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LeasingFinanceRoleToChatter</shortDescription>
+        <value>Leasing Finance Analyst</value>
+    </labels>
+    <labels>
+        <fullName>MiscellaneousLeaseCentreRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MiscellaneousLeaseCentreRoleToChatter</shortDescription>
+        <value>Leasing Executive;Commercial Retail Manager;Retail Manager</value>
+    </labels>
+    <labels>
+        <fullName>MiscellaneousLeaseLeasingFinanceRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MiscellaneousLeaseLeasingFinanceRoleToChatter</shortDescription>
+        <value>Leasing Executive;Commercial Retail Manager;Retail Manager</value>
+    </labels>
+    <labels>
+        <fullName>MiscellaneousServiceApprovalChatterMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MiscellaneousServiceApprovalChatterMsg</shortDescription>
+        <value>This case {0} with subject {1} of {2} type is approved.
+
+Submitter: {3}</value>
+    </labels>
+    <labels>
+        <fullName>MobileAppTheme</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MobileAppTheme</shortDescription>
+        <value>Theme4t</value>
+    </labels>
+    <labels>
+        <fullName>NZBNAccessToken</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NZBNAccessToken</shortDescription>
+        <value>c78c75dda0553999dde9f5f593859029</value>
+    </labels>
+    <labels>
+        <fullName>NZBNNameSearch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NZBNNameSearch</shortDescription>
+        <value>https://api.business.govt.nz/services/v3/nzbn/entities?search-term=</value>
+    </labels>
+    <labels>
+        <fullName>NZBNURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NZBNURL</shortDescription>
+        <value>https://api.business.govt.nz/services/v3/nzbn/entities/</value>
+    </labels>
+    <labels>
+        <fullName>NewCaseButtonOverride</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Case Button Override</shortDescription>
+        <value>Please use Account or Contract to raise all lease variations.</value>
+    </labels>
+    <labels>
+        <fullName>NewOpportunityButtonOverride</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NewOpportunityButtonOverride</shortDescription>
+        <value>Please use the New Retailer button on Space to create a New Retailer Opportunity</value>
+    </labels>
+    <labels>
+        <fullName>NoOfRCAWarningMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoOfRCAWarningMsg</shortDescription>
+        <value>Warning, there are RCAs on this Property that may impact this Opportunity, the RM of Retail Admin has been notified and will review. You will be notified via Chatter when reviewed, then please Resubmit for Approval.</value>
+    </labels>
+    <labels>
+        <fullName>NoOutgoingsforSpace</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoOutgoingsforSpace</shortDescription>
+        <value>No Applicable outgoings for selected space.</value>
+    </labels>
+    <labels>
+        <fullName>NonBestBetIssueLeaseErrorMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NonBestBetIssueLeaseErrorMessage</shortDescription>
+        <value>Please make sure that Best Bet flag is checked before moving to Issue Lease</value>
+    </labels>
+    <labels>
+        <fullName>Operational</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Operational</shortDescription>
+        <value>Operational</value>
+    </labels>
+    <labels>
+        <fullName>OppClauseLeasingRecTypeId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppClauseLeasingRecTypeId</shortDescription>
+        <value>0122P0000004KjjQAE</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityApprovedChatterMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityApprovedChatterMessage</shortDescription>
+        <value>&quot;{1}&quot; for the opportunity is approved.
+Opportunity Name: &quot;{0}&quot;</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityCreateError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Opportunity Create Error</shortDescription>
+        <value>Error on creating opportunity.</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityFinancials</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityFinancials</shortDescription>
+        <value>Current Rent (semi gross): 
+Budget Rent (semi gross): 
+JV Budget Rent: 
+Forecast Rent (semi gross): 
+Proposed Rent (semi gross): 
+Rent PSM: 
+Budget Capital: 
+JV Budget Capital: 
+Proposed Capital:</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityPropertyNotEqualtoAccountProperty</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Opportunity Property Not Equal to Account Property</shortDescription>
+        <value>Error on creating the lease variation. The Opportunity&apos;s Property is not equal to Account&apos;s Property related to the Contract.</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityRejectedChatterMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityRejectedChatterMessage</shortDescription>
+        <value>&quot;{1}&quot; for the opportunity is rejected.
+Opportunity Name: &quot;{0}&quot;</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityRiskClauseHelpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityRiskClauseHelpText</shortDescription>
+        <value>Includes First Right of Refusal, Exclusivity and Exclusion Zone</value>
+    </labels>
+    <labels>
+        <fullName>OtherInspectionComments</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OtherInspectionComments</shortDescription>
+        <value>The above scope of works is subject to adherence to current FITOUT REQUIREMENTS at the commencement of lease term or submission of drawings for approval.</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToAllCaseRecordType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToAllCaseRecordType</shortDescription>
+        <value>Automated Notification - Below Lease Variation request has been completed successfully:
+
+Case Type: {0}
+Case Sub-type: {1}
+Contract: {2}
+Trading Name: {3}
+Lessee Name: {4}
+Space: {5}
+Property: {6}
+
+Submitter: {7}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToAncillaryTaxInvoice</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToAncillaryTaxInvoice</shortDescription>
+        <value>Automated Notification – Below Lease Variation request has been completed successfully:
+ 
+Case Type: {0}
+Case Sub-type: {1}
+Contract: {2}
+Trading Name: {3}
+Lessee Name: {4}
+Space: {5}
+Property: {6}
+
+Submitter: {7}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToAssignOfLease</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToAssignOfLease</shortDescription>
+        <value>A {0} lease variation request has been completed for Space {1} at {2}:
+ - Request Type: {3}
+ - Trading Name: {4}
+ - Lessee Name: {5}
+ - Assignment Date: {6}
+ - Settlement Date: {7}
+ - Lessee Address: {8}
+ - Phone No: {9}
+ - Fax: {10}
+ - Security Deposit: {11}
+ - Rent in Advance: {12}
+ - Guarantee Type: {13}
+ - Guarantee Name: {14}
+ - Guarantee Address: {15}
+ - Release Outgoing Guarantor: {16}
+ - Fitout Contribution Amount: {17}
+
+ Submitter:{18}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToBadDebtWriteOff</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToBadDebtWriteOff</shortDescription>
+        <value>Hi, A {0} -{1} Lease Variation request has been completed:
+
+Case Number: {2}
+Subject: {3}
+Type: {4}
+Sub-Type: {5}
+Account Name: {6}
+Property: {7}
+Space: {8}
+Contract: {9}
+Bill Code: {10}
+Invoice Date: {11}
+Amount: {12}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToBankGuarantee</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToBankGuarantee</shortDescription>
+        <value>Hi, {0} lease variation request has been completed for Space {1} at {2}
+Security Deposit Type : {3}
+Security Deposit Amount : {4}
+Outstanding Debtor Balance : {5}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToCaseConductMarketReview</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToCaseConductMarketReview</shortDescription>
+        <value>This Case Type: {0}, Review Date: {1}, Basic Minimum Rent: {2} and Description: {3} is approved.
+
+Submitter:{4}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToCaseCreditNote</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToCaseCreditNote</shortDescription>
+        <value>This Case Type: {0}, Invoice Number: {1}, Bill Code: {2}, Amount (without GST): {3}, GST Amount: {4}, and  Reason for Credit Note: {5} is approved.
+
+Submitter:{6}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToCaseLeaseArea</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToCaseLeaseArea</shortDescription>
+        <value>This case {0} with Leaseable Area {1}, Effective Date{2} and Reason for Change {3} is approved.
+
+Submitter:{4}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToCasePromotional</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToCasePromotional</shortDescription>
+        <value>This case {0} with subject {1} of {2} type is approved.
+
+Submitter:{3}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToCaseUpdateRentableArea</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToCaseUpdateRentableArea</shortDescription>
+        <value>This case {0} with Leaseable Area {1}, Effective Date{2} and Reason for Change {3} is approved
+
+Submitter:{4}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToHoarding</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToHoarding</shortDescription>
+        <value>Hi, A {0} - {1} Lease Variation request has been completed:
+
+Case Number: {2}
+Subject: {3}
+Type: {4}
+Sub-Type: {5}
+Account Name: {6}
+Property: {7}
+Space: {8}
+Contract: {9}
+Bill Code: {10}
+Amount: {11}
+GST Applicable: {12}
+Amount Payable (Total): {13} 
+Invoice Description: {14}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToLeasingFinanceBilling</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToLeasingFinanceBilling</shortDescription>
+        <value>A {0} request has been completed for Space {1} at {2}: 
+
+Invoice Amount (Current Year): {3} 
+Current Year: {4} 
+Invoice Amount (PriorYear): {5} 
+Prior Year: {6} 
+GST Applicable: {7} 
+Invoice Description: {8} 
+Service Tax Date: {9} 
+GST Amount: {10}
+Amount Payable Total: {11}
+
+Submitter:{12}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToLeasingFinanceCapped</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToLeasingFinanceCapped</shortDescription>
+        <value>A {0} request has been completed for Space {1} at {2}: 
+
+Amount: {3}
+GST Applicable: {4} 
+Invoice Description: {5} 
+Service Tax Date: {6} 
+GST Amount: {7} 
+Amount Payable Total: {8} 
+
+Submitter:{9}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToMailboxCharge</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToMailboxCharge</shortDescription>
+        <value>Hi, A {0} - {1} Lease Variation request has been completed:
+
+Case Number: {2}
+Subject: {3}
+Type: {4}
+Sub-Type: {5}
+Account Name: {6}
+Property: {7}
+Space: {8}
+Contract: {9}
+Effective Date: {10}
+Description: {11}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToMiscellaneousLease</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToMiscellaneousLease</shortDescription>
+        <value>Hi {0}
+
+{1} lease variation request has been completed for Space {2} at {3} 
+
+Case Subtype: {4} 
+Description: {5}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToSurrenderALease</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToSurrenderALease</shortDescription>
+        <value>A {0} request has been completed for Space {1} at {2}:
+
+Lease Commencement Date: {3}
+Lease Expiry Date: {4}
+LA Type: {5}
+Surrender Date: {6}
+Surrender Payout Amount TBA?: {7}
+Surrender Payout Amount: {8}
+Fitout Contribution Amount: {9}
+
+Submitter:{10}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToTerminateALease</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToTerminateALease</shortDescription>
+        <value>A {0} request has been completed for Space {1} at {2}:
+
+Case Sub-Type: {3}
+Terminate Lease Date: {4}
+Reason for Termination: {5}
+Unexpired Fitout Amount: {6}
+
+Submitter: {7}</value>
+    </labels>
+    <labels>
+        <fullName>PostChatterToTradingName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostChatterToTradingName</shortDescription>
+        <value>This case {0} with subject {1} of {2} type is approved.
+
+New Trading Name:{3}
+
+Submitter:{4}</value>
+    </labels>
+    <labels>
+        <fullName>PostToChatterVoluntaryWorks</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PostToChatterVoluntaryWorks</shortDescription>
+        <value>This case {0} with subject {1} of {2} type is approved.
+
+Submitter:{3}</value>
+    </labels>
+    <labels>
+        <fullName>PrimaryContactValidationMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PrimaryContactValidationMessage</shortDescription>
+        <value>You must populate Primary Contact before generating the document.</value>
+    </labels>
+    <labels>
+        <fullName>PropertyRiskClauseHelpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PropertyRiskClauseHelpText</shortDescription>
+        <value>Includes First Right of Refusal, Exclusivity and Exclusion Zone</value>
+    </labels>
+    <labels>
+        <fullName>RCALogo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RCA Logo</shortDescription>
+        <value>0155D000000FWpx</value>
+    </labels>
+    <labels>
+        <fullName>RCAWarningMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RCA Warning Message</shortDescription>
+        <value>The Regional Mgr Retail Admin has reviewed the Opportunity and impacting RCAs, please continue to Submit the opportunity for approval.</value>
+    </labels>
+    <labels>
+        <fullName>RMRiskApprovalChatterMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RMRiskApprovalChatterMsg</shortDescription>
+        <value>The Opportunity &quot;{0}&quot; has been approved.</value>
+    </labels>
+    <labels>
+        <fullName>RaiseAnInvoiceRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RaiseAnInvoiceRoleToChatter</shortDescription>
+        <value>General Manager Leasing;Regional Leasing Manager</value>
+    </labels>
+    <labels>
+        <fullName>ReGenerateDSValidationMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReGenerateDSValidationMessage</shortDescription>
+        <value>Lessee name is NULL / Stage is before Issue Lease / Primary Contact is NULL</value>
+    </labels>
+    <labels>
+        <fullName>ReconfigReportId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReconfigReportId</shortDescription>
+        <value>00O2P000000KtbDUAS</value>
+    </labels>
+    <labels>
+        <fullName>RentReviewDescription</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RentReviewDescription</shortDescription>
+        <value>The Minimum Rent shall be adjusted annually on the anniversary of the commencement date of the lease by the aggregate of {0}% and the annual increase in the CPI Weighted Average Eight Capital Cities. The GST amount payable in the rent will be adjusted</value>
+    </labels>
+    <labels>
+        <fullName>RenumberingSpaceRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RenumberingSpaceRoleToChatter</shortDescription>
+        <value>General Manager Leasing;Regional Leasing Manager</value>
+    </labels>
+    <labels>
+        <fullName>RequestForRefundApprovalChatterMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RequestForRefundApprovalChatterMsg</shortDescription>
+        <value>This case {0} with subject {1} of {2} type is Completed.
+
+Submitter:{3}</value>
+    </labels>
+    <labels>
+        <fullName>RequestRentCommencementApprovalChatterMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RequestRentCommencementApprovalChatterMsg</shortDescription>
+        <value>This case {0} with subject {1} of {2} type is completed.
+
+Submitter:{3}</value>
+    </labels>
+    <labels>
+        <fullName>RevenueAssuranceNotification</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Task Name of Adhoc Task for Revenue Assurance</shortDescription>
+        <value>Revenue Assurance Notification - Deal Not Proceeding</value>
+    </labels>
+    <labels>
+        <fullName>ReverseAnInvoiceRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReverseAnInvoiceRoleToChatter</shortDescription>
+        <value>General Manager Leasing;Regional Leasing Manager</value>
+    </labels>
+    <labels>
+        <fullName>ReviewRCAChatterMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReviewRCAChatterMessage</shortDescription>
+        <value>An Opportunity is being submitted for approval which has impacting RCAs, please review and tick the &quot;RCAs Reviewed&quot; checkbox in the Opportunity &quot;Approval Details&quot; section. 
+Opportunity Name: &apos;{0}&apos;</value>
+    </labels>
+    <labels>
+        <fullName>RiskApprovalChatterMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RiskApprovalChatterMsg</shortDescription>
+        <value>&quot;Risk Approval Request&quot; for the opportunity is {1}
+{0}</value>
+    </labels>
+    <labels>
+        <fullName>RiskApprovedOppChatterGroup</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chatter Group for Risk Approved Opportunities</shortDescription>
+        <value>0F92P000000047uSAA</value>
+    </labels>
+    <labels>
+        <fullName>SketchLeasePlanUserGroup</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SketchLeasePlanUserGroup</shortDescription>
+        <value>0F92P00000004JfSAI</value>
+    </labels>
+    <labels>
+        <fullName>SpaceManagementAllowedProfiles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpaceManagementAllowedProfiles</shortDescription>
+        <value>System Administrator;SCG-Retail Finance;SCG-SysAdm;SCG-Sys BusinessSupport</value>
+    </labels>
+    <labels>
+        <fullName>SpaceManagementUserAccessErrorMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpaceManagementUserAccessErrorMessage</shortDescription>
+        <value>You don&apos;t have permission to access this page.</value>
+    </labels>
+    <labels>
+        <fullName>SpaceReconfig_BudgetSplitExcludedSpaceType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpaceReconfig_BudgetSplitExcludedSpaceType</shortDescription>
+        <value>20;21;22;5;6;7;8;9;4;</value>
+    </labels>
+    <labels>
+        <fullName>SpaceReconfig_BudgetSplitFields</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpaceReconfig_BudgetSplitFields</shortDescription>
+        <value>AnnualisedRentDecSemiGross__c;AnnualisedRentDecNet__c;AnnualisedRentJanSemiGross__c;AnnualisedRentJanNet__c;AnnualisedPVRentSemiGross__c;AnnualisedPVRentNet__c;AnnualisedPVRentGross__c;CapitalSiteEstablishment__c;AnnualisedRentJanGross__c;AnnualisedRentDecGross__c</value>
+    </labels>
+    <labels>
+        <fullName>SpaceReconfig_BudgetToSplit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpaceReconfig_BudgetToSplit</shortDescription>
+        <value>LatestBudget__c;LatestJVBudget__c;LatestForecast__c</value>
+    </labels>
+    <labels>
+        <fullName>SpaceReconfig_ErrorMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpaceReconfig_ErrorMessage</shortDescription>
+        <value>This Space has been reconfigured. Please forecast at the child Space level.</value>
+    </labels>
+    <labels>
+        <fullName>SpaceReconfig_LostSpaceExemption</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpaceReconfig-LostSpaceExemption</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>SpaceReconfig_OutgoingCategory</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpaceReconfig-OutgoingCategory</shortDescription>
+        <value>Air Con;Council Rates;Land Tax;Operating Expenses;Water Rates</value>
+    </labels>
+    <labels>
+        <fullName>SpaceRiskClauseHelpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SpaceRiskClauseHelpText</shortDescription>
+        <value>Includes First Right of Refusal, Exclusivity and Exclusion Zone</value>
+    </labels>
+    <labels>
+        <fullName>SubtypeTransferChatterRole</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SubtypeTransferChatterRole</shortDescription>
+        <value>Centre Manager</value>
+    </labels>
+    <labels>
+        <fullName>TASAutomaticRecordTypeId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TASAutomaticRecordTypeId</shortDescription>
+        <value>0122P0000004KjtQAE</value>
+    </labels>
+    <labels>
+        <fullName>TaskCreationDEXUS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TaskCreationDEXUS</shortDescription>
+        <value>DEXUS</value>
+    </labels>
+    <labels>
+        <fullName>TaskOwnerUpdateProfiles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TaskOwnerUpdateProfiles</shortDescription>
+        <value>System Administrator;SCG-SysAdm;SCG-Retail Admin</value>
+    </labels>
+    <labels>
+        <fullName>TenancyInspection</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Tenancy Inspection</shortDescription>
+        <value>Tenancy Inspection</value>
+    </labels>
+    <labels>
+        <fullName>TerminateALeaseChatterRoleLeaseExpired</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TerminateALeaseChatterRoleLeaseExpired</shortDescription>
+        <value>Leasing Finance Analyst;Regional Leasing Manager;General Manager Leasing</value>
+    </labels>
+    <labels>
+        <fullName>TerminateALeaseChatterRoleLegalLockout</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TerminateALeaseChatterRoleLegalLockout</shortDescription>
+        <value>Leasing Finance Analyst;Director of Leasing;General Manager Leasing</value>
+    </labels>
+    <labels>
+        <fullName>TerminateALeaseChatterRolePreexpiry</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TerminateALeaseChatterRolePreexpiry</shortDescription>
+        <value>Leasing Finance Analyst;Director of Leasing;General Manager Leasing;Regional Leasing Manager</value>
+    </labels>
+    <labels>
+        <fullName>TerminateLicenseAgreementErrorMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TerminateLicenseAgreementErrorMsg</shortDescription>
+        <value>Please select only Licence Agreements for Termination if subtype is chosen as &apos;Terminate a Licence Agreement&apos;</value>
+    </labels>
+    <labels>
+        <fullName>TotalGST</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total GST</shortDescription>
+        <value>0.10</value>
+    </labels>
+    <labels>
+        <fullName>TradingNameChangeRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TradingNameChangeRoleToChatter</shortDescription>
+        <value>Retail Manager</value>
+    </labels>
+    <labels>
+        <fullName>VFURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VFURL</shortDescription>
+        <value>scentre--c.ap9.visual.force.com</value>
+    </labels>
+    <labels>
+        <fullName>VICAmortizationPercent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VICAmortizationPercent</shortDescription>
+        <value>0.05</value>
+    </labels>
+    <labels>
+        <fullName>VoluntaryWorksRolesToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VoluntaryWorksRolesToChatter</shortDescription>
+        <value>Team Coordinator Retail Design;Retail Admin</value>
+    </labels>
+    <labels>
+        <fullName>assignmeantLeaseToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>assignmeantLeaseToChatter</shortDescription>
+        <value>Leasing Executive;Commercial Retail Manager;Centre Manager;General Manager Leasing</value>
+    </labels>
+    <labels>
+        <fullName>badDebtWriteOffRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>badDebtWriteOffRoleToChatter</shortDescription>
+        <value>Commercial Retail Manager</value>
+    </labels>
+    <labels>
+        <fullName>condMarketReviewRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>condMarketReviewRoleToChatter</shortDescription>
+        <value>Commercial Retail Manager;Leasing Executive;Director LARS &amp; NZ Development</value>
+    </labels>
+    <labels>
+        <fullName>creditNoteRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>creditNoteRoleToChatter</shortDescription>
+        <value>Leasing Executive;Centre Manager;Retail Manager;Commercial Retail Manager</value>
+    </labels>
+    <labels>
+        <fullName>hoardingRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>hoardingRoleToChatter</shortDescription>
+        <value>Leasing Executive</value>
+    </labels>
+    <labels>
+        <fullName>leaseAreVarRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>leaseAreVarRoleToChatter</shortDescription>
+        <value>Centre Manager;Leasing Finance Analyst;Leasing Executive;Regional Manager - LARS</value>
+    </labels>
+    <labels>
+        <fullName>mailboxChargeRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>mailboxChargeRoleToChatter</shortDescription>
+        <value>Leasing Executive</value>
+    </labels>
+    <labels>
+        <fullName>miscellaneousServiceRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>miscellaneousServiceRoleToChatter</shortDescription>
+        <value>General Manager Leasing</value>
+    </labels>
+    <labels>
+        <fullName>noOfGuarantorErrMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>noOfGuarantorErrMsg</shortDescription>
+        <value>Please make sure that the number of Guarantor Contact Roles is equal or is great than the Number of Guarantors field.</value>
+    </labels>
+    <labels>
+        <fullName>reqForRefundRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>reqForRefundRoleToChatter</shortDescription>
+        <value>Development Finance Manager</value>
+    </labels>
+    <labels>
+        <fullName>subtypereturnexchangeChatterRole</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SubtypereturnexchangeChatterRole</shortDescription>
+        <value>Centre Manager;Commercial Retail Manager</value>
+    </labels>
+    <labels>
+        <fullName>surrenderLeaseRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>surrenderLeaseRoleToChatter</shortDescription>
+        <value>Leasing Executive;Director LARS &amp; NZ Development</value>
+    </labels>
+    <labels>
+        <fullName>updatePromoAllowDevtRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>updatePromoAllowDevtRoleToChatter</shortDescription>
+        <value>Development Executive</value>
+    </labels>
+    <labels>
+        <fullName>updatePromotionalAllowance</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>updatePromoAllowRoleToChatter</shortDescription>
+        <value>Leasing Finance Analyst;Centre Manager;Development Executive;Commercial Retail Manager</value>
+    </labels>
+    <labels>
+        <fullName>varToRentCommenceRoleToChatter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>varToRentCommenceRoleToChatter</shortDescription>
+        <value>Centre Manager;Commercial Retail Manager;Leasing Finance Analyst;Tenancy Coordinator;Director LARS &amp; NZ Development</value>
+    </labels>
+    <labels>
+        <fullName>varToRentCommencementOffice</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>varToRentCommencementOffice</shortDescription>
+        <value>General Manager Leasing;Centre Manager;Commercial Property Manager</value>
+    </labels>
+</CustomLabels>

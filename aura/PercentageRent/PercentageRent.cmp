@@ -1,0 +1,142 @@
+<aura:component controller="OpportunityLineItemController" implements="lightning:availableForFlowScreens,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:attribute name="breakType" type="String"/>
+	<aura:attribute name="hasEditAccess" type="boolean" default="true"/>
+	<aura:attribute name="avoidRecurr" type="boolean" default="false"/>
+	<aura:attribute name="isReadOnly" type="boolean" default="true"/>
+	<aura:attribute name="isArtificial" type="boolean" default="false"/>
+	<aura:attribute name="initRun" type="boolean" default="false"/>
+    <aura:attribute name="breakTypeattribb" type="String"/>
+    <aura:attribute name="reasonForArtificialBreak" type="String"/>
+    <aura:attribute name="rent" type="Double"/>
+    <aura:attribute name="totalOutgoings" type="Double"/>
+    <aura:attribute name="totalPromoLevy" type="Double"/>
+    <aura:attribute name="pecentageOfRent" type="Double"/>
+    <aura:attribute name="occupancycost" type="Decimal"/>
+    <aura:attribute name="pecentageRentInput" type="Double"/>
+    <aura:attribute name="breakAmount" type="Double" default="0"/>
+    <aura:attribute name="forecastedturnoveryear" type="Double" default="0"/>
+    <aura:attribute name="forecastedpercentagerentyear" type="Double" default="0"/>
+    <aura:attribute name="doCalculation" type="Boolean"/>
+    <aura:method name="calculateDetails" action="{!c.calculatePercentageRent}" access="PUBLIC"/>
+    <aura:method name="saveDetails" action="{!c.savePercentageRent}" access="PUBLIC"/>
+    <aura:method name="populateOppFieldsPercRent" action="{!c.populateOppFieldsRent}" access="PUBLIC"/>
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="oRecord" type="Object"/>
+    <aura:attribute name="record2" type="Object"/>
+    <aura:attribute name="oRecord2" type="Object"/>
+    <aura:attribute name="displaybuttons" type="boolean" default="true"/>
+    <force:recordData aura:id="percentageRentRec"
+                      recordId="{!v.recordId}"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.oRecord}"
+                      fields="Id, AnnualMinimumRent__c,TotalPromotionLevy__c,TotalOutgoings__c,Name,ForecastedPercentageRentYear1__c, PercentageRentPercent__c, ForecastedTurnoverYear1__c, BreakType__c, BreakAmount__c, ReasonForArtificialBreak__c,OccupancyCost__c"
+                      mode="EDIT"/>
+    <force:recordData aura:id="percentageRentRec2"
+                      recordId="{!v.recordId}"
+                      targetRecord="{!v.record2}"
+                      targetFields="{!v.oRecord2}"
+                      fields="Id, AnnualMinimumRent__c,TotalPromotionLevy__c,TotalOutgoings__c,Name,ForecastedPercentageRentYear1__c, PercentageRentPercent__c, ForecastedTurnoverYear1__c, BreakType__c, BreakAmount__c, ReasonForArtificialBreak__c,OccupancyCost__c"/>
+    
+    <c:ToastMessage aura:id = "toast-percent"/>
+    
+    <div class="slds-section slds-is-open">
+        <h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Percentage Rent Details</span>
+        </h3>
+        <div aria-hidden="false" class="slds-section__content">
+            <lightning:layout multipleRows="true">
+			
+				<aura:if isTrue="{!!v.isReadOnly}">
+					<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+						<lightning:input name="forecastedturnoveryear" label="Forecasted Turnover (Year 1)" type="number" value="{!v.oRecord.ForecastedTurnoverYear1__c}" formatter="currency" step="0.01" onchange="{!c.calculatePercentageRent}"  readonly="{!v.isReadOnly}"/>
+					</lightning:layoutItem>
+					<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+						<lightning:input name="pecentageOfRent" label="Percentage Rent %" type="number" value="{!v.oRecord.PercentageRentPercent__c}" formatter="Decimal" step="0.01" onchange="{!c.calculatePercentageRent}"  readonly="{!v.isReadOnly}"/>
+					</lightning:layoutItem>
+					<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+						<lightning:select name="breakType" label="Break Type" value="{!v.breakTypeattribb}" onchange="{!c.calculatePercentageRent}"  disabled="{!v.isReadOnly}">
+							<option value="Natural" selected="{!!v.isArtificial}">Natural</option>
+							<option value="Artificial" selected="{!v.isArtificial}">Artificial</option>
+						</lightning:select>
+					</lightning:layoutItem>
+					<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+						<lightning:input name="forecastedturnoveryear" label="Forecasted Percentage Rent (Year 1)" type="number" readonly="true" value="{!v.forecastedpercentagerentyear}" formatter="currency" step="0.01" />
+						<!--<lightning:input name="forecastedturnoveryear" label="Forecasted Percentage Rent (Year 1) F" type="number" readonly="true" value="{!v.oRecord.ForecastedPercentageRentYear1__c}" formatter="currency" step="0.01" />-->
+					</lightning:layoutItem>
+					<aura:If isTrue="{!v.breakTypeattribb == 'Artificial'}">
+						<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+							<lightning:input name="artiBreakReason" value="{! v.oRecord.ReasonForArtificialBreak__c }" label="Reason For Artificial Break"  readonly="{!v.isReadOnly}"/>
+						</lightning:layoutItem>
+					</aura:If>
+					<aura:renderIf isTrue="{!v.breakTypeattribb == 'Artificial'}">
+						<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+							<lightning:input name="breakAmount" type="number" label="Break Amount"  value="{!v.breakAmount}" formatter="currency" step="0.01"  readonly="{!v.isReadOnly}" onchange="{!c.calculatePercentageRent}"/>
+						</lightning:layoutItem>
+						<aura:set attribute="else">
+							<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+								<lightning:input name="breakAmount" type="number" label="Break Amount" readonly="true" value="{!v.breakAmount}" formatter="currency" step="0.01"/>
+							</lightning:layoutItem>
+						</aura:set>
+					</aura:renderIf>
+					<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                        <label class="slds-form-element__label" style="margin-right: 12px; margin-bottom: 0px;" for="occupancycost">Occupancy Cost %</label>
+                		<div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                        <lightning:helptext content="Gross occupancy cost incl. outgoings, promo and forecasted % rent."/>
+                        </div>
+                        <lightning:input aura:id="occupancycost" style="margin-top: -20px" name="occupancycost" type="Decimal" readonly="true" value="{!v.occupancycost+'%'}" step="0.01"/>  
+					</lightning:layoutItem>
+
+					<aura:set attribute="else">
+					
+						<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+							<lightning:input name="forecastedturnoveryear" label="Forecasted Turnover (Year 1)" type="number" value="{!v.oRecord2.ForecastedTurnoverYear1__c}" formatter="currency" step="0.01" onchange="{!c.calculatePercentageRent}"  readonly="{!v.isReadOnly}"/>
+						</lightning:layoutItem>
+						<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+							<lightning:input name="pecentageOfRent" label="Percentage Rent %" type="number" value="{!v.oRecord2.PercentageRentPercent__c}" formatter="Decimal" step="0.01" onchange="{!c.calculatePercentageRent}"  readonly="{!v.isReadOnly}"/>
+						</lightning:layoutItem>
+						<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+							<lightning:select name="breakType" label="Break Type" value="{!v.breakTypeattribb}" onchange="{!c.calculatePercentageRent}"  disabled="{!v.isReadOnly}">
+								<option value="Natural" selected="{!!v.isArtificial}">Natural</option>
+								<option value="Artificial" selected="{!v.isArtificial}">Artificial</option>
+							</lightning:select>
+						</lightning:layoutItem>
+						<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+							<lightning:input name="forecastedturnoveryear" label="Forecasted Percentage Rent (Year 1)" type="number" readonly="true" value="{!v.forecastedpercentagerentyear}" formatter="currency" step="0.01" />
+							<!--<lightning:input name="forecastedturnoveryear" label="Forecasted Percentage Rent (Year 1) F" type="number" readonly="true" value="{!v.oRecord2.ForecastedPercentageRentYear1__c}" formatter="currency" step="0.01" />-->
+						</lightning:layoutItem>
+						<aura:If isTrue="{!v.breakTypeattribb == 'Artificial'}">
+							<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+								<lightning:input name="artiBreakReason" value="{! v.oRecord2.ReasonForArtificialBreak__c }" label="Reason For Artificial Break"  readonly="{!v.isReadOnly}"/>
+							</lightning:layoutItem>
+						</aura:If>
+						<aura:renderIf isTrue="{!v.breakTypeattribb == 'Artificial'}">
+							<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+								<lightning:input name="breakAmount" type="number" label="Break Amount"  value="{!v.breakAmount}" formatter="currency" step="0.01"  readonly="{!v.isReadOnly}" onchange="{!c.calculatePercentageRent}"/>
+							</lightning:layoutItem>
+							<aura:set attribute="else">
+								<lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+									<lightning:input name="breakAmount" type="number" label="Break Amount" readonly="true" value="{!v.breakAmount}" formatter="currency" step="0.01"/>
+								</lightning:layoutItem>
+							</aura:set>
+						</aura:renderIf>
+                        <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                        <label class="slds-form-element__label" style="margin-right: 12px; margin-bottom: 0px;" for="occupancycost">Occupancy Cost %</label>
+                		<div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                        <lightning:helptext content="Gross occupancy cost incl. outgoings, promo and forecasted % rent."/>
+                        </div>
+                        <lightning:input aura:id="occupancycost" style="margin-top: -20px" name="occupancycost" type="Decimal" readonly="true" value="{!v.occupancycost+'%'}" step="0.01"/>  
+					</lightning:layoutItem>
+					</aura:set>
+					
+				</aura:if>
+            </lightning:layout>
+            <!-- <div align="right">
+                <aura:if isTrue="{!v.displaybuttons}">
+                    <lightning:button label="Calculate" onclick="{!c.calculatePercentageRent}"/>
+                    <lightning:button variant="brand" label="Save" onclick="{!c.savePercentageRent}"/>
+                </aura:if>
+            </div> -->
+        </div>
+    </div>
+</aura:component>

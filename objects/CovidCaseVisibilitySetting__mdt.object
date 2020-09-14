@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Field_API_Name__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Please include API name with &quot;__c&quot;.</inlineHelpText>
+        <label>Field API Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Ready_Only__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Is Ready Only</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Is Required</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SectionAndUserAccessOnCovidCase__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Section And User Access On Covid Case</label>
+        <referenceTo>SectionAndUserAccessOnCovidCase__mdt</referenceTo>
+        <relationshipName>CovidCaseVisibilitySetting</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sort_Number__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Sort Number</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Covid Case Visibility Setting</label>
+    <listViews>
+        <fullName>All_Info</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>Field_API_Name__c</columns>
+        <columns>SectionAndUserAccessOnCovidCase__c</columns>
+        <columns>Sort_Number__c</columns>
+        <columns>Is_Ready_Only__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Info</label>
+    </listViews>
+    <listViews>
+        <fullName>Calc_Input</fullName>
+        <columns>MasterLabel</columns>
+        <columns>Sort_Number__c</columns>
+        <columns>DeveloperName</columns>
+        <columns>Field_API_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SectionAndUserAccessOnCovidCase__c</field>
+            <operation>contains</operation>
+            <value>calculator</value>
+        </filters>
+        <label>Calc Input</label>
+    </listViews>
+    <listViews>
+        <fullName>Sye_Info</fullName>
+        <columns>MasterLabel</columns>
+        <columns>Sort_Number__c</columns>
+        <columns>DeveloperName</columns>
+        <columns>Field_API_Name__c</columns>
+        <columns>SectionAndUserAccessOnCovidCase__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SectionAndUserAccessOnCovidCase__c</field>
+            <operation>contains</operation>
+            <value>System</value>
+        </filters>
+        <label>Sye Info</label>
+    </listViews>
+    <pluralLabel>CovidCaseVisibilitySetting</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

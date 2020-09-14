@@ -1,0 +1,146 @@
+<aura:component controller="ManageAcceptanceController" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute type="Boolean" name="isOppLocked"/>
+    <aura:attribute type="String" name="selectedClauseType" default="Acceptance"/>
+    <aura:attribute type="String" name="selectedDocLoc" default="Upfront Price Components"/>
+    <aura:attribute type="String" name="selectedApplicableState" default="NSW"/>
+    <aura:attribute type="String" name="searchKey"/>
+    <aura:attribute type="String[]" name="clauseTypePicklistValues"/>
+    <aura:attribute type="String[]" name="docLocPicklistValues"/>
+    <aura:attribute type="String[]" name="applicableStatePicklistValues"/>
+    <aura:attribute type="Object[]" name="clauseList"/>
+    <aura:attribute type="Object[]" name="displayClauseList"/>
+    <aura:attribute type="Object[]" name="selectedClauseList"/>
+    <aura:attribute type="Object[]" name="opportunityClauseList"/>
+    <aura:attribute type="Object[]" name="displayOppClauseList"/>
+    
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    
+    <!--SPINNER-->
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="large" aura:id="spinner"/>
+    </aura:if>
+    <!--SPINNER-->
+
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    
+    <aura:if isTrue="{!v.isOppLocked}">
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+            <h2>You cannot modify clauses when opportunity is locked.</h2>
+        </div>
+    </aura:if>
+    <div class="slds-col modal-footer" style="border-bottom-right-radius: .25rem; padding: .75rem 1rem;text-align: right">        
+        <div id = "header" class = "slds-border_bottom">
+            <div class="slds-text-heading_large slds-text-align_center">Manage Acceptance/Counter Offer Letter</div>
+        </div>
+    </div>
+    <div class="slds-col modal-body scrollable slds-p-around--medium" style="height: 636px;max-height: 700px;overflow-y: auto !important;">
+        <div>
+            <lightning:layout>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <!--CLAUSE TYPE PICKLIST-->
+                    <lightning:select aura:id="clauseTypePicklist" value="{!v.selectedClauseType}" name="ClauseTypePicklist" label="Clause Type" onchange="{!c.search}">
+                        <aura:iteration items="{!v.clauseTypePicklistValues}" var="type">
+                            <option text="{!type}" value="{!type}"></option>
+                        </aura:iteration>
+                    </lightning:select>
+                    <!--CLAUSE TYPE PICKLIST-->            
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <!--DOCUMENT LOCATION PICKLIST-->
+                    <lightning:select aura:id="docLocPicklist" value="{!v.selectedDocLoc}" name="docLocPicklist" label="Document Location" onchange="{!c.search}">
+                        <aura:iteration items="{!v.docLocPicklistValues}" var="docLoc">
+                            <option text="{!docLoc}" value="{!docLoc}"></option>
+                        </aura:iteration>
+                    </lightning:select>
+                    <!--DOCUMENT LOCATION PICKLIST-->     
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                    <!--SEARCH FIELD-->  
+                    <lightning:input type="text" name="searchKey" label="Search Keyword" value="{!v.searchKey}" onchange="{!c.search}"/>
+                    <!--SEARCH FIELD-->  
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-small" size="12" largeDeviceSize="6" smallDeviceSize="12" mediumDeviceSize="12">
+                	<!--Applicable State PICKLIST-->
+                    <lightning:select aura:id="appStatePicklist" value="{!v.selectedApplicableState}" name="appStatePicklist" label="State" onchange="{!c.search}">
+                        <aura:iteration items="{!v.applicableStatePicklistValues}" var="appState">
+                            <option text="{!appState}" value="{!appState}"></option>
+                        </aura:iteration>
+                    </lightning:select>
+                    <!--Applicable State PICKLIST-->
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+            <div class="slds-box slds-fluid slds-scrollable slds-m-left_small slds-m-top_medium">
+                <h2 style="font-size:18px;">Clauses</h2><br></br>
+                <div class="slds-m-left_small">
+                    <!--SELECTED CLAUSES-->
+                    <aura:iteration items="{!v.selectedClauseList}" var="clause" indexVar="index">
+                        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                            <tr>
+                                <th>
+                                    <div class="slds-text-body_regular" style="word-break:break-word; white-space: normal;"><strong>{!clause.Name}</strong></div>
+                                    <div style="white-space: normal; text-align: justify;">{!clause.ClauseDetails__c}</div> <br></br>
+                                </th>
+                                <aura:if isTrue="{!!v.isOppLocked}">
+                                    <div class="slds-float--right"> 
+                                        <th> 
+                                            <lightning:input name="{!index}" type="toggle" checked="true" onchange="{!c.uncheckClause}" messageToggleActive="" messageToggleInactive=""/>
+                                        </th>
+                                    </div>
+                                </aura:if>
+                            </tr>
+                        </table>
+                    </aura:iteration>
+                    <!--SELECTED CLAUSES-->
+                    <!--UNSELECTED CLAUSES-->
+                    <aura:iteration items="{!v.displayClauseList}" var="clause" indexVar="index">
+                        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                            <tr>
+                                <th>
+                                    <div class="slds-text-body_regular" style="word-break:break-word; white-space: normal;"><strong>{!clause.Name}</strong></div>
+                                    <div style="white-space: normal; text-align: justify;">{!clause.ClauseDetails__c}</div> <br></br>
+                                </th>
+                                <aura:if isTrue="{!!v.isOppLocked}">
+                                    <div class="slds-float--right"> 
+                                        <th> 
+                                            <lightning:input name="{!index}" type="toggle" checked="false" onchange="{!c.checkClause}" messageToggleActive="" messageToggleInactive=""/>
+                                        </th>
+                                    </div>
+                                </aura:if>
+                            </tr>
+                        </table>
+                    </aura:iteration>
+                    <!--UNSELECTED CLAUSES-->
+                    <!--OPPORTUNITY CLAUSES-->
+                    <aura:iteration items="{!v.displayOppClauseList}" var="clause" indexVar="index">
+                        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                            <tr>
+                                <th>
+                                    <div class="slds-text-body_regular" style="word-break:break-word; white-space: normal;"><strong>{!clause.Name}</strong></div>
+                                    <div class="slds-text-body_regular">{!clause.RecordType.Name}</div>
+                                    <div style="white-space: normal; text-align: justify;">{!clause.ClauseDetails__c}</div> <br></br>
+                                </th>
+                                <aura:if isTrue="{!!v.isOppLocked}">
+                                    <div class="slds-float--right"> 
+                                        <th> 
+                                            <lightning:button aura:id="edit" name="{!clause.Id}" value="{!index}" label="Edit" onclick="{!c.onEdit}"/>
+                                            <lightning:button aura:id="deleteClause" name="{!clause.Id}" value="{!index}" label="Delete" onclick="{!c.onDelete}"/>
+                                        </th>
+                                    </div>
+                                </aura:if>
+                            </tr>
+                        </table>
+                    </aura:iteration>
+                    <!--OPPORTUNITY CLAUSES-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slds-col modal-footer" style="border-bottom-right-radius: .25rem;padding: .75rem 1rem;text-align: right;">        
+        <lightning:button aura:id="Done" label="Done" variant="neutral" onclick="{!c.onClose}"/>
+        <lightning:button aura:id="Save" label="Save" variant="brand" onclick="{!c.onSave}" disabled="{!(!v.selectedClauseList.length > 0)}"/>
+    </div>
+</aura:component>

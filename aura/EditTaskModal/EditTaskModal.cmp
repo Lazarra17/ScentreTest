@@ -1,0 +1,16 @@
+<aura:component >
+    <aura:attribute name="taskId" type="String"/>
+    
+    <aura:registerEvent name="throwError" type="c:ToastEvent"/>
+    
+    <c:Toast />
+    
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    
+    <force:recordEdit aura:id="edit" recordId="{! v.taskId}"/>
+    
+    <div style="float:right">
+        <lightning:button label="Save" onclick="{!c.save}" variant="brand"/>
+    </div>
+    
+</aura:component>

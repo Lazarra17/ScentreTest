@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>DMShareWithRetailManager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>DM Share With Retail Manager</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManager</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <role>DMUser</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>DMShareWithRetailManagerOperations</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>DM Share With Retail Manager Operations</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailSeniorManagerOperations</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <role>DMUser</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>DMShareWithRetailSolicitor</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>DM Share With Retail Solicitor</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailSolicitor</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <role>DMUser</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PRO_RetailGeneralManagerAndSubordinates</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule to share Property to Retail General Manager (Read and write)</description>
+        <label>PRO - Retail General Manager and Subordinates</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManager</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PRO_RetailGeneralManagerOperationsAndSubordinates</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule to share Property to Retail General Manager Operatios (Read and write)</description>
+        <label>PRO - Retail General Manager Operations and Subordinates</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManagerOperations</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PRO_RetailSolicitor</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Sharing rule to share Property to Retail Solicitor (Read Only)</description>
+        <label>PRO - Retail Solicitor</label>
+        <sharedTo>
+            <role>RetailSolicitor</role>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

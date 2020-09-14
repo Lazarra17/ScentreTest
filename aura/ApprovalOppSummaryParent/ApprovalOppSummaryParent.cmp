@@ -1,0 +1,14 @@
+<aura:component description="ApprovalOppSummaryParentComponent" access="global" implements="force:appHostable,force:lightningQuickAction,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" >
+    <lightning:layout multipleRows="true">
+        <div class="header-column">
+            <p class="field-title" title="Approval Summary">Approval Summary
+                <lightning:layoutItem title="Approval Summary" flexibility="auto" padding="around-small" size="12" largeDeviceSize="12" smallDeviceSize="12" mediumDeviceSize="12">
+                    <c:OpportunitySummary aura:id="approvalSummary" recordId="{!v.recordId}"/>
+                </lightning:layoutItem>
+                
+            </p>
+        </div>     
+    </lightning:layout>
+    
+    <c:ClauseSummary aura:id="clauseSummary" recordId="{!v.recordId}"/>
+</aura:component>

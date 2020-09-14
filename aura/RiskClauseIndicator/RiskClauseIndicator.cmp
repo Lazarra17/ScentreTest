@@ -1,0 +1,22 @@
+<aura:component controller="DisplayRiskClauseController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="counter" type="Decimal"/>
+    <aura:attribute name="isMore" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:card title="Number of Risk Clauses:">
+        <div class="slds-align_absolute-center" style="width: 226px; height: 160px;"> 
+            <div class="fontSize">
+                
+                <aura:if isTrue="{!v.isMore}">
+                    <a onclick="{!c.navigateToComp}"><div class="slds-text-color_error">{!v.counter}</div></a>
+                    
+                    <aura:set attribute="else">
+                        <a onclick="{!c.navigateToComp}"><div class="slds-text-color_success">{!v.counter}</div></a>
+                    </aura:set>
+                </aura:if>
+                
+            </div>
+        </div>
+    </lightning:card>
+</aura:component>

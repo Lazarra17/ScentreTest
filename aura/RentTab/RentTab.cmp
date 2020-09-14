@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="recordId" type="String"/>
+    <div class="slds-section slds-is-open">
+        <div aria-hidden="false" class="slds-section__content">
+            <c:RentCalculator aura:id="rentCalcComponent" recordId="{!v.recordId}" displaybuttons="false" showBudgetTable="true" />
+            <c:PercentageRent aura:id="percentRentComponent" recordId="{!v.recordId}" displaybuttons="false"/>
+            <c:OpportunityKeyDates aura:id="keydatesComponent" recordId="{!v.recordId}" displaybuttons="false"/>  
+            <div align="right">
+                <lightning:button label="Calculate" onclick="{!c.calculate}"/>
+                <lightning:button label="Save" onclick="{!c.save}"/>
+            </div>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+    </customValue>
+    <customValue>
+        <fullName>Pending Approval</fullName>
+        <default>false</default>
+        <label>Pending Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Active</fullName>
+        <default>false</default>
+        <label>Active</label>
+    </customValue>
+    <customValue>
+        <fullName>Inactive</fullName>
+        <default>false</default>
+        <label>Inactive</label>
+    </customValue>
+    <customValue>
+        <fullName>Rejects</fullName>
+        <default>false</default>
+        <label>Rejects</label>
+    </customValue>
+    <customValue>
+        <fullName>Archived</fullName>
+        <default>false</default>
+        <label>Archived</label>
+    </customValue>
+    <customValue>
+        <fullName>Superseded</fullName>
+        <default>false</default>
+        <label>Superseded</label>
+    </customValue>
+    <masterLabel>Clause Statuses</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

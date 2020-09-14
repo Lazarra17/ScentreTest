@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute type = "String" name = "title"/>
+    <aura:attribute type = "String" name = "state"/>
+    <aura:attribute type = "String" name = "message"/>
+</aura:event>

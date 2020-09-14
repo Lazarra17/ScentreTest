@@ -1,0 +1,18 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForAllPageTypes,force:appHostable,flexipage:availableForRecordHome">
+    <aura:attribute name="targetopptyrecord" type="Opportunity"/>
+    <aura:attribute name="OpptyRecord" type="Opportunity"/>
+    <aura:attribute name="recordError" type="String"/>
+    <force:recordData aura:id="opportunityrecordview"
+        mode="view"
+        recordId="{!v.recordId}"
+        targetRecord="{!v.OpptyRecord}"
+        fields="Id,Name,Tech_GenerateOfferLetter__c"
+        targetFields ="{!v.targetopptyrecord}"
+        targetError="{!v.recordError}"/>
+    <lightning:OutputField />
+        <lightning:button label="Generate Offer Letter" variant="brand"  onclick="{!c.generateofferlatter}"/>
+        <!--<lightning:button label="Generate Tenancy Instruction" variant="brand"  onclick="{!c.clickSearch}"/>
+        <lightning:button label="Generate Acceptance With Modification" variant="brand"  onclick="{!c.clickSearch}"/>
+	-->	
+
+</aura:component>

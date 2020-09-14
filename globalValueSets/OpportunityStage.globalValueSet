@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Understand &amp; Negotiate</fullName>
+        <default>false</default>
+        <label>Understand &amp; Negotiate</label>
+    </customValue>
+    <customValue>
+        <fullName>Approve</fullName>
+        <default>false</default>
+        <label>Approve</label>
+    </customValue>
+    <customValue>
+        <fullName>Propose &amp; Accept</fullName>
+        <default>false</default>
+        <label>Propose &amp; Accept</label>
+    </customValue>
+    <customValue>
+        <fullName>Issue Lease</fullName>
+        <default>false</default>
+        <label>Issue Lease</label>
+    </customValue>
+    <customValue>
+        <fullName>Execute Lease</fullName>
+        <default>false</default>
+        <label>Execute Lease</label>
+    </customValue>
+    <customValue>
+        <fullName>Register Lease</fullName>
+        <default>false</default>
+        <label>Register Lease</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed - Cancelled</fullName>
+        <default>false</default>
+        <label>Closed - Cancelled</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed - Completed</fullName>
+        <default>false</default>
+        <label>Closed - Completed</label>
+    </customValue>
+    <description>Opportunity Stages</description>
+    <masterLabel>Opportunity Stage</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

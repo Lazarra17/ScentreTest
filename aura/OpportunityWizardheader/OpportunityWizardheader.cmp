@@ -1,0 +1,70 @@
+<aura:component controller="OpportunityLineItemController" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:attribute name="targetrecord" type="Opportunity"  description="The record object to be displayed"/>
+    <aura:attribute name="targtefieldRecord" type="Opportunity"  description="A simplified view record object to be displayed"/>
+    <aura:attribute name="recordError" type="Opportunity" description="An error message bound to force:recordData"/>
+    <aura:attribute name="recordId" type="String"/> 
+    <aura:attribute name="spaceType" type="String" default=""/> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <force:recordData aura:id="record"
+                      recordId="{!v.recordId}"
+                      fields="Space__r.Name,Space__r.CurrentRetailer__r.Name,Space__r.CurrentRent__c,Space__r.UsableArea__c,
+                              AnnualMinimumRent__c,Space__r.CurrentLeaseExpiryDate__c,Space__r.CurrentLeasingSpread__c,
+                              LeasingSpreadPercent__c,CurrentTotalOutgoings__c,CurrentOutgoingsPSM__c,
+                              CurrentTotalGrossRent__c,CurrentPromoLevy__c,BudgetRent__c,CurrentMATSales__c,
+                              Space__r.CurrentSemiGrossRent__c,Space__r.CurrentLease__r.CurrentLeaseOccupancyCostPercentage__c"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.targetrecord}"
+                      targetFields="{!v.targtefieldRecord}"
+                      mode="VIEW"/> 
+    <div class="c-container">
+        <h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small">Current Space Details</span>
+        </h3>
+        <lightning:recordViewForm  recordId="{!v.recordId}" objectApiName="Opportunity">
+            <lightning:layout multipleRows="true" class="slds-border_bottom">
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input aura:id="spaceName" label="Space Name" value="{!v.targtefieldRecord.Space__r.Name}" readonly="true"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input aura:id="currentRent" formatter="currency" label="Current Rent $" value="{!'$'+v.targtefieldRecord.Space__r.CurrentRent__c}" type="currency" readonly="true"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">	
+                    <lightning:input aura:id="currentRetailer" label="Current Retailer" value="{!v.targtefieldRecord.Space__r.CurrentRetailer__r.Name}" readonly="true"/>  
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input aura:id="currentsemigrossrent" formatter="currency" label="Current Semi Gross Rent $" value="{!'$'+v.targtefieldRecord.Space__r.CurrentSemiGrossRent__c}" type="currency" readonly="true"/>	
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input aura:id="spaceType" label="Space Type" value="{!v.spaceType}" readonly="true"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input  label="Current Total Outgoings" type="currency" value="{!'$'+v.targtefieldRecord.CurrentTotalOutgoings__c}" formatter="currency" step="0.01" readonly="true" />
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input aura:id="usableArea" label="Usable Area" value="{!v.targtefieldRecord.Space__r.UsableArea__c+' sqm'}" readonly="true"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input  label="Current Outgoings PSM" type="currency" value="{!'$'+v.targtefieldRecord.CurrentOutgoingsPSM__c}" formatter="currency" step="0.01" readonly="true"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input aura:id="currentleaseexpirydate" label="Current Lease Expiry Date" value="{!v.targtefieldRecord.Space__r.CurrentLeaseExpiryDate__c}" type="Date" readonly="true"/>
+                </lightning:layoutItem> 
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input  label="Current Promo Levy" type="currency" value="{!'$'+v.targtefieldRecord.CurrentPromoLevy__c}" formatter="currency" step="0.01" readonly="true"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input  label="Current Lease Occupancy Cost %" type="number" value="{!v.targtefieldRecord.Space__r.CurrentLease__r.CurrentLeaseOccupancyCostPercentage__c}" formatter="percent-fixed" step="0.01" readonly="true"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input  label="Current Total Gross Rent" type="currency" value="{!'$'+v.targtefieldRecord.CurrentTotalGrossRent__c}" formatter="currency" step="0.01" readonly="true"/>
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input  label="Current MAT Sales" type="currency" value="{!'$'+v.targtefieldRecord.CurrentMATSales__c}" formatter="currency" step="0.01" readonly="true"/>
+                </lightning:layoutItem>           
+                <lightning:layoutItem flexibility="auto" padding="around-xxx-small" size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12">
+                    <lightning:input  label="Budget Rent" type="currency" value="{!'$'+v.targtefieldRecord.BudgetRent__c}" formatter="currency" step="0.01" readonly="true"/>
+                </lightning:layoutItem>            
+            </lightning:layout>
+        </lightning:recordViewForm >
+    </div>
+</aura:component>

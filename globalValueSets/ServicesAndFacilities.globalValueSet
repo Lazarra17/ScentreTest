@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Car Parking</fullName>
+        <default>false</default>
+        <label>Car Parking</label>
+    </customValue>
+    <customValue>
+        <fullName>Cleaning</fullName>
+        <default>false</default>
+        <label>Cleaning</label>
+    </customValue>
+    <customValue>
+        <fullName>Escalators</fullName>
+        <default>false</default>
+        <label>Escalators</label>
+    </customValue>
+    <customValue>
+        <fullName>Lifts</fullName>
+        <default>false</default>
+        <label>Lifts</label>
+    </customValue>
+    <customValue>
+        <fullName>Mobility Equipment Hire</fullName>
+        <default>false</default>
+        <label>Mobility Equipment Hire</label>
+    </customValue>
+    <customValue>
+        <fullName>Parents Rooms</fullName>
+        <default>false</default>
+        <label>Parents Rooms</label>
+    </customValue>
+    <customValue>
+        <fullName>Public telephones</fullName>
+        <default>false</default>
+        <label>Public telephones</label>
+    </customValue>
+    <customValue>
+        <fullName>Public toilets</fullName>
+        <default>false</default>
+        <label>Public toilets</label>
+    </customValue>
+    <customValue>
+        <fullName>Security</fullName>
+        <default>false</default>
+        <label>Security</label>
+    </customValue>
+    <customValue>
+        <fullName>Staff toilets</fullName>
+        <default>false</default>
+        <label>Staff toilets</label>
+    </customValue>
+    <customValue>
+        <fullName>Travelators</fullName>
+        <default>false</default>
+        <label>Travelators</label>
+    </customValue>
+    <description>Services And Facilities in property</description>
+    <masterLabel>Services And Facilities</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

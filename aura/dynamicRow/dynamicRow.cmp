@@ -1,0 +1,60 @@
+<!--sfdcmonkey.com-->
+<!--Parent Lightning Compomemt-->
+<aura:component controller="RentReviewController" Implements="flexipage:availableForRecordHome,force:hasRecordId">
+  <!--Init handler which is call doInit js function on component Load-->  
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+  
+ <!--Event handler for Add and Delete Row Event which is fire from Child Component-->    
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow}"/>
+    <aura:handler name="AddRowEvt" event="c:AddNewRowEvt" action="{!c.addNewRow}"/>
+ 
+ <!--Aura Attribute for store Contact Object List as Array-->    
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="contactList" type="Contact[]"/>
+    <aura:attribute name="oppoLineItemList" type="OpportunityLineItem[]"/>
+    <aura:attribute name="cpiType" type="String"/>
+    <aura:attribute name="reviewDescription" type="String"/>
+    <aura:attribute name="reviewCode" type="String"/>
+    <aura:attribute name="rentReviewNumber" type="Integer" />
+ <!--Header Part-->        
+    <div class="slds-page-header">
+        <h1 class="slds-page-header__title">Add Non Standard Rent Review</h1>
+    </div>
+    <lightning:select name="cpiType" aura:id="calculationform" label="CPI Type" value="{!v.cpiType}">
+        <option value="National">National</option>
+        <option value="Other">Other</option>
+    </lightning:select>
+    <lightning:select name="reviewCode" aura:id="calculationform" label="Review Code" value="{!v.reviewCode}">
+        <option value="CN">CN</option>
+        <option value="NN">NN</option>
+    </lightning:select>
+    <lightning:textarea name="reviewDescription" aura:id="calculationform" value="{!v.reviewDescription}" 
+                        label="Review Description" maxlength="300" />
+ <!--Table Part-->           
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer"> 
+        <thead>
+            <tr class="slds-text-title_caps">
+                <th scope="col">
+                    <div class="slds-truncate">Year</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Review Type">Review Type</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Value">Value</div>
+                </th>
+            </tr>
+        </thead>   
+        <tbody>
+           <!--Iterate the child Component for display Table rows 
+               with pass the List Item Index for track the Every child Component 
+               and pass each List Contact Instance -->         
+            <aura:iteration items="{!v.oppoLineItemList}" var="item" indexVar="index">
+                <c:dynamicRowItem OppoLineItemInstance="{!item}" rowIndex="{!index}" />
+            </aura:iteration>
+        </tbody>
+    </table>
+    <br/>
+    <!--Save Button which is call Save js function on click --> 
+    <button class="slds-button slds-button_brand" onclick="{!c.Save}">Save</button>
+</aura:component>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>by email</fullName>
+        <default>false</default>
+        <label>by email</label>
+    </customValue>
+    <customValue>
+        <fullName>by post (physical address)</fullName>
+        <default>false</default>
+        <label>by post (physical address)</label>
+    </customValue>
+    <customValue>
+        <fullName>by hand (physical address)</fullName>
+        <default>false</default>
+        <label>by hand (physical address)</label>
+    </customValue>
+    <customValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Email</label>
+    </customValue>
+    <customValue>
+        <fullName>Physical Mail (Registered Address)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Physical Mail (Registered Address)</label>
+    </customValue>
+    <customValue>
+        <fullName>Fax</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fax</label>
+    </customValue>
+    <masterLabel>Preferred Channel</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

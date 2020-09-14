@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>CAS_RetailSolicitor</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Sharing rule to share Case to Retail Solicitor (Read Only)</description>
+        <label>CAS - Retail Solicitor</label>
+        <sharedTo>
+            <role>RetailSolicitor</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Type</field>
+            <operation>equals</operation>
+            <value>LV06 - Surrender,LV08 - Assignment of Lease,LV02 - Variation of Specialty Lease,LV05 - Termination</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>CAS_RetailGeneralManagerAndSubordinates</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule to share Case to Retail General Manager and Subordinates (Read and write)</description>
+        <label>CAS - Retail General Manager and Subordinates</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManager</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CAS_RetailGeneralManagerOperationsAndSubordinates</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing rule to share Case to Retail General Manager Operations and Subordinates (Read and write)</description>
+        <label>CAS - Retail General Manager Operations and Subordinates</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManagerOperations</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>DMShareWithRetailManager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>DM Share With Retail Manager</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManager</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <role>DMUser</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>DMShareWithRetailManagerOperations</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>DM Share With Retail Manager Operations</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManagerOperations</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <role>DMUser</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

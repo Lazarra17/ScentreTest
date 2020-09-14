@@ -1,0 +1,12 @@
+<design:component>
+	<design:attribute name="accountRecordId" label="Account RecordId" />
+	<design:attribute name="accountName" label="Account Name" />
+    <design:attribute name="accountRecTypeId" label="Account Record Type" />
+    <design:attribute name="accountCity" label="Registered City" />
+    <design:attribute name="accountCountry" label="Account Country" />
+    <design:attribute name="accountPostalCode" label="Account Postal Code" />
+    <design:attribute name="accountStateCode" label="Account State Code" />
+    <design:attribute name="accountStreet" label="Account Street" />
+    <design:attribute name="accountId" label="Account Id" />
+    <design:attribute name="contactId" label="Contact Id" />
+</design:component>

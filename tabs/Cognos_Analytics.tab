@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Cognos Analytics Report</description>
+    <frameHeight>800</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>Cognos Analytics</label>
+    <motif>Custom10: Moon</motif>
+    <url>https://mybi.scentregroup.com/analytics/bi/?pathRef=.public_folders%2FLeasing+Finance%2FReports+RPP%2FLeasing+Welcome+Page%2FSalesforce+Leasing+-+Menu&amp;format=HTML&amp;Download=false&amp;prompt=true</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

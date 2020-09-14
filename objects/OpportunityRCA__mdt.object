@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>ClauseSubType__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Clause Sub Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Aggregate Rent &gt;$7.5M</fullName>
+                    <default>true</default>
+                    <label>Aggregate Rent &gt;$7.5M</label>
+                </value>
+                <value>
+                    <fullName>Amendment to Repayment of Fitout Contribution</fullName>
+                    <default>false</default>
+                    <label>Amendment to Repayment of Fitout Contribution</label>
+                </value>
+                <value>
+                    <fullName>Area &gt; 2500sqm</fullName>
+                    <default>false</default>
+                    <label>Area &gt; 2500sqm</label>
+                </value>
+                <value>
+                    <fullName>Capital &gt; $5M</fullName>
+                    <default>false</default>
+                    <label>Capital &gt; $5M</label>
+                </value>
+                <value>
+                    <fullName>Capped Occ Costs</fullName>
+                    <default>false</default>
+                    <label>Capped Occ Costs</label>
+                </value>
+                <value>
+                    <fullName>Capped Outgoings, statutory charges</fullName>
+                    <default>false</default>
+                    <label>Capped Outgoings, statutory charges</label>
+                </value>
+                <value>
+                    <fullName>Change in Usage</fullName>
+                    <default>false</default>
+                    <label>Change in Usage</label>
+                </value>
+                <value>
+                    <fullName>Compensation Clause</fullName>
+                    <default>false</default>
+                    <label>Compensation Clause</label>
+                </value>
+                <value>
+                    <fullName>Co-Tenancy Agreement</fullName>
+                    <default>false</default>
+                    <label>Co-Tenancy Agreement</label>
+                </value>
+                <value>
+                    <fullName>Delete or Amend Demolition Clause ability to invoke demo cl.</fullName>
+                    <default>false</default>
+                    <label>Delete or Amend Demolition Clause ability to invoke demo cl.</label>
+                </value>
+                <value>
+                    <fullName>Delete or Amend Demolition Clause ability to invoke relocation cl.</fullName>
+                    <default>false</default>
+                    <label>Delete or Amend Demolition Clause ability to invoke relocation cl.</label>
+                </value>
+                <value>
+                    <fullName>Early termination rights</fullName>
+                    <default>false</default>
+                    <label>Early termination rights</label>
+                </value>
+                <value>
+                    <fullName>Exclusion Zone</fullName>
+                    <default>false</default>
+                    <label>Exclusion Zone</label>
+                </value>
+                <value>
+                    <fullName>Exclusivity</fullName>
+                    <default>false</default>
+                    <label>Exclusivity</label>
+                </value>
+                <value>
+                    <fullName>Fitout Period</fullName>
+                    <default>false</default>
+                    <label>Fitout Period</label>
+                </value>
+                <value>
+                    <fullName>Guarantee</fullName>
+                    <default>false</default>
+                    <label>Guarantee</label>
+                </value>
+                <value>
+                    <fullName>Lessee entity not the owner of the brand</fullName>
+                    <default>false</default>
+                    <label>Lessee entity not the owner of the brand</label>
+                </value>
+                <value>
+                    <fullName>Lessee Owns Fitout paid for by fitout contrib.</fullName>
+                    <default>false</default>
+                    <label>Lessee Owns Fitout paid for by fitout contrib.</label>
+                </value>
+                <value>
+                    <fullName>Amendment to Lessor indemnities and warranties</fullName>
+                    <default>false</default>
+                    <label>Amendment to Lessor indemnities and warranties</label>
+                </value>
+                <value>
+                    <fullName>National Change in Security Position</fullName>
+                    <default>false</default>
+                    <label>National Change in Security Position</label>
+                </value>
+                <value>
+                    <fullName>National Change in Usage</fullName>
+                    <default>false</default>
+                    <label>National Change in Usage</label>
+                </value>
+                <value>
+                    <fullName>Deviation from Security Policy</fullName>
+                    <default>false</default>
+                    <label>Deviation from Security Policy</label>
+                </value>
+                <value>
+                    <fullName>Non-standard fitout period</fullName>
+                    <default>false</default>
+                    <label>Non-standard fitout period</label>
+                </value>
+                <value>
+                    <fullName>Option Lease</fullName>
+                    <default>false</default>
+                    <label>Option Lease</label>
+                </value>
+                <value>
+                    <fullName>Percentage Rent</fullName>
+                    <default>false</default>
+                    <label>Percentage Rent</label>
+                </value>
+                <value>
+                    <fullName>Radius Clause</fullName>
+                    <default>false</default>
+                    <label>Radius Clause</label>
+                </value>
+                <value>
+                    <fullName>Reduced Outgoings</fullName>
+                    <default>false</default>
+                    <label>Reduced Outgoings</label>
+                </value>
+                <value>
+                    <fullName>Rent Free Period</fullName>
+                    <default>false</default>
+                    <label>Rent Free Period</label>
+                </value>
+                <value>
+                    <fullName>Rent Review</fullName>
+                    <default>false</default>
+                    <label>Rent Review</label>
+                </value>
+                <value>
+                    <fullName>Rent Review which contravenes Act</fullName>
+                    <default>false</default>
+                    <label>Rent Review which contravenes Act</label>
+                </value>
+                <value>
+                    <fullName>Right of Refusal</fullName>
+                    <default>false</default>
+                    <label>Right of Refusal</label>
+                </value>
+                <value>
+                    <fullName>Security Deposit</fullName>
+                    <default>false</default>
+                    <label>Security Deposit</label>
+                </value>
+                <value>
+                    <fullName>Special Condition</fullName>
+                    <default>false</default>
+                    <label>Special Condition</label>
+                </value>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>Step In Right</fullName>
+                    <default>false</default>
+                    <label>Step In Right</label>
+                </value>
+                <value>
+                    <fullName>Term &lt;1Yr with Contribution</fullName>
+                    <default>false</default>
+                    <label>Term &lt;1Yr with Contribution</label>
+                </value>
+                <value>
+                    <fullName>Term &gt; 10 Years</fullName>
+                    <default>false</default>
+                    <label>Term &gt; 10 Years</label>
+                </value>
+                <value>
+                    <fullName>Usage</fullName>
+                    <default>false</default>
+                    <label>Usage</label>
+                </value>
+                <value>
+                    <fullName>Inconsistent Lessee Entity</fullName>
+                    <default>false</default>
+                    <label>Inconsistent Lessee Entity</label>
+                </value>
+                <value>
+                    <fullName>Loan, lien, lessee&apos;s right to caveat lease, sub-lease, mortgage, right of entry waiver</fullName>
+                    <default>false</default>
+                    <label>Loan, lien, lessee&apos;s right to caveat lease, sub-lease, mortgage, right of entry waiver</label>
+                </value>
+                <value>
+                    <fullName>Amendment to assignment/change in Control lease clause</fullName>
+                    <default>false</default>
+                    <label>Amendment to assignment/change in Control lease clause</label>
+                </value>
+                <value>
+                    <fullName>Deletion of Direct Debit</fullName>
+                    <default>false</default>
+                    <label>Deletion of Direct Debit</label>
+                </value>
+                <value>
+                    <fullName>Trading without requirements</fullName>
+                    <default>false</default>
+                    <label>Trading without requirements</label>
+                </value>
+                <value>
+                    <fullName>Issuing lease without JV Approval</fullName>
+                    <default>false</default>
+                    <label>Issuing lease without JV Approval</label>
+                </value>
+                <value>
+                    <fullName>Amendment to Gross Sales clause</fullName>
+                    <default>false</default>
+                    <label>Amendment to Gross Sales clause</label>
+                </value>
+                <value>
+                    <fullName>Miscellaneous</fullName>
+                    <default>false</default>
+                    <label>Miscellaneous</label>
+                </value>
+                <value>
+                    <fullName>Amendment to Fitout Contribution Clawback</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Amendment to Fitout Contribution Clawback</label>
+                </value>
+                <value>
+                    <fullName>Capped Outgoings</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Capped Outgoings</label>
+                </value>
+                <value>
+                    <fullName>Delete or Amend Demolition Clause</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Delete or Amend Demolition Clause</label>
+                </value>
+                <value>
+                    <fullName>Deletion or Amendment to Relocation</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Deletion or Amendment to Relocation</label>
+                </value>
+                <value>
+                    <fullName>Lessee Owns Fitout</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Lessee Owns Fitout</label>
+                </value>
+                <value>
+                    <fullName>Lessor indemnities and warranties</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Lessor indemnities and warranties</label>
+                </value>
+                <value>
+                    <fullName>Non-Compliance with Security Position</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Non-Compliance with Security Position</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ConditionValue__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Condition Value</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Condition__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Condition</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Annual Rent &gt; $7.5M</fullName>
+                    <default>true</default>
+                    <label>Annual Rent &gt; $7.5M</label>
+                </value>
+                <value>
+                    <fullName>Recoverable Area &gt; 2500 SQM</fullName>
+                    <default>false</default>
+                    <label>Recoverable Area &gt; 2500 SQM</label>
+                </value>
+                <value>
+                    <fullName>Capital &gt; $5M</fullName>
+                    <default>false</default>
+                    <label>Capital &gt; $5M</label>
+                </value>
+                <value>
+                    <fullName>Recoverable area is not same as Rentable area</fullName>
+                    <default>false</default>
+                    <label>Recoverable area is not same as Rentable area</label>
+                </value>
+                <value>
+                    <fullName>Change in the Fitout days</fullName>
+                    <default>false</default>
+                    <label>Change in the Fitout days</label>
+                </value>
+                <value>
+                    <fullName>Security position count &lt; 4</fullName>
+                    <default>false</default>
+                    <label>Security position count &lt; 4</label>
+                </value>
+                <value>
+                    <fullName>Change in the standard review type</fullName>
+                    <default>false</default>
+                    <label>Change in the standard review type</label>
+                </value>
+                <value>
+                    <fullName>Fitout contribution for term less than a year</fullName>
+                    <default>false</default>
+                    <label>Fitout contribution for term less than a year</label>
+                </value>
+                <value>
+                    <fullName>Term is more than 10 years</fullName>
+                    <default>false</default>
+                    <label>Term is more than 10 years</label>
+                </value>
+                <value>
+                    <fullName>Atleast 1 number of options</fullName>
+                    <default>false</default>
+                    <label>Atleast 1 number of options</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Opportunity RCA</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>MasterLabel</columns>
+        <columns>Condition__c</columns>
+        <columns>ClauseSubType__c</columns>
+        <columns>ConditionValue__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <pluralLabel>Opportunity RCA</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

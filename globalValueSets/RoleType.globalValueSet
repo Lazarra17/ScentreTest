@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Accounts Receivable Admin</fullName>
+        <default>false</default>
+        <label>Accounts Receivable Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>Administration Manager</fullName>
+        <default>false</default>
+        <label>Administration Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Architectural Technician</fullName>
+        <default>false</default>
+        <label>Architectural Technician</label>
+    </customValue>
+    <customValue>
+        <fullName>Asset General Manager</fullName>
+        <default>false</default>
+        <label>Asset General Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Centre Manager</fullName>
+        <default>false</default>
+        <label>Centre Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Chief Operating Officer</fullName>
+        <default>false</default>
+        <label>Chief Operating Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial Leasing Admin</fullName>
+        <default>false</default>
+        <label>Commercial Leasing Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial Leasing General Manager</fullName>
+        <default>false</default>
+        <label>Commercial Leasing General Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial Leasing Regional Manager</fullName>
+        <default>false</default>
+        <label>Commercial Leasing Regional Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial Property Manager</fullName>
+        <default>false</default>
+        <label>Commercial Property Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial Retail Manager</fullName>
+        <default>false</default>
+        <label>Commercial Retail Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate Legal</fullName>
+        <default>false</default>
+        <label>Corporate Legal</label>
+    </customValue>
+    <customValue>
+        <fullName>D&amp;C Special Project Coordinator</fullName>
+        <default>false</default>
+        <label>D&amp;C Special Project Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>Development Executive</fullName>
+        <default>false</default>
+        <label>Development Executive</label>
+    </customValue>
+    <customValue>
+        <fullName>Development Finance Manager</fullName>
+        <default>false</default>
+        <label>Development Finance Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Director LARS &amp; NZ Development</fullName>
+        <default>false</default>
+        <label>Director LARS &amp; NZ Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Facilities Manager</fullName>
+        <default>false</default>
+        <label>Facilities Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Filing Clerk</fullName>
+        <default>false</default>
+        <label>Filing Clerk</label>
+    </customValue>
+    <customValue>
+        <fullName>Fitout Contributions Admin</fullName>
+        <default>false</default>
+        <label>Fitout Contributions Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>General Manager Leasing</fullName>
+        <default>false</default>
+        <label>General Manager Leasing</label>
+    </customValue>
+    <customValue>
+        <fullName>General Manager Retail Design</fullName>
+        <default>false</default>
+        <label>General Manager Retail Design</label>
+    </customValue>
+    <customValue>
+        <fullName>GM of Corporate Accounting</fullName>
+        <default>false</default>
+        <label>GM of Corporate Accounting</label>
+    </customValue>
+    <customValue>
+        <fullName>GM Retail Admin &amp; Delivery</fullName>
+        <default>false</default>
+        <label>GM Retail Admin &amp; Delivery</label>
+    </customValue>
+    <customValue>
+        <fullName>Group General Manager - LARS</fullName>
+        <default>false</default>
+        <label>Group General Manager - LARS</label>
+    </customValue>
+    <customValue>
+        <fullName>Group Renewal Admin Team</fullName>
+        <default>false</default>
+        <label>Group Renewal Team</label>
+    </customValue>
+    <customValue>
+        <fullName>Leasing Executive</fullName>
+        <default>false</default>
+        <label>Leasing Executive</label>
+    </customValue>
+    <customValue>
+        <fullName>Leasing Finance Analyst</fullName>
+        <default>false</default>
+        <label>Leasing Finance Analyst</label>
+    </customValue>
+    <customValue>
+        <fullName>Project Regional Manager - LARS</fullName>
+        <default>false</default>
+        <label>Project Regional Manager - LARS</label>
+    </customValue>
+    <customValue>
+        <fullName>Project Retail Administrator</fullName>
+        <default>false</default>
+        <label>Project Retail Administrator</label>
+    </customValue>
+    <customValue>
+        <fullName>Project Retail Design Manager</fullName>
+        <default>false</default>
+        <label>Project Retail Design Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>REAA Approver</fullName>
+        <default>false</default>
+        <label>REAA Approver</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional Manager - LARS</fullName>
+        <default>false</default>
+        <label>Regional Manager - LARS</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional Manager Retail Design</fullName>
+        <default>false</default>
+        <label>Regional Manager Retail Design</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional Mgr Retail Admin</fullName>
+        <default>false</default>
+        <label>Regional Mgr Retail Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional Mgr Retail Delivery</fullName>
+        <default>false</default>
+        <label>Regional Mgr Retail Delivery</label>
+    </customValue>
+    <customValue>
+        <fullName>Reg Retailer Account Admin</fullName>
+        <default>false</default>
+        <label>Reg Retailer Account Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Admin Assistant</fullName>
+        <default>false</default>
+        <label>Retail Admin Assistant</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Administrator</fullName>
+        <default>false</default>
+        <label>Retail Administrator</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Delivery Coordinator</fullName>
+        <default>false</default>
+        <label>Retail Delivery Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Design Manager</fullName>
+        <default>false</default>
+        <label>Retail Design Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Design Team Leader</fullName>
+        <default>false</default>
+        <label>Retail Design Team Leader</label>
+    </customValue>
+    <customValue>
+        <fullName>Retailer Account Admin</fullName>
+        <default>false</default>
+        <label>Retailer Account Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Manager</fullName>
+        <default>false</default>
+        <label>Retail Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Revenue Administrator</fullName>
+        <default>false</default>
+        <label>Revenue Administrator</label>
+    </customValue>
+    <customValue>
+        <fullName>Revenue Assurance Manager</fullName>
+        <default>false</default>
+        <label>Revenue Assurance Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Risk Executive</fullName>
+        <default>false</default>
+        <label>Risk Executive</label>
+    </customValue>
+    <customValue>
+        <fullName>RM &amp; National Retail Design Coordinator</fullName>
+        <default>false</default>
+        <label>RM &amp; National Retail Design Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>Senior Retail Administrator</fullName>
+        <default>false</default>
+        <label>Senior Retail Administrator</label>
+    </customValue>
+    <customValue>
+        <fullName>Snr Retail Design Mgr</fullName>
+        <default>false</default>
+        <label>Snr Retail Design Mgr</label>
+    </customValue>
+    <customValue>
+        <fullName>Solicitor Firm</fullName>
+        <default>false</default>
+        <label>Solicitor Firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Solicitor Firm - Commercial</fullName>
+        <default>false</default>
+        <label>Solicitor Firm - Commercial</label>
+    </customValue>
+    <customValue>
+        <fullName>Team Coordinator Retail Design</fullName>
+        <default>false</default>
+        <label>Team Coordinator Retail Design</label>
+    </customValue>
+    <customValue>
+        <fullName>Tenancy Coordinator</fullName>
+        <default>false</default>
+        <label>Tenancy Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>Tenancy Delivery Manager</fullName>
+        <default>false</default>
+        <label>Tenancy Delivery Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Third Party Leasing Agent</fullName>
+        <default>false</default>
+        <label>Third Party Leasing Agent</label>
+    </customValue>
+    <customValue>
+        <fullName>COVID19 Case Access</fullName>
+        <default>false</default>
+        <label>COVID19 Case Access</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Delivery Manager</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Retail Delivery Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>General Manager of Retail Admin</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>General Manager of Retail Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>GM Leasing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GM Leasing</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional Manager of Retail Admin</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Regional Manager of Retail Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional Manager of Leasing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Regional Manager of Leasing</label>
+    </customValue>
+    <customValue>
+        <fullName>RDM Administrator</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>RDM Administrator</label>
+    </customValue>
+    <customValue>
+        <fullName>Revenue Assurance Administrator</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Revenue Assurance Administrator</label>
+    </customValue>
+    <customValue>
+        <fullName>Merchant Administrator</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Merchant Administrator</label>
+    </customValue>
+    <customValue>
+        <fullName>RM – NSO</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>RM – NSO</label>
+    </customValue>
+    <customValue>
+        <fullName>Director of Leasing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Director of Leasing</label>
+    </customValue>
+    <customValue>
+        <fullName>Senior Lease Admin</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Senior Lease Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional Manager</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Regional Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Leasing Secretary</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Leasing Secretary</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Admin</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Retail Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>GM</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>GM</label>
+    </customValue>
+    <customValue>
+        <fullName>Director LARS &amp; NZ Development (Dupe)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Director LARS &amp; NZ Development (Dupe)</label>
+    </customValue>
+    <customValue>
+        <fullName>Account Receivable Manager</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Account Receivable Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>NSO Team Coordinator</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NSO Team Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>CX Manager</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CX Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail Experience Manager</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Retail Experience Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Director (Leasing)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Director (Leasing)</label>
+    </customValue>
+    <customValue>
+        <fullName>Senior / Retail Admin</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Senior / Retail Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>Fit Out Contribution Admin</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fit Out Contribution Admin</label>
+    </customValue>
+    <masterLabel>Role Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

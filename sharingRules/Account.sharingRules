@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>ACC_GeneralManagerAndSubordinates</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>Sharing rule to share Account to General Manager and subordinates (Read and write)</description>
+        <label>ACC - General Manager and Subordinates</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManager</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>ACC_GeneralManagerOperationsAndSubordinates</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>Sharing rule to share account to General Manager Operations and subordinates (Read and write)</description>
+        <label>ACC - General Manager Operations and Subordinates</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManagerOperations</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>ACC_RetailSolicitor</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Sharing rule to share Accounts with Retail Solicitors (Read Only)</description>
+        <label>ACC - Retail Solicitor</label>
+        <sharedTo>
+            <role>RetailSolicitor</role>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>DMShareWithRetailManager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>DM Share With Retail Manager</label>
+        <sharedTo>
+            <role>RetailGeneralManager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>DMUser</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>DMShareWithRetailManagerOperations</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>DM Share With Retail Manager Operations</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailGeneralManagerOperations</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <role>DMUser</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>DMShareWithRetailSolicitor</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>DM Share With Retail Solicitor</label>
+        <sharedTo>
+            <roleAndSubordinates>RetailSolicitor</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <role>DMUser</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

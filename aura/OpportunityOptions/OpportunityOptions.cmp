@@ -1,0 +1,41 @@
+<aura:component controller="OpportunityOptionsController" implements="lightning:availableForFlowScreens,force:appHostable,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome" access="global">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="oppLineItemColumnList" type="List"/>
+    <aura:attribute name="oppLineItemList" type="Object"/>
+    <aura:attribute name="optionPBentryRecordId" type="String"/>
+    <aura:attribute name="optionProductRecordId" type="String"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute type="Boolean" name="isReadOnly" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner variant="brand" size="large" aura:id="spinner"/>
+    </aura:if>
+    
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <div class="Record Details"> 
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small" title="Section Title">
+                    Options
+                    <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                    	<lightning:helptext content="Options for commercial deals"/>
+                    </div>
+               	</span>
+            </h3>
+            <br/>
+
+            <lightning:datatable columns="{!v.oppLineItemColumnList}"
+                                 data="{!v.oppLineItemList}"
+                                 keyField="id"
+                                 onrowaction="{! c.handleRowAction }"
+                                 hideCheckboxColumn="true"/>
+            <div align="right" style="padding-top:7px">
+                <aura:if isTrue="{!v.isReadOnly}">
+                    <lightning:button variant="brand" label="Add Options" onclick="{!c.toggleModal}"/>
+                </aura:if>
+            </div>
+        </div>
+    </div>
+</aura:component>

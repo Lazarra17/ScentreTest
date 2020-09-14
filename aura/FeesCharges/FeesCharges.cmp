@@ -1,0 +1,54 @@
+<aura:component controller="FeesChargesController" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes" access="global"  >
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="recordId" type="String"/> 
+    <aura:attribute name="isLoading" type="Boolean" default = "false"/>
+    <aura:attribute name="feesChargesWrapper" type="Object[]"/>
+    <aura:attribute name="filteredFeesChargesWrapper" type="Object[]"/>
+    <aura:attribute name="feesChargesWrapperTemp" type="Object[]"/>
+    <aura:attribute name="searchFieldList" type="String[]" default = "['productName']"/>
+    <aura:attribute name="oppRecord" type="Object" />
+    <aura:attribute name="oppRecordError" type="Object" />
+    <aura:attribute name="oppRecordMaster" type="Object" />
+    <aura:attribute type="Boolean" name="isReadOnly" default="false"/>
+    <aura:attribute name="columns" type="Object" />
+    
+    <force:recordData aura:id="opportunityRecord"
+                      recordId="{!v.recordId}"
+                      targetRecord="{!v.oppRecordMaster}"
+                      targetFields="{!v.oppRecord}"
+                      targetError="{!v.oppRecordError}"
+                      fields="Id, Pricebook2Id"
+                      recordUpdated = "{! c.getTableRecords}"
+                      />
+    <div class="slds-section slds-is-open">
+    <h3 class="slds-section__title slds-theme_shade">
+        <span class="slds-truncate slds-p-horizontal_small" title="Section Title">
+            Fee and Charges 
+            <div class="slds-form-element__icon slds-align-middle" style="margin-bottom: 5px">
+                <lightning:helptext content="Charges in addition to outgoings that relate to the Space i.e. Scullery food court Bondi Junction"/>
+            </div></span>
+    </h3> 	
+    <c:Search aura:id = "search"
+              searchFieldList = "{! v.searchFieldList}"
+              searchList = "{! v.feesChargesWrapper}"
+              searchResult = "{! c.catchSearchResult}"
+              variant = "label-hidden"/>
+    
+    
+        
+        <lightning:datatable errors = "{! v.errors }"
+                             hideCheckboxColumn="true"
+                             draftValues="{! v.feesChargesWrapperTemp }"
+                             data="{! v.filteredFeesChargesWrapper }" 
+                             columns="{! v.columns }" 
+                             keyField="recordId"
+                             onsave="{! c.handleSave }"
+                             oncellchange="{! c.handleEditCell }"
+                             oncancel="{! c.handleCancel }"
+                             />
+    </div>
+    
+    <aura:if isTrue="{! v.isLoading }">
+        <lightning:spinner alternativeText="Loading"/>
+    </aura:if>
+</aura:component>

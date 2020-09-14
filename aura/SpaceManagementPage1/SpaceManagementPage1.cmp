@@ -1,0 +1,33 @@
+<aura:component >
+    <aura:attribute type="String" name="mode" />
+    <aura:attribute type="Boolean" name="hasUserAccess" />
+    <aura:attribute type="String[]" name="searchFieldList" default = "['Name']"/>
+    <aura:attribute type="Object[]" name="tableColumns" />
+    <aura:attribute type = "Object[]" name = "spaceList" />
+    <aura:attribute type = "Object[]" name = "filteredSpaceList" />
+    <aura:attribute type = "Object[]" name = "selectedSpaceList" />
+    
+    <aura:registerEvent name="throwError" type="c:ToastEvent"/>
+    <aura:registerEvent name="pushSelectedSpaces" type="c:SpaceManagementEvent"/>
+    
+    <lightning:select name="selectItem" label="Do you want to merge or split" value = "{! v.mode}">
+        <option value="merge">Merge</option>
+        <option value="split">Split</option>
+    </lightning:select>
+    
+    <c:Search aura:id = "search"
+              searchFieldList = "{! v.searchFieldList}"
+              searchList = "{! v.spaceList}"
+              searchResult = "{! c.catchSearchResult}"/>
+    
+    <div style = "margin: 15px 0px 15px 0px;">
+        <lightning:datatable data="{! v.filteredSpaceList }" 
+                             columns="{! v.tableColumns }" 
+                             keyField="Id"
+                             onrowselection="{! c.getSelectedSpace }"/>
+    </div>
+    
+    <div align = "right">
+        <lightning:button variant="brand" label="Next" onclick="{! c.next}" disabled = "{! !v.hasUserAccess}"/>
+    </div>
+</aura:component>

@@ -1,0 +1,1758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Asian</fullName>
+        <default>false</default>
+        <label>Asian</label>
+    </customValue>
+    <customValue>
+        <fullName>Automotive</fullName>
+        <default>false</default>
+        <label>Automotive</label>
+    </customValue>
+    <customValue>
+        <fullName>Charity</fullName>
+        <default>false</default>
+        <label>Charity</label>
+    </customValue>
+    <customValue>
+        <fullName>Children&apos;s Entertainment</fullName>
+        <default>false</default>
+        <label>Children&apos;s Entertainment</label>
+    </customValue>
+    <customValue>
+        <fullName>Cinema &amp; Entertainment</fullName>
+        <default>false</default>
+        <label>Cinema &amp; Entertainment</label>
+    </customValue>
+    <customValue>
+        <fullName>Contemporary Fashion</fullName>
+        <default>false</default>
+        <label>Contemporary Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>Delivery / Online Orders</fullName>
+        <default>false</default>
+        <label>Delivery / Online Orders</label>
+    </customValue>
+    <customValue>
+        <fullName>Discount &amp; Bargain Hunting</fullName>
+        <default>false</default>
+        <label>Discount &amp; Bargain Hunting</label>
+    </customValue>
+    <customValue>
+        <fullName>Education</fullName>
+        <default>false</default>
+        <label>Education</label>
+    </customValue>
+    <customValue>
+        <fullName>Everyday Convenience</fullName>
+        <default>false</default>
+        <label>Everyday Convenience</label>
+    </customValue>
+    <customValue>
+        <fullName>Fashion Alterations Etc</fullName>
+        <default>false</default>
+        <label>Fashion Alterations Etc</label>
+    </customValue>
+    <customValue>
+        <fullName>Fast &amp; Takeaway</fullName>
+        <default>false</default>
+        <label>Fast &amp; Takeaway</label>
+    </customValue>
+    <customValue>
+        <fullName>Fast Healthy</fullName>
+        <default>false</default>
+        <label>Fast Healthy</label>
+    </customValue>
+    <customValue>
+        <fullName>Fast On The Go</fullName>
+        <default>false</default>
+        <label>Fast On The Go</label>
+    </customValue>
+    <customValue>
+        <fullName>Fast Sitdown</fullName>
+        <default>false</default>
+        <label>Fast Sitdown</label>
+    </customValue>
+    <customValue>
+        <fullName>Fitness, Beauty &amp; Other Services</fullName>
+        <default>false</default>
+        <label>Fitness, Beauty &amp; Other Services</label>
+    </customValue>
+    <customValue>
+        <fullName>For Babies &amp; Kids</fullName>
+        <default>false</default>
+        <label>For Babies &amp; Kids</label>
+    </customValue>
+    <customValue>
+        <fullName>Health &amp; Medical</fullName>
+        <default>false</default>
+        <label>Health &amp; Medical</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Diy &amp; Maintainance</fullName>
+        <default>false</default>
+        <label>Home Diy &amp; Maintainance</label>
+    </customValue>
+    <customValue>
+        <fullName>House Proud</fullName>
+        <default>false</default>
+        <label>House Proud</label>
+    </customValue>
+    <customValue>
+        <fullName>House Proud (Furniture)</fullName>
+        <default>false</default>
+        <label>House Proud (Furniture)</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance</fullName>
+        <default>false</default>
+        <label>Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquor &amp; Online</fullName>
+        <default>false</default>
+        <label>Liquor &amp; Online</label>
+    </customValue>
+    <customValue>
+        <fullName>Local Strip</fullName>
+        <default>false</default>
+        <label>Local Strip</label>
+    </customValue>
+    <customValue>
+        <fullName>Luxury</fullName>
+        <default>false</default>
+        <label>Luxury</label>
+    </customValue>
+    <customValue>
+        <fullName>Majors Food Retail</fullName>
+        <default>false</default>
+        <label>Majors Food Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Mature On A Budget</fullName>
+        <default>false</default>
+        <label>Mature On A Budget</label>
+    </customValue>
+    <customValue>
+        <fullName>Mobile &amp; Comms</fullName>
+        <default>false</default>
+        <label>Mobile &amp; Comms</label>
+    </customValue>
+    <customValue>
+        <fullName>Modern Cafes / Coffee</fullName>
+        <default>false</default>
+        <label>Modern Cafes / Coffee</label>
+    </customValue>
+    <customValue>
+        <fullName>Modern Licensed</fullName>
+        <default>false</default>
+        <label>Modern Licensed</label>
+    </customValue>
+    <customValue>
+        <fullName>Office And School Supplies</fullName>
+        <default>false</default>
+        <label>Office And School Supplies</label>
+    </customValue>
+    <customValue>
+        <fullName>Online (Pure Play)</fullName>
+        <default>false</default>
+        <label>Online (Pure Play)</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Apparel Home</fullName>
+        <default>false</default>
+        <label>Other Apparel Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Dining &amp; Takeaway</fullName>
+        <default>false</default>
+        <label>Other Dining &amp; Takeaway</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Food Retail</fullName>
+        <default>false</default>
+        <label>Other Food Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Takeaway</fullName>
+        <default>false</default>
+        <label>Other Takeaway</label>
+    </customValue>
+    <customValue>
+        <fullName>Pancakes &amp; Diner</fullName>
+        <default>false</default>
+        <label>Pancakes &amp; Diner</label>
+    </customValue>
+    <customValue>
+        <fullName>Pet Owners</fullName>
+        <default>false</default>
+        <label>Pet Owners</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmacies</fullName>
+        <default>false</default>
+        <label>Pharmacies</label>
+    </customValue>
+    <customValue>
+        <fullName>Postal, Courier Services</fullName>
+        <default>false</default>
+        <label>Postal, Courier Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Premium Local Grocery And Services</fullName>
+        <default>false</default>
+        <label>Premium Local Grocery And Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Pubs, Taverns And Bars</fullName>
+        <default>false</default>
+        <label>Pubs, Taverns and Bars</label>
+    </customValue>
+    <customValue>
+        <fullName>Spice</fullName>
+        <default>false</default>
+        <label>Spice</label>
+    </customValue>
+    <customValue>
+        <fullName>Sport &amp; Equipment</fullName>
+        <default>false</default>
+        <label>Sport &amp; Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>Street, Surf &amp; Sport -Males</fullName>
+        <default>false</default>
+        <label>Street, Surf &amp; Sport -Males</label>
+    </customValue>
+    <customValue>
+        <fullName>Subscription Services</fullName>
+        <default>false</default>
+        <label>Subscription Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Technology &amp; Entertainment</fullName>
+        <default>false</default>
+        <label>Technology &amp; Entertainment</label>
+    </customValue>
+    <customValue>
+        <fullName>Technology &amp; Leisure</fullName>
+        <default>false</default>
+        <label>Technology &amp; Leisure</label>
+    </customValue>
+    <customValue>
+        <fullName>Traditional Jewellery</fullName>
+        <default>false</default>
+        <label>Traditional Jewellery</label>
+    </customValue>
+    <customValue>
+        <fullName>Travel</fullName>
+        <default>false</default>
+        <label>Travel</label>
+    </customValue>
+    <customValue>
+        <fullName>Youth &amp; Young</fullName>
+        <default>false</default>
+        <label>Youth &amp; Young</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Institutions</fullName>
+        <default>false</default>
+        <label>Financial Institutions</label>
+    </customValue>
+    <customValue>
+        <fullName>Arts and theatre goers</fullName>
+        <default>false</default>
+        <label>Arts and theatre goers</label>
+    </customValue>
+    <customValue>
+        <fullName>Tax &amp; Accounting</fullName>
+        <default>false</default>
+        <label>Tax &amp; Accounting</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate Agents</fullName>
+        <default>false</default>
+        <label>Real Estate Agents</label>
+    </customValue>
+    <customValue>
+        <fullName>Household Bills</fullName>
+        <default>false</default>
+        <label>Household Bills</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal, Debt, Fines</fullName>
+        <default>false</default>
+        <label>Legal, Debt, Fines</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Transport</fullName>
+        <default>false</default>
+        <label>Other Transport</label>
+    </customValue>
+    <customValue>
+        <fullName>Accommodation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Accommodation</label>
+    </customValue>
+    <customValue>
+        <fullName>Advertising &amp; Printing Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Advertising &amp; Printing Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Affluent Casual &amp; Leisure Pursuits</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Affluent Casual &amp; Leisure Pursuits</label>
+    </customValue>
+    <customValue>
+        <fullName>Age &amp; Shape Female</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Age &amp; Shape Female</label>
+    </customValue>
+    <customValue>
+        <fullName>Age &amp; Shape Male</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Age &amp; Shape Male</label>
+    </customValue>
+    <customValue>
+        <fullName>Aging</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aging</label>
+    </customValue>
+    <customValue>
+        <fullName>Aldi and Other Chains</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aldi and Other Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Alternative Young Fashion</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Alternative Young Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>Art Retailing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Art Retailing</label>
+    </customValue>
+    <customValue>
+        <fullName>Asian $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Asian $</label>
+    </customValue>
+    <customValue>
+        <fullName>Asian $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Asian $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Asian $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Asian $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Asian Grocer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Asian Grocer</label>
+    </customValue>
+    <customValue>
+        <fullName>Aspirational Fashion</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aspirational Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>Aspirational Street</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aspirational Street</label>
+    </customValue>
+    <customValue>
+        <fullName>Automotive Fuel Retailing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Automotive Fuel Retailing</label>
+    </customValue>
+    <customValue>
+        <fullName>Bakery</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bakery</label>
+    </customValue>
+    <customValue>
+        <fullName>Bavarian / German</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bavarian / German</label>
+    </customValue>
+    <customValue>
+        <fullName>Beauty $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Beauty $</label>
+    </customValue>
+    <customValue>
+        <fullName>Beauty $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Beauty $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Beer / Bar / Wineries $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Beer / Bar / Wineries $</label>
+    </customValue>
+    <customValue>
+        <fullName>Beer / Bar / Wineries $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Beer / Bar / Wineries $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Beer / Bar / Wineries $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Beer / Bar / Wineries $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Bicycle Retailing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bicycle Retailing</label>
+    </customValue>
+    <customValue>
+        <fullName>Books &amp; Education</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Books &amp; Education</label>
+    </customValue>
+    <customValue>
+        <fullName>Branded Electronics</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Branded Electronics</label>
+    </customValue>
+    <customValue>
+        <fullName>Branded Sportswear</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Branded Sportswear</label>
+    </customValue>
+    <customValue>
+        <fullName>Bridge &amp; Designer Fashion</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bridge &amp; Designer Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>Brows / Threading</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Brows / Threading</label>
+    </customValue>
+    <customValue>
+        <fullName>Burger &amp; Chicken Casual Chains</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Burger &amp; Chicken Casual Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Burger &amp; Chicken Fast Chains</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Burger &amp; Chicken Fast Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Burgers $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Burgers $</label>
+    </customValue>
+    <customValue>
+        <fullName>Burgers $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Burgers $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Business Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Butcher</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Butcher</label>
+    </customValue>
+    <customValue>
+        <fullName>Cafes, Coffee, Deli $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cafes, Coffee, Deli $</label>
+    </customValue>
+    <customValue>
+        <fullName>Cafes, Coffee, Deli $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cafes, Coffee, Deli $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Cafes, Coffee, Deli $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cafes, Coffee, Deli $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Cafes, Coffee Chains</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cafes, Coffee Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Car, Truck, Boat Dealers</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Car, Truck, Boat Dealers</label>
+    </customValue>
+    <customValue>
+        <fullName>Car Repairs &amp; Maintainance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Car Repairs &amp; Maintainance</label>
+    </customValue>
+    <customValue>
+        <fullName>Charity / Secondhand</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Charity / Secondhand</label>
+    </customValue>
+    <customValue>
+        <fullName>Chicken, Roasts &amp; Carvery $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Chicken, Roasts &amp; Carvery $</label>
+    </customValue>
+    <customValue>
+        <fullName>Chicken, Roasts &amp; Carvery $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Chicken, Roasts &amp; Carvery $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Chicken, Roasts &amp; Carvery $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Chicken, Roasts &amp; Carvery $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Child Care Services (After School)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Child Care Services (After School)</label>
+    </customValue>
+    <customValue>
+        <fullName>Children&apos;s Play Centres</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Children&apos;s Play Centres</label>
+    </customValue>
+    <customValue>
+        <fullName>Chinese $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Chinese $</label>
+    </customValue>
+    <customValue>
+        <fullName>Chinese $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Chinese $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Cigarettes</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cigarettes</label>
+    </customValue>
+    <customValue>
+        <fullName>Classics</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Classics</label>
+    </customValue>
+    <customValue>
+        <fullName>Classics Fashion &amp; Home</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Classics Fashion &amp; Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Coffee / Tea / Artisan</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Coffee / Tea / Artisan</label>
+    </customValue>
+    <customValue>
+        <fullName>Computer Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Computer Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Confectionary</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Confectionary</label>
+    </customValue>
+    <customValue>
+        <fullName>Courier Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Courier Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Deli</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Deli</label>
+    </customValue>
+    <customValue>
+        <fullName>Dental</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Dental</label>
+    </customValue>
+    <customValue>
+        <fullName>Desserts Sweets &amp; Treats $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Desserts Sweets &amp; Treats $</label>
+    </customValue>
+    <customValue>
+        <fullName>Desserts Sweets &amp; Treats $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Desserts Sweets &amp; Treats $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Desserts Sweets &amp; Treats $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Desserts Sweets &amp; Treats $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Discount Variety &amp; Gifts</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Discount Variety &amp; Gifts</label>
+    </customValue>
+    <customValue>
+        <fullName>Doctor, Hospital &amp; Medical</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Doctor, Hospital &amp; Medical</label>
+    </customValue>
+    <customValue>
+        <fullName>Dumplings, Yum Cha $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Dumplings, Yum Cha $</label>
+    </customValue>
+    <customValue>
+        <fullName>Dumplings, Yum Cha $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Dumplings, Yum Cha $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Dumplings, Yum Cha $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Dumplings, Yum Cha $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Duty Free &amp; Souvenirs</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Duty Free &amp; Souvenirs</label>
+    </customValue>
+    <customValue>
+        <fullName>Early Learning  / Childcare</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Early Learning  / Childcare</label>
+    </customValue>
+    <customValue>
+        <fullName>Events &amp; Functions</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Events &amp; Functions</label>
+    </customValue>
+    <customValue>
+        <fullName>Everyday Value / Basics</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Everyday Value / Basics</label>
+    </customValue>
+    <customValue>
+        <fullName>Families With Babies</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Families With Babies</label>
+    </customValue>
+    <customValue>
+        <fullName>Family Value</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Family Value</label>
+    </customValue>
+    <customValue>
+        <fullName>Fashion - International</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fashion - International</label>
+    </customValue>
+    <customValue>
+        <fullName>Fashion - Online</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fashion - Online</label>
+    </customValue>
+    <customValue>
+        <fullName>Female / Shape Gym &amp; Fitness</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Female / Shape Gym &amp; Fitness</label>
+    </customValue>
+    <customValue>
+        <fullName>Flower Retailing (Florists)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Flower Retailing (Florists)</label>
+    </customValue>
+    <customValue>
+        <fullName>Food Manufacturing / Wholesaling</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Food Manufacturing / Wholesaling</label>
+    </customValue>
+    <customValue>
+        <fullName>French / European $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>French / European $</label>
+    </customValue>
+    <customValue>
+        <fullName>Fresh, Fruit, Organic</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fresh, Fruit, Organic</label>
+    </customValue>
+    <customValue>
+        <fullName>Furniture Indoors Specialists</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Furniture Indoors Specialists</label>
+    </customValue>
+    <customValue>
+        <fullName>Furniture Indoors Value</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Furniture Indoors Value</label>
+    </customValue>
+    <customValue>
+        <fullName>Gambling &amp; Casinos</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Gambling &amp; Casinos</label>
+    </customValue>
+    <customValue>
+        <fullName>Garden Outdoor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Garden Outdoor</label>
+    </customValue>
+    <customValue>
+        <fullName>Gift Cards and Vouchers</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Gift Cards and Vouchers</label>
+    </customValue>
+    <customValue>
+        <fullName>Govt / Council Administration</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Govt / Council Administration</label>
+    </customValue>
+    <customValue>
+        <fullName>Hair $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Hair $</label>
+    </customValue>
+    <customValue>
+        <fullName>Hair $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Hair $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Hair $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Hair $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Harris Farm and Others</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Harris Farm and Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Health Food</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Health Food</label>
+    </customValue>
+    <customValue>
+        <fullName>Home &amp; Motor Insurance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Home &amp; Motor Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Entertainment - Online</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Home Entertainment - Online</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Improvement Diy</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Home Improvement Diy</label>
+    </customValue>
+    <customValue>
+        <fullName>Indian $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Indian $</label>
+    </customValue>
+    <customValue>
+        <fullName>Indian $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Indian $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Indian $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Indian $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Infringements, Legal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Infringements, Legal</label>
+    </customValue>
+    <customValue>
+        <fullName>Italian / Pizza $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Italian / Pizza $</label>
+    </customValue>
+    <customValue>
+        <fullName>Italian / Pizza $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Italian / Pizza $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Italian / Pizza $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Italian / Pizza $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Japanese $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Japanese $</label>
+    </customValue>
+    <customValue>
+        <fullName>Japanese $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Japanese $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Japanese $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Japanese $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Jewellery Chains (Large)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Jewellery Chains (Large)</label>
+    </customValue>
+    <customValue>
+        <fullName>Kids Toys &amp; Apparel</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Kids Toys &amp; Apparel</label>
+    </customValue>
+    <customValue>
+        <fullName>Latin American $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Latin American $</label>
+    </customValue>
+    <customValue>
+        <fullName>Latin American $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Latin American $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Latin American $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Latin American $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Latin American Chains</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Latin American Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Laundries and Dry Cleaners</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Laundries and Dry Cleaners</label>
+    </customValue>
+    <customValue>
+        <fullName>Life, Super, Fund &amp; Financial Insurance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Life, Super, Fund &amp; Financial Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Liquor Stores</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Liquor Stores</label>
+    </customValue>
+    <customValue>
+        <fullName>Local Convenience</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Local Convenience</label>
+    </customValue>
+    <customValue>
+        <fullName>Luxury Accessories</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Luxury Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>Luxury Aggregators</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Luxury Aggregators</label>
+    </customValue>
+    <customValue>
+        <fullName>Luxury Branded</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Luxury Branded</label>
+    </customValue>
+    <customValue>
+        <fullName>Luxury Design</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Luxury Design</label>
+    </customValue>
+    <customValue>
+        <fullName>Luxury - International</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Luxury - International</label>
+    </customValue>
+    <customValue>
+        <fullName>Luxury Jewellers (Nsw Biased)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Luxury Jewellers (Nsw Biased)</label>
+    </customValue>
+    <customValue>
+        <fullName>Mainstream Home &amp; Accessories</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Mainstream Home &amp; Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>Mainstream Jewellers (Nsw Biased)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Mainstream Jewellers (Nsw Biased)</label>
+    </customValue>
+    <customValue>
+        <fullName>Maintainance &amp; Building Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Maintainance &amp; Building Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Massage / Spa</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Massage / Spa</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Specialtists</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Medical Specialtists</label>
+    </customValue>
+    <customValue>
+        <fullName>Men / Barber</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Men / Barber</label>
+    </customValue>
+    <customValue>
+        <fullName>Mens Classic / Preppy</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Mens Classic / Preppy</label>
+    </customValue>
+    <customValue>
+        <fullName>Middle Eastern $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Middle Eastern $</label>
+    </customValue>
+    <customValue>
+        <fullName>Middle Eastern $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Middle Eastern $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Middle Eastern $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Middle Eastern $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Mobile Phone Retailing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Mobile Phone Retailing</label>
+    </customValue>
+    <customValue>
+        <fullName>Modern / Australian $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Modern / Australian $</label>
+    </customValue>
+    <customValue>
+        <fullName>Modern / Australian $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Modern / Australian $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Modern / Australian $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Modern / Australian $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Motoring &amp; Accessories Retail</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Motoring &amp; Accessories Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Museums &amp; Libraries</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Museums &amp; Libraries</label>
+    </customValue>
+    <customValue>
+        <fullName>Musical Instrument Retailing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Musical Instrument Retailing</label>
+    </customValue>
+    <customValue>
+        <fullName>Nails</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Nails</label>
+    </customValue>
+    <customValue>
+        <fullName>New Age Clothing &amp; Accessories</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>New Age Clothing &amp; Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>Newsagents</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Newsagents</label>
+    </customValue>
+    <customValue>
+        <fullName>Null</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Null</label>
+    </customValue>
+    <customValue>
+        <fullName>Nuts</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Nuts</label>
+    </customValue>
+    <customValue>
+        <fullName>Office School</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Office School</label>
+    </customValue>
+    <customValue>
+        <fullName>Offline Electronics &amp; Games</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Offline Electronics &amp; Games</label>
+    </customValue>
+    <customValue>
+        <fullName>Older Value / Basics &amp; Home</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Older Value / Basics &amp; Home</label>
+    </customValue>
+    <customValue>
+        <fullName>Online Aggregators</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Online Aggregators</label>
+    </customValue>
+    <customValue>
+        <fullName>Optometrists</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Optometrists</label>
+    </customValue>
+    <customValue>
+        <fullName>Organised / House Proud</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Organised / House Proud</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Adult Cloth &amp; Acc</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Adult Cloth &amp; Acc</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Apparel Accessories</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Apparel Accessories</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Apparel Formal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Apparel Formal</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Appliances</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Appliances</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Children &amp; Baby</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Children &amp; Baby</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Computer &amp; Electronics</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Computer &amp; Electronics</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Connection Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Connection Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Cosmetic and Beauty Retailing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Cosmetic and Beauty Retailing</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Cosmetics &amp; Beauty Online</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Cosmetics &amp; Beauty Online</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Cosmetics and Beauty Aggregator</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Cosmetics and Beauty Aggregator</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Cosmetics and Beauty Brand</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Cosmetics and Beauty Brand</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Dining</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Dining</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Furniture Retailing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Furniture Retailing</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Gmmbp</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Gmmbp</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Gym &amp; Fitness</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Gym &amp; Fitness</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Hair &amp; Beauty</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Hair &amp; Beauty</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Home &amp; Acc (More Premium)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Home &amp; Acc (More Premium)</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Housewares</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Housewares</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Jewellers</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Jewellers</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Luxury</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Luxury</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Manufacturing / Wholesaling</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Manufacturing / Wholesaling</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Specialist Grocer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Specialist Grocer</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Specialty Food Retail</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Specialty Food Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Supermarkets</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Supermarkets</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Takeaway / Fast Foods $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Takeaway / Fast Foods $</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Takeaway / Fast Foods $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Takeaway / Fast Foods $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Takeaway / Fast Foods $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Takeaway / Fast Foods $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Toys and Games</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Toys and Games</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Value Fashion</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Value Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>Outdoor Sports Stores</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Outdoor Sports Stores</label>
+    </customValue>
+    <customValue>
+        <fullName>Pancakes, Diner, American $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pancakes, Diner, American $</label>
+    </customValue>
+    <customValue>
+        <fullName>Pancakes, Diner, American $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pancakes, Diner, American $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Pancakes, Diner, American $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pancakes, Diner, American $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Parking, Wash</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Parking, Wash</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Health Insurance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Personal Health Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Photo, Dvd Kiosk &amp; Music Fun</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Photo, Dvd Kiosk &amp; Music Fun</label>
+    </customValue>
+    <customValue>
+        <fullName>Pies</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pies</label>
+    </customValue>
+    <customValue>
+        <fullName>Pizza Chains</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pizza Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Post &amp; Other Education</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Post &amp; Other Education</label>
+    </customValue>
+    <customValue>
+        <fullName>Postal Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Postal Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Poultry</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Poultry</label>
+    </customValue>
+    <customValue>
+        <fullName>Premium / Young Affluent Designer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Premium / Young Affluent Designer</label>
+    </customValue>
+    <customValue>
+        <fullName>Premium Food Retail</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Premium Food Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Pub / Bistro / Hotel $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pub / Bistro / Hotel $</label>
+    </customValue>
+    <customValue>
+        <fullName>Public Transport: Bus, Train, Ferry</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Public Transport: Bus, Train, Ferry</label>
+    </customValue>
+    <customValue>
+        <fullName>Repair Services (Watch, Keys)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Repair Services (Watch, Keys)</label>
+    </customValue>
+    <customValue>
+        <fullName>Rta &amp; Tolls</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Rta &amp; Tolls</label>
+    </customValue>
+    <customValue>
+        <fullName>Sandwich, Salad &amp; Deli Chains</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sandwich, Salad &amp; Deli Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>School Education</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>School Education</label>
+    </customValue>
+    <customValue>
+        <fullName>Seafood</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Seafood</label>
+    </customValue>
+    <customValue>
+        <fullName>Seafood / Fish $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Seafood / Fish $</label>
+    </customValue>
+    <customValue>
+        <fullName>Seafood / Fish $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Seafood / Fish $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Seafood / Fish $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Seafood / Fish $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Sport &amp; Recreation Clubs</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sport &amp; Recreation Clubs</label>
+    </customValue>
+    <customValue>
+        <fullName>Sports Wear Stores</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sports Wear Stores</label>
+    </customValue>
+    <customValue>
+        <fullName>Steak, Ribs, Grill $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Steak, Ribs, Grill $</label>
+    </customValue>
+    <customValue>
+        <fullName>Steak, Ribs, Grill $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Steak, Ribs, Grill $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Steak, Ribs, Grill $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Steak, Ribs, Grill $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Surfie</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Surfie</label>
+    </customValue>
+    <customValue>
+        <fullName>Tailors and Alterations</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tailors and Alterations</label>
+    </customValue>
+    <customValue>
+        <fullName>Tapas, Spanish $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tapas, Spanish $</label>
+    </customValue>
+    <customValue>
+        <fullName>Thai $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Thai $</label>
+    </customValue>
+    <customValue>
+        <fullName>Thai $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Thai $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Thai $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Thai $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Theatre &amp; Performing Arts</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Theatre &amp; Performing Arts</label>
+    </customValue>
+    <customValue>
+        <fullName>Theme Parks, Circus &amp; Tourist Attractions</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Theme Parks, Circus &amp; Tourist Attractions</label>
+    </customValue>
+    <customValue>
+        <fullName>Ticketing Services</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ticketing Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Traditional Home Electronics</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Traditional Home Electronics</label>
+    </customValue>
+    <customValue>
+        <fullName>Traditional Locals (My Neighbours)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Traditional Locals (My Neighbours)</label>
+    </customValue>
+    <customValue>
+        <fullName>Travel &amp; Tour Agencies</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Travel &amp; Tour Agencies</label>
+    </customValue>
+    <customValue>
+        <fullName>Unclassified Adult Cloth &amp; Acc</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unclassified Adult Cloth &amp; Acc</label>
+    </customValue>
+    <customValue>
+        <fullName>Unclassified Bars</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unclassified Bars</label>
+    </customValue>
+    <customValue>
+        <fullName>Unclassified Cafes, Coffee, Deli</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unclassified Cafes, Coffee, Deli</label>
+    </customValue>
+    <customValue>
+        <fullName>Unclassified Kitchen</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unclassified Kitchen</label>
+    </customValue>
+    <customValue>
+        <fullName>Unclassified Restaurants</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unclassified Restaurants</label>
+    </customValue>
+    <customValue>
+        <fullName>Unisex 24/7 Gym &amp; Fitness Chains</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unisex 24/7 Gym &amp; Fitness Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Unisex Other Gym &amp; Fitness Chains</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Unisex Other Gym &amp; Fitness Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Value Australian Fast Fashion</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Value Australian Fast Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>Vegetarian / Healthy $</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Vegetarian / Healthy $</label>
+    </customValue>
+    <customValue>
+        <fullName>Vegetarian / Healthy $$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Vegetarian / Healthy $$</label>
+    </customValue>
+    <customValue>
+        <fullName>Vegetarian / Healthy $$$</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Vegetarian / Healthy $$$</label>
+    </customValue>
+    <customValue>
+        <fullName>Vegetarian / Healthy Chains</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Vegetarian / Healthy Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Weightloss, Tattoo</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Weightloss, Tattoo</label>
+    </customValue>
+    <customValue>
+        <fullName>Yoga / Pilates</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Yoga / Pilates</label>
+    </customValue>
+    <customValue>
+        <fullName>Young Creatives</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Young Creatives</label>
+    </customValue>
+    <customValue>
+        <fullName>Young Fashion Follower</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Young Fashion Follower</label>
+    </customValue>
+    <customValue>
+        <fullName>Young Female Fashion</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Young Female Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>Young Male Fashion</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Young Male Fashion</label>
+    </customValue>
+    <customValue>
+        <fullName>Young Value Fashion Copy</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Young Value Fashion Copy</label>
+    </customValue>
+    <customValue>
+        <fullName>List of values to be provided by Jack</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>List of values to be provided by Jack</label>
+    </customValue>
+    <customValue>
+        <fullName>Specialty (Bakers &amp; Butchers)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Specialty (Bakers &amp; Butchers)</label>
+    </customValue>
+    <customValue>
+        <fullName>Family &amp; Younger lunchtime</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Family &amp; Younger lunchtime</label>
+    </customValue>
+    <customValue>
+        <fullName>Fast Food &amp; Casual</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fast Food &amp; Casual</label>
+    </customValue>
+    <customValue>
+        <fullName>Premium dining</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Premium dining</label>
+    </customValue>
+    <customValue>
+        <fullName>WA Chains</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>WA Chains</label>
+    </customValue>
+    <customValue>
+        <fullName>Younger evening dining</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Younger evening dining</label>
+    </customValue>
+    <masterLabel>Cluster</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,13 @@
+.THIS {
+}
+
+.THIS .navigation {
+    /*min-width: 225px;*/
+    padding-left: 10px;
+    border-left: 1px solid #e7e7e7;
+    width: 112%
+}
+
+.THIS .border {
+    border-right: 1px solid #e7e7e7;
+}

@@ -1,0 +1,51 @@
+<apex:page standardController="Task" recordSetVar="AllTask" extensions="UpdateTaskOwnerController" action="{!validate}" lightningStylesheets="true">    
+    <apex:sectionHeader title="Task" subtitle="Mass Update Task Owner"/>
+    <script type="text/javascript">
+    function updatetaskOwners(){
+        var selectedtasks = '{!Selected}';
+        var ownerId=null;
+        ownerId=document.getElementById('{!$Component.formId.pb.pbsection.ownerfieldId}_lkid').value;
+        if(selectedtasks!=""&&ownerId!=""&&ownerId!=null){
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.UpdateTaskOwnerController.UpdateTaskOwner}',ownerId,selectedtasks,
+                function(result, event){
+                    if (event.status) { 
+                        SfdcApp.projectOneNavigator.fireContainerEvent('force:showToast', { message: 'Task owner sucessfully updated.'});                
+                        if ((typeof sforce != 'undefined') && (sforce != null) ) {
+                            sforce.one.back(true);
+                        }
+                    } else if (event.type === 'exception') {
+                        SfdcApp.projectOneNavigator.fireContainerEvent('force:showToast', { message: 'failed' });                    
+                    } else {
+                        SfdcApp.projectOneNavigator.fireContainerEvent('force:showToast', { message: 'failed' });
+                    }
+                }
+            );
+            
+        }else{
+            SfdcApp.projectOneNavigator.fireContainerEvent('force:showToast', { message: 'Records not updated, Owner field cannot be empty' }); 
+        }
+        
+    }   
+    </script>
+    <apex:form id="formId">
+        <apex:pageBlock title="Provide Value to Update Field" id="pb" rendered="{!AND(IF((Selected!=''),true,false),isValiduser)}">
+            <apex:pageMessages />
+            <apex:actionFunction action="{!cancel}" name="returntotab"/>
+            <apex:pageBlockSection id="pbsection" columns="2" >
+                <apex:inputField value="{!taskRecord.ownerID}" label="Owner Name" id="ownerfieldId"/>           
+            </apex:pageBlockSection>
+            <div class="slds-align--absolute-center" >
+                <apex:commandButton value="Save"  styleClass="slds-button slds-button--neutral" onclick="updatetaskOwners()" oncomplete="returntotab();"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </div>
+        </apex:pageBlock>
+        <apex:pageMessage summary="Please select atleast one recod to update." severity="error" strength="3" rendered="{!!IF((Selected!=''),true,false)}"/>
+        <apex:pageMessage summary="You don't have access to mass update task owner" severity="error" strength="3" rendered="{!!isValiduser}" />
+        <div class="slds-align--absolute-center" >
+            <apex:commandButton value="Cancel" action="{!cancel}" rendered="{!!AND(IF((Selected!=''),true,false),isValiduser)}" reRender="formId"/>
+        </div>
+    </apex:form>
+    <apex:slds />
+    <apex:includeLightning />
+</apex:page>

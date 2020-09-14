@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Use this metadata to store profile or user to bypass publisher event</description>
+    <fields>
+        <fullName>EntityTypeName__c</fullName>
+        <description>Field to store username or profile api name</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Enter profile api name or username to bypass publisher event.</inlineHelpText>
+        <label>EntityTypeName</label>
+        <length>250</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EntityType__c</fullName>
+        <description>Field to identity if the entity is user or profile.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>EntityType</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Profile</fullName>
+                    <default>true</default>
+                    <label>Profile</label>
+                </value>
+                <value>
+                    <fullName>User</fullName>
+                    <default>false</default>
+                    <label>User</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PaltformEventType__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Define the platformevent</inlineHelpText>
+        <label>PaltformEventType</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Spacepusblisherevent</fullName>
+                    <default>true</default>
+                    <label>Spacepusblisherevent</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>BypassPlatformEventPublish</label>
+    <pluralLabel>BypassPublishPlatformEvent</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

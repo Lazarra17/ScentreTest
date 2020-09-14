@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>6</activeVersionNumber>
+    <description>LV09 - Trading Name Change</description>
+    <masterLabel>CON_LV09TradingNameChange</masterLabel>
+</FlowDefinition>
