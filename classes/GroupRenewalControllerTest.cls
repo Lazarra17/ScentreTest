@@ -5,6 +5,7 @@
 @isTest
 public class GroupRenewalControllerTest {
 	  //test
+      //test deploy
     private static Map<String, Schema.RecordTypeInfo> accRecordTypeMapByDevName  = RecordTypeUtil.getAllRecordTypesByDeveloperName(Constants.ACCOUNT);
     private static Map<String, Schema.RecordTypeInfo> oppRecordTypeMapByDevName  = RecordTypeUtil.getAllRecordTypesByDeveloperName(Constants.OPPORTUNITY);
     
