@@ -4,7 +4,7 @@
 */
 
 @isTest
-public class ABNLookupHelperTest {
+public class ABNLookupHelperTest { //test deploy
    @TestSetup 
     private static void testSetup() {
         Map<String, Schema.RecordTypeInfo> accountRecordTypeMapByName = RecordTypeUtil.getAllRecordTypesByName(CONSTANTS.ACCOUNT);
